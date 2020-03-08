@@ -11,13 +11,15 @@ h1 {
   letter-spacing: 8px;
 }
 select option {
-    margin: 40px;
-    background:#2f2319;
-    color: #fff;
-
-    font-family: "Baloo 2", cursive;
+  margin: 40px;
+  background: #2f2319;
+  color: #fff;
+  font-family: "Baloo 2", cursive;
 }
 
+.letra2 {
+  font-family: "Baloo 2", cursive;
+}
 
 /** ==================================
     Main - Formulario
@@ -31,16 +33,14 @@ select option {
 .formulario {
   text-align: center;
   padding: 50px;
-  background-color: #f9c430;
-
+  background: url(../img/fondoabeja.png);
+  background-size: cover;
 }
 
 .fondosG::placeholder {
   color: white;
   font-family: "Baloo 2", cursive;
-
 }
-
 
 .fondosG {
   background-color: rgba(83, 61, 39, 0.39);
@@ -52,8 +52,9 @@ select option {
   color: white;
   border-radius: 5px;
   outline: none;
-  
 }
 .boton-envio {
   background-color: #2f2319;
+  font-family: "Baloo", cursive;
+  letter-spacing: 5px;
 }

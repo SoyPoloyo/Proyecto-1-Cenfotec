@@ -7,22 +7,20 @@
     <form  action="" method="get">
 
        
-        <img class="logoFormu" src="img/BEESAFE.png" alt=""> <br> <h1>Registro Usuario</h1> <br>
-
-        <div class="lineado">
+        <img class="logoFormu" src="img/BEESAFE.png" alt=""> <br> <h1>Registro De Usuario</h1> <br>
 
        
             <input class="fondosG" type="text" value="" placeholder="Nombre" name="nombre" id="nombre">
             <input class="fondosG" type="text" value="" placeholder="Apellido" name="apellido" id="apellido"> <br> <br>
             <input class="fondosG" type="number" value="" placeholder="Edad" name="edad" id="edad">
-            <input class="fondosG" type="email" value="" placeholder="Correo electronico" name="correo" id="correo"> <br> <br> 
+            <input class="fondosG" type="email" value="" placeholder="Correo electrónico" name="correo" id="correo"> <br> <br> 
     
           
     
             <select class="fondosG" id="raza">
-                <option value="">Tipo de cedula:</option>
-                <option value="deberman">Corriente</option>
-                <option value="snauzer">Juridica</option>
+                <option value="" selected hidden>Tipo de cédula:</option>
+                <option value="corriente">Corriente</option>
+                <option value="juridica">Jurídica </option>
              
             </select> 
           
@@ -30,11 +28,9 @@
             <br> <br>
             <br> <br>
            
-           
 
-        </div>
 
-        <input class="boton-envio fondosG" type="button" value="ENVIAR" onclick="enviar()">
+        <input class="boton-envio fondosG " type="button" value="ENVIAR" onclick="enviar()">
 
 
     </form>
