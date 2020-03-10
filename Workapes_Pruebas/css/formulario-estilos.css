@@ -1,0 +1,60 @@
+/** ==================================
+    Globales
+    =================================**/
+
+body {
+  font-family: "Baloo", cursive;
+}
+h1 {
+  color: #2f2319;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+select option {
+  margin: 40px;
+  background: #2f2319;
+  color: #fff;
+  font-family: "Baloo 2", cursive;
+}
+
+.letra2 {
+  font-family: "Baloo 2", cursive;
+}
+
+/** ==================================
+    Main - Formulario
+    =================================**/
+
+.logoFormu {
+  width: 30%;
+  margin-bottom: -200;
+  margin-top: -100;
+}
+.formulario {
+  text-align: center;
+  padding: 50px;
+  background: url(../img/fondoabeja.png);
+  background-size: cover;
+}
+
+.fondosG::placeholder {
+  color: white;
+  font-family: "Baloo 2", cursive;
+}
+
+.fondosG {
+  background-color: rgba(83, 61, 39, 0.39);
+  border: none;
+  padding: 20px;
+  color: #ef9d34;
+  margin: 0px 15px;
+  width: 250px;
+  color: white;
+  border-radius: 5px;
+  outline: none;
+}
+.boton-envio {
+  background-color: #2f2319;
+  font-family: "Baloo", cursive;
+  letter-spacing: 5px;
+}
