@@ -37,13 +37,13 @@
           =================================**/
       .hero {
         background: linear-gradient(rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0.295)),
-          url(../img/cabecera.jpg);
+          url(../img/pie.jpg);
         background-size: cover;
         background-position: center;
         overflow: auto;
       }
       nav {
-        margin-top: -80px;
+        margin-top: -50px;
         padding-right: 20px;
       }
       nav a {
@@ -53,33 +53,7 @@
       }
       .logo-menu {
         width: 3%;
-        padding: 35px;
-      }
-      
-      .titulos-hero {
-        padding: 50px 0px 0px 0px;
-      }
-      .sub-top {
-        margin-bottom: -20px;
-      
-        padding: 0px 50px;
-        font-size: 25px;
-      }
-      .hero-contacto {
-        margin-left: 450px;
-      }
-      .hero-contacto p {
-        padding: 50px 60px 15px 0px;
-        font-family: "Baloo", cursive;
-      }
-      .detalle-contacto-top {
-        margin-top: -30px;
-        padding-top: 30px;
-      }
-      
-      .bordetop {
-        border-top: solid 1px white;
-        width: 15%;
+        padding: 15px;
       }
       
       /** ==================================
@@ -129,13 +103,7 @@
         overflow: auto;
       }
       .logo-footer {
-        width: 10%;
-        padding: 55px;
-      }
-      .pie-contacto {
-        margin-top: -250px;
-        margin-right: 55px;
-        text-align: right;
+        width: 5%;
       }
       .pie-hruno {
         width: 91%;
@@ -143,20 +111,19 @@
       }
       
       .derechosReservados {
-        padding-left: 55px;
-        margin-top: -15px;
+        padding: 0px 55px;
         color: rgb(182, 182, 182);
       }
-      .titulo-footer {
-        font-size: larger;
-        padding-bottom: 25px;
-      }
+ 
       .pie-bajo-linea {
-        padding: 0px 85px 120px 55px;
+        padding: 0px 85px 100px 55px;
       }
       .redes {
         border: solid grey 1px;
         padding: 10px 15px;
         color: white;
+      }
+      .redesposicion{
+          margin-top: -50px;
       }
       
