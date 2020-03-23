@@ -24,6 +24,17 @@ select option {
   font-family: "Baloo 2", cursive;
 }
 
+.iconoTipoUsuario{
+  font-size: 80px;
+  color: 2f2319;
+  padding: 50px;
+  position: relative;
+  float: left;
+}
+.iconoTipoUsuario:hover i{
+  color: #CC5D01;
+  text-shadow: 2px 2px 5px grey;
+}
 
 /** ==================================
     Main - Formulario - Registro
@@ -32,6 +43,7 @@ select option {
 .logoFormu {
   width: 30%;
   margin-bottom: -200;
+  margin-left: -390px;
  
 }
 .formulario {
