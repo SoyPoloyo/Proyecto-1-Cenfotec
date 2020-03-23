@@ -1,0 +1,161 @@
+/** ==================================
+    GLOBALES
+    =================================**/
+    body {
+        font-family: "Lato", sans-serif;
+      }
+      .alt-letra {
+        font-family: "Open Sans Condensed", sans-serif;
+        letter-spacing: 4px;
+      }
+      h1 {
+        font-size: 65px;
+      }
+      hr {
+        border-color: grey;
+      }
+      .derecha {
+        float: right;
+      }
+      .izquierda {
+        float: left;
+      }
+      .centro-texto {
+        text-align: center;
+      }
+      .izquierda-texto {
+        text-align: left;
+      }
+      .blanco {
+        color: white;
+      }
+      .mayus {
+        text-transform: uppercase;
+      }
+      /** ==================================
+          CABECERA
+          =================================**/
+      .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0.295)),
+          url(../img/cabecera.jpg);
+        background-size: cover;
+        background-position: center;
+        overflow: auto;
+      }
+      nav {
+        margin-top: -80px;
+        padding-right: 20px;
+      }
+      nav a {
+        text-decoration: none;
+        color: white;
+        padding-right: 40px;
+      }
+      .logo-menu {
+        width: 3%;
+        padding: 35px;
+      }
+      
+      .titulos-hero {
+        padding: 50px 0px 0px 0px;
+      }
+      .sub-top {
+        margin-bottom: -20px;
+      
+        padding: 0px 50px;
+        font-size: 25px;
+      }
+      .hero-contacto {
+        margin-left: 450px;
+      }
+      .hero-contacto p {
+        padding: 50px 60px 15px 0px;
+      }
+      .detalle-contacto-top {
+        margin-top: -30px;
+        padding-top: 30px;
+      }
+      
+      .bordetop {
+        border-top: solid 1px white;
+        width: 15%;
+      }
+      
+      /** ==================================
+          Main - Formulario 
+          =================================**/
+      
+      .formulario {
+        width: 60%;
+        margin: 0 auto;
+      }
+      .fondo::placeholder {
+        font-family: "Lato", sans-serif;
+        color: grey;
+      }
+      .fondo {
+        background-color: rgba(128, 128, 128, 0.178);
+        border: none;
+        padding: 20px;
+        width: 350px;
+      }
+      .fondo2 {
+        width: 390px;
+        color: grey;
+        padding-left: 3px;
+      }
+      .boton-formulario {
+        border: none;
+        background: none;
+        font-family: "Lato", sans-serif;
+        font-weight: bold;
+        margin-left: 80%;
+        outline: none;
+      }
+      .boton-formulario:hover {
+        background-color: rgba(128, 128, 128, 0.377);
+        padding: 5px 10px;
+        border-radius: 10px;
+      }
+      /** ==================================
+          Footer 
+          =================================**/
+      .hero-footer {
+        background: linear-gradient(rgba(0, 0, 0, 0.685), rgba(0, 0, 0, 0.685)),
+          url(../img/pie.jpg);
+        background-size: cover;
+        background-position: 50%;
+        overflow: auto;
+      }
+      .logo-footer {
+        width: 10%;
+        padding: 55px;
+      }
+      .pie-contacto {
+        margin-top: -250px;
+        margin-right: 55px;
+        text-align: right;
+      }
+      .pie-hruno {
+        width: 91%;
+        padding: 20px 0px 20px 55px;
+      }
+      
+      .derechosReservados {
+        padding-left: 55px;
+        margin-top: -15px;
+        color: rgb(182, 182, 182);
+      }
+      .titulo-footer {
+        font-size: larger;
+        padding-bottom: 25px;
+      }
+      .pie-bajo-linea {
+        padding: 0px 85px 120px 55px;
+      }
+      .redes {
+        border: solid grey 1px;
+        padding: 10px 15px;
+        color: white;
+      }
+      
