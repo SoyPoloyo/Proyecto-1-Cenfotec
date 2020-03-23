@@ -37,7 +37,7 @@
           =================================**/
       .hero {
         background: linear-gradient(rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0.295)),
-          url(../img/pie.jpg);
+          url();
         background-size: cover;
         background-position: center;
         overflow: auto;
@@ -61,23 +61,11 @@
           =================================**/
       
       .formulario {
-        width: 60%;
+        
         margin: 0 auto;
       }
-      .fondo::placeholder {
-        font-family: "Baloo 2", cursive;
-        color: grey;
-      }
-      .fondo {
-        background-color: rgba(128, 128, 128, 0.178);
-        border: none;
-        padding: 20px;
-        width: 350px;
-      }
-      .fondo2 {
-        width: 390px;
-        color: grey;
-        padding-left: 3px;
+      .ladoizquierdo{
+          width: 20%;
       }
       .boton-formulario {
         border: none;
@@ -95,35 +83,27 @@
       /** ==================================
           Footer 
           =================================**/
+
       .hero-footer {
         background: linear-gradient(rgba(0, 0, 0, 0.685), rgba(0, 0, 0, 0.685)),
-          url(../img/pie.jpg);
+          url();
         background-size: cover;
-        background-position: 50%;
         overflow: auto;
       }
-      .logo-footer {
-        width: 5%;
-      }
-      .pie-hruno {
-        width: 91%;
-        padding: 20px 0px 20px 55px;
-      }
+    
       
       .derechosReservados {
         padding: 0px 55px;
         color: rgb(182, 182, 182);
       }
  
-      .pie-bajo-linea {
-        padding: 0px 85px 100px 55px;
-      }
       .redes {
         border: solid grey 1px;
-        padding: 10px 15px;
+        padding: 3px 5px;
         color: white;
       }
       .redesposicion{
-          margin-top: -50px;
+          margin-top: -40px;
+          margin-right: 50px;
       }
       

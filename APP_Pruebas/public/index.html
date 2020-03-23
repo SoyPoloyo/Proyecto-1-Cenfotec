@@ -9,6 +9,9 @@
 
     <link href="https://fonts.googleapis.com/css?family=Baloo|Baloo+2&display=swap" rel="stylesheet">
 
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+
     <script src="https://kit.fontawesome.com/2b7b514291.js" crossorigin="anonymous"></script>
 </head>
 
@@ -33,46 +36,35 @@
 
     <main>
 
-        <div class="formulario centro-texto">
+        <div class="contenido-principal">
 
-            <form action="" method="get">
 
-                <br> <br> <br>
+            <div class="izquierda ladoizquierdo">
 
-                <div class="izquierda">
+                <br>
 
-                    <input class="fondo" type="text" value="" placeholder="Nombre" name="nombre" id="nombre"> <br> <br>
-                    <input class="fondo" type="number" value="" placeholder="Telefono" name="telefono" id="telefono">
-                    <br> <br>
+                <input class="fondo" type="button" value="Reportar Siniestro" placeholder="Nombre" name="nombre"
+                    id="nombre"> <br> <br>
+                <input class="fondo" type="button" value="Reportar Siniestro" placeholder="Nombre" name="nombre"
+                    id="nombre">
 
-                    <select class="fondo fondo2" id="servicios">
-                        <option value="" selected hidden>¿Qué servicio desea?</option>
-                        <option value="servicio1">servicio 1</option>
-                        <option value="servicio2">servicio 2</option>
 
-                    </select>
+                <br><br>
 
-                    <br><br>
+            </div>
 
-                    <select class="fondo fondo2" id="forma-contacto">
-                        <option value="" selected hidden>¿Cómo desea que lo contactemos?</option>
-                        <option value="metodo1">método 1</option>
-                        <option value="metodo2">método 2</option>
+            <div class="" id='map' style=' height: 79vh; width:80%;'>
+                <script>
+                    mapboxgl.accessToken = 'pk.eyJ1Ijoic295cG9sb3lvIiwiYSI6ImNrODRtY3pyNTB5OWkzbG56ZWp2b3Y4cWEifQ.kXhxq_6KXwzzTMKX9MR66w';
+                    var map = new mapboxgl.Map({
+                        container: 'map',
+                        style: 'mapbox://styles/mapbox/streets-v11',
+                        zoom: 14.5,
+                        center: [-84.03116608099936, 9.932827376420036]
+                    });
+                </script>
+            </div>
 
-                    </select>
-
-                </div>
-
-                <textarea class="fondo" placeholder="Mensaje" rows="16" cols="40" name="mensaje"
-                    id="mensaje"></textarea>
-
-                <br> <br>
-
-                <input class="boton-formulario" type="button" value="ENVIAR" onclick="enviar()">
-
-                <br> <br> <br>
-
-            </form>
         </div>
 
     </main>
@@ -82,27 +74,13 @@
         <div class="hero-footer">
 
 
+            <p> <span class="derechosReservados">2018 &copy; Todos los derechos reservados.</span>
+                Desarrollo por Workapes </p>
 
 
-            <div class=" pie-bajo-linea">
+            <div class=" redesposicion derecha">
 
-
-                <div class="pie-hruno">
-                    <hr>
-                </div>
-
-                <div class="izquierda">
-                    <img class="logo-footer izquierda" src="img/logoblanco.png" alt="">
-                    <p class="derechosReservados izquierda">2018 &copy; Todos los derechos reservados.</p>
-                     <p class=" ">Desarrollo por Workapes </p>
-                </div>
-
-                <div class=" redesposicion derecha">
-
-                    <a href="#" class="redes"> <i class="fab fa-facebook-f"></i> </a>
-
-                </div>
-         
+                <a href="#" class="redes"> <i class="fab fa-facebook-f"></i> </a>
 
             </div>
 
