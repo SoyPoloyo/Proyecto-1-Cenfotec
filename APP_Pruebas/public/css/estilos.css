@@ -2,10 +2,10 @@
     GLOBALES
     =================================**/
     body {
-        font-family: "Lato", sans-serif;
+        font-family: "Baloo 2", cursive;
       }
       .alt-letra {
-        font-family: "Open Sans Condensed", sans-serif;
+        font-family: "Baloo", cursive;
         letter-spacing: 4px;
       }
       h1 {
@@ -70,6 +70,7 @@
       }
       .hero-contacto p {
         padding: 50px 60px 15px 0px;
+        font-family: "Baloo", cursive;
       }
       .detalle-contacto-top {
         margin-top: -30px;
@@ -90,7 +91,7 @@
         margin: 0 auto;
       }
       .fondo::placeholder {
-        font-family: "Lato", sans-serif;
+        font-family: "Baloo 2", cursive;
         color: grey;
       }
       .fondo {
@@ -107,7 +108,7 @@
       .boton-formulario {
         border: none;
         background: none;
-        font-family: "Lato", sans-serif;
+        font-family: "Baloo", cursive;
         font-weight: bold;
         margin-left: 80%;
         outline: none;
