@@ -1,43 +1,59 @@
-<meta charset="UTF-8">
-<link rel="stylesheet" href="css/formulario-estilos.css">
-<link href="https://fonts.googleapis.com/css?family=Baloo|Baloo+2&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/2b7b514291.js" crossorigin="anonymous"></script>
+<!DOCTYPE html>
+<html lang="en">
 
-<section class="formulario">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/formulario-estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo|Baloo+2&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2b7b514291.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <section class="formulario">
 
 
-    <a class="iconoTipoUsuario" href="#"> <i class="fas fa-address-card"></i></a> 
-    <a class="iconoTipoUsuario" href="#"> <i class="fas fa-address-card"></i></a>
+        <a class="iconoTipoUsuario" href="#"> <i class="fas fa-address-card"></i></a>
+        <a class="iconoTipoUsuario" href="#"> <i class="fas fa-address-card"></i></a>
 
-    <form  action="" method="get">
+        <form action="" method="get">
 
-       
-        <img class="logoFormu" src="img/BEESAFE.png" alt=""> <br> <h1>Registro De Usuario</h1> <br>
 
-       
+            <img class="logoFormu" src="img/BEESAFE.png" alt=""> <br>
+            <h1>Registro De Usuario</h1> <br>
+
+
             <input class="fondosG" type="text" value="" placeholder="Nombre" name="nombre" id="nombre">
             <input class="fondosG" type="text" value="" placeholder="Apellido" name="apellido" id="apellido"> <br> <br>
             <input class="fondosG" type="number" value="" placeholder="Edad" name="edad" id="edad">
-            <input class="fondosG" type="email" value="" placeholder="Correo electrónico" name="correo" id="correo"> <br> <br> 
-    
-          
-    
+            <input class="fondosG" type="email" value="" placeholder="Correo electrónico" name="correo" id="correo">
+            <br>
+            <br>
+
+
+
             <select class="fondosG" id="raza">
                 <option value="" selected hidden>Tipo de cédula:</option>
                 <option value="corriente">Corriente</option>
                 <option value="juridica">Jurídica </option>
-             
-            </select> 
-          
+
+            </select>
+
             <input class="fondosG" type="number" value="" placeholder="Cedula" name="cedula" id="cedula">
             <br> <br>
             <br> <br>
-           
 
 
-        <input class="boton-envio fondosG " type="button" value="ENVIAR" onclick="enviar()">
+
+            <input class="boton-envio fondosG " type="button" value="ENVIAR" onclick="enviar()">
 
 
-    </form>
+        </form>
 
-</section>
+    </section>
+
+</body>
+
+</html>

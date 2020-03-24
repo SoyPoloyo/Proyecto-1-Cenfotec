@@ -2,117 +2,37 @@
     GLOBALES
     =================================**/
 
-    * {
-        box-sizing: border-box;
-        margin: 0;
-      }
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  font-family: "Baloo 2", cursive;
+  height: 100vh;
+  overflow: hidden;
+}
+header {
+  max-height: 10vh;
+  overflow: hidden;
+}
+main {
+  max-height: 80vh;
+  overflow: hidden;
+}
+footer {
+  max-height: 10vh;
+  overflow: hidden;
+}
+.alt-letra {
+  font-family: "Baloo", cursive;
+  letter-spacing: 4px;
+}
 
-    body {
-        font-family: "Baloo 2", cursive;
-        height: 100vh;
-   
-      }
-      .alt-letra {
-        font-family: "Baloo", cursive;
-        letter-spacing: 4px;
-      }
-      h1 {
-        font-size: 65px;
-      }
-      hr {
-        border-color: grey;
-      }
-      .derecha {
-        float: right;
-      }
-      .izquierda {
-        float: left;
-      }
-      .centro-texto {
-        text-align: center;
-      }
-      .izquierda-texto {
-        text-align: left;
-      }
-      .blanco {
-        color: white;
-      }
-      .mayus {
-        text-transform: uppercase;
-      }
-      /** ==================================
+/** ==================================
           CABECERA
           =================================**/
-      .hero {
-        background: linear-gradient(rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0.295)),
-          url();
-        background-size: cover;
-        background-position: center;
-        overflow: auto;
-      }
-      nav {
-        margin-top: -45px;
-        padding-right: 20px;
-      }
-      nav a {
-        text-decoration: none;
-        color: white;
-        padding-right: 40px;
-      }
-      .logo-menu {
-        width: 3%;
-        padding: 10px;
-      }
-      
-      /** ==================================
-          Main - Formulario 
-          =================================**/
-      
-      .formulario {
-        
-        margin: 0 auto;
-      }
-      .ladoizquierdo{
-          width: 20%;
-      }
-      .boton-formulario {
-        border: none;
-        background: none;
-        font-family: "Baloo", cursive;
-        font-weight: bold;
-        margin-left: 80%;
-        outline: none;
-      }
-      .boton-formulario:hover {
-        background-color: rgba(128, 128, 128, 0.377);
-        padding: 5px 10px;
-        border-radius: 10px;
-      }
-      /** ==================================
-          Footer 
-          =================================**/
 
-      .hero-footer {
-        background: linear-gradient(rgba(0, 0, 0, 0.685), rgba(0, 0, 0, 0.685)),
-          url();
-        background-size: cover;
-        overflow: auto;
-        height: 5vh;
-      }
-    
-      
-      .derechosReservados {
-        padding: 0px 55px;
-        color: rgb(182, 182, 182);
-      }
- 
-      .redes {
-        border: solid grey 1px;
-        padding: 3px 5px;
-        color: white;
-      }
-      .redesposicion{
-          margin-top: -40px;
-          margin-right: 50px;
-      }
-      
+nav {
+  background-color: #2f2319;
+  height: 500px;
+}
