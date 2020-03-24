@@ -1,8 +1,16 @@
 /** ==================================
     GLOBALES
     =================================**/
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+
     body {
         font-family: "Baloo 2", cursive;
+        height: 100vh;
+   
       }
       .alt-letra {
         font-family: "Baloo", cursive;
@@ -43,7 +51,7 @@
         overflow: auto;
       }
       nav {
-        margin-top: -50px;
+        margin-top: -45px;
         padding-right: 20px;
       }
       nav a {
@@ -53,7 +61,7 @@
       }
       .logo-menu {
         width: 3%;
-        padding: 15px;
+        padding: 10px;
       }
       
       /** ==================================
@@ -89,6 +97,7 @@
           url();
         background-size: cover;
         overflow: auto;
+        height: 5vh;
       }
     
       
