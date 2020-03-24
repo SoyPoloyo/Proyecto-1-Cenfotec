@@ -6,6 +6,7 @@
   box-sizing: border-box;
   margin: 0;
 }
+
 body {
   font-family: "Baloo 2", cursive;
   height: 100vh;
@@ -65,21 +66,47 @@ nav a {
   text-align: center;
   border-right: #2f2319 1px solid;
 }
-.botones-accion {
-    color: white;
-    background-color: #CC5D01;
-    width:80%;
-    padding: 30px 0px;
-    font-size: 30px;
-    margin: 50px 0px;
-    border: #2f2319 solid 2px;
-    box-shadow:1px 1px 10px #2f2319;
-    border-radius: 5px;
+
+.fondosG {
+  background-color: rgba(83, 61, 39, 0.603);
+  border: none;
+  padding: 20px;
+  color: #ef9d34;
+  margin: 0px 15px;
+  width: 250px;
+  color: white;
+  border-radius: 5px;
+  outline: none;
 }
-.botones-accion:hover {
-  box-shadow:1px 1px 10px #CC5D01  ;
-  background-color:#2f2319 ;
-border: #2f2f2f 2px solid;
+.fondosG::placeholder {
+  color: white;
+  font-family: "Baloo 2", cursive;
+}
+
+select option {
+  margin: 40px;
+  background: #2f2319;
+  color: #fff;
+  font-family: "Baloo 2", cursive;
+}
+.imagen_provisional{
+  font-size: 100px;
+}
+.titulo_reporte {
+  color: white;
+  background-color: #cc5d01;
+ 
+  width: 90%;
+  font-size: 20px;
+  margin: 0 auto;
+  border: #2f2319 solid 2px;
+  box-shadow: 1px 1px 10px #2f2319;
+  border-radius: 10px;
+}
+.envio_formulario:hover {
+  box-shadow: 1px 1px 10px #cc5d01;
+  background-color: #2f2319;
+  border: #2f2f2f 2px solid;
 }
 
 /** ==================================
@@ -90,6 +117,6 @@ footer {
   height: 100vh;
   color: white;
 }
-footer P{
+footer p {
   padding: 3px 20px;
 }

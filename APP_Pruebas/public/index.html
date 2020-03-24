@@ -20,25 +20,47 @@
     <header>
 
         <nav>
-            
+
             <img class="logo_header" src="img/blancobesafe.png" alt="">
             <a class="alt_letra derecha" href="#">USUARIO</a>
             <a class="alt_letra derecha " href="#">INICIO</a>
-            
+
         </nav>
 
     </header>
 
     <main>
 
+        <!-- =======================================
+        CONTENIDO EN EL CAMPO IZQUIERDO DE LA PAGINA
+    =================================================-->
+
         <div class=" contenido_izquierdo izquierda">
 
             <br>
-            <button class="botones-accion alt_letra">Reportar Siniestros</button> <br>
-            <button class="botones-accion alt_letra">Reportar Siniestros</button> <br>
+            <h3 class="titulo_reporte alt_letra">Reportar Siniestro</h3> <br>
+
+            <select class="fondosG" id="tipo_accidente">
+                <option value="" selected hidden>Tipos de accidente:</option>
+                <option value="derrumbe">Derrumbe</option>
+                <option value="choque">Choque </option>
+
+            </select> <br> <br>
+
+            <textarea class="fondosG" placeholder="Describa el siniestro" rows="5" cols="0" name="mensaje"
+                id="mensaje"></textarea>
+
+
+            <p class="imagen_provisional"><i class="far fa-image"></i></p>
+            <input class="archivo_img" type="file" name="" id=""> <br> <br>
+
+            <input class="envio_formulario" type="submit" value="Reportar Siniestro">
 
         </div>
 
+        <!-- =======================================
+                            MAPA
+    =================================================-->
         <div class="" id='map' style=' height: 85vh'>
             <script>
                 mapboxgl.accessToken = 'pk.eyJ1Ijoic295cG9sb3lvIiwiYSI6ImNrODRtY3pyNTB5OWkzbG56ZWp2b3Y4cWEifQ.kXhxq_6KXwzzTMKX9MR66w';
@@ -54,8 +76,9 @@
 
     </main>
 
+
     <footer>
-        
+
         <p class="derecha">WORKAPES&copy;<span>Todos los derechos reservados </span></p>
 
     </footer>
