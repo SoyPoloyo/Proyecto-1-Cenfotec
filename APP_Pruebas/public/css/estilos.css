@@ -67,6 +67,15 @@ nav a {
   border-right: #2f2319 1px solid;
 }
 
+.titulo_reporte {
+  color:#2f2319;
+
+  width: 90%;
+  font-size: 20px;
+  margin: 0 auto;
+  text-shadow: 3px 3px 7px #a8998c;
+}
+
 .fondosG {
   background-color: rgba(83, 61, 39, 0.603);
   border: none;
@@ -91,17 +100,21 @@ select option {
 }
 .imagen_provisional{
   font-size: 100px;
+  margin-bottom: -20px;
 }
-.titulo_reporte {
+
+.subir_img{
+  width: 80%;
+}
+.envio_formulario{
   color: white;
-  background-color: #cc5d01;
- 
+  background-color: #ef9d34;
   width: 90%;
   font-size: 20px;
   margin: 0 auto;
   border: #2f2319 solid 2px;
   box-shadow: 1px 1px 10px #2f2319;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .envio_formulario:hover {
   box-shadow: 1px 1px 10px #cc5d01;
