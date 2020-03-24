@@ -25,12 +25,15 @@ select option {
 }
 
 .iconoTipoUsuario {
-  font-size: 80px;
-  color: #2f2319;
-  padding: 0px 30px;
+ 
+    color: #CC5D01;
+    width:80%;
+    font-size: 80px;
+    margin: 0px 50px;
+    text-shadow:2px 5px 7px #2f2319;
 }
-.iconoTipoUsuario:hover i {
-  color: #cc5d01;
+.iconoTipoUsuario i:hover {
+  color:#2f2319 ;
   
 }
 
