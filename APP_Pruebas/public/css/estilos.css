@@ -58,7 +58,8 @@ nav a {
   =================================**/
 
 .contenido_izquierdo {
-  background-color: #ED8C01;
+  background: url(../img/fondoabeja.png);
+  background-position: center;
   width: 20%;
   height: 100vh;
   text-align: center;
@@ -68,14 +69,17 @@ nav a {
     color: white;
     background-color: #CC5D01;
     width:80%;
-    padding: 40px 0px;
+    padding: 30px 0px;
     font-size: 30px;
     margin: 50px 0px;
     border: #2f2319 solid 2px;
-    box-shadow:3px 3px 10px #2f2319  ;
+    box-shadow:1px 1px 10px #2f2319;
+    border-radius: 5px;
 }
 .botones-accion:hover {
-  box-shadow:6px 6px 13px #2f2319  ;
+  box-shadow:1px 1px 10px #CC5D01  ;
+  background-color:#2f2319 ;
+border: #2f2f2f 2px solid;
 }
 
 /** ==================================

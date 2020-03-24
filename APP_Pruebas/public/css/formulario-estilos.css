@@ -26,10 +26,8 @@ select option {
 
 .iconoTipoUsuario {
   font-size: 80px;
-  color: 2f2319;
-  padding: 50px;
-  position: relative;
-  float: left;
+  color: #2f2319;
+  padding: 0px 30px;
 }
 .iconoTipoUsuario:hover i {
   color: #cc5d01;
@@ -42,8 +40,8 @@ select option {
 
 .logoFormu {
   width: 30%;
-  margin-bottom: -200;
-  margin-left: -390px;
+  margin-bottom: -50px;
+  margin-top: 25px;
 }
 .formulario {
   text-align: center;
@@ -60,7 +58,7 @@ select option {
 }
 
 .fondosG {
-  background-color: rgba(83, 61, 39, 0.39);
+  background-color: rgba(83, 61, 39, 0.603);
   border: none;
   padding: 20px;
   color: #ef9d34;
