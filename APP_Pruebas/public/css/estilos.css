@@ -73,7 +73,9 @@ nav a {
     margin: 50px 0px;
     border: #2f2319 solid 2px;
     box-shadow:3px 3px 10px #2f2319  ;
-    
+}
+.botones-accion:hover {
+  box-shadow:6px 6px 13px #2f2319  ;
 }
 
 /** ==================================
@@ -82,4 +84,8 @@ nav a {
 footer {
   background-color: #2f2319;
   height: 100vh;
+  color: white;
+}
+footer P{
+  padding: 3px 20px;
 }
