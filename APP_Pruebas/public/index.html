@@ -20,25 +20,34 @@
     <header>
 
         <nav>
-            <img class="logo-header" src="img/blancobesafe.png" alt="">
-            <a class="alt-letra derecha" href="#">USUARIO</a>
-            <a class="alt-letra derecha " href="#">INICIO</a>
+            <img class="logo_header" src="img/blancobesafe.png" alt="">
+            <a class="alt_letra derecha" href="#">USUARIO</a>
+            <a class="alt_letra derecha " href="#">INICIO</a>
         </nav>
 
     </header>
 
     <main>
 
-        <div class=" contenido-izquierdo">
+        <div class=" contenido_izquierdo izquierda">
 
             <br>
+            <button class="botones-accion">Reportar Siniestros</button> <br>
+            <button class="botones-accion">Reportar Siniestros</button> <br>
 
-            <input class="" type="button" value="Reportar Siniestro" name="" id=""> <br> <br>
-            <input class="" type="button" value="Reportar Siniestro" name="" id="">
+        </div>
 
+        <div class="" id='map' style=' height: 85vh'>
+            <script>
+                mapboxgl.accessToken = 'pk.eyJ1Ijoic295cG9sb3lvIiwiYSI6ImNrODRtY3pyNTB5OWkzbG56ZWp2b3Y4cWEifQ.kXhxq_6KXwzzTMKX9MR66w';
+                var map = new mapboxgl.Map({
+                    container: 'map',
+                    style: 'mapbox://styles/mapbox/streets-v11',
+                    zoom: 14.5,
+                    center: [-84.03116608099936, 9.932827376420036]
 
-            <br><br>
-
+                });
+            </script>
         </div>
 
     </main>
@@ -47,6 +56,7 @@
 
 
 
-    </footer </body>
+    </footer>
+</body>
 
 </html>
