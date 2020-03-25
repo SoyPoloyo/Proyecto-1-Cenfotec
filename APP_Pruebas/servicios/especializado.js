@@ -12,10 +12,10 @@ router.post('/registroEspecializado', function(req,res){
         apellido: req.body.nombre,
         edad: req.body.edad,
         correo: req.body.correo,
-        raza: req.body.raza,
+        tipoCedula: req.body.raza,
         cedula: req.body.cedula
     });
-    especializadoNuevoNuevo.save()
+    especializadoNuevo.save()
     .then(
         function(resultado){
     res.json(resultado);
