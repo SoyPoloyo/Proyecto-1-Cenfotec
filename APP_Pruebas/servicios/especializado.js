@@ -6,13 +6,15 @@ var mongoose = require('mongoose');
 var Especializado = require('../schema/especializado');
 
 router.post('/registroEspecializado', function(req,res){
+
     var especializadoNuevo = new Especializado({
+
        _id: new mongoose.Types.ObjectId(),
         nombre: req.body.nombre,
         apellido: req.body.nombre,
         edad: req.body.edad,
         correo: req.body.correo,
-        tipoCedula: req.body.raza,
+        tipoCedula: req.body.tipoCedula,
         cedula: req.body.cedula
     });
     especializadoNuevo.save()

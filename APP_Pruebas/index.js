@@ -10,6 +10,8 @@ mongoose.connect('mongodb+srv://admin:admin@workapes-9hxh3.mongodb.net/pruebas?r
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use('/registroEspecializado', require('./servicios/especializado.js'));
+
+
 app.listen(5252, function(){
     console.log("servidor corriendo en el 5252")
 });
