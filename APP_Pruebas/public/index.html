@@ -1,88 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/formulario-estilos.css">
+<link href="https://fonts.googleapis.com/css?family=Baloo|Baloo+2&display=swap" rel="stylesheet">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BeeSafe</title>
-    <link rel="stylesheet" href="css/estilos.css">
-
-    <link href="https://fonts.googleapis.com/css?family=Baloo|Baloo+2&display=swap" rel="stylesheet">
-
-    <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
-
-    <script src="https://kit.fontawesome.com/2b7b514291.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-
-    <header>
-
-        <nav>
-
-            <img class="logo_header" src="img/blancobesafe.png" alt="">
-            <a class="alt_letra derecha" href="#">USUARIO</a>
-            <a class="alt_letra derecha " href="#">INICIO</a>
-
-        </nav>
-
-    </header>
-
-    <main>
-
-        <!-- =======================================
-        CONTENIDO EN EL CAMPO IZQUIERDO DE LA PAGINA
-    =================================================-->
-
-        <div class=" contenido_izquierdo izquierda">
-
-            <br> <br>
-            
-            <h3 class="titulo_reporte alt_letra">REPORTAR SINIESTRO</h3> <br>
-
-            <select class="fondosG" id="tipo_accidente">
-                <option value="" selected hidden>Tipos de accidente:</option>
-                <option value="derrumbe">Derrumbe</option>
-                <option value="choque">Choque </option>
-
-            </select> <br> <br>
-
-            <textarea class="fondosG" placeholder="Describa el siniestro" rows="5" cols="0" name="mensaje"
-                id="mensaje"></textarea>
+<section class="formulario">
 
 
-            <p class="imagen_provisional"><i class="far fa-image"></i></p>
-            <input class="subir_img" type="file" size="0" name="" id=""> <br> <br> <br>
+    <form action="" method="get">
+        <br><br><br><br>
 
-            <input class="envio_formulario" type="submit" value="ENVIAR REPORTE">
+        <img class="logoFormu" src="img/BEESAFE.png" alt=""> <br> <br>
+        <h1>Inicio de Sesion</h1> <br>
 
-        </div>
+        <input class="fondosG largoFondos" type="email" value="" placeholder="Correo electrónico" name="correo" id="correo"> <br> <br>
+        <input class="fondosG largoFondos" type="password" value="" placeholder="Contraseña" name="password" id="password"> <br> <br>
 
-        <!-- =======================================
-                            MAPA
-    =================================================-->
-        <div class="" id='map' style=' height: 85vh'>
-            <script>
-                mapboxgl.accessToken = 'pk.eyJ1Ijoic295cG9sb3lvIiwiYSI6ImNrODRtY3pyNTB5OWkzbG56ZWp2b3Y4cWEifQ.kXhxq_6KXwzzTMKX9MR66w';
-                var map = new mapboxgl.Map({
-                    container: 'map',
-                    style: 'mapbox://styles/mapbox/streets-v11',
-                    zoom: 14.5,
-                    center: [-84.03116608099936, 9.932827376420036]
+        <br> <br>
 
-                });
-            </script>
-        </div>
-
-    </main>
+        <input class="boton-envio fondosG " type="button" value="Ingresar" onclick="window.location.href='usuario_clasico.html'">
+        <input class="boton-envio fondosG " type="button" value="Crear Cuenta" onclick="window.location.href='registro_comun.html'">
 
 
-    <footer>
 
-        <p class="derecha">WORKAPES&copy;<span>Todos los derechos reservados </span></p>
+    </form>
 
-    </footer>
-</body>
-
-</html>
+</section>
