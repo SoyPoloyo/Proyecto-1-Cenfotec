@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 function validarNombre(){
     var validacion = true;
     if(document.getElementById("nombre").value==""){
@@ -63,7 +62,10 @@ function validarRegistro(){
         console.log(data);
         fetch('/api')
     }
-=======
+
+    /************************************************************
+     aca viene el codigo que funciona por aquello
+     ****************************************************/
 function enviar () {
     console.log('probando');
     var nombre, apellido, edad;
@@ -94,5 +96,4 @@ function enviar () {
     .catch(function(err){
         console.log(err)
     })
->>>>>>> ef7485b93a1d5f16dbd3ffe1127b25321fbdd4a8
 }
