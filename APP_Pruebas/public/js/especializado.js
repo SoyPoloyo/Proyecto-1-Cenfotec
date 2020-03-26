@@ -4,4 +4,5 @@ function enviar() {
         edad: document.getElementById('apellido').value,
         carrera: document.getElementById('correo').value
     };
-console.log({data})
+      }
+console.log({data});

@@ -10,6 +10,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use('/registroEspecializado', require('./servicios/especializado.js'));
+app.use('/registroClasico', require('./servicios/clasico.js'));
 
 
 app.listen(5252, function(){
