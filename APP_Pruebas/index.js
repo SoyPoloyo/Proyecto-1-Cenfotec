@@ -9,8 +9,9 @@ mongoose.connect('mongodb+srv://admin:admin@workapes-9hxh3.mongodb.net/pruebas?r
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use('/registroEspecializado', require('./servicios/especializado.js'));
-app.use('/registroClasico', require('./servicios/clasico.js'));
+app.use('/registroEspecializado', require('./servicios/servicioEspecializado.js'));
+app.use('/registroClasico', require('./servicios/servicioClasico.js'));
+
 
 
 app.listen(5252, function(){

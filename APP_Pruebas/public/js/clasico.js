@@ -1,5 +1,5 @@
 function enviar () {
-    console.log('probando');
+
     var nombre, apellido, edad;
     nombre = document.getElementById('nombre').value;
      apellido = document.getElementById('apellido').value;
@@ -10,7 +10,6 @@ function enviar () {
         apellido: apellido,
         edad: edad,
     };
-    console.log(valores);
     
     fetch("http://localhost:5252/registroClasico/insertar", {
         body: JSON.stringify(valores),
@@ -28,4 +27,7 @@ function enviar () {
     .catch(function(err){
         console.log(err)
     })
+
+
+    alert('Se a creado su cuenta')
 }

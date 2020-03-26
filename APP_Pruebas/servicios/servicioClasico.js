@@ -3,7 +3,7 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
 
-var Clasico = require('../schema/clasico');
+var Clasico = require('../schema/modeloClasico');
 
 router.post('/insertar', function(req,res){
 
