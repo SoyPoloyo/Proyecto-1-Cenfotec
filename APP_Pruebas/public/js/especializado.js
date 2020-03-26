@@ -62,6 +62,10 @@ function validarRegistro(){
         console.log(data);
         fetch('/api')
     }
+
+    /************************************************************
+     aca viene el codigo que funciona por aquello
+     ****************************************************/
 function enviar () {
     console.log('probando');
     var nombre, apellido, edad;
