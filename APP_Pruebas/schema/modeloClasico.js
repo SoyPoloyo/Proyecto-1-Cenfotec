@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 
-var especializadoSchema = mongoose.Schema({
+var clasicoSchema = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
   nombre: String,
   apellido: String,
@@ -10,4 +10,4 @@ var especializadoSchema = mongoose.Schema({
   cedula: Number
 });
 
-module.exports = mongoose.model( "Clasico", especializadoSchema,"clasicos");
+module.exports = mongoose.model( "Clasico", clasicoSchema,"clasicos");

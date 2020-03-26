@@ -3,11 +3,11 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
 
-var Clasico = require('../schema/clasico');
+var Especializado = require('../schema/modeloEspecializado');
 
 router.post('/insertar', function(req,res){
 
-    var clasicoNuevo = new Clasico({
+    var especializadoNuevo = new Especializado({
 
        _id: new mongoose.Types.ObjectId(),
         nombre: req.body.nombre,
@@ -19,7 +19,7 @@ router.post('/insertar', function(req,res){
 
     });
 
-    clasicoNuevo.save()
+    especializadoNuevo.save()
     .then(
         function(resultado){
     res.json(resultado);
