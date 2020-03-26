@@ -6,7 +6,8 @@ var especializadoSchema = mongoose.Schema({
   apellido: String,
   edad: Number,
   correo: String,
-  tipoCedula: String,
-  cedula: String
+  tipoCedula: Number,
+  cedula: Number
 });
-module.exports = mongoose.model( "Especializado", especializadoSchema,"usuarioEspecializdo");
+
+module.exports = mongoose.model( "Especializado", especializadoSchema,"especializados");

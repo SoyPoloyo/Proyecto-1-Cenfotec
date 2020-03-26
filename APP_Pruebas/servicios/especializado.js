@@ -11,12 +11,14 @@ router.post('/insertar', function(req,res){
 
        _id: new mongoose.Types.ObjectId(),
         nombre: req.body.nombre,
-        apellido: req.body.nombre,
+        apellido: req.body.apellido,
         edad: req.body.edad,
         correo: req.body.correo,
         tipoCedula: req.body.tipoCedula,
         cedula: req.body.cedula
+
     });
+
     especializadoNuevo.save()
     .then(
         function(resultado){
