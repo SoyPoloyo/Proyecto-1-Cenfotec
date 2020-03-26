@@ -49,8 +49,7 @@
      Codigo normal - No contiene Validacion*
      ****************************************************/
 
-     /*
-
+     /* 
 function enviar () {
     console.log('probando');
     var nombre, apellido, edad;
