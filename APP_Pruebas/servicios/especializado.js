@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 
 var Especializado = require('../schema/especializado');
 
-router.post('/registroEspecializado', function(req,res){
+router.post('/insertar', function(req,res){
 
     var especializadoNuevo = new Especializado({
 
