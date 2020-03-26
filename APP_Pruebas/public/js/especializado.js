@@ -7,17 +7,16 @@
         let valoresPrueba = {}; 
         let aprobado = false;
     
-        for (var dato of datos) {         
+        for (let dato of datos) {         
             valoresPrueba[dato] = document.getElementById(dato).value;;
         }
         for (let i in valoresPrueba) {
            if(valoresPrueba[i] == ""){
-               console.log('vacio');
                alert("Debe llenar todos los campos");
                aprobado= false;
                break
            }else{
-         (console.log("mierda funciono"))
+         (console.log("Enviado"))
          aprobado = true
         }       
         }
