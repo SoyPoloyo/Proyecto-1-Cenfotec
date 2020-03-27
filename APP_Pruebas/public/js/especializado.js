@@ -1,4 +1,5 @@
-function validarNombre(){
+
+/**function validarNombre(){
     var validacion = true;
     if(document.getElementById("nombre").value==""){
         validacion=false;
@@ -62,6 +63,7 @@ function validarRegistro(){
         console.log(data);
         fetch('/api')
     }
+    **/
 
     /************************************************************
      aca viene el codigo que funciona por aquello
@@ -96,5 +98,4 @@ function enviar () {
     .catch(function(err){
         console.log(err)
     })
-}
 }
