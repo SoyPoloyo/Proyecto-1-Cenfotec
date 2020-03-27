@@ -14,6 +14,7 @@ app.use('/registroClasico', require('./servicios/servicioClasico.js'));
 
 
 
+
 app.listen(5252, function(){
     console.log("servidor corriendo en el 5252")
 });

@@ -28,4 +28,22 @@ router.post('/insertar', function(req,res){
         console.log(error);
     });
 });
+
+router.get("/recibir", function(req, res) {
+
+    var nombre = req.body.nombre;
+  
+    Clasico.find({nombre:nombre })
+      .exec()
+  
+      .then(function(result) {
+        res.json(result);
+      })
+  
+      .catch(function(err) {
+        console.log(err);
+      });
+
+
+  });
 module.exports = router;
