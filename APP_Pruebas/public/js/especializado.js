@@ -3,27 +3,32 @@
      ****************************************************/
 
     function enviar () {   
-        let datos = ['nombre', 'apellido', 'edad'];
-        let valoresPrueba = {}; 
+        let datos = ['nombre', 'apellido', 'edad', 'correo', 'tipoCedula','cedula'];
+        let valores = {}; 
         let aprobado = false;
-    
+        regexCorreo = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+
         for (let dato of datos) {         
-            valoresPrueba[dato] = document.getElementById(dato).value;;
+            valores[dato] = document.getElementById(dato).value;
         }
-        for (let i in valoresPrueba) {
-           if(valoresPrueba[i] == ""){
-               alert("Debe llenar todos los campos");
+        for (let i in valores) {
+          
+           if(valores[i] == "" || !regexCorreo.test(valores.correo) ){
+               alert("Debe llenar todos los campos de manera correcta");
                aprobado= false;
                break
-           }else{
+           }
+           else{
          (console.log("Enviado"))
          aprobado = true
         }       
         }
 
-        if(aprobado){
+        if(aprobado){ 
+               
               fetch("http://localhost:5252/registroEspecializado/insertar", {
-                        body: JSON.stringify(valoresPrueba),
+                  
+                        body: JSON.stringify(valores),
                         method: "POST",
                         headers: {
                             'Content-Type': 'application/json'
@@ -38,8 +43,10 @@
                     .catch(function(err){
                         console.log(err)
                     })
+
+            alert("Se ha creado su cuenta con exito")        
         }
-        alert("Se ha creado su cuenta con exito")    
+            
     }
      
 
