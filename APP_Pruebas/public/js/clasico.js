@@ -44,7 +44,8 @@
                         console.log(err)
                     })
 
-            alert("Se ha creado su cuenta con exito")        
+            alert("Se ha creado su cuenta con exito")   
+            window.location.href = "index.html";  
         }
             
     }
