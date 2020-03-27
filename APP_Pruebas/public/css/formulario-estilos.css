@@ -26,18 +26,18 @@ select option {
 
 .iconoTipoUsuario {
  
-    color: #CC5D01;
+    color: #2f2319;
     width:80%;
     font-size: 80px;
     margin: 0px 50px;
     text-shadow:2px 5px 7px #2f2319;
 }
 .iconoTipoUsuario i:hover {
-  color:#2f2319 ;
+  color:#cc5d01 ;
   
 }
 .active {
-  color:#2f2319 ;
+  color:#cc5d01 ;
   
 }
 
