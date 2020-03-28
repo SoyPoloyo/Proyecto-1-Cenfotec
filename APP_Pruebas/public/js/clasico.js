@@ -23,30 +23,67 @@
          aprobado = true
         }       
         }
-
+        console.log(valores.nombre)
         if(aprobado){ 
-               
-              fetch("http://localhost:5252/registroClasico/insertar", {
-                  
-                        body: JSON.stringify(valores),
-                        method: "POST",
+
+                
+                    fetch("http://localhost:5252/registroClasico/recibir", {
+                                
+
+                        body: JSON.stringify(),
+                        method: "GET",
                         headers: {
                             'Content-Type': 'application/json'
                         }
                     })
                     .then(function(data){
                         return data.json()
+                        var obtenido = data.json()
                     })
                     .then(function(res){
                         console.log(res)
+                    
                     })
                     .catch(function(err){
                         console.log(err)
                     })
 
-            alert("Se ha creado su cuenta con exito")   
-            window.location.href = "index.html";  
-        }
+                    if (valores.correo) {
+
+                        console.log(valores.correo)
+                        alert("Este correo electronico ya existe")
+                    }
+                    else{
+                        alert("funciono carajo")
+                    }
+                    
+                    /* else{
+
+                        fetch("http://localhost:5252/registroClasico/insertar", {
+                            
+                                    body: JSON.stringify(valores),
+                                    method: "POST",
+                                    headers: {
+                                        'Content-Type': 'application/json'
+                                    }
+                                })
+                                .then(function(data){
+                                    return data.json()
+                                })
+                                .then(function(res){
+                                    console.log(res)
+                                })
+                                .catch(function(err){
+                                    console.log(err)
+                                })
+
+                        alert("Se ha creado su cuenta con exito")   
+                        window.location.href = "index.html";  
+                    } */
+
+                    }
+               
+                        
             
     }
      

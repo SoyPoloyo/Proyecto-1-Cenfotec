@@ -28,7 +28,7 @@ router.post('/insertar', async function(req,res){
         console.log(error);
     });
 
-    
+
   const transporter = nodemailer.createTransport({
     host: "mail.sincorbata.net",
     port: 587,
@@ -52,11 +52,11 @@ router.post('/insertar', async function(req,res){
 });
 
 
-router.get("/recibir", function(req, res) {
+router.get("/recibir", async function(req, res) {
 
-    var nombre = req.body.nombre;
+    var correo =  req.body.correo;
   
-    Clasico.find({nombre:nombre })
+    Clasico.find({correo:'hvargasm@ucenfotec.ac.cr' })
       .exec()
   
       .then(function(result) {
