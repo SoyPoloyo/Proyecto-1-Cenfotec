@@ -1,4 +1,4 @@
-var mongoose = require("mongoose");
+/*var mongoose = require("mongoose");
 
 var caracteristicasVehiculoSchema = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
