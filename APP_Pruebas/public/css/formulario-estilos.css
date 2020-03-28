@@ -75,6 +75,21 @@ select option {
   border-radius: 5px;
   outline: none;
 }
+.fondosGB {
+  background-color: rgba(83, 61, 39, 0.603);
+  border: none;
+  padding: 20px;
+  color: #22211f;
+  margin: 0px 15px;
+  margin-left: 43px;
+  width: 250px;
+  color: white;
+  border-radius: 5px;
+  outline: none;
+}
+.loadImage{
+  
+}
 .boton-envio {
   background-color: #2f2319;
   font-family: "Baloo", cursive;
