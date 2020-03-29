@@ -8,7 +8,8 @@ var especializadoSchema = mongoose.Schema({
   correo: String,
   tipoCedula: Number,
   cedula: Number,
-  tipoAsistencia: String
+  tipoAsistencia: String,
+  imagen: String
 });
 
 module.exports = mongoose.model( "Especializado", especializadoSchema,"especializados");
