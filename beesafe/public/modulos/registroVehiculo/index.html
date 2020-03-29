@@ -14,7 +14,7 @@
 
     <section class="formulario">
 
-        <form action="" method="get">
+        <form action="/insertar" method="post">
 
             <br>
             <img class="logoFormu" src="img/BEESAFE.png" alt=""> <br>
@@ -23,14 +23,14 @@
             <h1>Registro De vehiculo</h1> <br>
 
 
-            <input class="fondosG" type="text" value="" placeholder="Nombre del vehiculo" name="nombre" id="nombre">
-            <input class="fondosG" type="number" value="" placeholder="Placa de su vehiculo" name="placaVehi" 
+            <input class="fondosG" type="text" value="nombre" placeholder="Nombre del vehiculo" name="nombre" id="nombre">
+            <input class="fondosG" type="number" value="placaVehi" placeholder="Placa de su vehiculo" name="placaVehi" 
             id="placaDevehiculo"> <br> <br>
-            <input class="fondosG" type="text" value="" placeholder="Modelo" name="modelo" id="autoModelo">
-            <input class="fondosG" type="number" value="" placeholder="año" name="anno" id="annio">
+            <input class="fondosG" type="text" value="modelo" placeholder="modelo" name="modelo" id="modelo">
+            <input class="fondosG" type="number" value="anno" placeholder="año" name="anno" id="anno">
             <br>
             <br>
-            <select class="fondosG" id="marca_vehiculo">
+            <select class="fondosG" value="" name="marca_vehiculo" id="marca_vehiculo">
                 <option value="" selected hidden>Marca de vehiculo:</option>
                 <option value="Audi">Audi</option>
                 <option value="BMW">BMW </option>
@@ -46,7 +46,8 @@
                 <option value="Tesla">Tesla </option>
                 <option value="Toyota">Toyota </option>
             </select> <br> <br>
-            <button class="boton-envio fondosG " type="button" value="ENVIAR" onclick="enviar()">Registrar</button>
+            <button class="boton-envio fondosG " type="button" name="enviar" value="enviar" onclick="enviar()">Registrar</button>
+
 
 
         </form>
