@@ -1,25 +1,38 @@
 function enviar() {
-    var aprobado = false;
-    var nombre = document.getElementById(nombre).value;
-    var descripcion = document.getElementById(descripcion).value;
-
-    if (nombre == "" && descripcion == "")
-        alert("Debe completar todos los campos de manera correcta");
-    else aprobado = true;
-
-    if (aprobado) {
-
+    let datos = ['nombre', 'descripcion'];
+    let valores = {};
+    let aprobado = false;
+    for (let dato of datos){
+        valores[dato] = document.getElementById(dato).value;
+    }
+    for (let i in valores){
+        if (valores[i] == "" ){
+            alert("Debe completar todos los campos de manera correcta");
+            aprobado = false;
+            break
+        }
+        else{
+            (console.log("enviado"))
+            aprobado = true
+        }
+    }
+    if (aprobado){
         fetch('http://localhost:5252/caracteristicasVehiculo/insertar', {
-            method: 'POST',
-            body: JSON.stringify(data),
-            headers: {
-                'Content-Type': 'application/json'
+            method:"POST",
+            body: JSON.stringify(valores),
+            headers:{
+                'content-Type': 'application/json'
             }
-        }).then(res => res.json())
-            .catch(error => console.log('Error:', error))
-            .then(response => console.log('Success:', response));
+        })     .then(function(data){
+            return data.json()
+        })
+        .then(function(res){
+            console.log(res)
+        })
+        .catch(function(err){
+            console.log(err)
+        })
+
+alert("Se ha creado su cuenta con exito")     
     }
 }
-
-
-
