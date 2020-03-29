@@ -2,7 +2,7 @@ var express = require('express');
 var path = require("path");
 var app = express();
 var mongoose = require('mongoose');
-var multer = require('multer'); //para cargar imagenes al servidor se necesita instalar
+// var multer = require('multer'); //para cargar imagenes al servidor se necesita instalar
 
 mongoose.connect('mongodb+srv://admin:admin@workapes-9hxh3.mongodb.net/pruebas?retryWrites=true&w=majority',
  {useNewUrlParser:true, useUnifiedTopology:true})
@@ -22,7 +22,7 @@ app.use(multer({storage}).single('image'));
 app.use(express.urlencoded({extended: false})); */
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "")));
+app.use(express.static(path.join(__dirname, "../public")));
 
 app.use('/registroEspecializado', require('./servicios/servicioEspecializado.js'));
 app.use('/registroClasico', require('./servicios/servicioClasico.js'));
