@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo|Baloo+2&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2b7b514291.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <section class="formulario">
+
+        <form action="" method="get">
+
+            <br>
+            <img class="logoFormu" src="img/BEESAFE.png" alt=""> <br>
+            
+
+            <h1>Registro De vehiculo</h1> <br>
+
+
+            <input class="fondosG" type="text" value="" placeholder="Nombre del vehiculo" name="nombre" id="nombre">
+            <input class="fondosG" type="number" value="" placeholder="Placa de su vehiculo" name="placaVehi" 
+            id="placaDevehiculo"> <br> <br>
+            <input class="fondosG" type="text" value="" placeholder="Modelo" name="modelo" id="autoModelo">
+            <input class="fondosG" type="number" value="" placeholder="año" name="anno" id="annio">
+            <br>
+            <br>
+            <select class="fondosG" id="marca_vehiculo">
+                <option value="" selected hidden>Marca de vehiculo:</option>
+                <option value="Audi">Audi</option>
+                <option value="BMW">BMW </option>
+                <option value="Chevrolet">Chevrolet </option>
+                <option value="Citroen">Citroen </option>
+                <option value="Ford">Ford </option>
+                <option value="Honda">Honda </option>
+                <option value="Hyundai">Hyundai </option>
+                <option value="Jeep">Jeep </option>
+                <option value="Mitsubishi">Mitsubishi </option>
+                <option value="Nissan">Nissan </option>
+                <option value="Susuki">Susuki </option>
+                <option value="Tesla">Tesla </option>
+                <option value="Toyota">Toyota </option>
+            </select> <br> <br>
+            <button class="boton-envio fondosG " type="button" value="ENVIAR" onclick="enviar()">Registrar</button>
+
+
+        </form>
+
+    </section>
+
+   
+    <script src="index.js"></script>
+
+</body>
+
+</html>

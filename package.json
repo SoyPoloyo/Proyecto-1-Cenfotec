@@ -10,10 +10,15 @@
     "type": "git",
     "url": "git+https://github.com/SoyPoloyo/workapes.git"
   },
-  "author": "Workapes",
+  "author": "workapes",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/SoyPoloyo/workapes/issues"
   },
-  "homepage": "https://github.com/SoyPoloyo/workapes#readme"
+  "homepage": "https://github.com/SoyPoloyo/workapes#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.6",
+    "nodemon": "^2.0.2"
+  }
 }
