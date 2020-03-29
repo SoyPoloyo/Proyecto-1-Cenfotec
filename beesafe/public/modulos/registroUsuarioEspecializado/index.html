@@ -26,24 +26,7 @@
 
 
             <input class="fondosG" type="text" value="" placeholder="Nombre" name="nombre" id="nombre">
-            <input class="fondosG" type="text" value="" placeholder="Apellido" name="apellido" id="apellido"> <br> <br>
-            <input class="fondosG" type="number" value="" placeholder="Edad" name="edad" id="edad">
-            <input class="fondosG" type="email" value="" placeholder="Correo electrónico" name="correo" id="correo">
-            <br>
-            <br>
-
-
-
-            <select class="fondosG" id="tipoCedula" required>
-                <option value="" selected hidden>Tipo de cédula:</option>
-                <option value="1">Corriente</option>
-                <option value="2">Jurídica </option>
-
-            </select>
-
-            <input class="fondosG" type="number" value="" placeholder="Cedula" name="cedula" id="cedula">
-            <br> <br>
-
+            <input class="fondosG" type="text" value="" placeholder="Apellido" name="apellido" id="apellido">
             <select class="fondosG" id="tipoAsistencia" required>
                 <option value="" selected hidden>Tipo de servicio:</option>
                 <option value="1">Grúa</option>
@@ -51,7 +34,31 @@
                 <option value="3">Asistencia Vehicular</option>
 
             </select>
-            <br><br>
+            <br> <br>
+            <input class="fondosG" type="number" value="" placeholder="Edad" name="edad" id="edad">
+            <input class="fondosG" type="email" value="" placeholder="Correo electrónico" name="correo" id="correo">
+            <input onchange="subirImagen()" class=" fondosG" type="file" id="botonAgregarImagen">
+            <br>
+            <br>
+
+            <div class="wrapperImagenes"> 
+
+            <select class="fondosG fondosGB" id="tipoCedula" required>
+                <option value="" selected hidden>Tipo de cédula:</option>
+                <option value="1">Corriente</option>
+                <option value="2">Jurídica </option>
+
+            </select>
+
+            <input class="fondosG fondosGB" type="number" value="" placeholder="Cedula" name="cedula" id="cedula">
+
+           
+                <i class="  far fa-image fondos2 ima" id="muestraIcono"></i>
+            
+                <img class="" id="iconoAgregado" alt="">
+            </div>
+
+           <br><br>
                 <button class="boton-envio fondosG " type="button" onclick="enviar()"> Enviar</button>
 
 

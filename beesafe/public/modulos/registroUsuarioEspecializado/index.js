@@ -4,7 +4,7 @@
      ****************************************************/
 
     function enviar () {   
-        let datos = ['nombre', 'apellido', 'edad', 'correo', 'tipoCedula','cedula', 'tipoAsistencia'];
+        let datos = ['nombre', 'apellido', 'edad', 'correo', 'tipoCedula','cedula', 'tipoAsistencia', 'iconoAgregado'];
         let valores = {}; 
         let aprobado = false;
         regexCorreo = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
@@ -45,7 +45,8 @@
                         console.log(err)
                     })
 
-            alert("Se ha creado su cuenta con exito")        
+            alert("Se ha creado su cuenta con exito");
+        window.location.href = "index.html"; //Preguntar
         }
             
     }
