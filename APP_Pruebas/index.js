@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use('/registroEspecializado', require('./servicios/servicioEspecializado.js'));
 app.use('/registroClasico', require('./servicios/servicioClasico.js'));
-
+//app.use('/caracteristicasVehiculo', require('./servicios/caracteristicasVehiculo'));
 
 
 
