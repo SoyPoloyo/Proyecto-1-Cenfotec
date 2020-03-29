@@ -30,3 +30,6 @@ como sesionUsuarioTradicional, sesionUsuarioClasico y asi susivamente con las de
 para iniciar el proyecto y con esto me refiero al "npm run dev" vamos hacerlo en 
 beesafe/app   --> ya que recordemos que esta es la carpeta donde hemos instalado todo
 
+recuerden que al ingresar por primera vez a la carpeta app ( solo la primera vez) deben hacer "npm install" con eso van a instalar
+automaticamente todas las cosas necesias, no necesitan poner ni instalar ninguna otra cosa, solo "npm install" y listo
+ni mongoo ni express ni nada, solo eso y ya, eso va instalar automaticamente todo
