@@ -6,6 +6,8 @@ var mongoose = require("mongoose");
 var Clasico = require("../schema/modeloClasico");
 
 router.post("/insertar", async function(req, res) {
+
+  
   var clasicoNuevo = new Clasico({
     _id: new mongoose.Types.ObjectId(),
     nombre: req.body.nombre,
