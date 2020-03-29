@@ -1,7 +1,7 @@
 function enviar() {
     var aprobado = false;
-    var nombre = document.getElementById('nombre').value;
-    var descripcion = document.getElementById('descripcion').value;
+    var nombre = document.getElementById(nombre).value;
+    var descripcion = document.getElementById(descripcion).value;
 
     if (nombre == "" && descripcion == "")
         alert("Debe completar todos los campos de manera correcta");
