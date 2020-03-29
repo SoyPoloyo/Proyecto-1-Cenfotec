@@ -17,7 +17,7 @@ function enviar() {
         }
     }
     if (aprobado){
-        fetch('http://localhost:5252/caracteristicasVehiculo/insertar', {
+        fetch("http://localhost:5252/caracteristicasVehiculo/insertar", {
             method:"POST",
             body: JSON.stringify(valores),
             headers:{
