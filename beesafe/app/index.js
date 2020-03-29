@@ -24,10 +24,10 @@ app.use(express.urlencoded({extended: false})); */
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "../public")));
 
-app.use('/registroEspecializado', require('./servicios/servicioEspecializado.js'));
-app.use('/registroClasico', require('./servicios/servicioClasico.js'));
-app.use('/registroCaracteristicaVehiculo', require('./servicios/servicioCaracteristicaVehiculo'));
-app.use('/registroTipoSiniestro', require('./servicios/servicioTipoSiniestro'));
+app.use('/registroEspecializado', require('./servicios/registroUsuarioEspecializado.js'));
+app.use('/registroClasico', require('./servicios/registroUsuarioClasico.js'));
+app.use('/registroCaracteristicaVehiculo', require('./servicios/registroCaracteristicaVehiculo'));
+app.use('/registroTipoSiniestro', require('./servicios/registroTipoSiniestro'));
 
 
 app.listen(5252, function(){
