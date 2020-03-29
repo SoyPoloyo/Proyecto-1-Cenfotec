@@ -52,8 +52,17 @@
                 id="mensaje"></textarea>
 
 
-            <p class="imagen_provisional"><i class="far fa-image"></i></p>
-            <input class="subir_img" type="file" size="0" name="" id=""> <br> <br> <br>
+            <p class="imagen_provisional">
+                <i class=" esconder far fa-image" id="muestraIcono"></i>
+            
+                <img class="" id="iconoAgregado" alt="">
+            </p>
+
+            <input onchange="subirImagen()" class="subir_img" type="file" id="botonAgregarImagen">
+
+            
+            
+            <br> <br> <br>
 
             <input class="envio_formulario" type="submit" value="ENVIAR REPORTE">
 
@@ -83,6 +92,8 @@
         <p class="derecha">WORKAPES&copy;<span>Todos los derechos reservados </span></p>
 
     </footer>
+
+    <script src="js/usuarioclasico.js"></script>
 </body>
 
 </html>

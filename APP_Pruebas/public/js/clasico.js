@@ -1,98 +1,90 @@
 /************************************************************
      Codigo Validacion de Elio
      ****************************************************/
+console.log('estoy en la concsola arriba')
+var perro = {};
+async function probando (){
 
-    function enviar () {   
-        let datos = ['nombre', 'apellido', 'edad', 'correo', 'tipoCedula','cedula'];
-        let valores = {}; 
-        let aprobado = false;
-        regexCorreo = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+    parra = await fetch("http://localhost:5252/registroClasico/recibir", {
+  body: JSON.stringify(),
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json"
+  }
+})   
+  .then(function(data) {
+    
+    console.log('pruebadeconsola')
+    perro = data.json;
+    return data.json(correo);
 
-        for (let dato of datos) {         
-            valores[dato] = document.getElementById(dato).value;
-        }
-        for (let i in valores) {
-          
-           if(valores[i] == "" || !regexCorreo.test(valores.correo) ){
-               alert("Debe llenar todos los campos de manera correcta");
-               aprobado= false;
-               break
-           }
-           else{
-         (console.log("Enviado"))
-         aprobado = true
-        }       
-        }
-        console.log(valores.nombre)
-        if(aprobado){ 
+  })
+  .then(function(res) {
+    console.log(res);
+    console.log(perro)
+  })
+  .catch(function(err) {
+    console.log(err);
+  });
 
-                
-                    fetch("http://localhost:5252/registroClasico/recibir", {
-                                
+  console.log('2donde estoy')
+  console.log(perro.json)
+}
+probando();
 
-                        body: JSON.stringify(),
-                        method: "GET",
-                        headers: {
-                            'Content-Type': 'application/json'
-                        }
-                    })
-                    .then(function(data){
-                        return data.json()
-                        var obtenido = data.json()
-                    })
-                    .then(function(res){
-                        console.log(res)
-                    
-                    })
-                    .catch(function(err){
-                        console.log(err)
-                    })
+console.log('estoy en al consola abajo');
 
-                    if (valores.correo) {
 
-                        console.log(valores.correo)
-                        alert("Este correo electronico ya existe")
-                    }
-                    else{
-                        alert("funciono carajo")
-                    }
-                    
-                    /* else{
 
-                        fetch("http://localhost:5252/registroClasico/insertar", {
-                            
-                                    body: JSON.stringify(valores),
-                                    method: "POST",
-                                    headers: {
-                                        'Content-Type': 'application/json'
-                                    }
-                                })
-                                .then(function(data){
-                                    return data.json()
-                                })
-                                .then(function(res){
-                                    console.log(res)
-                                })
-                                .catch(function(err){
-                                    console.log(err)
-                                })
+async function enviar() {
+  let datos = ["nombre", "apellido", "edad", "correo", "tipoCedula", "cedula"];
+  let valores = {};
+  let aprobado = false;
+  regexCorreo = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
 
-                        alert("Se ha creado su cuenta con exito")   
-                        window.location.href = "index.html";  
-                    } */
-
-                    }
-               
-                        
-            
+  for (let dato of datos) {
+    valores[dato] = document.getElementById(dato).value;
+  }
+  for (let i in valores) {
+    if (valores[i] == "" || !regexCorreo.test(valores.correo)) {
+      alert("Debe llenar todos los campos de manera correcta");
+      aprobado = false;
+      break;
+    } else {
+      console.log("Enviado");
+      aprobado = true;
     }
-     
+  }
+  console.log(valores.nombre);
+  if (aprobado) {
+    fechy = await fetch("http://localhost:5252/registroClasico/insertar", {
+      body: JSON.stringify(valores),
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+      .then(function(data) {
+        return data.json();
+      })
+      .then(function(res) {
+        console.log(res);
+      })
+      .catch(function(err) {
+        console.log(err);
+      });
 
-    /************************************************************
+    alert("Se ha creado su cuenta con exito");
+    window.location.href = "index.html";
+  }
+}
+
+
+/************************************************************
      Codigo normal - No contiene Validacion*
      ****************************************************/
 
-     /*
+/*
 
 function enviar () {
     console.log('probando');

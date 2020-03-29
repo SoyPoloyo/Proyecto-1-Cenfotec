@@ -133,3 +133,8 @@ footer {
 footer p {
   padding: 3px 20px;
 }
+
+.imagen_subida{
+  width: 30%;
+  margin-top: 10px;
+}
