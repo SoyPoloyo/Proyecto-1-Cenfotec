@@ -59,7 +59,7 @@
         =================================**/
       
       .contenido_izquierdo {
-        background: url(../img/fondoabeja.png);
+        background: url(../../assets/img/fondoabeja.png);
         background-position: center;
         width: 20%;
         height: 100vh;
@@ -94,18 +94,34 @@
       
       .solicitudes{
         color: white;
-        background-color: #2f2f2f;
-        width: 70%;
-        padding: 15px 0px;
-        font-size: 20px;
-        margin: 0 auto;
+        background-color: #cc5d01;
+        width: 40%;
+        padding: 10px 0px;
+        font-size: 15px;
+        margin: 0px 8px auto;
         border: #2f2319 solid 2px;
-        box-shadow: 1px 1px 5px #ef9d34;
+        box-shadow: 1px 1px 5px #533D27;
         border-radius: 5px;
+      }
+      .solicitudes2{
+        color: white;
+        background-color: #ef9d34;
+        width: 40%;
+        padding: 10px 0px;
+        font-size: 15px;
+        margin: 0px 8px auto;
+        border: #2f2319 solid 2px;
+        box-shadow: 1px 1px 5px #2f2f2f;
+        border-radius: 5px;
+      }
+      .solicitudes2:hover {
+        box-shadow: 1px 1px 10px #ef9d34;
+        background-color: #533D27;
+        border: #2f2f2f 2px solid;
       }
       .solicitudes:hover {
         box-shadow: 1px 1px 10px #cc5d01;
-        background-color: #2f2319;
+        background-color: #533D27;
         border: #2f2f2f 2px solid;
       }
 

@@ -35,10 +35,10 @@ function mostrar() {
   console.log(perro);
 }
 
-function siniestros() {
-  document.getElementById("siniestro").removeAttribute("hidden");
+function crearsiniestros() {
+  document.getElementById("crearsiniestro").removeAttribute("hidden");
 }
 
 function caracteristicasVehiculo() {
-  document.getElementById("siniestro").setAttribute("hidden", true);
+  document.getElementById("crearsiniestro").setAttribute("hidden", true);
 }
