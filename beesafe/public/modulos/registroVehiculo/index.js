@@ -24,22 +24,13 @@ function enviar() {
         formData.append('anno', document.getElementById('anno').value);
         formData.append('marca_vehiculo', document.getElementById('marca_vehiculo').value);
        
-        fetch("http://localhost:5252/registroVehiculo/insertar", {     
-            method:"POST",
-            body: formData,       
-            body: JSON.stringify(valores),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })     .then(function(data){
-            return data.json()
-        })
-        .then(function(res){
-            console.log(res)
-        })
-        .catch(function(err){
-            console.log(err)
-        })
+        fetch("http://localhost:5252/registroVehiculo/insertar", {    
+            method: 'POST',
+            body: formData,    
+        }).then(res => res.json())
+        .catch(error => console.log('Error:', error))
+        .then(response => console.log('Success:', response));
 
 }
+
 }
