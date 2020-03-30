@@ -63,6 +63,8 @@ function registro(){
 
 function mostrar(){
 
+    var perro;
+
     fetch('/registroTipoSiniestro/mostrar', {
         body: JSON.stringify(),
         method: "GET",
@@ -71,8 +73,11 @@ function mostrar(){
         } 
     }).then(res => res.json())
         .catch(error => console.log('Error:', error))
-        .then(response => console.log('Success:', response));
+        .then(response =>   console.log('Success:', response));
 
+
+        console.log('esto es abajo');
+        console.log(perro);
 }
 
 mostrar();
