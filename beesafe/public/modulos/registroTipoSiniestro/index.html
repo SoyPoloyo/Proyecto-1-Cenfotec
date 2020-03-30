@@ -11,35 +11,43 @@
 
 <body>
 
-    <div class="momentaneo">
-
-        <section class="formulario">
-
-            <form id="siniestro-form">
-
-                <p class="titulo">Registrar tipo de siniestro</p> <br>
 
 
+    <section class="formulario">
 
-                <div class="upload-btn-wrapper izquierda">
-                    <input class="fondosG" type="text" value="" placeholder="Nombre del siniestro" name="nombre"
-                        id="nombre" autofocus>
-                    <br> <br>
-                    <input class="boton-imagen fondosG" type="button" value="Imagen">
-                    <input type="file" name="myfile" id="image" accept="image/gif, image/png, image/jpeg">
-                </div>
+        <form>
 
-                <textarea class="fondosG" rows="7" placeholder="Descripcion" id="descripcion"></textarea>
+            <br>
+            <img class="logoFormu" src="../../assets/img/BEESAFE.png" alt=""> <br>
 
-                <br><br>
+            <br>
 
-                <input class="boton-envio fondosG" type="button" value="ENVIAR" onclick="registro()">
-                <br><br>
+            <h1 class="titulo">Registrar tipo de siniestro</h1> <br>
 
-            </form>
-        </section>
 
-    </div>
+
+            <input class="fondosG" type="text" value="" placeholder="Nombre del siniestro" name="nombre" id="nombre"
+                autofocus>
+            <br> <br>
+
+            <div class="upload-btn-wrapper izquierda">
+                <input class="boton-imagen fondosG" type="button" value="Imagen">
+                <input type="file" name="myfile" id="image" accept="image/gif, image/png, image/jpeg">
+            </div>
+            <br><br>
+
+            <textarea class="fondosG" rows="7" placeholder="Descripcion" id="descripcion"></textarea>
+
+           
+
+            <br><br>
+
+            <input class="boton-envio fondosG" type="button" value="ENVIAR" onclick="registro()">
+            <br><br>
+
+        </form>
+    </section>
+
 
     <script src="index.js"> </script>
 </body>

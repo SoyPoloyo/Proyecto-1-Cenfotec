@@ -2,93 +2,120 @@
     Globales
     =================================**/
     * {
-        box-sizing: border-box;
-        margin: 0;
-      }
-      body {
-        font-family: "Baloo", cursive;
-      }
-      .titulo {
-        padding-top: 12px;
-        padding-bottom: 12px;
-        color:white;
-        text-transform: uppercase;
-        letter-spacing: 8px;
-        background-color: #2f2319;
-        font-size: 16px;
-      }
-
-      .izquierda {
-        float: left;
-      }
-
-      /** ==================================
-          Main - Formulario - Registro
-          =================================**/
-      .formulario {
-        text-align: center;
-        background-size: cover;
-        width: 45%;
-        border-radius: 5px;
-        background-color: #ef9d34;
-
-      }
+      box-sizing: border-box;
+      margin: 0;
+    }
+    body {
+      font-family: "Baloo", cursive;
+    }
+    h1 {
+      color: #2f2319;
+      text-transform: uppercase;
+      letter-spacing: 8px;
+    }
+    select option {
+      margin: 40px;
+      background: #2f2319;
+      color: #fff;
+      font-family: "Baloo 2", cursive;
+    }
+    
+    .letra2 {
+      font-family: "Baloo 2", cursive;
+    }
+    
+    .iconoTipoUsuario {
+     
+        color: #2f2319;
+        width:80%;
+        font-size: 80px;
+        margin: 0px 50px;
+        text-shadow:2px 5px 7px #2f2319;
+    }
+    .iconoTipoUsuario i:hover {
+      color:#cc5d01 ;
       
-      .fondosG::placeholder {
-        color: white;
-        font-family: "Baloo 2", cursive;
-        text-align: justify;
-      }
+    }
+    .active {
+      color:#cc5d01 ;
       
-      .fondosG {
-        background-color: rgba(83, 61, 39, 0.603);
-        border: none;
-        padding: 20px;
-        color: #ef9d34;
-        margin: 0px 15px;
-        width: 250px;
-        color: white;
-        border-radius: 5px;
-        outline: none;
-      }
-      .boton-envio {
-        background-color: #cc5d01;
-        font-family: "Baloo", cursive;
-        letter-spacing: 5px;
-      }
-      .boton-envio:hover {
-        background-color: #2f2319;
-      }
-      
-      /** ==================================
-          Inicio de Sesion - Formulario
-          =================================**/
+    }
+    
+    /** ==================================
+        Main - Formulario - Registro
+        =================================**/
+    
+    .logoFormu {
+      width: 30%;
+      margin-bottom: -50px;
+      margin-top: 25px;
+    }
+    .formulario {
+      text-align: center;
+    
+      background: url(../../assets/img/fondoabeja.png);
+      background-size: cover;
+    
+      height: 100vh;
+    }
+    
+    .fondosG::placeholder {
+      color: white;
+      font-family: "Baloo 2", cursive;
+    }
+    
+    .fondosG {
+      background-color: rgba(83, 61, 39, 0.603);
+      border: none;
+      padding: 20px;
+      color: #ef9d34;
+      margin: 0px 15px;
+      width: 250px;
+      color: white;
+      border-radius: 5px;
+      outline: none;
+    }
+    .boton-envio {
+      background-color: #2f2319;
+      font-family: "Baloo", cursive;
+      letter-spacing: 5px;
+    }
+    .boton-envio:hover {
+      background-color: #cc5d01;
+    }
+    
+    /** ==================================
+        Inicio de Sesion - Formulario
+        =================================**/
+    .largoFondos {
+      width: 35%;
+    }
+    
     .upload-btn-wrapper {
-        position: relative;
-        overflow: hidden;
-        display: inline-block; 
-      }
+      position: relative;
+      overflow: hidden;
+      display: inline-block; 
+    }
+    
+    .upload-btn-wrapper input[type=file] {
+      font-size: 11px;
+      height: 100px;
+      position: absolute;
+      left: 12px;
+      top: 0px;
+      opacity: 0;
+
+    }
+
+    .boton-imagen {
+      font-family: "Baloo", cursive;
+      text-align: justify;
+      background-color: #2f2319;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    
       
-      .upload-btn-wrapper input[type=file] {
-        font-size: 10px;
-        height: 60px;
-        position: absolute;
-        left: 22px;
-        top: 90px;
-        opacity: 0;
-      }
-
-      .boton-imagen {
-        font-family: "Baloo", cursive;
-        text-align: justify;
-        background-color: #2f2319;
-      }
-
-      textarea {
-          resize: none;
-      }
-
-      .momentaneo {
-          padding-top: 25px;
-          padding-left: 25px;
-      }
