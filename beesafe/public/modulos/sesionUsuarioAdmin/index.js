@@ -1,3 +1,4 @@
+
 /************************************************************
      codigo para subir la imagen
      ****************************************************/
@@ -16,6 +17,7 @@ function subirImagen() {
 
   document.getElementById("muestraIcono").remove();
 }
+
 
 function mostrar() {
   var perro;
