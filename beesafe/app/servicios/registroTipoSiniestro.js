@@ -3,10 +3,6 @@ const router = Router();
 
 const TipoSiniestro = require('../schema/modeloTipoSiniestro');
 
-router.get('/ver', async (req, res) => {
-    const tipoSiniestros = await TipoSiniestro.find();
-    res.json(tipoSiniestros);
-});
 
 router.post('/insertar', async (req, res) => {
     const { nombre, descripcion } = req.body;
@@ -16,6 +12,20 @@ router.post('/insertar', async (req, res) => {
     await newTipoSiniestro.save();
     res.json({'mensaje': 'Tipo de siniestro guardado'});
 });
+
+
+router.get('/mostrar', async (req, res) => {
+
+    TipoSiniestro.find().exec()
+    .then(function(result) {
+        res.json(result);
+      })
+      .catch(function(err) {
+        console.log(err);
+      });
+    
+});
+
 
 /* router.delete('/:id', async (req, res) => {
     const tipoSiniestro = await TipoSiniestro.findByIdAndDelete(req.params.id);

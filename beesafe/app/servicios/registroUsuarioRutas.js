@@ -3,12 +3,12 @@ var express = require("express");
 var router = express.Router();
 var mongoose = require("mongoose");
 
-var Clasico = require("../schema/modeloUsuarioClasico");
+var Rutas = require("../schema/modeloUsuarioRutas");
 
 router.post("/insertar", async function(req, res) {
 
   
-  var clasicoNuevo = new Clasico({
+  var rutasNuevo = new Rutas({
     _id: new mongoose.Types.ObjectId(),
     nombre: req.body.nombre,
     apellido: req.body.apellido,
@@ -18,7 +18,7 @@ router.post("/insertar", async function(req, res) {
     cedula: req.body.cedula
   });
 
-  clasicoNuevo
+  rutasNuevo
     .save()
     .then(function(resultado) {
       res.json(resultado);

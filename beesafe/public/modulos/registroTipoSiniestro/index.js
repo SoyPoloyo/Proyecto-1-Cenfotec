@@ -61,3 +61,21 @@ function registro(){
 
 }
 
+function mostrar(){
+
+    fetch('/registroTipoSiniestro/mostrar', {
+        body: JSON.stringify(),
+        method: "GET",
+        headers: {
+            'Content-Type': 'application/json'
+        } 
+    }).then(res => res.json())
+        .catch(error => console.log('Error:', error))
+        .then(response => console.log('Success:', response));
+
+}
+
+mostrar();
+
+
+

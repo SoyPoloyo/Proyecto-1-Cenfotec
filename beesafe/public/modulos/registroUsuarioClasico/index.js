@@ -5,7 +5,7 @@
    
     async function probando (){
      var perro;
-        parra = await fetch("http://localhost:5252/registroClasico/recibir", {
+        parra = await fetch("http://localhost:5252/registroUsuarioClasico/recibir", {
       body: JSON.stringify(),
       method: "GET",
       headers: {

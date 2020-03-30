@@ -27,7 +27,7 @@
 
         if(aprobado){ 
                
-              fetch("http://localhost:5252/registroEspecializado/insertar", {
+              fetch("http://localhost:5252/registroUsuarioEspecializado/insertar", {
                   
                         body: JSON.stringify(valores),
                         method: "POST",
