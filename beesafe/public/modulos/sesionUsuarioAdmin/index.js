@@ -18,3 +18,30 @@
 
         document.getElementById('muestraIcono').remove();
       }
+
+      function mostrar(){
+
+        var perro;
+    
+        fetch('/registroTipoSiniestro/mostrar', {
+            body: JSON.stringify(),
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json'
+            } 
+        }).then(res => res.json())
+            .catch(error => console.log('Error:', error))
+            .then(response =>   console.log('Success:', response));
+    
+    
+            console.log('esto es abajo');
+            console.log(perro);
+    }
+
+
+    function registro(){
+
+        document.getElementById('siniestro').appendChild(hidden);
+
+  
+  }

@@ -39,52 +39,69 @@
 
             <br> <br>
             
-            <h3 class="titulo_reporte alt_letra">REPORTAR SINIESTRO</h3> <br>
-
-            <select class="fondosG" id="tipo_accidente">
-                <option value="" selected hidden>Tipos de accidente:</option>
-                <option value="derrumbe">Derrumbe</option>
-                <option value="choque">Choque </option>
-
-            </select> <br> <br>
-
-            <textarea class="fondosG" placeholder="Describa el siniestro" rows="5" cols="0" name="mensaje"
-                id="mensaje"></textarea>
+            <h3 class="titulo_reporte alt_letra">OPCIONES</h3> <br>
 
 
-            <p class="imagen_provisional">
-                <i class=" esconder far fa-image" id="muestraIcono"></i>
-            
-                <img class="" id="iconoAgregado" alt="">
-            </p>
 
-            <input onchange="subirImagen()" class="subir_img" type="file" id="botonAgregarImagen">
-
-            
+            <button class="envio_formulario" onclick="registro()">Siniestros</button>
             
             <br> <br> <br>
 
-            <input class="envio_formulario" type="submit" value="ENVIAR REPORTE">
 
         </div>
+
+               <!-- =======================================
+        CONTENIDO EN EL CAMPO IZQUIERDO DE LA PAGINA
+    =================================================-->
 
         <!-- =======================================
-                            MAPA
+                            CONTENDIO CENTRAL
     =================================================-->
-        <div class="" id='map' style=' height: 85vh'>
-            <script>
-                mapboxgl.accessToken = 'pk.eyJ1Ijoic295cG9sb3lvIiwiYSI6ImNrODRtY3pyNTB5OWkzbG56ZWp2b3Y4cWEifQ.kXhxq_6KXwzzTMKX9MR66w';
-                var map = new mapboxgl.Map({
-                    container: 'map',
-                    style: 'mapbox://styles/mapbox/streets-v11',
-                    zoom: 14.5,
-                    center: [-84.03116608099936, 9.932827376420036]
+    <div class="" id='map' style=' height: 85vh'>
 
-                });
-            </script>
-        </div>
+
+
+
+        <form id="siniestro">
+
+         
+
+            <h1 class="titulo">Registrar tipo de siniestro</h1> <br>
+
+
+
+            <input class="fondosG" type="text" value="" placeholder="Nombre del siniestro" name="nombre" id="nombre"
+                autofocus>
+            <br> <br>
+
+            <div class="upload-btn-wrapper izquierda">
+                <input class="boton-imagen fondosG" type="button" value="Imagen">
+                <input type="file" name="myfile" id="image" accept="image/gif, image/png, image/jpeg">
+            </div>
+            <br><br>
+
+            <textarea class="fondosG" rows="7" placeholder="Descripcion" id="descripcion"></textarea>
+
+           
+
+            <br><br>
+
+            <input class="boton-envio fondosG" type="button" value="ENVIAR" onclick="registro()">
+            <br><br>
+
+        </form>
+
+
+
+
+
+     </div>
 
     </main>
+
+          <!-- =======================================
+                            CONTENDIO CENTRAL
+    =================================================-->
 
 
     <footer>
