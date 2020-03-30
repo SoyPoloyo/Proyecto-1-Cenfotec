@@ -38,7 +38,7 @@
         <div class=" contenido_izquierdo izquierda">
 
             <br> <br>
-            
+
             <h3 class="titulo_reporte alt_letra">OPCIONES</h3> <br>
 
 
@@ -48,62 +48,67 @@
             <br> <br>
 
             <button class="solicitudes" onclick="caracteristicasVehiculo()">Caracteristicas Vehiculo</button>
-            
+
             <br> <br> <br>
 
 
         </div>
 
-               <!-- =======================================
+        <!-- =======================================
         CONTENIDO EN EL CAMPO IZQUIERDO DE LA PAGINA
     =================================================-->
 
         <!-- =======================================
                             CONTENDIO CENTRAL
     =================================================-->
-    <div class="" id='map' style=' height: 85vh'>
+        <div class="" id='map' style=' height: 85vh'>
+
+
+
+            <!-- =======================================
+                            CONTENDIO SINIESTROS
+    =================================================-->
+
+            <section id="siniestro" class="formulario">
+                
+                <br>
+
+                <form class="formulario2">
+                    <h1 class="titulo">Registrar tipo de siniestro</h1> <br>
+                    <br>
+                    <div class="izquierda">
+
+                        <input class="fondosG" type="text" value="" placeholder="Nombre del siniestro" name="nombre"
+                            id="nombre" autofocus>
+                        <br><br>
+                        <textarea class="fondosG" rows="7" placeholder="Descripcion" id="descripcion"></textarea>
+                    </div>
+                    <div class="upload-btn-wrapper ">
+                        <input class="boton-imagen fondosG" type="button" value="Imagen">
+                        <input type="file" name="myfile" id="image" accept="image/gif, image/png, image/jpeg"
+                            onchange="subirImagen()">
+                    </div>
+
+                    <p class="imagen_provisional ">
+                        <i class=" esconder far fa-image" id="muestraIcono"></i>
+                        <img class="" id="imagenAgregada" alt="">
+                    </p>
+                    <input class="boton-envio fondosG" type="button" value="ENVIAR" onclick="registro()">
+                    <br><br>
+
+                </form>
+            </section>
 
 
 
 
-        <form id="siniestro">
-
-         
-
-            <h1 class="titulo">Registrar tipo de siniestro</h1> <br>
 
 
-
-            <input class="fondosG" type="text" value="" placeholder="Nombre del siniestro" name="nombre" id="nombre"
-                autofocus>
-            <br> <br>
-
-            <div class="upload-btn-wrapper izquierda">
-                <input class="boton-imagen fondosG" type="button" value="Imagen">
-                <input type="file" name="myfile" id="image" accept="image/gif, image/png, image/jpeg">
-            </div>
-            <br><br>
-
-            <textarea class="fondosG" rows="7" placeholder="Descripcion" id="descripcion"></textarea>
-
-           
-
-            <br><br>
-
-            <input class="boton-envio fondosG" type="button" value="ENVIAR" onclick="registro()">
-            <br><br>
-
-        </form>
-
-
-
-
-
-     </div>
+        </div>
 
     </main>
 
-          <!-- =======================================
+    <!-- =======================================
                             CONTENDIO CENTRAL
     =================================================-->
 

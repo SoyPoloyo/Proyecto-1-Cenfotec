@@ -92,8 +92,6 @@
         font-family: "Baloo 2", cursive;
       }
       
-
-   
       .solicitudes{
         color: white;
         background-color: #2f2f2f;
@@ -110,6 +108,39 @@
         background-color: #2f2319;
         border: #2f2f2f 2px solid;
       }
+
+            /** ==================================
+                CONTENIDO SINIESTROS
+        =================================**/
+
+        .imagen_provisional{
+          font-size: 130px;
+          padding-left: 50px;
+        }
+
+        .upload-btn-wrapper {
+          position: relative;
+          overflow: hidden;
+          display: inline-block; 
+        }
+        .upload-btn-wrapper input[type=file] {
+          font-size: 11px;
+          height: 100px;
+          position: absolute;
+          left: 15px;
+          top: 0px;
+          opacity: 0;
+    
+        }
+
+        .boton-imagen {
+          font-family: "Baloo", cursive;
+          text-align: justify;
+          border: #2f2319 3px solid;
+          background-color:inherit;
+          color: #2f2319;
+          padding: 15px 15px;
+        }
       
       /** ==================================
                 FOOTER
