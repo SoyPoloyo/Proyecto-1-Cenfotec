@@ -3,10 +3,10 @@ var mongoose = require("mongoose");
 var registroVehiculoSchema = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
   nombre: String,
-  placaVehi: float,
+  placaVehi: Number,
   modelo: String,
-  anno: float,
-  marca_vehiculo: String,
+  anno: Number,
+  marca_vehiculo: String
 });
 
-module.exports = mongoose.model( "registarVehiculo", registrarVehiculoSchema ,"registrarVehiculos");
+module.exports = mongoose.model( "registroVehiculo", registroVehiculoSchema ,"registroVehiculos");
