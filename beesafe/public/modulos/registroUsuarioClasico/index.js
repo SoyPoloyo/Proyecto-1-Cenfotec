@@ -2,9 +2,9 @@
      Codigo Validacion de Elio
      ****************************************************/
     console.log('estoy en la concsola arriba')
-    var perro = {};
+   
     async function probando (){
-    
+     var perro;
         parra = await fetch("http://localhost:5252/registroClasico/recibir", {
       body: JSON.stringify(),
       method: "GET",
@@ -13,22 +13,20 @@
       }
     })   
       .then(function(data) {
-        
-        console.log('pruebadeconsola')
-        perro = data.json;
         return data.json(correo);
-    
       })
       .then(function(res) {
-        console.log(res);
-        console.log(perro)
+        console.log('segundo then');
+        console.log(res[0]);
+         perro = res[0].correo
+        console.log(perro);
+        console.log('segundo then');
       })
       .catch(function(err) {
         console.log(err);
       });
     
-      console.log('2donde estoy')
-      console.log(perro.json)
+      console.log(perro);
     }
     probando();
     
@@ -36,7 +34,7 @@
     
     
     
-    async function enviar() {
+    async function enviar(probar) {
       let datos = ["nombre", "apellido", "edad", "correo", "tipoCedula", "cedula"];
       let valores = {};
       let aprobado = false;
@@ -57,6 +55,9 @@
       }
       console.log(valores.nombre);
       if (aprobado) {
+
+      
+
         fechy = await fetch("http://localhost:5252/registroClasico/insertar", {
           body: JSON.stringify(valores),
           method: "POST",
