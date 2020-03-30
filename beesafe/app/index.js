@@ -26,9 +26,12 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "../public")));
 
+    //registrar usuarios
 app.use('/registroUsuarioEspecializado', require('./servicios/registroUsuarioEspecializado.js'));
 app.use('/registroUsuarioClasico', require('./servicios/registroUsuarioClasico.js'));
 app.use('/registroUsuarioRutas', require('./servicios/registroUsuarioRutas'));
+
+
 app.use('/registroCaracteristicaVehiculo', require('./servicios/registroCaracteristicaVehiculo'));
 app.use('/registroVehiculo', require('./servicios/registroVehiculo'));
 app.use('/registroTipoSiniestro', require('./servicios/registroTipoSiniestro'));

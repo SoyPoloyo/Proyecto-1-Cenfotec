@@ -10,4 +10,4 @@ var rutasSchema = mongoose.Schema({
   cedula: Number
 });
 
-module.exports = mongoose.model( "Rutas", rutasSchema,"UsuariosRutas");
+module.exports = mongoose.model( "Rutas", rutasSchema, "UsuariosRutas");

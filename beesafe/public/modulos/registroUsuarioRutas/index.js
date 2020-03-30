@@ -1,40 +1,8 @@
 /************************************************************
      Codigo Validacion de Elio
      ****************************************************/
-    console.log('estoy en la concsola arriba')
-   
-    async function probando (){
-     var perro;
-        parra = await fetch("http://localhost:5252/registroClasico/recibir", {
-      body: JSON.stringify(),
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })   
-      .then(function(data) {
-        return data.json(correo);
-      })
-      .then(function(res) {
-        console.log('segundo then');
-        console.log(res[0]);
-         perro = res[0].correo
-        console.log(perro);
-        console.log('segundo then');
-      })
-      .catch(function(err) {
-        console.log(err);
-      });
     
-      console.log(perro);
-    }
-    probando();
-    
-    console.log('estoy en al consola abajo');
-    
-    
-    
-    async function enviar(probar) {
+    async function enviar() {
       let datos = ["nombre", "apellido", "edad", "correo", "tipoCedula", "cedula"];
       let valores = {};
       let aprobado = false;
@@ -58,7 +26,7 @@
 
       
 
-        fechy = await fetch("http://localhost:5252/registroClasico/insertar", {
+        fechy = await fetch("http://localhost:5252/registroUsuarioRutas/insertar", {
           body: JSON.stringify(valores),
           method: "POST",
           headers: {

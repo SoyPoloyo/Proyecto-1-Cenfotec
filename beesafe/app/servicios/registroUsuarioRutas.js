@@ -44,7 +44,7 @@ router.post("/insertar", async function(req, res) {
     from: '"BeeSafe 👻" <beesafe@sincorbata.net>', // sender address
     to: req.body.correo, // list of receivers
     subject: "Hola ✔", // Subject line
-    html: "<b>ultimo correo A</b>" // html body
+    html: "<b> correo B</b>" // html body
   });
 
 });
