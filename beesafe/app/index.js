@@ -29,6 +29,7 @@ app.use(express.static(path.join(__dirname, "../public")));
 app.use('/registroEspecializado', require('./servicios/registroUsuarioEspecializado.js'));
 app.use('/registroClasico', require('./servicios/registroUsuarioClasico.js'));
 app.use('/registroCaracteristicaVehiculo', require('./servicios/registroCaracteristicaVehiculo'));
+app.use('/registroVehiculo', require('./servicios/registroVehiculo'));
 app.use('/registroTipoSiniestro', require('./servicios/registroTipoSiniestro'));
 
 
