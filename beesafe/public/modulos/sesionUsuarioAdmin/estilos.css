@@ -92,31 +92,20 @@
         font-family: "Baloo 2", cursive;
       }
       
-      select option {
-        margin: 40px;
-        background: #2f2319;
-        color: #fff;
-        font-family: "Baloo 2", cursive;
-      }
-      .imagen_provisional{
-        font-size: 100px;
-        margin-bottom: -20px;
-      }
-      
-      .subir_img{
-        width: 80%;
-      }
-      .envio_formulario{
+
+   
+      .solicitudes{
         color: white;
-        background-color: #ef9d34;
-        width: 90%;
+        background-color: #2f2f2f;
+        width: 70%;
+        padding: 15px 0px;
         font-size: 20px;
         margin: 0 auto;
         border: #2f2319 solid 2px;
         box-shadow: 1px 1px 10px #2f2319;
         border-radius: 5px;
       }
-      .envio_formulario:hover {
+      .solicitudes:hover {
         box-shadow: 1px 1px 10px #cc5d01;
         background-color: #2f2319;
         border: #2f2f2f 2px solid;

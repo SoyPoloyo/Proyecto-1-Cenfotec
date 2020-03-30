@@ -39,9 +39,9 @@
     }
 
 
-    function registro(){
+    function cambio(){
 
-        document.getElementById('siniestro').appendChild(hidden);
+        document.getElementById('siniestro').setAttribute("hidden", true);
 
   
   }
