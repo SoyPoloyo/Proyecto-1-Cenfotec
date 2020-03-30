@@ -1,0 +1,94 @@
+/** ==================================
+    Globales
+    =================================**/
+    * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      body {
+        font-family: "Baloo", cursive;
+      }
+      .titulo {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        color:white;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+        background-color: #2f2319;
+        font-size: 16px;
+      }
+
+      .izquierda {
+        float: left;
+      }
+
+      /** ==================================
+          Main - Formulario - Registro
+          =================================**/
+      .formulario {
+        text-align: center;
+        background-size: cover;
+        width: 45%;
+        border-radius: 5px;
+        background-color: #ef9d34;
+
+      }
+      
+      .fondosG::placeholder {
+        color: white;
+        font-family: "Baloo 2", cursive;
+        text-align: justify;
+      }
+      
+      .fondosG {
+        background-color: rgba(83, 61, 39, 0.603);
+        border: none;
+        padding: 20px;
+        color: #ef9d34;
+        margin: 0px 15px;
+        width: 250px;
+        color: white;
+        border-radius: 5px;
+        outline: none;
+      }
+      .boton-envio {
+        background-color: #cc5d01;
+        font-family: "Baloo", cursive;
+        letter-spacing: 5px;
+      }
+      .boton-envio:hover {
+        background-color: #2f2319;
+      }
+      
+      /** ==================================
+          Inicio de Sesion - Formulario
+          =================================**/
+    .upload-btn-wrapper {
+        position: relative;
+        overflow: hidden;
+        display: inline-block; 
+      }
+      
+      .upload-btn-wrapper input[type=file] {
+        font-size: 10px;
+        height: 60px;
+        position: absolute;
+        left: 22px;
+        top: 90px;
+        opacity: 0;
+      }
+
+      .boton-imagen {
+        font-family: "Baloo", cursive;
+        text-align: justify;
+        background-color: #2f2319;
+      }
+
+      textarea {
+          resize: none;
+      }
+
+      .momentaneo {
+          padding-top: 25px;
+          padding-left: 25px;
+      }
