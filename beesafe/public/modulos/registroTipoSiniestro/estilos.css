@@ -40,11 +40,19 @@
       color:#cc5d01 ;
       
     }
+
+    .izquierda{
+      float: left;
+    }
+    .centro{
+      position: relative;
+      padding-left: 30%;
+    }
     
     /** ==================================
         Main - Formulario - Registro
         =================================**/
-    
+
     .logoFormu {
       width: 30%;
       margin-bottom: -50px;
@@ -57,6 +65,11 @@
       background-size: cover;
     
       height: 100vh;
+    }
+
+    .formulario2{
+      width: 40%;
+      margin: 0 auto;
     }
     
     .fondosG::placeholder {
@@ -79,14 +92,18 @@
       background-color: #2f2319;
       font-family: "Baloo", cursive;
       letter-spacing: 5px;
+     
+     
     }
     .boton-envio:hover {
       background-color: #cc5d01;
     }
+
+    .imagen_provisional{
+      font-size: 150px;
+      margin-left: 50px;
+    }
     
-    /** ==================================
-        Inicio de Sesion - Formulario
-        =================================**/
     .largoFondos {
       width: 35%;
     }
@@ -96,12 +113,16 @@
       overflow: hidden;
       display: inline-block; 
     }
+   
+    .imagen_subida{
+      width: 20%;
+    }
     
     .upload-btn-wrapper input[type=file] {
       font-size: 11px;
       height: 100px;
       position: absolute;
-      left: 12px;
+      left: 15px;
       top: 0px;
       opacity: 0;
 
@@ -110,7 +131,14 @@
     .boton-imagen {
       font-family: "Baloo", cursive;
       text-align: justify;
-      background-color: #2f2319;
+      border: #2f2319 3px solid;
+      background-color:inherit;
+      color: #2f2319;
+      padding: 15px 15px;
+    }
+    .boton-imagen:hover {
+      border: #ef9d34 5px solid;
+      
     }
 
     textarea {

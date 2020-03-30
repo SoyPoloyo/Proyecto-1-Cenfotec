@@ -26,7 +26,22 @@
             .then(response => console.log('Success:', response));
     }
 }*/
+function subirImagen() {
+    
+    console.dir(document.getElementById('imagenAgregada'));
+      var archivo = document.getElementById("image").files[0];
+      var reader = new FileReader();
+      if (image) {
+        reader.readAsDataURL(archivo);
+        reader.onloadend = function () {
+          document.getElementById("imagenAgregada").src = reader.result;
+          document.getElementById("imagenAgregada").classList.add('imagen_subida');
+      }
+    }
 
+    document.getElementById('muestraIcono').remove();
+  }
+  
 function registro(){
     let datos = ["nombre","descripcion","image"];
     let valores = {};
