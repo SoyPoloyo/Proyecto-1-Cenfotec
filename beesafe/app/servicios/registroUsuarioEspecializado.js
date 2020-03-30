@@ -3,7 +3,7 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
 
-var Especializado = require('../schema/modeloEspecializado');
+var Especializado = require('../schema/modeloUsuarioEspecializado');
 
 router.post('/insertar', function(req,res){
 
