@@ -1,8 +1,10 @@
-async function probando (){
+
+var existentes;
+function probando (){
 
 
-
-    fetch("http://localhost:5252/listadoUsuarios/mostrar", {
+    
+    fetch("http://localhost:5252/registroUsuarioClasico/recibir", {
      body: JSON.stringify(),
      method: "GET",
      headers: {
@@ -15,8 +17,9 @@ async function probando (){
      .then(function(res) {
        console.log(res);
 
-
+       existentes = res;
        console.log('segundo then');
+       console.log(existentes);
      })
      .catch(function(err) {
        console.log(err);
@@ -25,5 +28,5 @@ async function probando (){
 
    }
    probando();
-   
-   console.log('estoy en al consola abajo');
+   console.log('tercer then');
+   console.log(existentes);
