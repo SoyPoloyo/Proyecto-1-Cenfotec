@@ -18,9 +18,14 @@ function probando() {
       console.log(res[1])
       let objeto = {}
       objeto = res;
-      console.log(objeto)
+      console.log(objeto.length)
      
-      document.getElementById("prueba").innerHTML = res[2].tipoUsuario;
+      for (let i = 0; i <= objeto.length; i++) {
+       
+        document.getElementById("prueba").innerHTML = objeto[i].nombre;     
+      }
+
+
     })
     .catch(function(err) {
       console.log(err);
