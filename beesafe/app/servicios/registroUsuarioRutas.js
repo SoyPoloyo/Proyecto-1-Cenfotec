@@ -3,22 +3,24 @@ var express = require("express");
 var router = express.Router();
 var mongoose = require("mongoose");
 
-var Rutas = require("../schema/modeloUsuarioRutas");
 
+var Usuario = require("../schema/modeloUsuarios");
 router.post("/insertar", async function(req, res) {
 
   
-  var rutasNuevo = new Rutas({
+  var usuarioNuevo = new Usuario({
     _id: new mongoose.Types.ObjectId(),
+    tipoUsuario: 3,
     nombre: req.body.nombre,
     apellido: req.body.apellido,
     edad: req.body.edad,
     correo: req.body.correo,
     tipoCedula: req.body.tipoCedula,
-    cedula: req.body.cedula
+    cedula: req.body.cedula,
+   
   });
 
-  rutasNuevo
+  usuarioNuevo
     .save()
     .then(function(resultado) {
       res.json(resultado);
@@ -44,17 +46,15 @@ router.post("/insertar", async function(req, res) {
     from: '"BeeSafe 👻" <beesafe@sincorbata.net>', // sender address
     to: req.body.correo, // list of receivers
     subject: "Hola ✔", // Subject line
-    html: "<b> correo B</b>" // html body
+    html: "<b>ultimo correo A</b>" // html body
   });
 
 });
 
 
-router.get("/recibir", function(req, res) {
+router.get("/recibir", function(req, res) { 
 
-  var correo =  'vargasteban@gmail.com';
-
-  Clasico.find({correo:correo})
+  Usuario.find({})
     .exec()
 
     .then(function(result) {

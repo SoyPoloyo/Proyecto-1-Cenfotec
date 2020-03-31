@@ -1,7 +1,9 @@
 /************************************************************
      Codigo Validacion de Elio
-     ****************************************************/
-    
+     ****************************************************/  
+  
+
+
      async function enviar() {
       let datos = ["nombre", "apellido", "edad", "correo", "tipoCedula", "cedula"];
       let valores = {};
@@ -23,7 +25,6 @@
       }
       console.log(valores.nombre);
 
-      
       if (aprobado) {
 
       let existente;
@@ -41,21 +42,18 @@
       .then(function(res) {
         console.log(res);
         existente = res[0].correo
-        console.log(existente);
       })
       .catch(function(err) {
         console.log(err);
       });
-    
-      console.log(existente);
 
-      if (existente !== null) { 
+      if (existente == valores.correo) { 
 
         alert("Este usuario ya existe");
         
       } else{
 
-        fetch2 = await fetch("http://localhost:5252/registroClasico/insertar", {
+         fetch2 = await fetch("http://localhost:5252/registroUsuarioClasico/insertar", {
           body: JSON.stringify(valores),
           method: "POST",
           headers: {
@@ -73,7 +71,7 @@
           });
     
         alert("Se ha creado su cuenta con exito");
-        window.location.href = "index.html";
+       
 
       }
       

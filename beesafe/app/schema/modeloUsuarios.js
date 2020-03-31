@@ -1,7 +1,8 @@
 var mongoose = require("mongoose");
 
-var especializadoSchema = mongoose.Schema({
+var usuarios = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
+  tipoUsuario:Number,
   nombre: String,
   apellido: String,
   edad: Number,
@@ -12,4 +13,4 @@ var especializadoSchema = mongoose.Schema({
   imagen: String
 });
 
-module.exports = mongoose.model( "Especializado", especializadoSchema,"especializados");
+module.exports = mongoose.model( "Usuario", usuarios,"Usuarios");

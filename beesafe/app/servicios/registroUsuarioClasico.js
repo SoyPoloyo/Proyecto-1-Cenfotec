@@ -3,22 +3,24 @@ var express = require("express");
 var router = express.Router();
 var mongoose = require("mongoose");
 
-var Clasico = require("../schema/modeloUsuarioClasico");
 
+var Usuario = require("../schema/modeloUsuarios");
 router.post("/insertar", async function(req, res) {
 
   
-  var clasicoNuevo = new Clasico({
+  var usuarioNuevo = new Usuario({
     _id: new mongoose.Types.ObjectId(),
+    tipoUsuario: 1,
     nombre: req.body.nombre,
     apellido: req.body.apellido,
     edad: req.body.edad,
     correo: req.body.correo,
     tipoCedula: req.body.tipoCedula,
-    cedula: req.body.cedula
+    cedula: req.body.cedula,
+   
   });
 
-  clasicoNuevo
+  usuarioNuevo
     .save()
     .then(function(resultado) {
       res.json(resultado);
@@ -50,11 +52,9 @@ router.post("/insertar", async function(req, res) {
 });
 
 
-router.get("/recibir", function(req, res) {
+router.get("/recibir", function(req, res) { 
 
-  var correo =  'vargasteban@gmail.com';
-
-  Clasico.find({correo:correo})
+  Usuario.find({})
     .exec()
 
     .then(function(result) {
