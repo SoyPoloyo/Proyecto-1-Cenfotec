@@ -40,7 +40,6 @@ app.use('/registroCaracteristicaVehiculo', require('./servicios/registroCaracter
 app.use('/registroVehiculo', require('./servicios/registroVehiculo'));
 app.use('/registroTipoSiniestro', require('./servicios/registroTipoSiniestro'));
 
-app.use('/listadoUsuarios', require('./servicios/listarUsuarios'));
 
 
 app.listen(5252, function(){
