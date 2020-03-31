@@ -1,8 +1,6 @@
 
-var existentes;
-function probando (){
-
-
+var existentes = [];
+function  probando (){
     
     fetch("http://localhost:5252/registroUsuarioClasico/recibir", {
      body: JSON.stringify(),
@@ -15,18 +13,26 @@ function probando (){
        return data.json();
      })
      .then(function(res) {
-       console.log(res);
+       console.log();
 
-       existentes = res;
+      
        console.log('segundo then');
-       console.log(existentes);
+      for (let i in res) {
+        if (res[i]) {
+           existentes = push.res[i];
+          
+        }
+      }
+      console.log(existentes);
+       document.getElementById("prueba").innerHTML = res[2].tipoUsuario
+       
      })
      .catch(function(err) {
        console.log(err);
      });
+    
+       console.log(existentes);
    
-
-   }
+  }
    probando();
-   console.log('tercer then');
-   console.log(existentes);
+ 
