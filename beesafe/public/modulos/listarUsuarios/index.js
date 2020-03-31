@@ -16,6 +16,9 @@ function probando() {
 
       console.log(res.length)
       console.log(res[1])
+      let objeto = {}
+      objeto = res;
+      console.log(objeto)
      
       document.getElementById("prueba").innerHTML = res[2].tipoUsuario;
     })
