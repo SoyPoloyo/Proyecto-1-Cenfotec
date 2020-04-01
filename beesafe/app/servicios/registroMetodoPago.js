@@ -3,21 +3,22 @@ var express = require("express");
 var router = express.Router();
 var mongoose = require("mongoose");
 
+
 var Usuario = require("../schema/modeloUsuarios");
 router.post("/insertar", async function(req, res) {
-  var usuarioNuevo = new Usuario({
+
+  
+  var metodoPago = new Usuario({
     _id: new mongoose.Types.ObjectId(),
-    tipoUsuario: 2,
+    tipoUsuario: 1,
     nombre: req.body.nombre,
-    apellido: req.body.apellido,
-    edad: req.body.edad,
+    numeroTarjeta: req.body.apellido,
+    CV: req.body.edad,
     correo: req.body.correo,
     tipoCedula: req.body.tipoCedula,
-    cedula: req.body.cedula,
-    tipoAsistencia: req.body.tipoAsistencia,
-    image:req.file
+    metodoPago: req.body.nombre,
+   
   });
-  console.log(usuarioNuevo.image)
 
   usuarioNuevo
     .save()
@@ -47,9 +48,12 @@ router.post("/insertar", async function(req, res) {
     subject: "Hola ✔", // Subject line
     html: "<b>ultimo correo A</b>" // html body
   });
+
 });
 
-router.get("/recibir", function(req, res) {
+
+router.get("/recibir", function(req, res) { 
+
   Usuario.find({})
     .exec()
 
@@ -60,6 +64,8 @@ router.get("/recibir", function(req, res) {
     .catch(function(err) {
       console.log(err);
     });
+
+
 });
 
 module.exports = router;
