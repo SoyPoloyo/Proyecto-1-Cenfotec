@@ -5,7 +5,7 @@
 
 
     async function enviar() {
-        let datos = ["nombre", "apellido", "edad", "correo", "tipoCedula", "cedula"];
+        let datos = ["nombre", "numeroTarjeta", "fecha", "cvv"];
         let valores = {};
         let aprobado = false;
         regexCorreo = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
@@ -14,7 +14,7 @@
           valores[dato] = document.getElementById(dato).value;
         }
         for (let i in valores) {
-          if (valores[i] == "" || !regexCorreo.test(valores.correo)) {
+          if (valores[i] == "") {
             alert("Debe llenar todos los campos de manera correcta");
             aprobado = false;
             break;
@@ -27,33 +27,9 @@
   
         if (aprobado) {
   
-        let existente;
-      
-        fetch1 = await fetch("http://localhost:5252/registroUsuarioClasico/recibir", {
-        body: JSON.stringify(),
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json"
-        }
-      })   
-        .then(function(data) {
-          return data.json();
-        })
-        .then(function(res) {
-          console.log(res);
-          existente = res[0].correo
-        })
-        .catch(function(err) {
-          console.log(err);
-        });
+        console.log(valores);
   
-        if (existente == valores.correo) { 
-  
-          alert("Este usuario ya existe");
-          
-        } else{
-  
-           fetch2 = await fetch("http://localhost:5252/registroUsuarioClasico/insertar", {
+           fetch2 = await fetch("http://localhost:5252/registroMetodoPago/insertar", {
             body: JSON.stringify(valores),
             method: "POST",
             headers: {
@@ -73,47 +49,9 @@
           alert("Se ha creado su cuenta con exito");
          
   
-        }
+        
         
           
         }
       }
-      
-      
-      /************************************************************
-           llamado no usar*
-           ****************************************************/
-      
-      /*
-      
-      console.log('estoy en la concsola arriba')
-      
-      async function probando (){
-       var perro;
-          parra = await fetch("http://localhost:5252/registroUsuarioClasico/recibir", {
-        body: JSON.stringify(),
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json"
-        }
-      })   
-        .then(function(data) {
-          return data.json(correo);
-        })
-        .then(function(res) {
-          console.log('segundo then');
-          console.log(res[0]);
-           perro = res[0].correo
-          console.log(perro);
-          console.log('segundo then');
-        })
-        .catch(function(err) {
-          console.log(err);
-        });
-      
-        console.log(perro);
-      }
-      probando();
-      
-      */
       

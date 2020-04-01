@@ -8,14 +8,15 @@ var Usuario = require("../schema/modeloUsuarios");
 router.post("/insertar", async function(req, res) {
 
   
-  var metodoPago = new Usuario({
+  var usuarioNuevo = new Usuario({
     _id: new mongoose.Types.ObjectId(),
     tipoUsuario: 1,
     nombre: req.body.nombre,
-    numeroTarjeta: req.body.apellido,
-    CV: req.body.edad,
+    apellido: req.body.apellido,
+    edad: req.body.edad,
     correo: req.body.correo,
     tipoCedula: req.body.tipoCedula,
+    cedula: req.body.cedula,
    
   });
 
