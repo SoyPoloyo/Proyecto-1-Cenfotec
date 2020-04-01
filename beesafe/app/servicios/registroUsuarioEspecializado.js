@@ -14,8 +14,10 @@ router.post("/insertar", async function(req, res) {
     correo: req.body.correo,
     tipoCedula: req.body.tipoCedula,
     cedula: req.body.cedula,
-    tipoAsistencia: req.body.tipoAsistencia
+    tipoAsistencia: req.body.tipoAsistencia,
+    image:req.file.filename
   });
+  console.log(usuarioNuevo.image)
 
   usuarioNuevo
     .save()

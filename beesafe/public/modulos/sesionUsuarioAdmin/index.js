@@ -1,4 +1,4 @@
-
+import {  } from "registroTipoSiniestro";
 /************************************************************
      codigo para subir la imagen
      ****************************************************/
@@ -41,6 +41,6 @@ function crearsiniestros() {
   document.getElementById("crearsiniestro").removeAttribute("hidden");
 }
 
-function caracteristicasVehiculo() {
+function siniestros() {
   document.getElementById("crearsiniestro").setAttribute("hidden", true);
 }
