@@ -1,93 +1,20 @@
-/** ==================================
-    Globales
-    =================================**/
-    * {
-      box-sizing: border-box;
-      margin: 0;
-    }
-    body {
-      font-family: "Baloo", cursive;
-    }
-    h1 {
-      color: #2f2319;
-      text-transform: uppercase;
-      letter-spacing: 8px;
-    }
-    select option {
-      margin: 40px;
-      background: #2f2319;
-      color: #fff;
-      font-family: "Baloo 2", cursive;
-    }
-    
-    .letra2 {
-      font-family: "Baloo 2", cursive;
-    }
-    
-    .iconoTipoUsuario {
-     
-        color: #2f2319;
-        width:80%;
-        font-size: 80px;
-        margin: 0px 50px;
-        text-shadow:2px 5px 7px #2f2319;
-    }
-    .iconoTipoUsuario i:hover {
-      color:#cc5d01 ;
-      
-    }
-    .active {
-      color:#cc5d01 ;
-      
-    }
 
-    .izquierda{
-      float: left;
-    }
-    .centro{
-      position: relative;
-      padding-left: 30%;
-    }
-    
     /** ==================================
         Main - Formulario - Registro
         =================================**/
 
-    .logoFormu {
-      width: 30%;
-      margin-bottom: -50px;
-      margin-top: 25px;
-    }
     .formulario {
       text-align: center;
-    
-      background: url(../../assets/img/fondoabeja.png);
-      background-size: cover;
-    
+      margin-left: 300px;
       height: 100vh;
     }
 
     .formulario2{
-      width: 40%;
+      width: 50%;
       margin: 0 auto;
     }
     
-    .fondosG::placeholder {
-      color: white;
-      font-family: "Baloo 2", cursive;
-    }
-    
-    .fondosG {
-      background-color: rgba(83, 61, 39, 0.603);
-      border: none;
-      padding: 20px;
-      color: #ef9d34;
-      margin: 0px 15px;
-      width: 250px;
-      color: white;
-      border-radius: 5px;
-      outline: none;
-    }
+
     .boton-envio {
       background-color: #2f2319;
       font-family: "Baloo", cursive;
@@ -141,9 +68,6 @@
       
     }
 
-    textarea {
-        resize: none;
-    }
-
+ 
     
       
