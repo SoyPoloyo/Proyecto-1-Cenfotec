@@ -1,9 +1,12 @@
 
+
+
 /************************************************************
      Codigo Validacion de Elio
      ****************************************************/
  
      async function enviar() {
+      //import swal from 'sweetalert';
         let datos = ['nombre', 'apellido', 'edad', 'correo', 'tipoCedula','cedula', 'tipoAsistencia', 'iconoAgregado'];
         let valores = {};
         let aprobado = false;

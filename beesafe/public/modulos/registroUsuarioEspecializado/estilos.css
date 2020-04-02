@@ -126,6 +126,21 @@
       .subir_img{
         width: 80%;
       }
+      .estiloBoton{
+        font-family: "Baloo", cursive;
+        text-align: justify;
+        border: #2f2319 3px solid;
+        background-color:transparent;
+        color: #2f2319;
+        padding: 15px 15px;
+      }
+      .estiloBoton:hover{
+        border: #ef9d34 3px solid;
+      }
+      .fondosG:hover{
+        border: #ef9d34 2px solid;
+      }
+
 
       
       
