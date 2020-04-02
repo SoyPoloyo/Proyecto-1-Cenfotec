@@ -17,7 +17,7 @@ router.post("/insertar", async function(req, res) {
     correo: req.body.correo,
     tipoCedula: req.body.tipoCedula,
     cedula: req.body.cedula,
-   
+    
   });
 
   usuarioNuevo
