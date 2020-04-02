@@ -1,95 +1,64 @@
 /** ==================================
     Globales
     =================================**/
- 
-  
-      .iconoTipoUsuario {
-       
-          color: #2f2319;
-          width:80%;
-          font-size: 80px;
-          margin: 0px 50px;
-          text-shadow:2px 5px 7px #2f2319;
-      }
-      .iconoTipoUsuario i:hover {
-        color:#cc5d01 ;
-        
-      }
-      .active {
-        color:#cc5d01 ;
-        
-      }
-      
-      /** ==================================
+
+.iconoTipoUsuario {
+  color: #2f2319;
+  width: 80%;
+  font-size: 80px;
+  margin: 0px 50px;
+  text-shadow: 2px 5px 7px #2f2319;
+}
+.iconoTipoUsuario i:hover {
+  color: #cc5d01;
+}
+.active {
+  color: #cc5d01;
+}
+
+/** ==================================
           Main - Formulario - Registro
           =================================**/
-      
-      .logoFormu {
-        width: 30%;
-        margin-bottom: -50px;
-        margin-top: 25px;
-      }
-      .formulario {
-        text-align: center;
-      
-        background: url(../../assets/img/fondoabeja.png);
-        background-size: cover;
-      
-        height: 100vh;
-      }
-      
 
-      /*.fondosGB{
+.logoFormu {
+  width: 30%;
+  margin-bottom: -50px;
+  margin-top: 25px;
+}
+.acomodo {
+  width: 81%;
+  margin-right: -680px;
+}
+
+.formulario {
+  text-align: center;
+
+  background: url(../../assets/img/fondoabeja.png);
+  background-size: cover;
+
+  height: 100vh;
+}
+
+/*.fondosGB{
         margin-top: -250px !important;
       }*/
-      .fondos2 {
-        border: none;
-        padding: 20px;
-        color: #ef9d34;
-        margin: -20px 15px;
-        width: 250px;
-        font-size: 100px;
-        color: black;
-        border-radius: 5px;
-        outline: none;
-      }
- 
-      
-      /** ==================================
+
+/** ==================================
           Inicio de Sesion - Formulario
           =================================**/
-      .largoFondos {
-        width: 35%;
-      }
-       .wrapperImagen{
-        overflow: auto;
-        position: relative;
-       }
+.largoFondos {
+  width: 35%;
+}
 
-      .imagen_subida{
-        width: 30%;
-        margin-top: 10px;
-      }
-      .imagen_provisional{
-        font-size: 100px;
-        margin-bottom: -20px;
-      }
-      
-      .subir_img{
-        width: 80%;
-      }
-      .estiloBoton{
-        font-family: "Baloo", cursive;
-        text-align: justify;
-        border: #2f2319 3px solid;
-        background-color:transparent;
-        color: #2f2319;
-        padding: 15px 15px;
-      }
-      .estiloBoton:hover{
-        border: #ef9d34 3px solid;
-      }
-
-
-      
-      
+.estiloBoton {
+  font-family: "Baloo", cursive;
+  text-align: justify;
+  border: #2f2319 3px solid;
+  background-color: transparent;
+  color: #2f2319;
+  padding: 15px 15px;
+  width: 16%;
+}
+.estiloBoton:hover {
+  border: #ef9d34 3px solid;
+}

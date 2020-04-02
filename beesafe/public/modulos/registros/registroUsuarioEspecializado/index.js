@@ -8,7 +8,7 @@
           reader.readAsDataURL(archivo);
           reader.onloadend = function () {
             document.getElementById("imagenAgregada").src = reader.result;
-            document.getElementById("imagenAgregada").classList.add('imagen_subida');
+            document.getElementById("imagenAgregada").classList.add('imagenAgregada');
         }
       }
 

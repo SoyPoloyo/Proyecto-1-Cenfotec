@@ -110,18 +110,18 @@ select option {
 }
 
 /* Para la funcion de cambiar imagen*/
-.imagen_provisional {
+.muestraIcono {
+  padding: 20px;
+  margin: -40px 15px;
   font-size: 100px;
-  margin-bottom: -20px;
-}
-.subir_img {
-  width: 80%;
+  color: black;
 }
 
-.imagen_subida {
-  width: 20%;
-  margin-top: 10px;
+.imagenAgregada {
+  width: 4%;
+  margin-top: 7px;
 }
+
 
 .boton_1 {
   color: white;
