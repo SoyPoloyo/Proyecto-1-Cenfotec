@@ -35,6 +35,11 @@
       float: left;
     }
     
+    h1 {
+      color: #2f2319;
+      text-transform: uppercase;
+      letter-spacing: 8px!important;
+    }
     /** ==================================
                     CABECERA
             =================================**/
@@ -60,6 +65,8 @@
       font-size: larger;
       margin-top: 3px;
     }
+
+
     /** ==================================
                     CONTENIDO PRINCIPAL
             =================================**/

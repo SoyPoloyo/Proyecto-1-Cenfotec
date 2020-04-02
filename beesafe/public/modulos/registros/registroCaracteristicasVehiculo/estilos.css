@@ -1,13 +1,7 @@
 /** ==================================
     Globales
     =================================**/
-    * {
-        box-sizing: border-box;
-        margin: 0;
-      }
-      body {
-        font-family: "Baloo", cursive;
-      }
+
       h1 {
           padding-top: 4px;
         color: #2f2319;
@@ -18,40 +12,17 @@
     Main - Formulario - Registro
     =================================**/
 
-.logoFormu {
-    width: 30%;
-    margin-bottom: -50px;
-    margin-top: 25px;
-  }
+
       .formulario {
         text-align: center;
-      
-        background: url(../../assets/img/fondoabeja.png);
-        
+              
         background-size: cover;
       
         height: 100vh;
       }
       
-      .fondosG::placeholder {
-        color: white;
-        font-family: "Baloo 2", cursive;
-      }
 
-      textarea{
-          resize: none;
-      }
-      .fondosG {
-        background-color: rgba(83, 61, 39, 0.603);
-        border: none;
-        padding: 20px;
-        color: #ef9d34;
-        margin: 0px 15px;
-        width: 250px;
-        color: white;
-        border-radius: 5px;
-        outline: none;
-      }
+     
       .boton-envio {
         background-color: #2f2319;
         font-family: "Baloo", cursive;
