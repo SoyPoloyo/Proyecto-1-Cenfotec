@@ -33,7 +33,7 @@ app.use(express.static(path.join(__dirname, "../public")));
     //registrar y listar usuarios
 app.use('/registroUsuarioEspecializado', require('./servicios/registroUsuarioEspecializado.js'));
 app.use('/registroUsuarioClasico', require('./servicios/registroUsuarioClasico.js'));
-app.use('/registroUsuarioRutas', require('./servicios/registroUsuarioRutas.js'));
+app.use('/registroUsuarioRutas', require('./servicios/registroUsuarioRutas'));
 app.use('/listarRutas', require('./servicios/listarRutas'));
 
 

@@ -4,23 +4,23 @@ var router = express.Router();
 var mongoose = require("mongoose");
 
 
-var Usuario = require("../schema/modeloUsuarios");
+var ruta = require("../schema/modeloRutas");
 router.post("/insertar", async function(req, res) {
 
   
-  var usuarioNuevo = new Usuario({
+  var rutasNuevo = new ruta({
     _id: new mongoose.Types.ObjectId(),
-    tipoUsuario: 3,
     nombre: req.body.nombre,
-    apellido: req.body.apellido,
+    apellido: req.body.nombre,
     edad: req.body.edad,
     correo: req.body.correo,
     tipoCedula: req.body.tipoCedula,
     cedula: req.body.cedula,
+    tipoAsistencia: req.body.nombre,
    
   });
 
-  usuarioNuevo
+  rutasNuevo
     .save()
     .then(function(resultado) {
       res.json(resultado);
@@ -54,7 +54,7 @@ router.post("/insertar", async function(req, res) {
 
 router.get("/recibir", function(req, res) { 
 
-  Usuario.find({})
+  ruta.find({})
     .exec()
 
     .then(function(result) {
