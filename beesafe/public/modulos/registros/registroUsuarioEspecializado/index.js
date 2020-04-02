@@ -33,7 +33,26 @@
       
         console.log(valores.nombre);
    
-  
+        for (let i of valores) {
+
+          if (valores[i] == "" || !regexCorreo.test(valores.correo)) {
+ 
+         form.append(key, value);
+            swal({
+              title: "Registro Incorrecto",
+              text: "Debe completar todos los campos",
+              icon: "warning",
+              button: "Continuar",
+            });
+            aprobado = false;
+            break;
+          } else {
+            console.log(" ");  
+         form.append(key, value);
+            aprobado = true;
+          }
+        }
+        
         if (aprobado) {
   
         let existente;

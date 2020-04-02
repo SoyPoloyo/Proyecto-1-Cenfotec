@@ -9,22 +9,11 @@
       height: 100vh;
     }
 
-    .formulario2{
-      width: 50%;
-      margin: 0 auto;
+    .izquierdaCentro{
+      margin-left: 350px;
+      margin-right: -300px;
     }
     
-
-    .boton-envio {
-      background-color: #2f2319;
-      font-family: "Baloo", cursive;
-      letter-spacing: 5px;
-     
-     
-    }
-    .boton-envio:hover {
-      background-color: #cc5d01;
-    }
 
     .imagen_provisional{
       font-size: 150px;
@@ -41,9 +30,7 @@
       display: inline-block; 
     }
    
-    .imagen_subida{
-      width: 20%;
-    }
+  
     
     .upload-btn-wrapper input[type=file] {
       font-size: 11px;
