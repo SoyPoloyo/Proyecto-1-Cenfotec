@@ -6,7 +6,7 @@
      ****************************************************/
  
      async function enviar() {
-      //import swal from 'sweetalert';
+      
         let datos = ['nombre', 'apellido', 'edad', 'correo', 'tipoCedula','cedula', 'tipoAsistencia', 'iconoAgregado'];
         let valores = {};
         let aprobado = false;
@@ -17,7 +17,7 @@
         }
         for (let i in valores) {
           if (valores[i] == "" || !regexCorreo.test(valores.correo)) {
-            alert("Debe llenar todos los campos de manera correcta");
+            swal("Debe llenar todos los campos de manera correcta");
             aprobado = false;
             break;
           } else {
