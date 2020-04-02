@@ -26,7 +26,10 @@
                         <td>${listadoRuta.nombre}</td>
                         <td>${listadoRuta.apellido}</td>
                         <td>${listadoRuta.edad}</td>
-                       
+                        <td>${listadoRuta.correo}</td>
+                        <td>${listadoRuta.tipoCedula}</td>
+                        <td>${listadoRuta.cedula}</td>
+                        <td>${listadoRuta.tipoAsitencia}</td
                     
                      
                     </tr>    

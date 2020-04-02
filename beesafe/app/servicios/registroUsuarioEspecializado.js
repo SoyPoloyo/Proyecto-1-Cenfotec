@@ -5,7 +5,6 @@ var mongoose = require("mongoose");
 
 var Usuario = require("../schema/modeloUsuarios");
 router.post("/insertar", async function(req, res) {
-  console.log(req.file)
   var usuarioNuevo = new Usuario({
     _id: new mongoose.Types.ObjectId(),
     tipoUsuario: 2,
@@ -16,7 +15,6 @@ router.post("/insertar", async function(req, res) {
     tipoCedula: req.body.tipoCedula,
     cedula: req.body.cedula,
     tipoAsistencia: req.body.tipoAsistencia,
-    image: req.file.filename
     
   });
   console.log(usuarioNuevo.image)

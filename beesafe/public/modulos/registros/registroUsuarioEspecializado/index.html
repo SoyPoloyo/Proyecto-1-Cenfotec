@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
-    <link rel="stylesheet" href="../../../assets/css/estilosGlobales.css">
     <link rel="stylesheet" href="estilos.css">
     <link href="https://fonts.googleapis.com/css?family=Baloo|Baloo+2&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2b7b514291.js" crossorigin="anonymous"></script>
@@ -19,7 +18,7 @@
         <form>
 
             <br>
-            <a href="../../index.html" ><img  class="logoFormu" src="../../../assets/img/BEESAFE.png" alt=""></a>  <br> <br>
+            <a href="../../index.html" ><img  class="logoFormu" src="../../assets/img/BEESAFE.png" alt=""></a>  <br> <br>
             
        <a class="iconoTipoUsuario" title="Usuario Clasico" href="../registroUsuarioClasico/index.html"> <i class="fas fa-user"></i></i></a>
         <a class="iconoTipoUsuario active" title="Usuario Especializado"  href="../registroUsuarioEspecializado/index.html"> <i class="fas fa-user-tie"></i> </a>
@@ -39,9 +38,7 @@
             <br> <br>
             <input class="fondosG" type="number" value="" placeholder="Edad" name="edad" id="edad">
             <input class="fondosG" type="email" value="" placeholder="Correo electrónico" name="correo" id="correo">
-
             <input onchange="subirImagen()" class="estiloBoton" type="file" name="image" id="image">
-
             <br>
             <br>
 
@@ -59,11 +56,11 @@
            
                 <i class="  far fa-image fondos2 ima" id="muestraIcono"></i>
             
-                <img class="" id="imagenAgregada" alt="">
+                <img class="" id="iconoAgregado" alt="">
             </div>
 
            <br><br>
-                <button class="boton_1 fondosG " type="button" onclick="enviar()"> Enviar</button>
+                <button class="boton-envio fondosG " type="button" onclick="enviar()"> Enviar</button>
 
 
         </form>
