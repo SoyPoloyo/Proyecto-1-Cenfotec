@@ -57,12 +57,12 @@
           alert("Este usuario ya existe");
           
         } else{
-          valores2 = new FormData;
-          valores2 = valores;
-           fetch2 = await fetch("http://localhost:5252/registroUsuarioEspecializado/insertar", {
-            body:valores2,
+          fetch2 = await fetch("http://localhost:5252/registroUsuarioEspecializado/insertar", {
+            body: JSON.stringify(valores),
             method: "POST",
-           
+            headers: {
+              "Content-Type": "application/json"
+            }
           })
             .then(function(data) {
               return data.json();
