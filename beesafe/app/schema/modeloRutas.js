@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 
-var rutas = mongoose.Schema({
+var rutasSchemas = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
   nombre:String,
   apellido: String,
@@ -8,8 +8,7 @@ var rutas = mongoose.Schema({
   correo: String,
   tipoCedula: Number,
   cedula: Number,
-  tipoAsistencia: String,
-  imagen: String
+  tipoAsistencia: String
 });
 
 module.exports = mongoose.model( "ruta", rutasSchemas,"rutas");
