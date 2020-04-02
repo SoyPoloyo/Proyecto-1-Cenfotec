@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BeeSafe</title>
+
+    <link rel="stylesheet" href="../../../assets/css/estilosGlobales.css">
     <link rel="stylesheet" href="estilos.css">
 
     <link href="https://fonts.googleapis.com/css?family=Baloo|Baloo+2&display=swap" rel="stylesheet">
-
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
-
     <script src="https://kit.fontawesome.com/2b7b514291.js" crossorigin="anonymous"></script>
 </head>
 
@@ -21,8 +21,8 @@
 
         <nav>
 
-            <img class="logo_header" src="../../assets/img/blancobesafe.png" alt="">
-            <a class="alt_letra derecha" href="#">USUARIO</a>
+            <img onclick="window.location.href='../../../index.html'" class="logo_header" src="../../../assets/img/blancobesafe.png" alt="">
+            <a class="alt_letra derecha" href="../perfilUsuarioEspecializado/index.html">USUARIO</a>
             <a class="alt_letra derecha " href="#">INICIO</a>
 
         </nav>
@@ -32,24 +32,23 @@
     <main>
 
         <!-- =======================================
-        CONTENIDO EN EL CAMPO IZQUIERDO DE LA PAGINA
+        CONTENIDO EN EL CAMPO IZQUIERDO DE LA PAGINA INICIO
     =================================================-->
 
         <div class=" contenido_izquierdo izquierda">
 
             <br> <br>
             
-            <h3 class="titulo_reporte alt_letra">REPORTAR SINIESTRO</h3> <br>
+            <h3 class="titulo_lateral alt_letra">Usuario Especializado</h3> <br>
 
             <select class="fondosG" id="tipo_accidente">
-                <option value="" selected hidden>Tipos de accidente:</option>
-                <option value="derrumbe">Derrumbe</option>
-                <option value="choque">Choque </option>
+                <option value="" selected hidden>Muestra Select:</option>
+                <option value="derrumbe">Opcion 1</option>
+                <option value="choque">Opcion 2 </option>
 
             </select> <br> <br>
 
-            <textarea class="fondosG" placeholder="Describa el siniestro" rows="5" cols="0" name="mensaje"
-                id="mensaje"></textarea>
+           
 
 
             <p class="imagen_provisional">
@@ -64,28 +63,31 @@
             
             <br> <br> <br>
 
-            <input class="envio_formulario" type="submit" value="ENVIAR REPORTE">
+            <input class="boton_1" type="submit" value="ENVIAR REPORTE">
 
         </div>
+
+         <!-- =======================================
+        CONTENIDO EN EL CAMPO IZQUIERDO DE LA PAGINA INICIO
+    =================================================-->
 
         <!-- =======================================
-                            MAPA
+                            Contenido Central Inicio
     =================================================-->
-        <div class="" id='map' style=' height: 85vh'>
-            <script>
-                mapboxgl.accessToken = 'pk.eyJ1Ijoic295cG9sb3lvIiwiYSI6ImNrODRtY3pyNTB5OWkzbG56ZWp2b3Y4cWEifQ.kXhxq_6KXwzzTMKX9MR66w';
-                var map = new mapboxgl.Map({
-                    container: 'map',
-                    style: 'mapbox://styles/mapbox/streets-v11',
-                    zoom: 14.5,
-                    center: [-84.03116608099936, 9.932827376420036]
 
-                });
-            </script>
+
+        <div class="contenidoPrincipal" >
+          
         </div>
+
+
+ <!-- =======================================
+                            Contenido Central Final
+    =================================================-->
 
     </main>
 
+      
 
     <footer>
 

@@ -1,14 +1,141 @@
 /** ==================================
-    Globales
+    GLOBALES
     =================================**/
-    * {
-        box-sizing: border-box;
-        margin: 0;
-      }
-      body {
-        font-family: "Baloo", cursive;
-      }
 
-      .letra2 {
-        font-family: "Baloo 2", cursive;
-      }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+    
+    body {
+      font-family: "Baloo 2", cursive;
+      height: 100vh;
+      overflow: hidden;
+    }
+    header {
+      max-height: 10vh;
+      overflow: hidden;
+    }
+    main {
+      max-height: 85vh;
+      overflow: hidden;
+    }
+    footer {
+      max-height: 5vh;
+      overflow: hidden;
+    }
+    .alt_letra {
+      font-family: "Baloo", cursive;
+      letter-spacing: 2px;
+    }
+    .derecha {
+      float: right;
+    }
+    .izquierda {
+      float: left;
+    }
+    
+    /** ==================================
+                    CABECERA
+            =================================**/
+    
+    nav {
+      background-color: #2f2319;
+      height: 500px;
+    }
+    
+    .logo_header {
+      width: 15%;
+      padding-left: 20px;
+    }
+    nav a {
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      padding: 20px;
+    }
+    
+    /** ==================================
+                    CONTENIDO PRINCIPAL
+            =================================**/
+    
+    .contenido_izquierdo {
+      background: url(../img/fondoabeja.png);
+      background-position: center;
+      width: 20%;
+      height: 100vh;
+      text-align: center;
+      border-right: #2f2319 1px solid;
+    }
+    
+    .titulo_lateral {
+      color: #2f2319;
+      width: 90%;
+      font-size: 20px;
+      margin: 0 auto;
+      text-shadow: 3px 3px 7px #a8998c;
+    }
+    .fondosG {
+      background-color: rgba(83, 61, 39, 0.603);
+      border: none;
+      padding: 20px;
+      color: #ef9d34;
+      margin: 0px 15px;
+      width: 250px;
+      color: white;
+      border-radius: 5px;
+      outline: none;
+    }
+    .fondosG::placeholder {
+      color: white;
+      font-family: "Baloo 2", cursive;
+    }
+    
+    select option {
+      margin: 40px;
+      background: #2f2319;
+      color: #fff;
+      font-family: "Baloo 2", cursive;
+    }
+    
+    /* Para la funcion de cambiar imagen*/
+    .imagen_provisional {
+      font-size: 100px;
+      margin-bottom: -20px;
+    }
+    .subir_img {
+      width: 80%;
+    }
+    
+    .imagen_subida {
+      width: 30%;
+      margin-top: 10px;
+    }
+    
+    .boton_1 {
+      color: white;
+      background-color: #2f2319;
+      width: 80%;
+      font-size: 20px;
+      margin: 0 auto;
+      border: #2f2319 solid 2px;
+      box-shadow: 1px 1px 10px #2f2319;
+      border-radius: 5px;
+    }
+    .boton_1:hover {
+      box-shadow: 1px 1px 7px #2f2319;
+      background-color: #cc5d01;
+      border: #2f2f2f 2px solid;
+    }
+    
+    /** ==================================
+                    FOOTER
+          =================================**/
+    footer {
+      background-color: #2f2319;
+      height: 100vh;
+      color: white;
+    }
+    footer p {
+      padding: 3px 20px;
+    }
+    
