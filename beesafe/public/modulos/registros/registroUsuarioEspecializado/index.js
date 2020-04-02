@@ -30,25 +30,7 @@
          valores.append( dato, document.getElementById(dato).value);
         }
 
-        for (let i of valores) {
-
-          if (valores[i] == "" || !regexCorreo.test(valores.correo)) {
- 
-         form.append(key, value);
-            swal({
-              title: "Registro Incorrecto",
-              text: "Debe completar todos los campos",
-              icon: "warning",
-              button: "Continuar",
-            });
-            aprobado = false;
-            break;
-          } else {
-            console.log(" ");  
-         form.append(key, value);
-            aprobado = true;
-          }
-        }
+      
         console.log(valores.nombre);
    
   
@@ -56,7 +38,7 @@
   
         let existente;
         valores.append( 'image' , document.getElementById('image').files[0]);
-        valores.append('image', '')
+  
         console.log(valores.image)
         console.log(valores);
         fetch1 = await fetch("http://localhost:5252/registroUsuarioEspecializado/recibir", {

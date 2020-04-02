@@ -11,10 +11,10 @@ mongoose.connect('mongodb+srv://admin:admin@workapes-9hxh3.mongodb.net/pruebas?r
 
 
 
-const storage = multer.diskStorage({
+ const storage = multer.diskStorage({
     destination: path.join(__dirname, '../public/assets/uploads'),
     filename(req, file, cb) {
-        cb(null, new Date().getTime() + path.extname(file.originalname));
+        cb(null, file.originalname); // new Date().getTime() + path.extname
     }
 })
 

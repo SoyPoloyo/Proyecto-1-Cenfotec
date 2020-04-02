@@ -139,10 +139,10 @@ select option {
 }
 
 .listas_menu {
-  width: 80%;
+  width: 95%;
   font-size: 15px;
   margin: 0 auto;
-  padding: 2px 15px;
+  padding: 3px 5px;
 }
 .listas_menu li {
   color: white;
@@ -151,7 +151,7 @@ select option {
   box-shadow: 1px 1px 10px #2f2319;
   border-radius: 5px;
   text-decoration: none;
-  padding: 2px 15px;
+  padding: 8px 5px;
 }
 .listas_menu li:hover {
 
