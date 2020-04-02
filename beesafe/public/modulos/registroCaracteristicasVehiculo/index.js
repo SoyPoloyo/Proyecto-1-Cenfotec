@@ -1,37 +1,38 @@
-
-function probando() {
-    fetch("http://localhost:5252/registroCaracteristicaVehiculo/recibir", {
-      body: JSON.stringify(),
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
-      .then(function(data) {
-        return data.json();
-      })
-      .then(function(res) {
-        console.log();
-  
-        console.log("segundo then");
-  
-        console.log(res.length)
-        console.log(res[1])
-        let objeto = {}
-        objeto = res;
-        console.log(objeto.length)
-       
-        for (let i = 0; i <= objeto.length; i++) {
-         
-          document.getElementById("prueba").innerHTML = objeto[i].nombre;     
+function enviar() {
+    let datos = ['nombre', 'descripcion'];
+    let valores = {};
+    let aprobado = false;
+    for (let dato of datos){
+        valores[dato] = document.getElementById(dato).value;
+    }
+    for (let i in valores){
+        if (valores[i] == "" ){
+            alert("Debe completar todos los campos de manera correcta");
+            aprobado = false;
+            break
         }
-  
-  
-      })
-      .catch(function(err) {
-        console.log(err);
-      });
-  
-  }
-  probando();
-  
+        else{
+            (console.log("enviado"))
+            aprobado = true
+        }
+    }
+    if (aprobado){
+        fetch("http://localhost:5252/registroCaracteristicaVehiculo/insertar", {
+            method:"POST",
+            body: JSON.stringify(valores),
+            headers:{
+                'content-Type': 'application/json'
+            }
+        })     .then(function(data){
+            return data.json()
+        })
+        .then(function(res){
+            console.log(res)
+        })
+        .catch(function(err){
+            console.log(err)
+        })
+
+alert("Se ha creado su cuenta con exito")     
+    }
+}

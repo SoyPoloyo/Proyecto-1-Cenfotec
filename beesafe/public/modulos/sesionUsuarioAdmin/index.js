@@ -44,3 +44,38 @@ function crearsiniestros() {
 function siniestros() {
   document.getElementById("crearsiniestro").setAttribute("hidden", true);
 }
+
+
+
+
+/************************************************************
+     codigo para crear caracteristicas de vehiculo
+     ****************************************************/
+
+    function mostrar() {
+      var carac;
+    
+      fetch("/registroCaracteristicaVehiculo/insertar", {
+        body: JSON.stringify(),
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      })
+        .then(res => res.json())
+        .catch(error => console.log("Error:", error))
+        .then(response => console.log("Success:", response));
+    
+      console.log("esto es abajo");
+      console.log(carac);
+    }
+    
+    function crearCaractVehiculo() {
+      document.getElementById("caractVehiculo").removeAttribute("hidden");
+    }
+    
+    function crearCaractVehiculo() {
+      document.getElementById("crearCaractVehiculo").setAttribute("hidden", true);
+    }
+    
+    
