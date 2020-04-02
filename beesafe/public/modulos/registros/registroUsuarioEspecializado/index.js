@@ -27,14 +27,10 @@
         regexCorreo = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
         
         for (let dato of datos) {
-          
          valores.append( dato, document.getElementById(dato).value);
-  
         }
 
         for (let i of valores) {
-
-
 
           if (valores[i] == "" || !regexCorreo.test(valores.correo)) {
  
