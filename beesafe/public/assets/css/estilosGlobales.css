@@ -47,6 +47,7 @@
     .logo_header {
       width: 15%;
       padding-left: 20px;
+      float: left;
     }
     nav a {
       text-decoration: none;
@@ -54,6 +55,11 @@
       padding: 20px;
     }
     
+    .titulo_cuenta{
+      float: left;
+      font-size: larger;
+      margin-top: 3px;
+    }
     /** ==================================
                     CONTENIDO PRINCIPAL
             =================================**/
@@ -126,6 +132,26 @@
       background-color: #cc5d01;
       border: #2f2f2f 2px solid;
     }
+
+    .boton_admin {
+      color: white;
+      background-color: #2f2319;
+      width: 80%;
+      font-size: 20px;
+      margin: 0 auto;
+      border: #2f2319 solid 2px;
+      box-shadow: 1px 1px 10px #2f2319;
+      border-radius: 5px;
+      text-decoration: none;
+      padding: 2px 15px;
+    }
+    .boton_admin:hover {
+      box-shadow: 1px 1px 7px #2f2319;
+      background-color: #cc5d01;
+      border: #2f2f2f 2px solid;
+    }
+  
+
     
     /** ==================================
                     FOOTER

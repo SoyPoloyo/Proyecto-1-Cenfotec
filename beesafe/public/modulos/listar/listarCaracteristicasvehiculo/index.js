@@ -1,4 +1,6 @@
-contenidoTablaCaracteristicas = document.getElementById("contenidoTablaCaracteristicas");
+contenidoTablaCaracteristicas = document.getElementById(
+  "contenidoTablaCaracteristicas"
+);
 
 fetch("http://localhost:5252/listarCaracteristicasVehiculo/recibir", {
   body: JSON.stringify(),
@@ -15,20 +17,18 @@ fetch("http://localhost:5252/listarCaracteristicasVehiculo/recibir", {
 
     listadoCaracteristicas = res;
 
-  
     for (let listadoCaracteristica of listadoCaracteristicas) {
       //console.log(valor);
       contenidoTablaCaracteristicas.innerHTML += `
                   <tr>
                     
-                      <td>${listadoCaracteristicas.nombre}</td>
-                      <td>${listadoCaracteristicas.descripcion}</td>
+                      <td>${listadoCaracteristica.nombre}</td>
+                      <td>${listadoCaracteristica.descripcion}</td>
                   
                    
                   </tr>    
                   `;
     }
-
   })
   .catch(function(err) {
     console.log(err);
