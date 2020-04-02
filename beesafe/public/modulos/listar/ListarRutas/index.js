@@ -1,8 +1,9 @@
-contenidoTablaCaracteristicas = document.getElementById(
-    "contenidoTablaCaracteristicas"
+  contenidoTablaRutas = document.getElementById(
+    "contenidoTablaRutas"
   );
   
-  fetch("http://localhost:5252/listarCaracteristicasVehiculo/recibir", {
+  
+  fetch("http://localhost:5252/listarRutas/recibir", {
     body: JSON.stringify(),
     method: "GET",
     headers: {
@@ -13,17 +14,24 @@ contenidoTablaCaracteristicas = document.getElementById(
       return data.json();
     })
     .then(function(res) {
-      let listadoCaracteristicas = {};
+      let listadoRutas = {};
   
-      listadoCaracteristicas = res;
+      listadoRutas = res;
   
-      for (let listadoCaracteristica of listadoCaracteristicas) {
+      for (let listadoRuta of listadoRutas) {
         //console.log(valor);
-        contenidoTablaCaracteristicas.innerHTML += `
+        contenidoTablaRutas.innerHTML += `
                     <tr>
                       
-                        <td>${listadoCaracteristica.nombre}</td>
-                        <td>${listadoCaracteristica.descripcion}</td>
+                        <td>${listadoRutas.nombre}</td>
+                        <td>${listadoRutas.apellido}</td>
+                        <td>${listadoRutas.edad}</td>
+                        <td>${listadoRutas.correo}</td>
+                        <td>${listadoRutas.tipoCedula}</td>
+                        <td>${listadoRutas.cedula}</td>
+                        <td>${listadoRutas.tipoAsitencia}</td>
+                        <td>${listadoRutas.imagen}</td>
+
                     
                      
                     </tr>    

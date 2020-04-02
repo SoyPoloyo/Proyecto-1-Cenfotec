@@ -1,5 +1,5 @@
-contenidoTablaRutas = document.getElementById(
-  "contenidoTablaRutas"
+contenidoTablaCaracteristicas = document.getElementById(
+  "contenidoTablaCaracteristicas"
 );
 
 fetch("http://localhost:5252/listarCaracteristicasVehiculo/recibir", {
