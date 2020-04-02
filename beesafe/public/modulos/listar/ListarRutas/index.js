@@ -23,15 +23,13 @@
         contenidoTablaRutas.innerHTML += `
                     <tr>
                       
-                        <td>${listadoRutas.nombre}</td>
-                        <td>${listadoRutas.apellido}</td>
-                        <td>${listadoRutas.edad}</td>
-                        <td>${listadoRutas.correo}</td>
-                        <td>${listadoRutas.tipoCedula}</td>
-                        <td>${listadoRutas.cedula}</td>
-                        <td>${listadoRutas.tipoAsitencia}</td>
-                        <td>${listadoRutas.imagen}</td>
-
+                        <td>${listadoRuta.nombre}</td>
+                        <td>${listadoRuta.apellido}</td>
+                        <td>${listadoRuta.edad}</td>
+                        <td>${listadoRuta.correo}</td>
+                        <td>${listadoRuta.tipoCedula}</td>
+                        <td>${listadoRuta.cedula}</td>
+                        <td>${listadoRuta.tipoAsitencia}</td
                     
                      
                     </tr>    

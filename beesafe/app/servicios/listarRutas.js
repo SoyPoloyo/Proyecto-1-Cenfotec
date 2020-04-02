@@ -3,12 +3,12 @@ var express = require("express");
 var router = express.Router();
 var mongoose = require("mongoose");
 
-const listarRutas = require('../schema/modeloRutas.js');
+const listarRutas = require('../schema/modeloRutas');
 
 
 router.get("/recibir", function(req, res) { 
 
-    ListarRutas.find()
+    listarRutas.find()
       .exec()
   
       .then(function(result) {
