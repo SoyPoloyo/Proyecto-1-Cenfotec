@@ -17,7 +17,12 @@
         }
         for (let i in valores) {
           if (valores[i] == "" || !regexCorreo.test(valores.correo)) {
-            swal("Debe llenar todos los campos de manera correcta");
+            swal({
+              title: "Registro Incorrecto",
+              text: "Debe completar todos los campos",
+              icon: "warning",
+              button: "Continuar",
+            });
             aprobado = false;
             break;
           } else {
@@ -54,7 +59,12 @@
   
         if (existente == valores.correo) { 
   
-          alert("Este usuario ya existe");
+          swal({
+            title: "Registro Incorrecto",
+            text: "Usuario ya registrado",
+            icon: "warning",
+            button: "Continuar",
+          });
           
         } else{
           fetch2 = await fetch("http://localhost:5252/registroUsuarioEspecializado/insertar", {
@@ -74,7 +84,12 @@
               console.log(err);
             });
       
-          alert("Se ha creado su cuenta con exito");
+            swal({
+              title: "Registro Correcto",
+              text: "Registro Exitoso",
+              icon: "success",
+              button: "Continuar",
+            });
          
   
         }
