@@ -10,7 +10,7 @@ var usuarios = mongoose.Schema({
   tipoCedula: Number,
   cedula: Number,
   tipoAsistencia: String,
-  imagen: String,
+  image: String,
   metodoPago: String,
 });
 
