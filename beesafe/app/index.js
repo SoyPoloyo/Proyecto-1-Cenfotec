@@ -35,6 +35,8 @@ app.use('/registroUsuarioEspecializado', require('./servicios/registroUsuarioEsp
 app.use('/registroUsuarioClasico', require('./servicios/registroUsuarioClasico.js'));
 app.use('/registroUsuarioRutas', require('./servicios/registroUsuarioRutas'));
 
+app.use('/listarUsuarios', require('./servicios/listarUsuarios'));
+
     //Registrar y listar Vehiculo
 app.use('/registroCaracteristicaVehiculo', require('./servicios/registroCaracteristicaVehiculo'));
 app.use('/registroVehiculo', require('./servicios/registroVehiculo'));
