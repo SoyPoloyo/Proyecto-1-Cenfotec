@@ -18,8 +18,7 @@ router.post("/insertar", async function(req, res) {
    
   });
 
-  metodoPagoNuevo
-    .save()
+  metodoPagoNuevo.set()
     .then(function(resultado) {
       res.json(resultado);
     })
