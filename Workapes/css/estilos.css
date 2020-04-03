@@ -30,21 +30,12 @@ background: -webkit-linear-gradient(left,  rgba(210,235,216,1) 0%,rgba(114,174,1
 background: linear-gradient(to right,  rgba(210,235,216,1) 0%,rgba(114,174,148,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2ebd8', endColorstr='#72ae94',GradientType=1 ); /* IE6-9 */
 
-
-
-
 }
-.imagen1{
-    width: 200px;
-    height: 50px;
-   
-    border-radius: 50px;
-   
-}
+
 .imagen2{
     width: 300px;
+    margin: 0 auto;
     
-    border-radius: 50px;
 
 }
 .imagen3{
