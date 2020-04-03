@@ -169,16 +169,15 @@ select option {
   width: 80%;
   font-size: 15px;
   margin: 0 auto;
-  border: #2f2319 solid 2px;
+  border: #2f2319;
   box-shadow: 1px 1px 10px #2f2319;
   border-radius: 5px;
   text-decoration: none;
-  padding: 2px 15px;
+  padding: 10px 15px;
 }
 .boton_admin:hover {
   box-shadow: 1px 1px 7px #2f2319;
   background-color: #cc5d01;
-  border: #2f2f2f 2px solid;
 }
 
 /** ==================================

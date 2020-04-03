@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,10 +21,10 @@
 
         <nav>
 
-            <img onclick="window.location.href='../../../index.html'" class="logo_header" src="../../../assets/img/blancobesafe.png" alt="">
+            <img class="logo_header" src="../../../assets/img/blancobesafe.png" alt="">
             <a class="alt_letra derecha" href="../perfilUsuarioClasico/index.html">PERFIL</a>
             <a class="alt_letra derecha " href="#">INICIO</a>
-            <a class="alt_letra titulo_cuenta " href="#">USUARIO TRADICIONAL</a>
+            <a class="alt_letra titulo_cuenta " href="#">—USUARIO TRADICIONAL</a>
 
         </nav>
 
@@ -38,40 +36,40 @@
         CONTENIDO EN EL CAMPO IZQUIERDO DE LA PAGINA INICIO
     =================================================-->
 
-    <div class=" contenido_izquierdo izquierda">
+        <div class=" contenido_izquierdo izquierda">
 
-        <br> <br>
-        
-        <h3 class="titulo_reporte alt_letra">REPORTAR SINIESTRO</h3> <br>
+            <br> <br>
 
-        <select class="fondosG" id="tipo_accidente">
-            <option value="" selected hidden>Tipos de accidente:</option>
-            <option value="derrumbe">Derrumbe</option>
-            <option value="choque">Choque </option>
+            <h3 class="titulo_reporte alt_letra">REPORTAR SINIESTRO</h3> <br>
 
-        </select> <br> <br>
+            <select class="fondosG" id="tipo_accidente">
+                <option value="" selected hidden>Tipos de accidente:</option>
+                <option value="derrumbe">Derrumbe</option>
+                <option value="choque">Choque </option>
 
-        <textarea class="fondosG" placeholder="Describa el siniestro" rows="5" cols="0" name="mensaje"
-            id="mensaje"></textarea>
+            </select> <br> <br>
+
+            <textarea class="fondosG" placeholder="Describa el siniestro" rows="5" cols="0" name="mensaje"
+                id="mensaje"></textarea>
 
 
-        <p class="imagen_provisional">
-            <i class=" esconder far fa-image" id="muestraIcono"></i>
-        
-            <img class="" id="iconoAgregado" alt="">
-        </p>
+            <p class="imagen_provisional">
+                <i class=" esconder far fa-image" id="muestraIcono"></i>
 
-        <input onchange="subirImagen()" class="subir_img" type="file" id="botonAgregarImagen">
+                <img class="" id="iconoAgregado" alt="">
+            </p>
 
-        
-        
-        <br> <br> <br>
+            <input onchange="subirImagen()" class="subir_img" type="file" id="botonAgregarImagen">
 
-        <input class="boton_1" type="submit"  value="ENVIAR REPORTE">
 
-    </div>
 
-         <!-- =======================================
+            <br> <br> <br>
+
+            <input class="alt_letra boton_admin" type="submit" value="Enviar Reporte">
+
+        </div>
+
+        <!-- =======================================
         CONTENIDO EN EL CAMPO IZQUIERDO DE LA PAGINA INICIO
     =================================================-->
 
@@ -80,30 +78,30 @@
     =================================================-->
 
 
-              <!-- =======================================
+        <!-- =======================================
                             MAPA
     =================================================-->
-    <div class="" id='map' style=' height: 85vh'>
-        <script>
-            mapboxgl.accessToken = 'pk.eyJ1Ijoic295cG9sb3lvIiwiYSI6ImNrODRtY3pyNTB5OWkzbG56ZWp2b3Y4cWEifQ.kXhxq_6KXwzzTMKX9MR66w';
-            var map = new mapboxgl.Map({
-                container: 'map',
-                style: 'mapbox://styles/mapbox/streets-v11',
-                zoom: 14.5,
-                center: [-84.03116608099936, 9.932827376420036]
+        <div class="" id='map' style=' height: 85vh'>
+            <script>
+                mapboxgl.accessToken = 'pk.eyJ1Ijoic295cG9sb3lvIiwiYSI6ImNrODRtY3pyNTB5OWkzbG56ZWp2b3Y4cWEifQ.kXhxq_6KXwzzTMKX9MR66w';
+                var map = new mapboxgl.Map({
+                    container: 'map',
+                    style: 'mapbox://styles/mapbox/streets-v11',
+                    zoom: 14.5,
+                    center: [-84.03116608099936, 9.932827376420036]
 
-            });
-        </script>
-    </div>
+                });
+            </script>
+        </div>
 
 
- <!-- =======================================
+        <!-- =======================================
                             Contenido Central Final
     =================================================-->
 
     </main>
 
-      
+
 
     <footer>
 
