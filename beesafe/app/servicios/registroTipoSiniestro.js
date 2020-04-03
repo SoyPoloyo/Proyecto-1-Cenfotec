@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const router = Router();
 
-const TipoSiniestro = require('../schema/modeloTipoSiniestro');
+const TipoSiniestro = require('../schema/CategoriaIncidente');
 
 
 router.post('/insertar', async (req, res) => {
