@@ -7,7 +7,12 @@ function enviar() {
     }
     for (let i in valores){
         if (valores[i] == "" ){
-            alert("Debe completar todos los campos de manera correcta");
+            swal({
+                title: "Registro Incorrecto",//josue
+                text: "Debe completar todos los campos de manera correcta",//josue
+                icon: "warning",//josue
+                button: "Continuar",//josue
+              });
             aprobado = false;
             break
         }

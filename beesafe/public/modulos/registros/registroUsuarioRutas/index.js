@@ -14,7 +14,12 @@
       }
       for (let i in valores) {
         if (valores[i] == "" || !regexCorreo.test(valores.correo)) {
-          alert("Debe llenar todos los campos de manera correcta");
+          swal({
+            title: "Registro Incorrecto",
+            text: "Debe completar todos los campos de manera correcta",
+            icon: "warning",
+            button: "Continuar",
+          });//josue
           aprobado = false;
           break;
         } else {
@@ -48,7 +53,12 @@
 
       if (existente == valores.correo) { 
 
-        alert("Este usuario ya existe");
+        swal({
+          title: "Registro Incorrecto",
+          text: "Usuario ya registrado",
+          icon: "warning",
+          button: "Continuar",
+        });
         
       } else{
 
@@ -69,7 +79,12 @@
             console.log(err);
           });
     
-        alert("Se ha creado su cuenta con exito");
+          swal({
+            title: "Registro Correcto",
+            text: "Registro Exitoso",
+            icon: "success",
+            button: "Continuar",
+          });
        
 
       }

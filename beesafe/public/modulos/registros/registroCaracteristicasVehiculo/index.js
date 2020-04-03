@@ -7,7 +7,12 @@ function enviar() {
     }
     for (let i in valores){
         if (valores[i] == "" ){
-            alert("Debe completar todos los campos de manera correcta");
+            swal({
+                title: "Registro Incorrecto",
+                text: "Debe completar todos los campos de manera correcta",
+                icon: "warning",
+                button: "Continuar",
+              });//josue
             aprobado = false;
             break
         }
@@ -33,6 +38,11 @@ function enviar() {
             console.log(err)
         })
 
-alert("Se ha creado su cuenta con exito")     
+        swal({
+            title: "Registro Correcto",
+            text: "Registro Exitoso",
+            icon: "success",
+            button: "Continuar",
+          });  
     }
 }

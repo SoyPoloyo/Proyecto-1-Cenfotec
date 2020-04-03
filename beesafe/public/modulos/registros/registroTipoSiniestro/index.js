@@ -52,7 +52,12 @@ function registro(){
     }
     for (let i in valores) {
         if (valores[i] == "" ) {
-            alert("Debe llenar todos los campos de manera correcta");
+            swal({
+                title: "Registro Incorrecto",
+                text: "Debe completar todos los campos de manera correcta",
+                icon: "warning",
+                button: "Continuar",
+              });//josue
             aprobado = false;
             break;
         } else {
