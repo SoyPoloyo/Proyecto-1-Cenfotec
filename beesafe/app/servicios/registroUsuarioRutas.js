@@ -4,7 +4,7 @@ var router = express.Router();
 var mongoose = require("mongoose");
 
 
-var ruta = require("../schema/modeloRutas");
+var ruta = require("../schema/modeloUsuarios");
 router.post("/insertar", async function(req, res) {
 
   

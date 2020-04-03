@@ -1,7 +1,8 @@
 /************************************************************
      Codigo Validacion de Elio
-     ****************************************************/
+     ****************************************************/  
   
+
 
     async function enviar() {
       let datos = ["nombre", "apellido", "edad", "correo", "tipoCedula", "cedula"];
@@ -15,11 +16,11 @@
       for (let i in valores) {
         if (valores[i] == "" || !regexCorreo.test(valores.correo)) {
           swal({
-            title: "Registro Incorrecto",
-            text: "Debe completar todos los campos de manera correcta",
-            icon: "warning",
-            button: "Continuar",
-          });//josue
+            title: "Registro Incorrecto",//josue
+            text: "Debe completar todos los campos de manera correcta",//josue
+            icon: "warning",//josue
+            button: "Continuar",//josue
+          });
           aprobado = false;
           break;
         } else {
@@ -86,6 +87,7 @@
             button: "Continuar",
           });
        
+       
 
       }
       
@@ -95,42 +97,39 @@
     
     
     /************************************************************
-         Codigo normal - No contiene Validacion*
+         llamado no usar*
          ****************************************************/
     
     /*
     
-    function enviar () {
-        console.log('probando');
-        var nombre, apellido, edad;
-        nombre = document.getElementById('nombre').value;
-         apellido = document.getElementById('apellido').value;
-         edad = document.getElementById('edad').value;
-       
-        var valores = {
-            nombre: nombre,
-            apellido: apellido,
-            edad: edad,
-        };
-        console.log(valores);
-        
-        fetch("http://localhost:5252/registroEspecializado/insertar", {
-            body: JSON.stringify(valores),
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(function(data){
-            return data.json()
-        })
-        .then(function(res){
-            console.log(res)
-        })
-        .catch(function(err){
-            console.log(err)
-        })
+    console.log('estoy en la concsola arriba')
+    
+    async function probando (){
+     var perro;
+        parra = await fetch("http://localhost:5252/registroUsuarioClasico/recibir", {
+      body: JSON.stringify(),
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })   
+      .then(function(data) {
+        return data.json(correo);
+      })
+      .then(function(res) {
+        console.log('segundo then');
+        console.log(res[0]);
+         perro = res[0].correo
+        console.log(perro);
+        console.log('segundo then');
+      })
+      .catch(function(err) {
+        console.log(err);
+      });
+    
+      console.log(perro);
     }
+    probando();
     
     */
     
