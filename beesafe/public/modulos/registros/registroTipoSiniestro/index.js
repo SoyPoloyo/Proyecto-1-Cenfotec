@@ -26,6 +26,7 @@
             .then(response => console.log('Success:', response));
     }
 }*/
+
 function subirImagen() {
     
     console.dir(document.getElementById('imagenAgregada'));
@@ -35,11 +36,11 @@ function subirImagen() {
         reader.readAsDataURL(archivo);
         reader.onloadend = function () {
           document.getElementById("imagenAgregada").src = reader.result;
-          document.getElementById("imagenAgregada").classList.add('imagen_subida');
+          document.getElementById("imagenAgregada").classList.add('imagenAgregada');
+          document.getElementById('muestraIcono').remove()
       }
-    }
-
-    document.getElementById('muestraIcono').remove();
+    } 
+    
   }
   
 function registro(){
