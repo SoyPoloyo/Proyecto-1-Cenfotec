@@ -1,3 +1,95 @@
 .logo{
     font-family: 'Baloo', cursive;
 }
+
+body{
+    font-family: 'Baloo', cursive;
+    
+}
+
+h1{
+    font-family: 'montserrat', sans-serif;
+    color: rgb(94, 93, 93);
+}
+h2{
+    font-family: 'lato', sans-serif;
+    color: rgb(94, 93, 93);
+}
+.colortitulos{
+    color: rgb(120, 120, 180);
+}
+
+.colorhead{
+
+
+   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#9caff4+0,db95e2+90,db95e2+100 */
+background: rgb(156,175,244); /* Old browsers */
+background: -moz-linear-gradient(left,  rgb(156,175,244) 0%, rgb(219,149,226) 90%, rgb(219,149,226) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgb(156,175,244) 0%,rgb(219,149,226) 90%,rgb(219,149,226) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgb(156,175,244) 0%,rgb(219,149,226) 90%,rgb(219,149,226) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9caff4', endColorstr='#db95e2',GradientType=1 ); /* IE6-9 */
+
+
+
+}
+.imagen1{
+    width: 200px;
+    height: 50px;
+   
+    border-radius: 50px;
+   
+}
+.imagen2{
+    width: 300px;
+    
+    border-radius: 50px;
+
+}
+.imagen3{
+    width: 250px;
+    border-radius: 50px;
+    margin-left: 150px;
+    margin-bottom: 25px;
+
+}
+.imagen3_{
+    width: 80%;
+    border-radius: 50px;
+    margin-left: 0px;
+    margin-bottom: 25px;
+
+}
+.headertamano{
+    height: 260px;
+}
+.tamano{
+    width: 800px;
+}
+.venydes{
+    background: rgb(156, 244, 182); /* Old browsers */
+    background: -moz-linear-gradient(left,  rgb(156,175,244) 0%, rgb(219,149,226) 90%, rgb(219,149,226) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  rgb(156,175,244) 0%,rgb(219,149,226) 90%,rgb(219,149,226) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  rgb(156,175,244) 0%,rgb(219,149,226) 90%,rgb(219,149,226) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9caff4', endColorstr='#db95e2',GradientType=1 ); /* IE6-9 */
+    
+}
+.ventajas{
+    background-color: rgba(149, 204, 236, 0.616);
+
+}
+.desventajas{
+    background-color: rgba(233, 156, 226, 0.616);
+}
+.margen{
+    margin-bottom: 0;
+}
+
+.sangria{
+    text-indent: 20px;
+}
+.justificado{
+    text-align: center;
+}
+.tablas{
+    height: 215px;
+}
