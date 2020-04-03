@@ -9,10 +9,12 @@
           reader.onloadend = function () {
             document.getElementById("imagenAgregada").src = reader.result;
             document.getElementById("imagenAgregada").classList.add('imagenAgregada');
+            document.getElementById('muestraIcono').remove()
         }
-      }
-
-      document.getElementById('muestraIcono').remove();
+      } 
+   
+     
+      
     }
 
 /************************************************************
@@ -23,32 +25,29 @@
       
         let datos = ['nombre', 'apellido', 'edad', 'correo', 'tipoCedula','cedula', 'tipoAsistencia'];
         let valores = new FormData();
-        let aprobado = true;
+        let aprobado = false;
         regexCorreo = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
         
         for (let dato of datos) {
          valores.append( dato, document.getElementById(dato).value);
         }
-
-      
-        console.log(valores.nombre);
-   
-        for (let i of valores) {
-
-          if (valores[i] == "" || !regexCorreo.test(valores.correo)) {
+        
+        for (let par of valores.entries()) {
+          // mostramos los pares de valores
+          console.log(par[0]+ ', '+ par[1]);
+          if (par[1] == "" || !regexCorreo.test(correo.value)) {
  
-         form.append(key, value);
             swal({
               title: "Registro Incorrecto",
-              text: "Debe completar todos los campos",
+              text: "Debe completar todos los campos de manera correcta",
               icon: "warning",
               button: "Continuar",
             });
             aprobado = false;
             break;
           } else {
-            console.log(" ");  
-         form.append(key, value);
+            console.log("dentro del else");  
+        
             aprobado = true;
           }
         }
@@ -78,7 +77,7 @@
           console.log(err);
         });
   
-        if (existente == valores.correo) { 
+        if (existente == document.getElementById('correo').value) { 
   
           swal({
             title: "Registro Incorrecto",
