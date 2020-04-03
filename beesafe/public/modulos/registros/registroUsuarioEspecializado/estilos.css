@@ -27,7 +27,7 @@
 }
 .acomodo {
   width: 81.5%;
-  margin-right: -682px;
+  margin-right: -683px;
 }
 
 .formulario {
@@ -57,8 +57,9 @@
   background-color: transparent;
   color: #2f2319;
   padding: 15px 15px;
-  width: 16%;
+  width: 16.3%;
+  border-radius: 5px;
 }
 .estiloBoton:hover {
-  border: #ef9d34 3px solid;
+  border: #cc5d01 3px solid;
 }

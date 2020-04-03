@@ -116,7 +116,10 @@ select option {
   font-size: 100px;
   color: black;
 }
-
+.muestraIcono:hover {
+ 
+  color: #cc5d01;
+}
 .imagenAgregada {
   width: 4%;
   margin-top: 7px;
