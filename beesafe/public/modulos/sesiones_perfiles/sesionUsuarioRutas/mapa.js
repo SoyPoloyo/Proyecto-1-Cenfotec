@@ -56,6 +56,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYWJsYW5jb2NlbmZvIiwiYSI6ImNrODNud2lrdzB6NDQzZ
     }
     function name(params) {
       
+      
     }
     function obtenerRuta(coordinates, radius, profile) {
       var radiuses = radius.join(';')

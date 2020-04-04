@@ -34,11 +34,10 @@ app.use(express.static(path.join(__dirname, "../public")));
 app.use('/registroUsuarioEspecializado', require('./servicios/registroUsuarioEspecializado.js'));
 app.use('/registroUsuarioClasico', require('./servicios/registroUsuarioClasico.js'));
 app.use('/registroUsuarioRutas', require('./servicios/registroUsuarioRutas'));
+app.use('/listarUsuarios', require('./servicios/listarUsuarios'));
+
 app.use('/listarRutas', require('./servicios/listarRutas'));
 
-
-
-app.use('/listarUsuarios', require('./servicios/listarUsuarios'));
 
     //Registrar y listar Vehiculo
 app.use('/registroCaracteristicaVehiculo', require('./servicios/registroCaracteristicaVehiculo'));
