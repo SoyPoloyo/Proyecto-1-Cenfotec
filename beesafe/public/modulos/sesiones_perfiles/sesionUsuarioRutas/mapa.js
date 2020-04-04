@@ -47,14 +47,17 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYWJsYW5jb2NlbmZvIiwiYSI6ImNrODNud2lrdzB6NDQzZ
       var lastFeature = data.features.length - 1;
       var coords = data.features[lastFeature].geometry.coordinates;
       var newCoords = coords.join(';'); // Se le da formato a las coordenadas
-      var radius = []; // Se le da de radio a las coordenadas de 25 metros
+      var radius = []; // Se le da de radio a las cooreliodenadas de 25 metros
       coords.forEach(element => {
         radius.push(25);
       });
       console.log("Punto de inicio y final para salvar en la base de datos: "+coords);
       obtenerRuta(newCoords, radius, profile);
     }
-
+    function name(params) {
+      
+      
+    }
     function obtenerRuta(coordinates, radius, profile) {
       var radiuses = radius.join(';')
       var query = 'https://api.mapbox.com/matching/v5/mapbox/' + profile + '/' + coordinates + '?geometries=geojson&radiuses=' + radiuses + '&steps=true&access_token=' + mapboxgl.accessToken;

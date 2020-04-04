@@ -12,9 +12,7 @@
             document.getElementById('muestraIcono').remove()
         }
       } 
-   
-     
-      
+    
     }
 
 /************************************************************
