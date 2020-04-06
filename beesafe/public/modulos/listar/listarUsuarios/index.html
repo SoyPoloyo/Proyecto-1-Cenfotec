@@ -1,6 +1,4 @@
-
-
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -23,15 +21,15 @@
     <header>
 
         <nav>
-            
-                
-            <img  class="logo_header"
-                src="../../../assets/img/blancobesafe.png" alt=""> 
 
-                
+
+            <img class="logo_header" src="../../../assets/img/blancobesafe.png" alt="">
+
+
             <a class="alt_letra derecha" href="../../sesiones_perfiles/perfilUsuarioAdmin/index.html">PERFIL</a>
             <a class="alt_letra derecha " href="#">INICIO</a>
-            <a class="alt_letra titulo_cuenta " href="../../sesiones_perfiles/sesionUsuarioEspecializado/index.html">—ADMINISTRADOR</a>
+            <a class="alt_letra titulo_cuenta "
+                href="../../sesiones_perfiles/sesionUsuarioEspecializado/index.html">—ADMINISTRADOR</a>
 
         </nav>
 
@@ -43,40 +41,42 @@
         CONTENIDO EN EL CAMPO IZQUIERDO DE LA PAGINA INICIO
     =================================================-->
 
-    <div class=" contenido_izquierdo izquierda">
+        <div class=" contenido_izquierdo izquierda">
 
-        <br>
+            <br>
 
-        <ul style="list-style-type:none;" class="alt_letra listas_menu">
+            <ul style="list-style-type:none;" class="alt_letra listas_menu">
 
-            <h3 class="titulo_lateral alt_letra">Listados</h3> <br>
-            <li><a href="../../listar/listarCaracteristicasvehiculo/index.html"> Caracteristicas Vehiculo</a> </li>
-            <br>
-            <li>  <a href="../../listar/ListarRutas/index.html">Rutas Disponibles</a> </li>
-            <br>
-            <li>  <a href="../../listar/listarUsuarios/index.html">Usuarios Totales</a></li>
-            <br>
-            <h3 class="titulo_lateral alt_letra">Registros</h3> <br>
-            <li><a href="../../registros/registroCaracteristicasVehiculo/index.html"> Caracteristicas Vehiculo</a> </li>
-            <br>
-            <li> <a href="../../registros/registroCategoriaIncidente/index.html"> Caracteristicas de incidente</a></li>
-            <br>
-            <li><a href="../../registros/registroUsuarioRutas/index.html"> Usuario Rutas</a></li>
-        
-        </ul>
-    
+                <h3 class="titulo_lateral alt_letra">Listados</h3> <br>
+                <li><a href="../../listar/listarCaracteristicasvehiculo/index.html"> Caracteristicas Vehiculo</a> </li>
+                <br>
+                <li> <a href="../../listar/ListarRutas/index.html">Rutas Disponibles</a> </li>
+                <br>
+                <li> <a href="../../listar/listarUsuarios/index.html">Usuarios Totales</a></li>
+                <br>
+                <h3 class="titulo_lateral alt_letra">Registros</h3> <br>
+                <li><a href="../../registros/registroCaracteristicasVehiculo/index.html"> Caracteristicas Vehiculo</a>
+                </li>
+                <br>
+                <li> <a href="../../registros/registroCategoriaIncidente/index.html"> Caracteristicas de incidente</a>
+                </li>
+                <br>
+                <li><a href="../../registros/registroUsuarioRutas/index.html"> Usuario Rutas</a></li>
 
-        
-  
-        
-     
-        <br> <br>
-       
-        <br> <br>
-        
-      
+            </ul>
 
-    </div>
+
+
+
+
+
+            <br> <br>
+
+            <br> <br>
+
+
+
+        </div>
 
         <!-- =======================================
         CONTENIDO EN EL CAMPO IZQUIERDO DE LA PAGINA INICIO
@@ -92,12 +92,23 @@
             <section class="listadoUsuarios">
 
 
-                
+
                 <a href="../../index.html"><img class="logoFormu" src="../../assets/img/BEESAFE.png" alt=""></a> <br>
-                
 
 
-                <h1>Listado De Usuarios</h1> <br>
+
+                <h1 class="izquierda">Listado De Usuarios</h1>
+
+
+                <select class="fondosG" id="tipoUsuarios"  onchange="buscar()">
+                    <option  value="" selected hidden>Tipo de usuario:</option>
+                    <option  value="1">Tradicional</option>
+                    <option  value="2">Especializado</option>
+                    <option  value="3">Rutas</option>
+                    <option  value="5">Todos</option>
+                </select> 
+
+                  <br> <br>
 
                 <table border="1" id="tablaUsuarios" class="tablaUsuarios">
 

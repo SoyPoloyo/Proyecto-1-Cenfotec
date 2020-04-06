@@ -3,23 +3,37 @@ var express = require("express");
 var router = express.Router();
 var mongoose = require("mongoose");
 
-const ListarUsuarios = require('../schema/modeloUsuarios.js');
+const Usuario = require('../schema/modeloUsuarios.js');
 
 
-router.get("/recibir", function(req, res) { 
+router.post("/recibir", function(req, res) { 
 
-    ListarUsuarios.find()
-      .exec()
-  
-      .then(function(result) {
-        res.json(result);
-      })
-  
-      .catch(function(err) {
-        console.log(err);
-      });
-  
-  
+
+  tipoUsuario=req.body.perro
+
+  if (tipoUsuario<5) {
+     Usuario
+    .find({tipoUsuario:tipoUsuario})
+    .then(function(resultado) {
+      res.json(resultado);
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+  }else{
+    Usuario
+  .find()
+  .then(function(resultado) {
+    res.json(resultado);
+  })
+  .catch(function(error) {
+    console.log(error);
   });
+ 
+  }
   
+  
+
+});
+
   module.exports = router;
