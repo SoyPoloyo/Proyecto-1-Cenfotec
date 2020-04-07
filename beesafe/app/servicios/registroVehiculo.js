@@ -20,18 +20,7 @@ router.post('/insertar', function (req, res) {
         .catch(function (error) {
             console.log(error);
         });
-    });
-    const transporter = nodemailer.createTransport({
-        host: "mail.sincorbata.net",
-        port: 587,
-        secure: false, // true for 465, false for other ports
-        auth: {
-          user: "beesafe@sincorbata.net", // generated ethereal user
-          pass: "admin" // generated ethereal password
-        },
-        tls: {
-          rejectUnauthorized: false
-        }
+
       });
     
     module.exports = router;
