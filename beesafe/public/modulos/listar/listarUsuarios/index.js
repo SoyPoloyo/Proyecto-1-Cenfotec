@@ -34,7 +34,7 @@ function buscar(){
         //console.log(valor);
         contenidoTablaUsuarios.innerHTML += `
                     <tr>
-                        <td>${i._id}</td>
+                       
                         <td>${i.tipoUsuario}</td>
                         <td>${i.nombre}</td>
                         <td>${i.apellido}</td>
