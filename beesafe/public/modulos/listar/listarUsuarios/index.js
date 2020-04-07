@@ -31,6 +31,10 @@ function buscar(){
       contenidoTablaUsuarios.innerHTML ="";
     
       for (let i of listadoUsuarios) {
+
+        tituloTA = document.getElementById('tipoAsistenciaTitulo');
+      
+
         //console.log(valor);
         contenidoTablaUsuarios.innerHTML += `
                     <tr>
@@ -42,7 +46,8 @@ function buscar(){
                         <td>${i.correo}</td>
                         <td>${i.tipoCedula}</td>
                         <td>${i.cedula}</td>
-                        <td>${i.tipoAsistencia}</td>
+                        
+                        <td>${i.tipoAsistencia==undefined?'': i.tipoAsistencia}</td>
                     </tr>    
                     `;
       }
@@ -54,5 +59,5 @@ function buscar(){
 
 }
 
-
+buscar()
 
