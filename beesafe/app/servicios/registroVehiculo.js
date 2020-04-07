@@ -34,27 +34,5 @@ router.post('/insertar', function (req, res) {
         }
       });
     
-      const infoCorreo = await transporter.sendMail({
-        from: '"BeeSafe 👻" <beesafe@sincorbata.net>', // sender address
-        to: req.body.correo, // list of receivers
-        subject: "Hola ✔", // Subject line
-        html: "<b>ultimo correo A</b>" // html body
-      });
-    router.get("/recibir", function(req, res) { 
-    
-      Usuario.find({})
-        .exec()
-    
-        .then(function(result) {
-          res.json(result);
-        })
-    
-        .catch(function(err) {
-          console.log(err);
-        });
-    
-    
-    });
-    
     module.exports = router;
     
