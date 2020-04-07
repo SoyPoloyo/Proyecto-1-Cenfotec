@@ -9,7 +9,7 @@ function buscar(){
   console.log(tipoUsuario);
 
   valor = {
-    perro:tipoUsuario
+    tipoUsuario:tipoUsuario
   }
 
   fetch("http://localhost:5252/listarUsuarios/recibir", {
