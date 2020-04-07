@@ -1,4 +1,6 @@
-var mongoose = require("mongoose");
+var express = require('express');
+var router = express.Router();
+var mongoose = require('mongoose');
 
 var registroVehiculoSchema = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
