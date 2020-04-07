@@ -1,7 +1,7 @@
 contenidoTablaUsuarios = document.getElementById("contenidoTablaUsuarios");
 
 
-
+console.log("probandoconsola")
 
 function buscar(){
 
