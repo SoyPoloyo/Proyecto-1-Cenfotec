@@ -9,7 +9,7 @@ const Usuario = require('../schema/modeloUsuarios.js');
 router.post("/recibir", function(req, res) { 
 
 
-  tipoUsuario=req.body.perro
+  tipoUsuario=req.body.tipoUsuario
 
   if (tipoUsuario<5) {
      Usuario

@@ -102,6 +102,10 @@ nav a {
   font-family: "Baloo 2", cursive;
 }
 
+.largoFondos {
+  width: 35%!important;
+}
+
 select option {
   margin: 40px;
   background: #2f2319;
