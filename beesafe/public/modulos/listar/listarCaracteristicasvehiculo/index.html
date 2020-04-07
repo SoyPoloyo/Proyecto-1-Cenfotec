@@ -1,0 +1,145 @@
+
+
+   
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BeeSafe</title>
+    
+        <link rel="stylesheet" href="../../../assets/css/estilosGlobales.css">
+    
+        <link rel="stylesheet" href="estilos.css">
+    
+        <link href="https://fonts.googleapis.com/css?family=Baloo|Baloo+2&display=swap" rel="stylesheet">
+        <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+        <script src="https://kit.fontawesome.com/2b7b514291.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+    
+        <header>
+    
+            <nav>
+                
+                    
+                <img onclick="window.location.href='../../../index.html'" class="logo_header"
+                    src="../../../assets/img/blancobesafe.png" alt=""> 
+    
+                    
+                <a class="alt_letra derecha" href="../../sesiones_perfiles/perfilUsuarioAdmin/index.html">PERFIL</a>
+                <a class="alt_letra derecha " href="#">INICIO</a>
+                <a class="alt_letra titulo_cuenta " href="../../sesiones_perfiles/sesionUsuarioAdmin/index.html">—ADMINISTRADOR</a>
+    
+            </nav>
+    
+        </header>
+    
+        <main>
+    
+            <!-- =======================================
+            CONTENIDO EN EL CAMPO IZQUIERDO DE LA PAGINA INICIO
+        =================================================-->
+    
+        <div class=" contenido_izquierdo izquierda">
+
+            <br>
+
+            <ul style="list-style-type:none;" class="alt_letra listas_menu">
+
+                <h3 class="titulo_lateral alt_letra">Listados</h3> <br>
+                <li><a href="../../listar/listarCaracteristicasvehiculo/index.html"> Caracteristicas Vehiculo</a> </li>
+                <br>
+                <li>  <a href="../../listar/ListarRutas/index.html">Rutas Disponibles</a> </li>
+                <br>
+                <li>  <a href="../../listar/listarUsuarios/index.html">Usuarios Totales</a></li>
+                <br>
+                <h3 class="titulo_lateral alt_letra">Registros</h3> <br>
+                <li><a href="../../registros/registroCaracteristicasVehiculo/index.html"> Caracteristicas Vehiculo</a> </li>
+                <br>
+                <li> <a href="../../registros/registroCategoriaIncidente/index.html"> Caracteristicas de incidente</a></li>
+                <br>
+                <li><a href="../../registros/registroUsuarioRutas/index.html"> Usuario Rutas</a></li>
+            
+            </ul>
+        
+
+            
+      
+            
+         
+            <br> <br>
+           
+            <br> <br>
+            
+          
+
+        </div>
+    
+            <!-- =======================================
+            CONTENIDO EN EL CAMPO IZQUIERDO DE LA PAGINA INICIO
+        =================================================-->
+    
+            <!-- =======================================
+                                Contenido Central Inicio
+        =================================================-->
+    
+    
+            <div class="contenidoPrincipal">
+
+                
+    <section class="listadoCaracteristicas">
+
+
+        <br>
+    
+        
+
+        <h1 class="">Caracteristicas De Vehiculo</h1> <br>
+
+        <table border="1" id="tablaCaracteristicas" class="tablaCaracteristicas">
+
+            <thead>
+                <tr>
+                  
+                    <th id="">Nombre</th>
+                    <th id="">Descripción</th>
+                            
+                </tr>
+            </thead>
+
+            <tbody id="contenidoTablaCaracteristicas">
+                 
+            </tbody>
+
+
+        </table>
+
+
+
+</section>
+    
+            </div>
+    
+    
+            <!-- =======================================
+                                Contenido Central Final
+        =================================================-->
+    
+        </main>
+    
+    
+    
+        <footer>
+    
+            <p class="derecha">WORKAPES&copy;<span>Todos los derechos reservados </span></p>
+    
+        </footer>
+    
+        <script src="index.js"></script>
+    </body>
+    
+    </html>

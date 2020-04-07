@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeeSafe</title>
+
+    <link rel="stylesheet" href="../../../assets/css/estilosGlobales.css">
+    <link rel="stylesheet" href="estilos.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Baloo|Baloo+2&display=swap" rel="stylesheet">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://kit.fontawesome.com/2b7b514291.js" crossorigin="anonymous"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.js'></script>
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.css' type='text/css' />
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+
+            <img class="logo_header" src="../../../assets/img/blancobesafe.png" alt="">
+            <a class="alt_letra derecha" href="../perfilUsuarioRutas/index.html">PERFIL</a>
+            <a class="alt_letra derecha " href="#">INICIO</a>
+            <a class="alt_letra titulo_cuenta " href="../sesionUsuarioRutas/index.html">—USUARIO RUTAS</a>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- =======================================
+        CONTENIDO EN EL CAMPO IZQUIERDO DE LA PAGINA INICIO
+    =================================================-->
+
+        <div class=" contenido_izquierdo izquierda">
+
+            <br> <br>
+
+            <h3 class="titulo_reporte alt_letra">Crear Ruta</h3> <br>
+
+
+            <textarea class="fondosG" placeholder="Describa el siniestro" rows="5" cols="0" name="mensaje"
+                id="mensaje"></textarea>
+
+
+
+            <br> <br> <br>
+
+            <input class="alt_letra boton_admin" type="submit" value="Guardar">
+
+        </div>
+
+        <!-- =======================================
+        CONTENIDO EN EL CAMPO IZQUIERDO DE LA PAGINA INICIO
+    =================================================-->
+
+        <!-- =======================================
+                            Contenido Central Inicio
+    =================================================-->
+
+
+        <!-- =======================================
+                            MAPA
+    =================================================-->
+
+    
+        <div class="" id='map' style='height: 85vh;';>
+           
+        </div>
+
+
+        <!-- =======================================
+                            Contenido Central Final
+    =================================================-->
+
+    </main>
+
+
+
+    <footer>
+
+        <p class="derecha">WORKAPES&copy;<span>Todos los derechos reservados </span></p>
+
+    </footer>
+
+    <script src="mapa.js"></script>
+</body>
+
+</html>
