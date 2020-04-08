@@ -1,135 +1,119 @@
-/************************************************************
-     Codigo Validacion de Elio
-     ****************************************************/  
-  
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
 
-
-    async function enviar() {
-      let datos = ["nombre", "apellido", "edad", "correo", "tipoCedula", "cedula"];
-      let valores = {};
-      let aprobado = false;
-      regexCorreo = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
-      
-      for (let dato of datos) {
-        valores[dato] = document.getElementById(dato).value;
-      }
-      for (let i in valores) {
-        if (valores[i] == "" || !regexCorreo.test(valores.correo)) {
-          swal({
-            title: "Registro Incorrecto",//josue
-            text: "Debe completar todos los campos de manera correcta",//josue
-            icon: "warning",//josue
-            button: "Continuar",//josue
-          });
-          aprobado = false;
-          break;
-        } else {
-          console.log("Enviado");
-          aprobado = true;
+    function subirImagen() {
+    
+      console.dir(document.getElementById('imagenAgregada'));
+        var archivo = document.getElementById("image").files[0];
+        var reader = new FileReader();
+        if (image) {
+          reader.readAsDataURL(archivo);
+          reader.onloadend = function () {
+            document.getElementById("imagenAgregada").src = reader.result;
+            document.getElementById("imagenAgregada").classList.add('imagenAgregada');
+            document.getElementById('muestraIcono').remove()
         }
-      }
-      console.log(valores.nombre);
-
-      if (aprobado) {
-
-      let existente;
+      } 
     
-      fetch1 = await fetch("http://localhost:5252/registroUsuarioRutas/recibir", {
-      body: JSON.stringify(),
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })   
-      .then(function(data) {
-        return data.json();
-      })
-      .then(function(res) {
-        console.log(res);
-        existente = res[0].correo
-      })
-      .catch(function(err) {
-        console.log(err);
-      });
+    }
 
-      if (existente == valores.correo) { 
-
-        swal({
-          title: "Registro Incorrecto",
-          text: "Usuario ya registrado",
-          icon: "warning",
-          button: "Continuar",
-        });
+/************************************************************
+     Codigo Validacion
+     ****************************************************/
+ 
+     async function enviar() {
+      
+        let datos = ['nombre', 'apellido', 'edad', 'correo', 'tipoCedula','cedula'];
+        let valores = new FormData();
+        let aprobado = false;
+        regexCorreo = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
         
-      } else{
-
-         fetch2 = await fetch("http://localhost:5252/registroUsuarioRutas/insertar", {
-          body: JSON.stringify(valores),
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
+        for (let dato of datos) {
+         valores.append( dato, document.getElementById(dato).value);
+        }
+        
+        for (let par of valores.entries()) {
+          // mostramos los pares de valores
+          console.log(par[0]+ ', '+ par[1]);
+          if (par[1] == "" || !regexCorreo.test(correo.value)) {
+ 
+            swal({
+              title: "Registro Incorrecto",
+              text: "Debe completar todos los campos de manera correcta",
+              icon: "warning",
+              button: "Continuar",
+            });
+            aprobado = false;
+            break;
+          } else {
+  
+        
+            aprobado = true;
           }
+        }
+        
+        if (aprobado) {
+  
+        let existente;
+       
+        valores.append( 'password' , 'beesafe'+getRandomInt(300));
+
+
+        fetch1 = await fetch("http://localhost:5252/listarUsuario/recibir", {
+        body: JSON.stringify({correo:document.getElementById('correo').value}),
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      })   
+        .then(function(data) {
+          return data.json();
         })
-          .then(function(data) {
-            return data.json();
-          })
-          .then(function(res) {
-            console.log(res);
-          })
-          .catch(function(err) {
-            console.log(err);
-          });
-    
+        .then(function(res) {
+          existente = res[0].correo;
+          
+        })
+        .catch(function(err) {
+          console.log(err);
+        });
+  
+        if (existente == document.getElementById('correo').value) { 
+  
           swal({
-            title: "Registro Correcto",
-            text: "Registro Exitoso",
-            icon: "success",
+            title: "Registro Incorrecto",
+            text: "Usuario ya registrado",
+            icon: "warning",
             button: "Continuar",
           });
-       
-       
+          
+        } else{
+          fetch2 = await fetch("http://localhost:5252/registroUsuarioRutas/insertar", {
+            body: valores,
+            method: "POST",
 
+          })
+            .then(function(data) {
+              return data.json();
+            })
+            .then(function(res) {
+              console.log(res);
+            })
+            .catch(function(err) {
+              console.log(err);
+            });
+      
+            swal({
+              title: "Registro Correcto",
+              text: "Registro Exitoso",
+              icon: "success",
+              button: "Continuar",
+            });
+         
+  
+        }
+        
+          
+        }
       }
       
-        
-      }
-    }
-    
-    
-    /************************************************************
-         llamado no usar*
-         ****************************************************/
-    
-    /*
-    
-    console.log('estoy en la concsola arriba')
-    
-    async function probando (){
-     var perro;
-        parra = await fetch("http://localhost:5252/registroUsuarioClasico/recibir", {
-      body: JSON.stringify(),
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })   
-      .then(function(data) {
-        return data.json(correo);
-      })
-      .then(function(res) {
-        console.log('segundo then');
-        console.log(res[0]);
-         perro = res[0].correo
-        console.log(perro);
-        console.log('segundo then');
-      })
-      .catch(function(err) {
-        console.log(err);
-      });
-    
-      console.log(perro);
-    }
-    probando();
-    
-    */
-    

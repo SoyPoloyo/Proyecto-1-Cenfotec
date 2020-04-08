@@ -30,11 +30,11 @@ router.post("/insertar", async function(req, res) {
     });
 
   const transporter = nodemailer.createTransport({
-    host: "mail.sincorbata.net",
+    host: "mail.alineacr.com",
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-      user: "beesafe@sincorbata.net", // generated ethereal user
+      user: "beesafe@alineacr.com", // generated ethereal user
       pass: "admin" // generated ethereal password
     },
     tls: {
@@ -43,29 +43,15 @@ router.post("/insertar", async function(req, res) {
   });
 
   const infoCorreo = await transporter.sendMail({
-    from: '"BeeSafe 🐝" <beesafe@sincorbata.net>', // sender address
+    from: '"BeeSafe 🐝" <beesafe@alineacr.net>', // sender address
     to: req.body.correo, // list of receivers
-    subject: "Hola ✔", // Subject line
+    subject: "Bienvenido a BeeSafe ✔", // Subject line
     html: "<b>ultimo correo A</b>" // html body
+
+    // html body
   });
 
 });
 
-
-router.get("/recibir", function(req, res) { 
-
-  Usuario.find({})
-    .exec()
-
-    .then(function(result) {
-      res.json(result);
-    })
-
-    .catch(function(err) {
-      console.log(err);
-    });
-
-
-});
 
 module.exports = router;
