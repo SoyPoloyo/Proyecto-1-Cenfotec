@@ -7,8 +7,8 @@
     <title>BeeSafe</title>
 
     <script>
-        var cookieConectado = document.cookie.split("=");
-        if (cookieConectado[1] != 3)
+        var galleta = localStorage.getItem("usuario");
+        if (galleta != 3)
           window.location.replace("../../../index.html");
       </script>
 

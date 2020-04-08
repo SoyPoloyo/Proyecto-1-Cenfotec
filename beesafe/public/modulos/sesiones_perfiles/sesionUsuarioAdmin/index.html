@@ -7,8 +7,8 @@
     <title>BeeSafe</title>
     
     <script>
-        var cookieConectado = document.cookie.split("=");
-        if (cookieConectado[1] != 0)
+        var galleta = localStorage.getItem("usuario");
+        if (galleta != 0)
           window.location.replace("../../../index.html");
       </script>
 
@@ -34,7 +34,7 @@
 
                 
             <a class="alt_letra derecha" href="../perfilUsuarioAdmin/index.html">PERFIL</a>
-            <a class="alt_letra derecha " href="#">INICIO</a>
+           
             <a class="alt_letra titulo_cuenta " href="#">—ADMINISTRADOR</a>
 
         </nav>
