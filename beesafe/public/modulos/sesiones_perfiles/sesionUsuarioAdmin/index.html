@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BeeSafe</title>
+    
+    <script>
+        var cookieConectado = document.cookie.split("=");
+        if (cookieConectado[1] != 0)
+          window.location.replace("../../../index.html");
+      </script>
 
     <link rel="stylesheet" href="../../../assets/css/estilosGlobales.css">
 
@@ -111,6 +117,9 @@
         <p class="derecha">WORKAPES&copy;<span>Todos los derechos reservados </span></p>
 
     </footer>
+
+
+ 
 
     <script src="index.js"></script>
 </body>

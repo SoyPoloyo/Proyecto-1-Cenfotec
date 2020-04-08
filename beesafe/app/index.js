@@ -28,6 +28,8 @@ app.use(express.static(path.join(__dirname, "../public")));
 
 // recibir llamados
 
+// Verificar Usuario , LOGIN
+app.use('/login', require('./servicios/login'));
 
 
     //registrar y listar usuarios
