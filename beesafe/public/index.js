@@ -24,10 +24,10 @@ function validarLogin() {
         if (response.length>0) {
           if (document.getElementById('password').value == response[0]['password']) {
               console.log(response[0].tipoUsuario)
-                        response[0].tipoUsuario == 0 ? localStorage.setItem('usuario', '0') :
-                        response[0].tipoUsuario == 1 ? localStorage.setItem('usuario', '1'):
-                        response[0].tipoUsuario == 2 ? localStorage.setItem('usuario', '2'):
-                        response[0].tipoUsuario == 3 ? localStorage.setItem('usuario', '3'):
+                        response[0].tipoUsuario == 0 ? localStorage.setItem('usuario', '0') & localStorage.setItem('correo',response[0].correo ):
+                        response[0].tipoUsuario == 1 ? localStorage.setItem('usuario', '1') & localStorage.setItem('correo',response[0].correo ):
+                        response[0].tipoUsuario == 2 ? localStorage.setItem('usuario', '2') & localStorage.setItem('correo',response[0].correo ):
+                        response[0].tipoUsuario == 3 ? localStorage.setItem('usuario', '3') & localStorage.setItem('correo',response[0].correo ):
                         'Invalido';
             console.log(response)
 

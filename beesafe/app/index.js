@@ -37,6 +37,7 @@ app.use('/registroUsuarioEspecializado', require('./servicios/registroUsuarioEsp
 app.use('/registroUsuarioClasico', require('./servicios/registroUsuarioClasico.js'));
 app.use('/registroUsuarioRutas', require('./servicios/registroUsuarioRutas'));
 app.use('/listarUsuarios', require('./servicios/listarUsuarios'));
+app.use('/listarUsuario', require('./servicios/listarUsuario'));
 
 app.use('/listarRutas', require('./servicios/listarRutas'));
 

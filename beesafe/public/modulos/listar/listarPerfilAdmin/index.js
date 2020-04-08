@@ -1,13 +1,12 @@
 contenidoUsuario = document.getElementById("contenidoUsuario");
 
-var tipoUsuario;
-console.log(tipoUsuario);
+
 
 valor = {
-  tipoUsuario: 0
+  correo: localStorage.getItem('correo')
 };
 
-fetch("http://localhost:5252/listarUsuarios/recibir", {
+fetch("http://localhost:5252/listarUsuario/recibir", {
   body: JSON.stringify(valor),
   method: "POST",
   headers: {
@@ -18,7 +17,7 @@ fetch("http://localhost:5252/listarUsuarios/recibir", {
     return data.json();
   })
   .then(function(res) {
-    console.log(tipoUsuario);
+  
     usuario = res[0];
     console.log(res);
 
