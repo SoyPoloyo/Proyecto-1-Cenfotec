@@ -44,7 +44,7 @@ router.post("/insertar", async function (req, res) {
   });
 
   const infoCorreo = await transporter.sendMail({
-    from: '"BeeSafe 🐝" <beesafe@sincorbata.net>', // sender address
+    from: '"BeeSafe 🐝" <beesafe@alineacr.com">', // sender address
     to: req.body.correo, // list of receivers
     subject: "Bienvenido a BeeSafe ✔", // Subject line
     html: `<!doctype html>
