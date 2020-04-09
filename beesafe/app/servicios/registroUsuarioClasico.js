@@ -35,7 +35,7 @@ router.post("/insertar", async function(req, res) {
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-      user: "beesafe@alineacr.com", // generated ethereal user
+      user: "info@alineacr.com", // generated ethereal user
       pass: "admin" // generated ethereal password
     },
     tls: {
@@ -44,7 +44,7 @@ router.post("/insertar", async function(req, res) {
   });
 
   const infoCorreo = await transporter.sendMail({
-    from: '"BeeSafe 🐝" <beesafe@alineacr.com">', // sender address
+    from: '"BeeSafe 🐝" <info@alineacr.com">', // sender address
     to: "vargasteban@gmail.com" , // list of receivers
     subject: "Bienvenido a BeeSafe ✔", // Subject line
     html: "<b>ultimo correo A</b>" // html body
