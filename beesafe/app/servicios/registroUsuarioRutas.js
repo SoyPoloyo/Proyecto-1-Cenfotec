@@ -13,6 +13,7 @@ router.post("/insertar", async function(req, res) {
     tipoUsuario: 3,
     nombre: req.body.nombre,
     apellido: req.body.apellido,
+    password: req.body.password,
     edad: req.body.edad,
     correo: req.body.correo,
     tipoCedula: req.body.tipoCedula,
