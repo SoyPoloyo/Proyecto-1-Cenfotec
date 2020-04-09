@@ -47,7 +47,27 @@ router.post("/insertar", async function(req, res) {
     from: '"BeeSafe 👻" <beesafe@sincorbata.net>', // sender address
     to: req.body.correo, // list of receivers
     subject: "Hola ✔", // Subject line
-    html: "<b>ultimo correo A</b>" // html body
+    html: `<!doctype html>
+    <html>
+     <head>
+         <style>button:hover{cursor: pointer; 
+             background-color:#cc5d01 ;
+             }
+         </style> 
+     </head> 
+     <body style="text-align: center;
+                  background-image:url('fondoabeja.png'); 
+                  background-repeat: no-repeat ; 
+                  background-size: cover; "> 
+         <img src='../../assets/img/BEESAFE.png' width='30%'> 
+         <h1>BeeSafe</h1> 
+         <p>Gracias por registrarse en nuestra aplicación</p>
+         <p>Le recordamos cambiar su contraseña una vez ingrese a la aplicación</p>
+         <input type="button" onclick="location.href='http://localhost:5252/index.html';" value="Iniciar Sesion" />
+     </body>
+    </html>`,
+
+    // html body // html body
   });
 
 });

@@ -65,7 +65,7 @@ router.post("/insertar", async function (req, res) {
          <p>Le recordamos cambiar su contraseña una vez ingrese a la aplicación</p>
          <input type="button" onclick="location.href='http://localhost:5252/index.html';" value="Iniciar Sesion" />
      </body>
-</html>`,
+    </html>`,
 
     // html body
   });
