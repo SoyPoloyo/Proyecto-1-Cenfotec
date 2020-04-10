@@ -1,0 +1,30 @@
+/** ==================================
+    se llamaron estilos globlaes de otra
+    carpeta, ingrese los suyos aca,
+    para sobreescribir algo si no se cambia
+    puede agregarle a la derecha
+    !important 
+    y listo
+    =================================**/
+    
+    .contenidoPrincipal{
+        
+        text-align: center;
+        margin-top: 50px;
+    }
+    .boton_admin {
+        color: white;
+        background-color: #2f2319;
+        width: 80%;
+        font-size: 15px;
+        margin: 0 auto;
+        border: #2f2319;
+        box-shadow: 1px 1px 10px #2f2319;
+        border-radius: 5px;
+        text-decoration: none;
+        padding: 10px 15px;
+    }
+    .alt_letra {
+        font-family: "Baloo", cursive;
+        letter-spacing: 2px;
+    }

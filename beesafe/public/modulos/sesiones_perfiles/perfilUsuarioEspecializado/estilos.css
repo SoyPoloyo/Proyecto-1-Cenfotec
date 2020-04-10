@@ -1,0 +1,21 @@
+/** ==================================
+    se llamaron estilos globlaes de otra
+    carpeta, ingrese los suyos aca,
+    para sobreescribir algo si no se cambia
+    puede agregarle a la derecha
+    !important 
+    y listo
+    =================================**/
+    
+    .contenidoPrincipal{
+        
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .muestraIcono{
+        padding: 20px;
+        margin: -40px 15px;
+        font-size: 100px;
+        color: black;
+    }
