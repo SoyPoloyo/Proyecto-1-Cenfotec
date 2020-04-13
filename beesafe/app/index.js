@@ -47,11 +47,16 @@ app.use('/registroCaracteristicaVehiculo', require('./servicios/registroCaracter
 app.use('/registroVehiculo', require('./servicios/registroVehiculo'));
 app.use('/listarCaracteristicasVehiculo', require('./servicios/listarCaracteristicasVehiculo'));
 
-    //Registrar y listar Siniestros
-app.use('/registroTipoSiniestro', require('./servicios/registroTipoSiniestro'));
+    //Registrar y listar Categoria Incidente 
+app.use('/registroCategoriaIncidente', require('./servicios/registroCategoriaIncidente'));
+app.use('/listarCategoriaIncidente', require('./servicios/listarCategoriaIncidente'));
+
+  //Registrar y listar Tipo Vehiculo 
+app.use('/registroTipoVehiculo', require('./servicios/registroTipoVehiculo'));
+app.use('/listarTipoVehiculo', require('./servicios/listarTipoVehiculo'));
 
     //Registrar y listar metodos de pago
-    app.use('/registroMetodoPago', require('./servicios/registroMetodoPago'));
+app.use('/registroMetodoPago', require('./servicios/registroMetodoPago'));
 
 
 

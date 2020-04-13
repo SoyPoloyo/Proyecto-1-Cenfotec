@@ -99,40 +99,20 @@
 
 
                 <form class="formulario2">
-                    <h1 class="alt_letra">Registrar categoría de incidente</h1> <br>
+                    <h1 class="alt_letra">Registrar tipo de vehículo</h1> <br>
                     <br>
                     <div class="izquierda izquierdaCentro">
 
-                        <input class="fondosG" type="text" value="" placeholder="Nombre del incidente" name="nombre"
+                        <input class="fondosG" type="text" value="" placeholder="Tipo de vehículo" name="nombre"
                             id="nombre" autofocus>
+
+                        <input class="fondosG" type="text" value="" placeholder="Característica" name="caracteristica"
+                            id="caracteristica" autofocus>
 
                         <br><br>
 
                         <textarea class="fondosG" rows="7" placeholder="Descripcion" id="descripcion"></textarea>
                     </div>
-
-                    <!-- =======================================
-                            Contenido Div de imagen Fran
-                            
-                            <div class="upload-btn-wrapper ">
-                        <input class="boton-imagen fondosG" type="button" value="Imagen">
-                        <input type="file" name="myfile" id="image" accept="image/gif, image/png, image/jpeg"
-                            onchange="subirImagen()">
-                            
-                            <p class="imagen_provisional ">
-                        <i class=" esconder far fa-image" id="muestraIcono"></i>
-                        <img class="" id="imagenAgregada" alt="">
-                    </p>
-                    
-                    </div>  <img src="/public/assets/uploads/car-crash-solid.png">
-    =================================================-->
-
-                    <input onchange="subirImagen()" class="estiloBoton" type="file" name="image" id="image"> <br> <br>
-
-                    <img class="" id="imagenAgregada" alt=""> <br>
-                    <i class="  far fa-image muestraIcono" id="muestraIcono"></i> <br> <br>
-
-
 
                     <br> <br>
                     <input class="boton_1 alt_letra fondosG" type="button" value="Enviar" onclick="registro()">

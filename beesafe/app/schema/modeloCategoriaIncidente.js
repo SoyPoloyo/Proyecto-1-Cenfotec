@@ -1,12 +1,10 @@
-const { Schema, model } = require('mongoose');
+var mongoose = require("mongoose");
 
-const TipoSiniestroSchema = new Schema({
-
-    nombre: { type: String, required: true },
-    descripcion: { type: String, required: true },
-    imagen: { type: String },
-    creado_en: { type: Date, default: Date.now }
+var categoriaIncidenteSchema = mongoose.Schema({
+  _id: mongoose.Schema.Types.ObjectId,
+  nombre: String,
+  descripcion: String,
+  image: String
 });
 
-module.exports = model('TipoSinietro', TipoSiniestroSchema);
-
+module.exports = mongoose.model("CategoriaIncidente", categoriaIncidenteSchema, "CategoriaIncidentes");
