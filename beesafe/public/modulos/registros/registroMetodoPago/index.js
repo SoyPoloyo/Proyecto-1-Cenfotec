@@ -5,7 +5,7 @@
 
 
     async function enviar() {
-        let datos = ["nombre", "numeroTarjeta", "fecha", "cvv"];
+        let datos = [ "numeroTarjeta", "fecha", "cvv"];
         let valores = {};
         let aprobado = false;
         regexCorreo = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;

@@ -32,7 +32,6 @@
 
     </header>
 
-
     <main>
 
         <!-- =======================================
@@ -76,50 +75,44 @@
 
         <div class="contenidoPrincipal">
 
+            <section class="listadoUsuarios">
+                <br>
+                <h1 class="izquierda ">Listado De Tarjetas</h1> 
+
+                
 
 
-            <section class="formulario">
+                <select class="fondosG" id="tipoTarjeta"  onchange="buscar()">
+                    <option  value="5" selected hidden>Buscar Tarjeta:</option>
+                    <option  value="1">Mastercard</option>
+                    <option  value="2">Visa</option>
+                  
+                </select> 
 
-                <form >
+                  <br> <br>
 
-                    <br>
-                   
-                    <br> <br>
+                <table border="1" id="tablaTarjetas" class="tablaTarjetas">
 
+                    <thead>
+                        <tr>
 
+                            <th id="">Nombre</th>
+                            <th id="">Numero de tarjeta</th>
+                            <th id="">Fecha Vencimiento</th>
+                            <th id="">CVV</th>   
+                        </tr>
+                    </thead>
 
-                    <h1 class="alt_letra">Registro De vehiculo</h1> <br>
+                    <tbody id="contenidoTablaTarjetas">
 
-
-                    <input class="fondosG" type="number" value="" placeholder="Placa de su vehiculo" name="placaVehi"
-                        id="placaVehi">
-                    <input class="fondosG" type="text" value="" placeholder="modelo" name="modelo" id="modelo"> <br> <br>
-                    <input class="fondosG" type="number" value="" placeholder="año" name="anno" id="anno">
-             
-                    <select class="fondosG" value="" name="marca_vehiculo" id="marca_vehiculo">
-                        <option value="" selected hidden>Marca de vehiculo:</option>
-                        <option value="Audi">Audi</option>
-                        <option value="BMW">BMW </option>
-                        <option value="Chevrolet">Chevrolet </option>
-                        <option value="Citroen">Citroen </option>
-                        <option value="Ford">Ford </option>
-                        <option value="Honda">Honda </option>
-                        <option value="Hyundai">Hyundai </option>
-                        <option value="Jeep">Jeep </option>
-                        <option value="Mitsubishi">Mitsubishi </option>
-                        <option value="Nissan">Nissan </option>
-                        <option value="Susuki">Susuki </option>
-                        <option value="Tesla">Tesla </option>
-                        <option value="Toyota">Toyota </option>
-                    </select> <br> <br>
-                    <input class="boton_1 alt_letra fondosG" type="button" value="Guardar" onclick="enviar()">
+                    </tbody>
 
 
+                </table>
 
-                </form>
+
 
             </section>
-
 
         </div>
 

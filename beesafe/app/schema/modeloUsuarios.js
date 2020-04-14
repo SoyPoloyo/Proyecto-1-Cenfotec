@@ -12,7 +12,7 @@ var usuarios = mongoose.Schema({
   cedula: Number,
   tipoAsistencia: String,
   image: String,
-  metodoPago: String,
+  metodoPago: Object,
 });
 
 module.exports = mongoose.model( "Usuario", usuarios,"Usuarios");

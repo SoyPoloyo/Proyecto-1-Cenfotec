@@ -2,7 +2,7 @@ var mongoose = require("mongoose");
 
 var listarVehiculoSchema = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
-  nombre: String,
+
   placa: Number,
   modelo: String,
   año: Number,
