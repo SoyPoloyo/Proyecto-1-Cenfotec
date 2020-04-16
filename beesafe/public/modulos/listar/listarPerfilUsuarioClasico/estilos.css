@@ -5,3 +5,11 @@
 .largoFondos{
 width: 57.5%!important;
 }
+
+.modificar{
+    margin-left: 28%;
+}
+.redireccion{
+    text-decoration: none;
+    color: white;
+}
