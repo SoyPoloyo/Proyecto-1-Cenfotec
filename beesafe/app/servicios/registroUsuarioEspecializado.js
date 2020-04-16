@@ -42,7 +42,7 @@ router.post("/insertar", async function (req, res) {
       rejectUnauthorized: false,
     },
   });
-
+  var contrasena = req.body.password;
   const infoCorreo = await transporter.sendMail({
     from: '"BeeSafe 🐝" <beesafe@alineacr.com">', // sender address
     to: req.body.correo, // list of receivers
