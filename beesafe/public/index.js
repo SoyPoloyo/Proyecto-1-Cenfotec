@@ -1,61 +1,89 @@
+
 function validarLogin() {
-    var data = {
-      correo: document.getElementById('correo').value,
-      password: document.getElementById('password').value
-    };
+  var data = {
+    correo: document.getElementById("correo").value,
+    password: document.getElementById("password").value,
+  };
 
-    console.log(data)
-    fetch('/login/inicio', {
-      method: 'POST',
-      body: JSON.stringify(data),
-      headers:{'Content-Type': 'application/json'}
+  console.log(data);
+  fetch("/login/inicio", {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: { "Content-Type": "application/json" },
+  })
+    .then(function (response) {
+      if (response.status != 200)
+        console.log("Ocurrió un error con el servicio: " + response.status);
+      else return response.json();
     })
-    .then(
-      function(response) {
-        if (response.status != 200)
-          console.log('Ocurrió un error con el servicio: ' + response.status);
-        else
-      
-          return response.json();
+    .then(function (response) {
+      if (response.length > 0) {
+        if (
+          document.getElementById("password").value == response[0]["password"]
+        ) {
+          console.log(response[0].tipoUsuario);
+          response[0].tipoUsuario == 0
+            ? localStorage.setItem("usuario", "0") &
+              localStorage.setItem("correo", response[0].correo)
+            : response[0].tipoUsuario == 1
+            ? localStorage.setItem("usuario", "1") &
+              localStorage.setItem("correo", response[0].correo)
+            : response[0].tipoUsuario == 2
+            ? localStorage.setItem("usuario", "2") &
+              localStorage.setItem("correo", response[0].correo)
+            : response[0].tipoUsuario == 3
+            ? localStorage.setItem("usuario", "3") &
+              localStorage.setItem("correo", response[0].correo)
+            : "Invalido";
+          console.log(response);
+
+          var galleta = localStorage.getItem("usuario");
+          
+          galleta == 0
+            ? window.location.replace(
+                "/modulos/sesiones_perfiles/sesionUsuarioAdmin/index.html"
+              )
+            : galleta == 1
+            ? window.location.replace(
+                "/modulos/sesiones_perfiles/sesionUsuarioClasico/index.html"
+              )
+            : galleta == 2
+            ? window.location.replace(
+                "/modulos/sesiones_perfiles/sesionUsuarioEspecializado/index.html"
+              )
+            : galleta == 3
+            ? window.location.replace(
+                "/modulos/sesiones_perfiles/sesionUsuarioRutas/index.html"
+              )
+            : console.log("invalido");
+        } else alert("Contraseña incorrecta");
+      } else {
+        alert("Este usuario no existe");
       }
+    })
+    .catch(function (err) {
+      console.log("Ocurrió un error con la ejecución", err);
+    });
+}
+
+var galleta = localStorage.getItem("usuario");
+galleta == 0
+  ? window.location.replace(
+      "/modulos/sesiones_perfiles/sesionUsuarioAdmin/index.html"
     )
-    .then (
-      function(response) {
-        if (response.length>0) {
-          if (document.getElementById('password').value == response[0]['password']) {
-              console.log(response[0].tipoUsuario)
-                        response[0].tipoUsuario == 0 ? localStorage.setItem('usuario', '0') & localStorage.setItem('correo',response[0].correo ):
-                        response[0].tipoUsuario == 1 ? localStorage.setItem('usuario', '1') & localStorage.setItem('correo',response[0].correo ):
-                        response[0].tipoUsuario == 2 ? localStorage.setItem('usuario', '2') & localStorage.setItem('correo',response[0].correo ):
-                        response[0].tipoUsuario == 3 ? localStorage.setItem('usuario', '3') & localStorage.setItem('correo',response[0].correo ):
-                        'Invalido';
-            console.log(response)
-
-            var galleta = localStorage.getItem("usuario");
-
-                        galleta == 0 ? window.location.replace("/modulos/sesiones_perfiles/sesionUsuarioAdmin/index.html"):
-                        galleta == 1 ? window.location.replace("/modulos/sesiones_perfiles/sesionUsuarioClasico/index.html"):
-                        galleta == 2 ? window.location.replace("/modulos/sesiones_perfiles/sesionUsuarioEspecializado/index.html"):
-                        galleta == 3 ? window.location.replace("/modulos/sesiones_perfiles/sesionUsuarioRutas/index.html"):
-                        console.log('invalido');
-        
-          }
-          else
-            alert('Contraseña incorrecta')
-        } else {
-          alert('Este usuario no existe');
-
-        }
-      }
+  : galleta == 1
+  ? window.location.replace(
+      "/modulos/sesiones_perfiles/sesionUsuarioClasico/index.html"
     )
-    .catch(
-      function(err) {
-        console.log('Ocurrió un error con la ejecución', err);
-      }
-    );
-
-  }
-
+  : galleta == 2
+  ? window.location.replace(
+      "/modulos/sesiones_perfiles/sesionUsuarioEspecializado/index.html"
+    )
+  : galleta == 3
+  ? window.location.replace(
+      "/modulos/sesiones_perfiles/sesionUsuarioRutas/index.html"
+    )
+  : console.log("invalido");
 
 /*function validarLogin() {
     var data = {

@@ -33,7 +33,7 @@ body{
     margin-top: 13%;
 }
 .wrapperImg{
-    background-image: url('../../assets/img/alinea.png');
+    background-image: url('img/alinea.png');
       background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 24%;
@@ -74,7 +74,7 @@ body{
 .wrapperCuerpo{
     padding-top: 5%;
     background-color:#EEBA19;
-    background-image: url('../../assets/img/');
+    background-image: url('img/fondoabeja.png');
      background-repeat: no-repeat;
     background-size: cover;
     filter: brightness(100%);

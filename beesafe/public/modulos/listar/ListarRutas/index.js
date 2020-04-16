@@ -23,9 +23,9 @@
         contenidoTablaRutas.innerHTML += `
                     <tr>
                       
-                        <td>${listadoRuta.nombre}</td>
-                        <td>${listadoRuta.apellido}</td>
-                        <td>${listadoRuta.edad}</td>
+                        <td>${listadoRuta.nombreRuta}</td>
+                        <td>${listadoRuta.cordenadasRuta}</td>
+                        <td>${listadoRuta.estado}</td>
                        
                     
                      
