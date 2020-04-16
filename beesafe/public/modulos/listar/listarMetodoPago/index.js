@@ -1,28 +1,32 @@
 contenidoTablaTarjetas = document.getElementById("contenidoTablaTarjetas");
 
 
-console.log("probandoconsola")
 
 function buscar(){
 
 
+  valor = {
+    identificador: localStorage.getItem('correo')
+  };
+  
   fetch("http://localhost:5252/listarMetodoPago/recibir", {
-    
-    method: "GET"
-
+    body: JSON.stringify(valor),
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    }
   })
     .then(function(data) {
       return data.json();
     })
     .then(function(res) {
-      let listadoUsuarios = {};
-      console.log(res);
-      listadoUsuarios = res;
+   
+      listadoTarjetas = res;
       console.log(res)
       
       contenidoTablaTarjetas.innerHTML ="";
     
-      for (let i of listadoUsuarios) {
+      for (let i of listadoTarjetas) {
     
         //console.log(valor);
         contenidoTablaTarjetas.innerHTML += `
@@ -45,4 +49,21 @@ function buscar(){
 }
 
 buscar()
+
+/* router.post('/update', function(req, res) {
+  siniestro.findByIdAndUpdate({ _id: req.body.id },{ icono: req.body.icono,nombre : req.body.nombre,descripcion: req.body.descripcion},
+    function(err, result) {
+      if (err) {
+        res.send(err);
+      }
+      else {
+        res.json({
+          succes: false,
+          msg: 'El usuario no existe'
+        }) 
+      };
+    }
+  );
+});
+ */
 

@@ -5,12 +5,13 @@
 
 
     async function enviar() {
-        let datos = [ "numeroTarjeta", "fecha", "cvv"];
+        let datos = [ 'nombre', "numeroTarjeta", "fecha", "cvv"];
         let valores = {};
         let aprobado = false;
         regexCorreo = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
         
         for (let dato of datos) {
+          
           valores[dato] = document.getElementById(dato).value;
         }
         for (let i in valores) {
@@ -33,7 +34,7 @@
         if (aprobado) {
   
         console.log(valores);
-  
+        valores['identificador'] = localStorage.getItem("correo")
            fetch2 = await fetch("http://localhost:5252/registroMetodoPago/insertar", {
             body: JSON.stringify(valores),
             method: "POST",

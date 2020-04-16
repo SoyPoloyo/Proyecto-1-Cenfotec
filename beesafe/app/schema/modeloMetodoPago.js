@@ -6,6 +6,7 @@ var metodoPagoSchema = mongoose.Schema({
   numeroTarjeta: Number,
   fecha: String,
   cvv: Number,
+  identificador:String
  
 });
 

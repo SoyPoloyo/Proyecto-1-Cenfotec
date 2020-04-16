@@ -8,6 +8,7 @@ var MetodoPago = require("../schema/modeloMetodoPago");
 
 router.post("/insertar", async function(req, res) {
 
+
   
   var metodoPagoNuevo = new MetodoPago({
     _id: new mongoose.Types.ObjectId(),
@@ -15,6 +16,7 @@ router.post("/insertar", async function(req, res) {
     numeroTarjeta: req.body.numeroTarjeta,
     fecha: req.body.fecha,
     cvv: req.body.cvv,
+    identificador:req.body.identificador
    
   });
 
@@ -30,21 +32,5 @@ router.post("/insertar", async function(req, res) {
 
 });
 
-
-router.get("/recibir", function(req, res) { 
-
-  Usuario.find({})
-    .exec()
-
-    .then(function(result) {
-      res.json(result);
-    })
-
-    .catch(function(err) {
-      console.log(err);
-    });
-
-
-});
 
 module.exports = router;
