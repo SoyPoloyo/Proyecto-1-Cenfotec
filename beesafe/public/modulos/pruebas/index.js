@@ -1,2 +1,0 @@
-import { registroCaracteristicasVehiculo } from "../registroCaracteristicasVehiculo";
-
