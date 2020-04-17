@@ -24,7 +24,8 @@ fetch("http://localhost:5252/listarCaracteristicasVehiculo/recibir", {
                     
                       <td>${listadoCaracteristica.nombre}</td>
                       <td>${listadoCaracteristica.descripcion}</td>
-                      <td><button class="botonBorrar" onclick=""><i class="fas fa-trash"></i></button></td>
+                      <td><button class="botonBorrarEditar" onclick=""><i class="far fa-edit"></i></button></td>
+                      <td><button class="botonBorrarEditar" onclick=""><i class="far fa-trash-alt"></i></button></td>
                    
                   </tr>    
                   `;

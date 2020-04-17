@@ -165,7 +165,7 @@ select option {
 
 }
 
-.botonBorrar{
+.botonBorrarEditar{
   color: #ef9d34;
   background-color: #2f2319;
   width: 80%;
@@ -180,7 +180,7 @@ select option {
   padding: 5px;
   
 }
-.botonBorrar:hover{
+.botonBorrarEditar:hover{
   color: #2f2319;
   background-color: #cc5d01;
   
