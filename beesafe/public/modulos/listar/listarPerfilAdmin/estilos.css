@@ -1,20 +1,12 @@
 
-.listadoUsuarios{
-    height: 85vh;
-    margin-left: 25%;
-    text-align: justify;
-}
+ .contenidoPrincipal {
+    margin-left: 22%;
+    
+  }
+  
 
-.largoFondos{
-width: 57.5%!important;
-}
 
-.modificar{
-    margin-left: 15%;
-    text-align: center;
-    width: 30%!important;
 
-}
 .redireccion{
     text-decoration: none;
     color: white;

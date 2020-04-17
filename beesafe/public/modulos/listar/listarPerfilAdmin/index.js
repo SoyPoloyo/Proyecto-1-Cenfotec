@@ -24,30 +24,32 @@ fetch("http://localhost:5252/listarUsuario/recibir", {
     contenidoUsuario.innerHTML += `
 
       
-                    <h4>Nombre y Apellidos</h4>
-                    <p class="fondosG izquierda">
+                    <h4>Nombre</h4>
+                    <p class="fondosG ">
                     ${usuario.nombre}
                     </p>
-
-                    <p class="fondosG izquierda">
+                    <br>
+                    <h4>Apellidos</h4>
+                    <p class="fondosG ">
                     ${usuario.apellido}
                     </p>
 
-                    <br> <br> <br>
+                    <br> 
 
-                    <h4>Edad y Cedula</h4>
-                    <p  class="fondosG izquierda">
+                    <h4>Edad</h4>
+                    <p  class="fondosG ">
                     ${usuario.edad}
                     </p>
-
-                    <p  class="fondosG izquierda">
+                    <br>
+                    <h4>Cedula</h4>
+                    <p  class="fondosG ">
                     ${usuario.cedula}
                     </p>
 
-                    <br> <br> <br>
+                    <br> 
 
                     <h4>Correo Electronico</h4>
-                    <p  class="fondosG largoFondos">
+                    <p  class="fondosG ">
                     ${usuario.correo}
                     </p>    
 
