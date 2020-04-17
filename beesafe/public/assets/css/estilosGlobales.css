@@ -154,10 +154,10 @@ select option {
   background-color: #ef9d34;
   width: 20%;
   font-size: 15px;
-  margin: auto;
+  
   box-shadow: 1px 1px 10px #2f2319;
   border-radius: 5px;
-  margin-left: 10px;
+  
 }
 .boton_2:hover {
   box-shadow: 1px 1px 7px #2f2319;
@@ -233,7 +233,31 @@ select option {
   color: white;
 }
 
+.tablaListar {
+  max-width: 92%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 17px;
+  
 
+}
+.tablaListar th  {
+  
+  text-align: center;
+  font-size: 20px;
+  font-family: "Baloo 2", cursive;
+  padding: 5px 10px;
+  
+}
+.tablaListar td {
+  
+ 
+  padding: 0px 10px;
+}
+
+.tablaListar tr:nth-child(even) {
+  background-color: #a8998c21;
+}
 /** ==================================
                     FOOTER
           =================================**/
