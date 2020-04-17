@@ -165,6 +165,27 @@ select option {
 
 }
 
+.botonBorrar{
+  color: #ef9d34;
+  background-color: #2f2319;
+  width: 80%;
+  font-size: 20px;
+  margin: 5px auto;
+  margin-left: 10px;
+  border: #2f2319;
+  box-shadow: 1px 1px 4px #a8998c;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+  
+}
+.botonBorrar:hover{
+  color: #2f2319;
+  background-color: #cc5d01;
+  
+}
+
 .listas_menu {
   width: 95%;
   font-size: 15px;

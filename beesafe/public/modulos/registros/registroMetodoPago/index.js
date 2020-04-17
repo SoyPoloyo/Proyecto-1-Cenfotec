@@ -59,7 +59,11 @@
               button: "Continuar",
             });
          
-  
+            setTimeout(() => {
+              window.location.replace(
+              "../../listar/listarMetodoPago/index.html"
+            )
+            }, 3333);
         
         
           
