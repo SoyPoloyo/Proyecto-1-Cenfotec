@@ -58,8 +58,16 @@
               text: "Registro Exitoso",
               icon: "success",
               button: "Continuar",
+              
             });
-         
+            
+            setTimeout(() => {
+              window.location.replace(
+              "../../listar/listarVehiculos/index.html"
+            )
+            }, 3333);
+            
+           
   
         
         
