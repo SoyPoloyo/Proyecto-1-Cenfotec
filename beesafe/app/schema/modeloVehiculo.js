@@ -1,14 +1,13 @@
+
 var mongoose = require("mongoose");
 
-var listarVehiculoSchema = mongoose.Schema({
+var vehiculoSchema = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
-
-  placa: Number,
+  placaVehi: String,
   modelo: String,
-  año: Number,
-  marca: String,
+  anno: Number,
+  marca_vehiculo: String,
   identificador: String
-
 });
 
-module.exports = mongoose.model( "vehiculo", listarVehiculoSchema ,"listarVehiculos");
+module.exports = mongoose.model( "vehiculo", vehiculoSchema ,"Vehiculos");

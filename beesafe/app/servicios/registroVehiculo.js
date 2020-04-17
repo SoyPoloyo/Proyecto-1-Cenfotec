@@ -2,12 +2,12 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
 
-var registroVehiculo = require('../schema/modeloRegistroVehiculo');
+var registroVehiculo = require('../schema/modeloVehiculo');
 
 router.post('/insertar', function (req, res) {
     var VehiculoNuevo = new registroVehiculo({
         _id: new mongoose.Types.ObjectId(),
-        nombre: req.body.nombre,
+        
         placaVehi: req.body.placaVehi,
         modelo: req.body.modelo,
         anno: req.body.anno,

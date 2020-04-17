@@ -46,6 +46,7 @@ app.use('/listarRutas', require('./servicios/listarRutas'));
 app.use('/registroCaracteristicaVehiculo', require('./servicios/registroCaracteristicaVehiculo'));
 app.use('/registroVehiculo', require('./servicios/registroVehiculo'));
 app.use('/listarCaracteristicasVehiculo', require('./servicios/listarCaracteristicasVehiculo'));
+app.use('/listarVehiculo', require('./servicios/listarVehiculo'));
 
     //Registrar y listar Categoria Incidente 
 app.use('/registroCategoriaIncidente', require('./servicios/registroCategoriaIncidente'));

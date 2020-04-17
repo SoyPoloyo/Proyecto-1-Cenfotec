@@ -1,25 +1,33 @@
-const nodemailer = require("nodemailer");
-var express = require("express");
-var router = express.Router();
-var mongoose = require("mongoose");
 
-const listarVehiculos = require('../schema/modeloVehiculo.js');
-
-
-router.get("/recibir", function(req, res) { 
-
-    listarVehiculos.find()
-      .exec()
+  const nodemailer = require("nodemailer");
+  var express = require("express");
+  var router = express.Router();
+  var mongoose = require("mongoose");
   
-      .then(function(result) {
-        res.json(result);
+ 
+const listarVehiculos = require('../schema/modeloVehiculo');
+
+  
+  
+  router.post("/recibir", function(req, res) { 
+  
+  
+    identificador=req.body.identificador
+  
+    listarVehiculos
+      .find({identificador:identificador})
+      .then(function(resultado) {
+        res.json(resultado);
       })
-  
-      .catch(function(err) {
-        console.log(err);
+    
+      .catch(function(error) {
+        console.log(error);
       });
+   
   
+    
+    
   
   });
   
-  module.exports = router;
+    module.exports = router;

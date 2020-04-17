@@ -73,22 +73,16 @@
 
             <section class="formulario">
 
-                <form >
+                <form>
 
                     <br>
-                   
+
                     <br> <br>
 
 
 
                     <h1 class="alt_letra">Registro De vehiculo</h1> <br>
 
-
-                    <input class="fondosG" type="number" value="" placeholder="Placa de su vehiculo" name="placaVehi"
-                        id="placaVehi">
-                    <input class="fondosG" type="text" value="" placeholder="modelo" name="modelo" id="modelo"> <br> <br>
-                    <input class="fondosG" type="number" value="" placeholder="año" name="anno" id="anno">
-             
                     <select class="fondosG" value="" name="marca_vehiculo" id="marca_vehiculo">
                         <option value="" selected hidden>Marca de vehiculo:</option>
                         <option value="Audi">Audi</option>
@@ -104,7 +98,18 @@
                         <option value="Susuki">Susuki </option>
                         <option value="Tesla">Tesla </option>
                         <option value="Toyota">Toyota </option>
-                    </select> <br> <br>
+                    </select> 
+
+                    <input class="fondosG" type="text" value="" placeholder="modelo" name="modelo" id="modelo"> <br> <br>
+
+                   
+                    <input class="fondosG" type="number" value="" placeholder="año" name="anno" id="anno">
+                    <input class="fondosG" type="text" value="" placeholder="Placa de su vehiculo" name="placaVehi"
+                        id="placaVehi">
+                    
+                    
+
+                    <br> <br>
                     <input class="boton_1 alt_letra fondosG" type="button" value="Guardar" onclick="enviar()">
 
 
@@ -130,7 +135,7 @@
         <p class="derecha">WORKAPES&copy;<span>Todos los derechos reservados </span></p>
 
     </footer>
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="index.js"></script>
 </body>
 

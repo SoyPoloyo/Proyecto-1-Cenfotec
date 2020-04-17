@@ -72,34 +72,23 @@
         =================================================-->
     
     
+
             <div class="contenidoPrincipal">
 
-                
-    <section class="listaVehiculo">
-
-
-        <br>
+                <section class="listaVehiculo">
+                    <br>
 
         <button class="boton_2 alt_letra fondosG modificarBoton " type="button">
             <a class="redireccion" href="../../registros/registroVehiculo/index.html">Agregar nuevo vehiculo</a>
         </button>
         <br> <br>
+                    <h1 class="izquierda ">Listado De Vehiculos</h1> 
     
-        
-
-        <h1 class="">Listado de Vehiculos</h1> <br>
-
-        <table border="1" id="listaVehiculos" class="listaVehiculos">
-
-            <thead>
-                <tr>
-                  
-                    <th id="">Nombre</th>
-                    <th id="">placa del Vehiculo</th>
-                    <th id="">Modelo de vehiculo</th>
-                    <th id="">Año</th>
-                    <th id="">Marca del vehiculo</th>
-                    <th><select class="fondosG" id="marca_vehiculo">
+                    
+    
+    
+                    <select class="fondosG" id="marcaVehiculo"  onchange="buscar()">
+                        <option  value="5" selected hidden>Buscar por marca:</option>
                         <option value="" selected hidden>Marca de vehiculo:</option>
                         <option value="Audi">Audi</option>
                         <option value="BMW">BMW </option>
@@ -114,21 +103,33 @@
                         <option value="Susuki">Susuki </option>
                         <option value="Tesla">Tesla </option>
                         <option value="Toyota">Toyota </option>
-                    </select> <br> <br></th>
-                            
-                </tr>
-            </thead>
-
-            <tbody id="contenidoTablaVehiculos">
-                 
-            </tbody>
-
-
-        </table>
-
-
-
-</section>
+                      
+                    </select> 
+    
+                      <br> <br>
+    
+                    <table border="1" id="listaVehiculos" class="listaVehiculos">
+    
+                        <thead>
+                            <tr>
+    
+                                <th id="">Marca del vehiculo</th>
+                                <th id="">Modelo de vehiculo</th>
+                                <th id="">Año</th>
+                                <th id="">Numero de placa</th>   
+                            </tr>
+                        </thead>
+    
+                        <tbody id="contenidoTablaVehiculos">
+    
+                        </tbody>
+    
+    
+                    </table>
+    
+    
+    
+                </section>
     
             </div>
     
