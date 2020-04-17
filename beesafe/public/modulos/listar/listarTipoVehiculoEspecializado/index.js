@@ -67,6 +67,7 @@ fetch('/listarTipoVehiculo/recibir', {
                       <td>${i.nombre}</td>
                       <td>${i.caracteristica}</td>
                       <td>${i.descripcion}</td>
+                      <td><button class="botonBorrar" onclick=""><i class="fas fa-trash"></i></button></td>
                   </tr>    
                   `;
         }

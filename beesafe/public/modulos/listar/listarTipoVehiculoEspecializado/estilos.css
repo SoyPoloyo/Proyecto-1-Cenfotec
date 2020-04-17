@@ -7,4 +7,6 @@ main .contenidoPrincipal{
     margin-left: 350px;
   
   }
-  
+  .modificarBoton{
+    width: 300px;
+  }

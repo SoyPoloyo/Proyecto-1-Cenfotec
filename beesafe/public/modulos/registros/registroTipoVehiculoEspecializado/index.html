@@ -40,44 +40,34 @@
         <!-- =======================================
         CONTENIDO EN EL CAMPO IZQUIERDO DE LA PAGINA INICIO
     =================================================-->
+    <div class=" contenido_izquierdo izquierda">
 
-        <div class=" contenido_izquierdo izquierda">
+        <br>
 
+        <ul style="list-style-type:none;" class="alt_letra listas_menu">
+
+            <h3 class="titulo_lateral alt_letra">Opciones</h3> <br>
+            <li>  <a href="../../listar/listarUsuarios/index.html">Usuarios</a></li>
             <br>
+            <li>  <a href="../../listar/ListarRutas/index.html">Rutas Disponibles</a> </li>
+            <br>
+            <li>  <a href="../../listar/listarTipoVehiculoEspecializado/index.html">Vehiculos Especializados</a></li>
+            <br>
+            <li><a href="../../listar/listarCaracteristicasvehiculo/index.html"> Caracteristicas Vehiculo</a> </li>
+            <br>
+            <h3 class="titulo_lateral alt_letra">Registros</h3> <br>
+      
+            <li> <a href="../../registros/registroCategoriaIncidente/index.html"> Caracteristicas de incidente</a></li>
+ 
+        
+        </ul>
+    
 
-            <ul style="list-style-type:none;" class="alt_letra listas_menu">
+        
+ 
+      
 
-                <h3 class="titulo_lateral alt_letra">Listados</h3> <br>
-                <li><a href="../../listar/listarCaracteristicasvehiculo/index.html"> Caracteristicas Vehiculo</a> </li>
-                <br>
-                <li> <a href="../../listar/ListarRutas/index.html">Rutas Disponibles</a> </li>
-                <br>
-                <li> <a href="../../listar/listarUsuarios/index.html">Usuarios Totales</a></li>
-                <br>
-                <h3 class="titulo_lateral alt_letra">Registros</h3> <br>
-                <li><a href="../../registros/registroCaracteristicasVehiculo/index.html"> Caracteristicas Vehiculo</a>
-                </li>
-                <br>
-                <li> <a href="../../registros/registroCategoriaIncidente/index.html"> Caracteristicas de incidente</a>
-                </li>
-                <br>
-                <li><a href="../../registros/registroUsuarioRutas/index.html"> Usuario Rutas</a></li>
-
-            </ul>
-
-
-
-
-
-
-            <br> <br>
-
-            <br> <br>
-
-
-
-        </div>
-
+    </div>
         <!-- =======================================
         CONTENIDO EN EL CAMPO IZQUIERDO DE LA PAGINA INICIO
     =================================================-->
@@ -90,37 +80,38 @@
         <div class="contenidoPrincipal">
 
 
-
             <section class="formulario">
-                <br>
-                <br>
 
-                <br>
-
-
-                <form class="formulario2">
-                    <h1 class="alt_letra">Registrar tipo de vehículo</h1> <br>
+                <form>
+        
                     <br>
-                    <div class="izquierda izquierdaCentro">
+               <br> <br>
+               
+                    <h1 class="alt_letra">Registrar tipo de vehículo</h1> <br>
+        
+        
+                    <input class="fondosG" type="text" value="" placeholder="Tipo de vehículo" name="nombre" id="nombre"><br> <br>
+                    <input class="fondosG" type="text" value="" placeholder="Característica" name="caracteristica" id="caracteristica"> <br> <br>
+                    
+           
 
-                        <input class="fondosG" type="text" value="" placeholder="Tipo de vehículo" name="nombre"
-                            id="nombre" autofocus>
-
-                        <input class="fondosG" type="text" value="" placeholder="Característica" name="caracteristica"
-                            id="caracteristica" autofocus>
-
-                        <br><br>
-
-                        <textarea class="fondosG" rows="7" placeholder="Descripcion" id="descripcion"></textarea>
-                    </div>
-
-                    <br> <br>
-                    <input class="boton_1 alt_letra fondosG" type="button" value="Enviar" onclick="registro()">
-
-                    <br><br>
-
+                    <textarea class="fondosG" rows="5" placeholder="Descripcion" id="descripcion"></textarea>
+                    <br>
+                    <br>
+        
+        
+        
+                    
+                    <button class="boton_1 alt_letra fondosG " type="button" onclick="registro()"> Agregar</button>
+        
+        
                 </form>
+        
             </section>
+
+                 
+
+    
 
         </div>
 
