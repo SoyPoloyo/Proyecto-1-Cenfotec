@@ -68,6 +68,9 @@ fetch('/listarCategoriaIncidente/recibir', {
                       <td>${i.nombre}</td>
                       <td>${i.descripcion}</td>
                       <td><img class="imagen" src="${i.image}"></td>
+                      <td><button class="botonBorrarEditar" onclick=""><i class="far fa-edit"></i></button></td>
+                      <td><button class="botonBorrarEditar" onclick=""><i class="fas fa-trash"></i></button></td>
+           
                   </tr>    
                   `;
         }

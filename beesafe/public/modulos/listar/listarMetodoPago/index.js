@@ -36,7 +36,8 @@ function buscar(){
                         <td>${i.numeroTarjeta}</td>
                         <td>${i.fecha}</td>
                         <td>${i.cvv}</td>
-                        <td><button class="botonBorrar" onclick=""><i class="fas fa-trash"></i></button></td>
+                        <td><button class="botonBorrarEditar" onclick=""><i class="far fa-edit"></i></button></td>
+                        <td><button class="botonBorrarEditar" onclick=""><i class="fas fa-trash"></i></button></td>
              
                     </tr>    
                     `;
