@@ -46,8 +46,8 @@ function buscar(){
                         <td>${i.correo}</td>
                         <td>${i.tipoCedula}</td>
                         <td>${i.cedula}</td>
-                        
                         <td>${i.tipoAsistencia==undefined?'': i.tipoAsistencia}</td>
+                        <td><button class="botonBorrar" onclick=""><i class="fas fa-trash"></i></button></td>
                     </tr>    
                     `;
       }

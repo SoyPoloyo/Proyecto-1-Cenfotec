@@ -2,12 +2,7 @@
     Globales
     =================================**/
 
-      h1 {
-          padding-top: 4px;
-        color: #2f2319;
-        text-transform: uppercase;
-        letter-spacing: 4px;
-      }
+   
       /** ==================================
     Main - Formulario - Registro
     =================================**/
@@ -18,19 +13,12 @@
               
         background-size: cover;
       
-        height: 100vh;
+        height: 85vh;
       }
       
 
      
-      .boton-envio {
-        background-color: #2f2319;
-        font-family: "Baloo", cursive;
-        letter-spacing: 5px;
-      }
-      .boton-envio:hover {
-        background-color: #cc5d01;
-      }
+  
       
       /** ==================================
           Inicio de Sesion - Formulario
