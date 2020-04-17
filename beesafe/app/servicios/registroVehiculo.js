@@ -12,6 +12,7 @@ router.post('/insertar', function (req, res) {
         modelo: req.body.modelo,
         anno: req.body.anno,
         marca_vehiculo: req.body.marca_vehiculo,
+        identificador: req.body.identificador
     });
     VehiculoNuevo.save()
         .then(function (result) {

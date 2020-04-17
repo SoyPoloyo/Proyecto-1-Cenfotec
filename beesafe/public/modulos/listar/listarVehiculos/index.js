@@ -1,6 +1,4 @@
-contenidoTablaVehiculos = document.getElementById(
-  "contenidoTablaVehiculos"
-);
+contenidoTablaVehiculos = document.getElementById( "contenidoTablaVehiculos");
 
 fetch("http://localhost:5252/listarVehiculo/recibir", {
   body: JSON.stringify(),
@@ -13,7 +11,7 @@ fetch("http://localhost:5252/listarVehiculo/recibir", {
     return data.json();
   })
   .then(function(res) {
-    let listaVehiculos = {};
+
 
     listaVehiculos = res;
 
@@ -23,10 +21,10 @@ fetch("http://localhost:5252/listarVehiculo/recibir", {
                   <tr>
                     
                       <td>${listaVehiculo.nombre}</td>
-                      <td>${listaVehiculo.placa}</td>
+                      <td>${listaVehiculo.placaVehi}</td>
                       <td>${listaVehiculo.modelo}</td>
-                      <td>${listaVehiculo.ano}</td>
-                      <td>${listaVehiculo.marca}</td>
+                      <td>${listaVehiculo.anno}</td>
+                      <td>${listaVehiculo.marca_vehiculo}</td>
                     
                  
                    

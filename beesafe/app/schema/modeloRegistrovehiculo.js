@@ -6,7 +6,8 @@ var registroVehiculoSchema = mongoose.Schema({
   placaVehi: Number,
   modelo: String,
   anno: Number,
-  marca_vehiculo: String
+  marca_vehiculo: String,
+  identificador: String
 });
 
 module.exports = mongoose.model( "registroVehiculo", registroVehiculoSchema ,"registroVehiculos");

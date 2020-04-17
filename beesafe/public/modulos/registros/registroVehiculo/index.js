@@ -1,5 +1,6 @@
+console.log(localStorage.getItem('correo'))
 function enviar() {
-    let datos = ['nombre', 'placaVehi', 'modelo','anno', 'marca_vehiculo'];
+    let datos = ['placaVehi', 'modelo','anno', 'marca_vehiculo'];
     let valores = {};
     let aprobado = false;
     for (let dato of datos){
@@ -22,8 +23,11 @@ function enviar() {
         }
     }
     if (aprobado){
+
+        identificador = localStorage.getItem('correo');
         const formData = new FormData();
-        formData.append('nombre', document.getElementById('nombre').value);
+
+        formData.append('identificador', identificador);
         formData.append('placaVehi', document.getElementById('placaVehi').value);
         formData.append('modelo', document.getElementById('modelo').value);
         formData.append('anno', document.getElementById('anno').value);

@@ -6,7 +6,8 @@ var listarVehiculoSchema = mongoose.Schema({
   placa: Number,
   modelo: String,
   año: Number,
-  marca: String
+  marca: String,
+  identificador: String
 
 });
 

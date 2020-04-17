@@ -66,6 +66,11 @@ nav a {
   margin-top: 3px;
 }
 
+main .contenidoPrincipal{
+  max-height: 85vh;
+  overflow: auto;
+}
+
 /** ==================================
                     CONTENIDO PRINCIPAL
             =================================**/
@@ -144,6 +149,21 @@ select option {
   background-color: #cc5d01;
 
 }
+.boton_2 {
+  color: white;
+  background-color: #ef9d34;
+  width: 20%;
+  font-size: 15px;
+  margin: auto;
+  box-shadow: 1px 1px 10px #2f2319;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.boton_2:hover {
+  box-shadow: 1px 1px 7px #2f2319;
+  background-color: #cc5d01;
+
+}
 
 .listas_menu {
   width: 95%;
@@ -186,6 +206,12 @@ select option {
   box-shadow: 1px 1px 7px #2f2319;
   background-color: #cc5d01;
 }
+
+.redireccion{
+  text-decoration: none;
+  color: white;
+}
+
 
 /** ==================================
                     FOOTER
