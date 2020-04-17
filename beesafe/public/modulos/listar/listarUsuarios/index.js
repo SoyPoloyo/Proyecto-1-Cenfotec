@@ -39,14 +39,14 @@ function buscar(){
         contenidoTablaUsuarios.innerHTML += `
                     <tr>
                        
-                        <td>${i.tipoUsuario}</td>
+                    <td>${i.tipoAsistencia==undefined?'': i.tipoAsistencia}</td>
                         <td>${i.nombre}</td>
                         <td>${i.apellido}</td>
                         <td>${i.edad}</td>
                         <td>${i.correo}</td>
                         <td>${i.tipoCedula}</td>
                         <td>${i.cedula}</td>
-                        <td>${i.tipoAsistencia==undefined?'': i.tipoAsistencia}</td>
+                       
                         <td><button class="botonBorrar" onclick=""><i class="fas fa-trash"></i></button></td>
                     </tr>    
                     `;
