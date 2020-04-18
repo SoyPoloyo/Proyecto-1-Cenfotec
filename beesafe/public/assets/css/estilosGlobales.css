@@ -234,17 +234,18 @@ table {
   width: 10%;
 }
 .tablaListar th:nth-last-child(2) {
-  
   width: 5%;
 }
 .tablaListar th:nth-last-child(1) {
-  
   width: 5%;
 }
 .tablaListar td {
  
   text-align: center;
   padding: 10px;
+}
+.tablaListar img:hover{
+width: 25%;
 }
 
 .tablaListar tr:hover {
@@ -260,7 +261,7 @@ table {
     width: 20%;
     }
 
-    
+
 /** ==================================
                     BUSCADOR
           =================================**/
@@ -268,7 +269,7 @@ table {
     #inputBuscar {
       box-sizing: border-box;
       border: 2px solid #ccc;
-      color: black;
+      color: #2f2319;
       border-radius: 4px;
       font-size: 16px;
       background-color: white;
@@ -283,7 +284,9 @@ table {
       }
 
 
-
+      .modificarBoton{
+        width: 20.5%;
+      }
 
 
 /* .tablaListar tr:nth-child(even) {

@@ -12,19 +12,3 @@ main .contenidoPrincipal{
     width: 20.5%;
   }
 
-  #inputBuscar {
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    color: black;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    background-position: 10px 17px; 
-    background-size: 15px;
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-    background-image: url("../../../assets/img/image-search\ gray.png");
-    font-family: "Baloo 2", cursive;
-    width: 70%;
-  
-    }

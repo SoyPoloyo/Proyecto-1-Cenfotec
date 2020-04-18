@@ -26,7 +26,7 @@
             <img class="logo_header" src="../../../assets/img/blancobesafe.png" alt="">
 
 
-            <a class="alt_letra derecha" href="../../sesiones_perfiles/perfilUsuarioAdmin/index.html">PERFIL</a>
+            <a class="alt_letra derecha" href="../../sesiones_perfiles/perfilUsuarioAdmin/index.html">PERFIL <i class="far fa-user-circle"></i></a>
 
             <a class="alt_letra titulo_cuenta "
                 href="../../sesiones_perfiles/sesionUsuarioEspecializado/index.html">—ADMINISTRADOR</a>
@@ -79,8 +79,10 @@
 
             <section class="listadoUsuarios">
 <br>
+<input type="text" id="inputBuscar" name="search" class="izquierda" onkeyup="buscar()" placeholder="Buscar">
 
-                <select class="fondosG" id="tipoUsuarios" onchange="buscar()">
+
+                <select class="fondosG izquierda" id="tipoUsuarios" onchange="buscar()">
                     <option value="5" selected hidden>Tipo de usuario:</option>
                     <option value="1">Tradicional</option>
                     <option value="2">Especializado</option>
@@ -89,7 +91,7 @@
                 </select>
                
                
-                <button class="boton_2 alt_letra fondosG derecha  " type="button">
+                <button class="boton_2 alt_letra fondosG modificarBoton " type="button">
                     <a class="redireccion" href="../../registros/registroUsuarioRutas/index.html">Agregar usuario rutas</a>
                 </button>
                 <br><br>
