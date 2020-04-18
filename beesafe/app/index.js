@@ -55,6 +55,7 @@ app.use('/listarCategoriaIncidente', require('./servicios/listarCategoriaInciden
   //Registrar y listar Tipo Vehiculo 
 app.use('/registroTipoVehiculo', require('./servicios/registroTipoVehiculo'));
 app.use('/listarTipoVehiculo', require('./servicios/listarTipoVehiculo'));
+app.use('/modificarTipoVehiculo', require('./servicios/modificarTipoVehiculo'));
 
     //Registrar y listar metodos de pago
 app.use('/registroMetodoPago', require('./servicios/registroMetodoPago'));

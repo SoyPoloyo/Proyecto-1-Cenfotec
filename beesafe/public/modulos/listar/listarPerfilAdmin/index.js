@@ -51,7 +51,9 @@ fetch("http://localhost:5252/listarUsuario/recibir", {
                     <h4>Correo Electronico</h4>
                     <p  class="fondosG ">
                     ${usuario.correo}
-                    </p>    
+                    </p>  
+                    
+                    
 
       `;
   })

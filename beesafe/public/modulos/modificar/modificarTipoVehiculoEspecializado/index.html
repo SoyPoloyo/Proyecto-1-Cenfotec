@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="../../../assets/css/estilosGlobales.css">
 
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="../../registro/registroTipoVehiculo/estilos.css">
 
     <link href="https://fonts.googleapis.com/css?family=Baloo|Baloo+2&display=swap" rel="stylesheet">
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
@@ -27,9 +27,9 @@
 
 
             <a class="alt_letra derecha" href="../../sesiones_perfiles/perfilUsuarioAdmin/index.html">PERFIL</a>
-
+            
             <a class="alt_letra titulo_cuenta "
-                href="../../sesiones_perfiles/sesionUsuarioEspecializado/index.html">—ADMINISTRADOR</a>
+                href="../../sesiones_perfiles/sesionUsuarioAdmin/index.html">—ADMINISTRADOR</a>
 
         </nav>
 
@@ -57,6 +57,7 @@
             <li><a href="../../listar/listarCaracteristicasvehiculo/index.html"> Caracteristicas Vehiculo</a> </li>
             <br>
             <li> <a href="../../listar/listarCategoriaIncidente/index.html"> Caracteristicas de incidente</a></li>
+        
         </ul>
     
 
@@ -65,6 +66,7 @@
       
 
     </div>
+
 
         <!-- =======================================
         CONTENIDO EN EL CAMPO IZQUIERDO DE LA PAGINA INICIO
@@ -77,57 +79,35 @@
 
         <div class="contenidoPrincipal">
 
-            <section class="listadoUsuarios">
-<br>
-
-                <select class="fondosG" id="tipoUsuarios" onchange="buscar()">
-                    <option value="5" selected hidden>Tipo de usuario:</option>
-                    <option value="1">Tradicional</option>
-                    <option value="2">Especializado</option>
-                    <option value="3">Rutas</option>
-                    <option value="5">Todos los usuarios</option>
-                </select>
-               
-               
-                <button class="boton_2 alt_letra fondosG derecha  " type="button">
-                    <a class="redireccion" href="../../registros/registroUsuarioRutas/index.html">Agregar usuario rutas</a>
-                </button>
-                <br><br>
-
-              
-
-                <h1 class="izquierda ">Listado De Usuarios</h1>      <br> <br>
-
-               
-   
-            
-
-                <table  id="tablaUsuarios" class="tablaUsuarios tablaListar">
-
-                    <thead>
-                        <tr>
-
-                            <th id="tipoAsistenciaTitulo">Tipo de Asistencia</th>
-                            <th id="">Nombre</th>
-                            <th id="">Apellido</th>
-                            <th id="">Edad</th>
-                            <th id="">Correo</th>
-                            <th id="">Tipo de Cedula</th>
-                            <th id="">Cedula</th>
-                            <th id="tipoAsistenciaTitulo">Editar usuario</th>
-                            <th id="tipoAsistenciaTitulo">Borrar usuario</th>
-                        </tr>
-                    </thead>
-
-                    <tbody id="contenidoTablaUsuarios">
-
-                    </tbody>
 
 
-                </table>
+            <section class="formulario">
+                <br>
+                <br>
 
                 <br>
 
+
+                <form class="formulario2">
+                    <h1 class="alt_letra">Modificar tipo de vehículo</h1> <br>
+                    <br>
+                    <div class="izquierda izquierdaCentro">
+
+                        <input class="fondosG" type="text" name="nombre" id="nombre">
+
+                        <br><br>
+
+                        <textarea class="fondosG" rows="7" id="descripcion" name="descripcion"></textarea>
+                    </div>
+
+                    <input class="fondosG" type="text" name="caracteristica"
+                        id="caracteristica">
+                    <br><br> <br><br> <br><br> <br><br><br>
+                    <input class="boton_1 alt_letra fondosG" type="button" value="Enviar" onclick="modificar()">
+
+                    <br><br>
+
+                </form>
             </section>
 
         </div>
@@ -146,8 +126,9 @@
         <p class="derecha">WORKAPES&copy;<span>Todos los derechos reservados </span></p>
 
     </footer>
-
+    
     <script src="index.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>

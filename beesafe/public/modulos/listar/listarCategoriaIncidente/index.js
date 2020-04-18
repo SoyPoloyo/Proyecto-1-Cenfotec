@@ -49,19 +49,7 @@ fetch('/listarCategoriaIncidente/recibir', {
 
         listadoIncidente = res;
         console.log(res)
-        /*
-        for (let i = 0; i < listadoIncidente.length; i++) {
-          contenidoTablaIncidente.innerHTML += `
-                      <tr>
-                          
-                          <td>${listadoIncidente[i].nombre}</td>
-                          <td>${listadoIncidente[i].descripcion}</td>
-                          <td><img src="${'/assets/uploads' + listadoIncidente[i].image}"></td>
-                      </tr>    
-                      `;
-    
-        }
-        */
+       
         for (let i of listadoIncidente) {
             contenidoTablaIncidente.innerHTML += `
                   <tr>

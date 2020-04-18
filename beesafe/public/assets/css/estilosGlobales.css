@@ -66,7 +66,7 @@ nav a {
   margin-top: 3px;
 }
 
-main .contenidoPrincipal{
+main .contenidoPrincipal {
   max-height: 85vh;
   overflow: auto;
 }
@@ -108,7 +108,7 @@ main .contenidoPrincipal{
 }
 
 .largoFondos {
-  width: 35%!important;
+  width: 35% !important;
 }
 
 select option {
@@ -126,14 +126,12 @@ select option {
   color: black;
 }
 .muestraIcono:hover {
- 
   color: #cc5d01;
 }
 .imagenAgregada {
   width: 4%;
   margin-top: 7px;
 }
-
 
 .boton_1 {
   color: white;
@@ -147,42 +145,37 @@ select option {
 .boton_1:hover {
   box-shadow: 1px 1px 7px #2f2319;
   background-color: #cc5d01;
-
 }
 .boton_2 {
   color: white;
   background-color: #ef9d34;
   width: 20%;
   font-size: 15px;
-  
+
   box-shadow: 1px 1px 10px #2f2319;
   border-radius: 5px;
-  
 }
 .boton_2:hover {
   box-shadow: 1px 1px 7px #2f2319;
   background-color: #cc5d01;
-
 }
 
-.botonBorrarEditar{
+.botonBorrarEditar {
   color: #ef9d34;
-  background-color: #2f2319;
+ /*  background-color: none; */
   width: 80%;
   font-size: 20px;
   margin: 5px auto;
   margin-left: 10px;
-  border: #2f2319;
-  box-shadow: 1px 1px 4px #a8998c;
+ border: #2f2319; 
+   box-shadow: 1px 1px 4px #a8998c; 
   border-radius: 5px;
   text-decoration: none;
   text-align: center;
   padding: 5px;
-  
 }
-.botonBorrarEditar:hover{
-  color: #2f2319;
-  background-color: #cc5d01;
+.botonBorrarEditar:hover {
+  color: #cc5d01;
   
 }
 
@@ -195,16 +188,14 @@ select option {
 .listas_menu li {
   color: white;
   background-color: #2f2319;
- 
+
   box-shadow: 1px 1px 10px #2f2319;
   border-radius: 5px;
   text-decoration: none;
   padding: 8px 5px;
 }
 .listas_menu li:hover {
-
   background-color: #cc5d01;
-
 }
 .listas_menu li a {
   color: white;
@@ -228,9 +219,17 @@ select option {
   background-color: #cc5d01;
 }
 
-.redireccion{
+.redireccion {
   text-decoration: none;
   color: white;
+}
+
+
+
+table {
+  overflow: hidden;
+  color: #666666;
+  border-radius: 5px;
 }
 
 .tablaListar {
@@ -238,26 +237,34 @@ select option {
   border-collapse: collapse;
   text-align: center;
   font-size: 17px;
-  
 
 }
-.tablaListar th  {
+.tablaListar th {
   
-  text-align: center;
-  font-size: 20px;
-  font-family: "Baloo 2", cursive;
-  padding: 5px 10px;
-  
+  /* font-family: "Baloo 2", cursive; */
+ 
+
+  padding: 20px;
+  font-size: 18px;
+  background-color: #ecbc1b;
+ /*  background-color: #2f2319; */
+  color: white;
+  text-transform: uppercase;
 }
 .tablaListar td {
-  
  
-  padding: 0px 10px;
+  text-align: center;
+  padding: 5px;
 }
 
-.tablaListar tr:nth-child(even) {
+.tablaListar tr:hover {
   background-color: #a8998c21;
 }
+
+
+/* .tablaListar tr:nth-child(even) {
+  background-color: #a8998c21;
+} */
 /** ==================================
                     FOOTER
           =================================**/
