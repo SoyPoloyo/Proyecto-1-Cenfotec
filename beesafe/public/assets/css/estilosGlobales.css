@@ -151,7 +151,7 @@ select option {
   background-color: #ef9d34;
   width: 20%;
   font-size: 15px;
-
+  margin-left: 2;
   box-shadow: 1px 1px 10px #2f2319;
   border-radius: 5px;
 }
@@ -160,24 +160,6 @@ select option {
   background-color: #cc5d01;
 }
 
-.botonBorrarEditar {
-  color: #ef9d34;
- /*  background-color: none; */
-  width: 80%;
-  font-size: 20px;
-  margin: 5px auto;
-  margin-left: 10px;
- border: #2f2319; 
-   box-shadow: 1px 1px 4px #a8998c; 
-  border-radius: 5px;
-  text-decoration: none;
-  text-align: center;
-  padding: 5px;
-}
-.botonBorrarEditar:hover {
-  color: #cc5d01;
-  
-}
 
 .listas_menu {
   width: 95%;
@@ -241,25 +223,67 @@ table {
 }
 .tablaListar th {
   
-  /* font-family: "Baloo 2", cursive; */
- 
-
   padding: 20px;
   font-size: 18px;
-  background-color: #ecbc1b;
- /*  background-color: #2f2319; */
+  background-color: #ef9d34;
   color: white;
   text-transform: uppercase;
+}
+.tablaListar th {
+  
+  width: 10%;
+}
+.tablaListar th:nth-last-child(2) {
+  
+  width: 5%;
+}
+.tablaListar th:nth-last-child(1) {
+  
+  width: 5%;
 }
 .tablaListar td {
  
   text-align: center;
-  padding: 5px;
+  padding: 10px;
 }
 
 .tablaListar tr:hover {
   background-color: #a8998c21;
 }
+.iconoEditarBorrar {       
+  color: #d76d04;
+  font-size: 50px;
+  margin: 0px 50px;
+  }
+
+  .iconoEditarBorrar img {       
+    width: 20%;
+    }
+
+    
+/** ==================================
+                    BUSCADOR
+          =================================**/
+
+    #inputBuscar {
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      color: black;
+      border-radius: 4px;
+      font-size: 16px;
+      background-color: white;
+      background-position: 10px 17px; 
+      background-size: 15px;
+      background-repeat: no-repeat;
+      padding: 12px 20px 12px 40px;
+      background-image: url("../../../assets/img/image-search\ gray.png");
+      font-family: "Baloo 2", cursive;
+      width: 70%;
+    
+      }
+
+
+
 
 
 /* .tablaListar tr:nth-child(even) {
@@ -277,6 +301,3 @@ footer p {
   padding: 3px 20px;
 }
 
-.iconoEditarBorrar img {       
-  width: 10%;
-  }
