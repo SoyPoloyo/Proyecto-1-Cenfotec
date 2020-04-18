@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", async function renderTipoVehiculo(
       //modificar
       let td_modificar = document.createElement("td");
       let anchor_modificar = document.createElement("a");
-      anchor_modificar.classList.add("iconoTipoUsuario");
+      anchor_modificar.classList.add("iconoEditarBorrar");
     
       let image_modificar = document.createElement("img");
       image_modificar.setAttribute("src", "../../../assets/img/edit.png");
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", async function renderTipoVehiculo(
     
       let td_eliminar = document.createElement("td");
       let anchor_eliminar = document.createElement("a");
-      anchor_eliminar.classList.add("iconoTipoUsuario");
+      anchor_eliminar.classList.add("iconoEditarBorrar");
     
       let image_eliminar = document.createElement("img");
       image_eliminar.setAttribute("src", "../../../assets/img/delete.png");
