@@ -98,7 +98,7 @@ function buscar() {
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("inputBuscar");
   filter = input.value.toUpperCase();
-  table = document.getElementById("contenidoTablaVehiculo");
+  table = document.getElementById("contenidoTablaIncidente");
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[0];
