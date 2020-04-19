@@ -65,6 +65,9 @@ app.use('/registroMetodoPago', require('./servicios/registroMetodoPago'));
 app.use('/listarMetodoPago', require('./servicios/listarMetodoPago'));
 app.use('/modificarMetodoPago2', require('./servicios/modificarMetodoPago2'));
 app.use('/eliminarMetodoPago2', require('./servicios/eliminarMetodoPago2')); 
+app.use('/modificarMetodoPago', require('./servicios/modificarMetodoPago'));
+app.use('/eliminarMetodoPago', require ('./servicios/eliminarMetodoPago'));
+
 
 
 
