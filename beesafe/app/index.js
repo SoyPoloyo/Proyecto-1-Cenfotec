@@ -63,7 +63,8 @@ app.use('/eliminarTipoVehiculo', require('./servicios/eliminarTipoVehiculo'));
     //Registrar y listar metodos de pago
 app.use('/registroMetodoPago', require('./servicios/registroMetodoPago'));
 app.use('/listarMetodoPago', require('./servicios/listarMetodoPago'));
-
+app.use('/modificarMetodoPago', require('./servicios/modificarMetodoPago'));
+app.use('/eliminarMetodoPago', require ('./servicios/eliminarMetodoPago'));
 
 
 
