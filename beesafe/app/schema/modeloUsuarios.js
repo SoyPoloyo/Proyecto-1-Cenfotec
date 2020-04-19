@@ -8,7 +8,7 @@ var usuarios = mongoose.Schema({
   edad: Number,
   correo: String,
   password: String,
-  tipoCedula: Number,
+  tipoCedula: String,
   cedula: Number,
   tipoAsistencia: String,
   image: String,

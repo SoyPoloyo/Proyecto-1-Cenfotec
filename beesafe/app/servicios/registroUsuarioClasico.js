@@ -3,11 +3,8 @@ var express = require("express");
 var router = express.Router();
 var mongoose = require("mongoose");
 
-
 var Usuario = require("../schema/modeloUsuarios");
-router.post("/insertar", async function(req, res) {
-
-  
+router.post("/insertar", async function (req, res) {
   var usuarioNuevo = new Usuario({
     _id: new mongoose.Types.ObjectId(),
     tipoUsuario: 1,
@@ -18,15 +15,14 @@ router.post("/insertar", async function(req, res) {
     correo: req.body.correo,
     tipoCedula: req.body.tipoCedula,
     cedula: req.body.cedula,
-    
   });
 
   usuarioNuevo
     .save()
-    .then(function(resultado) {
+    .then(function (resultado) {
       res.json(resultado);
     })
-    .catch(function(error) {
+    .catch(function (error) {
       console.log(error);
     });
 
@@ -35,24 +31,50 @@ router.post("/insertar", async function(req, res) {
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-      user: "info@alineacr.com", // generated ethereal user
-      pass: "admin" // generated ethereal password
+      user: "beesafe@alineacr.com", // generated ethereal user
+      pass: "admin", // generated ethereal password
     },
     tls: {
-      rejectUnauthorized: false
-    }
+      rejectUnauthorized: false,
+    },
   });
 
+  contentHTML = `
+
+
+
+
+  <html>
+  <head>
+      <style>button:hover{cursor: pointer; 
+          background-color:#cc5d01 ;
+          }
+      </style> 
+  </head> 
+  <body style="text-align: center;
+               background-image:url('fondoabeja.png'); 
+               background-repeat: no-repeat ; 
+               background-size: cover; "> 
+      <img src='../../public/assets/img/BEESAFE.png' width='30%'> 
+      <h1>BeeSafe</h1> 
+      ${correo}
+      <p>Gracias por registrarse en nuestra aplicación</p>
+      <p>Le recordamos cambiar su contraseña una vez ingrese a la aplicación</p>
+      <input type="button" onclick="window.location.href='http://localhost:5252/index.html';" value="Iniciar Sesion" />
+  </body>
+ </html>
+
+
+`;
+
   const infoCorreo = await transporter.sendMail({
-    from: '"BeeSafe 🐝" <info@alineacr.com">', // sender address
-    to: "vargasteban@gmail.com" , // list of receivers
+    from: '"BeeSafe 🐝" <beesafe@alineacr.com>', // sender address
+    to: req.body.correo, // list of receivers
     subject: "Bienvenido a BeeSafe ✔", // Subject line
-    html: "<b>ultimo correo A</b>" // html body
+    html: contentHTML, // html body
 
     // html body
   });
-
 });
-
 
 module.exports = router;
