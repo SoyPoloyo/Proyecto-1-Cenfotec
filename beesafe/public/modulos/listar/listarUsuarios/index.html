@@ -82,7 +82,7 @@
 <input type="text" id="inputBuscar" name="search" class="izquierda" onkeyup="buscar()" placeholder="Buscar">
 
 
-                <select class="fondosG izquierda" id="tipoUsuarios" onchange="buscar()">
+                <select class="fondosG izquierda" id="tipoUsuarios" onchange="ordenar()">
                     <option value="5" selected hidden>Tipo de usuario:</option>
                     <option value="1">Tradicional</option>
                     <option value="2">Especializado</option>
@@ -108,16 +108,18 @@
 
                     <thead>
                         <tr>
-
                             <th id="tipoAsistenciaTitulo">Tipo de Asistencia</th>
                             <th id="">Nombre</th>
                             <th id="">Apellido</th>
                             <th id="">Edad</th>
-                            <th id="">Correo</th>
                             <th id="">Tipo de Cedula</th>
-                            <th id="">Cedula</th>
-                            <th id="tipoAsistenciaTitulo">Editar</th>
-                            <th id="tipoAsistenciaTitulo">Borrar</th>
+                            <th id="">Cedula</th> 
+                            <th id="">Correo</th>   
+                            <th id="">Editar</th> 
+
+                            
+                           
+                           
                         </tr>
                     </thead>
 
@@ -133,6 +135,7 @@
             </section>
 
         </div>
+
 
 
         <!-- =======================================

@@ -23,7 +23,7 @@
 
             <img class="logo_header" src="../../../assets/img/blancobesafe.png" alt="">
             <a class="alt_letra derecha" href="../../../index.html" onclick="localStorage.clear()">CERRAR SESSION</a>
-            <a class="alt_letra derecha " href="../../sesiones_perfiles/sesionUsuarioClasico/index.html">INICIO</a>
+            <a class="alt_letra derecha " href="../../sesiones_perfiles/sesionUsuarioClasico/index.html">INICIO <i class="far fa-user-circle"></i></a>
             <a class="alt_letra titulo_cuenta " href="../../sesiones_perfiles/perfilUsuarioClasico/index.html">—USUARIO
                 TRADICIONAL</a>
 
@@ -73,29 +73,39 @@
 
             <section class="listadoUsuarios">
 
-                <br><br>
+ 
 
-                <h1 class="izquierda alt_letra">Datos de su cuenta</h1>
+                <br> <br>
+                <h1 class="izquierda ">Datos de su cuenta</h1> 
 
 
-                <br><br>
+                  <br> <br> 
 
-                <div id="contenidoUsuario">
+                <table  id="tablaUsuarios" class="tablaUsuarios tablaListar">
 
-                </div>
+                    <thead>
+                        <tr>
 
+                            <th id="">Nombre</th>
+                            <th id="">Apellido</th>
+                            <th id="">Edad</th>
+                            <th id="">Cedula</th> 
+                            <th id="">Correo</th>   
+                            <th id="">Editar</th>  
+                        </tr>
+                    </thead>
+                    
+                    <tbody id="contenidoTablaUsuarios">
+
+                    </tbody>
+
+
+                </table>
+              
                 <br>
+    
 
-                <button class="boton_1 alt_letra fondosG modificar " type="button">
-                    <a class="redireccion" href="../../modificar/modificarUsuarioClasico/index.html">Editar perfil</a>
-                </button>
-                <br>
             </section>
-            
-
-
-
-
 
         </div>
 

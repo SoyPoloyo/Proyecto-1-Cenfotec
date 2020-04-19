@@ -1,6 +1,6 @@
-/* async function postTipoVehiculo(id) {
+ async function postTipoVehiculo(id) {
     valor = { _id: id }
-    const res = await fetch('/modificarTipoVehiculo/recibir', {
+    const res = await fetch('/listarMetodoPago/recibir', {
         method: 'POST',
         body: JSON.stringify(valor),
         headers: {
@@ -9,7 +9,7 @@
     });
     const data = await res.json();
     return data;
-}//fin de postCategoriaIncidente */
+}//fin de postCategoriaIncidente 
 
 let id = localStorage.getItem('id');
 console.log(id);
@@ -17,23 +17,24 @@ console.log(id);
 var enlace = ("/modificarMetodoPago/editar/"+ id);
 console.log(enlace);
 
-/* 
-const nombre = document.getElementById('nombre');
-const caracteristica = document.getElementById('caracteristica');
-const descripcion = document.getElementById('descripcion');
+
+let nombre = document.getElementById('nombre');
+let caracteristica = document.getElementById('caracteristica');
+let descripcion = document.getElementById('descripcion');
 
 async function llenarCampos() {
-    var response = await postTipoVehiculo(id);
+    var response = await postTipoVehiculo();
     console.log(response);
 
-    nombre.value = response[0].nombre;
+   /*  nombre.placeholder = response[0].nombre;
     caracteristica.value = response[0].caracteristica;
-    descripcion.value = response[0].descripcion;
+    descripcion.value = response[0].descripcion; */
     
 }
 
 llenarCampos();
- */
+console.log(nombre.placeholder)
+ 
 
 function modificar() {
     let datos = ["nombre", "numeroTarjeta", "fecha","cvv"];
