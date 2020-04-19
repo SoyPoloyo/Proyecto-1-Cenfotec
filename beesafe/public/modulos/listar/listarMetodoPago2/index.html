@@ -71,7 +71,11 @@
         <div class="contenidoPrincipal">
 
             <section class="listadoUsuarios">
+
                 <br>
+                <input type="text" id="inputBuscar" name="search" class="izquierda" onkeyup="buscar()"
+                    placeholder="Buscar">
+              
 
                 <button class="boton_2 alt_letra fondosG modificarBoton " type="button">
                     <a class="redireccion" href="../../registros/registroMetodoPago/index.html">Agregar nueva tarjeta</a>
@@ -79,17 +83,8 @@
                 <br> <br>
                 <h1 class="izquierda ">Listado De Tarjetas</h1> 
 
-                
 
-
-                <select class="fondosG" id="tipoTarjeta"  onchange="buscar()">
-                    <option  value="5" selected hidden>Buscar Tarjeta:</option>
-                    <option  value="1">Mastercard</option>
-                    <option  value="2">Visa</option>
-                  
-                </select> 
-
-                  <br> <br>
+                  <br> <br> 
 
                 <table  id="tablaTarjetas" class="tablaTarjetas tablaListar">
 

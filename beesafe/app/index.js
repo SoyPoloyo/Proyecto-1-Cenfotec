@@ -60,10 +60,11 @@ app.use('/listarTipoVehiculo', require('./servicios/listarTipoVehiculo'));
 app.use('/modificarTipoVehiculo', require('./servicios/modificarTipoVehiculo'));
 app.use('/eliminarTipoVehiculo', require('./servicios/eliminarTipoVehiculo')); 
 
-    //Registrar y listar metodos de pago
+    //Registrar,listar,modificar,eliminar Tipo Vehiculo
 app.use('/registroMetodoPago', require('./servicios/registroMetodoPago'));
 app.use('/listarMetodoPago', require('./servicios/listarMetodoPago'));
-
+app.use('/modificarMetodoPago2', require('./servicios/modificarMetodoPago2'));
+app.use('/eliminarMetodoPago2', require('./servicios/eliminarMetodoPago2')); 
 
 
 
