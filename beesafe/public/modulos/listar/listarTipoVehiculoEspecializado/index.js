@@ -7,6 +7,21 @@ async function getTipoVehiculo() {
     return data;
 }//fin de getTipoVehiculo
 
+async function deleteTipoVehiculo() {
+
+  let id = localStorage.getItem('id');
+  var enlace = ('/eliminarTipoVehiculo/borrar/' + id);
+  const res = await fetch(enlace, {
+      method: 'DELETE',
+      headers: {
+          "Content-Type": "application/json"
+      }
+  });
+  var data = await res.json();
+  return data;
+
+}//fin de deleteTipoVehiculo 
+
 document.addEventListener("DOMContentLoaded", async function renderTipoVehiculo() {
 
     let tipoVehiculo = await getTipoVehiculo();
@@ -71,7 +86,7 @@ document.addEventListener("DOMContentLoaded", async function renderTipoVehiculo(
     
       anchor_eliminar.addEventListener('click', () => {
         localStorage.setItem('id', tipoVehiculo[i]._id);
-        //window.location.href = 'eliminar_objeto.html';
+        borrarTipoVehiculo();
       });
     
       td_eliminar.appendChild(anchor_eliminar);
@@ -102,3 +117,10 @@ document.addEventListener("DOMContentLoaded", async function renderTipoVehiculo(
           }
         }
       }
+
+      async function borrarTipoVehiculo() {
+        var response = await deleteTipoVehiculo()
+        console.log(response);
+        /* location.reload(); */
+        window.location.reload(true);
+        }

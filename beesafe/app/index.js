@@ -48,14 +48,17 @@ app.use('/registroVehiculo', require('./servicios/registroVehiculo'));
 app.use('/listarCaracteristicasVehiculo', require('./servicios/listarCaracteristicasVehiculo'));
 app.use('/listarVehiculo', require('./servicios/listarVehiculo'));
 
-    //Registrar y listar Categoria Incidente 
+    //Registrar,listar,modificar,eliminar Categoria Incidente 
 app.use('/registroCategoriaIncidente', require('./servicios/registroCategoriaIncidente'));
 app.use('/listarCategoriaIncidente', require('./servicios/listarCategoriaIncidente'));
+app.use('/modificarCategoriaIncidente', require('./servicios/modificarCategoriaIncidente'));
+app.use('/eliminarCategoriaIncidente', require('./servicios/eliminarCategoriaIncidente'));
 
-  //Registrar y listar Tipo Vehiculo 
+  //Registrar,listar,modificar,eliminar Tipo Vehiculo 
 app.use('/registroTipoVehiculo', require('./servicios/registroTipoVehiculo'));
 app.use('/listarTipoVehiculo', require('./servicios/listarTipoVehiculo'));
 app.use('/modificarTipoVehiculo', require('./servicios/modificarTipoVehiculo'));
+app.use('/eliminarTipoVehiculo', require('./servicios/eliminarTipoVehiculo')); 
 
     //Registrar y listar metodos de pago
 app.use('/registroMetodoPago', require('./servicios/registroMetodoPago'));
