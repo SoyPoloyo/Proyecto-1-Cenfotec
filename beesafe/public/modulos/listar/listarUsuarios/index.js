@@ -37,107 +37,111 @@ async function deleteListarUsuarios() {
   return data;
 }//fin  
 
-
-document.addEventListener("DOMContentLoaded", async function renderListarUsuarios() {
-   
+async function ordenar() {
  
-  let listarUsuarios = await postListarUsuarios();
-  console.log(listarUsuarios);
-  console.log(tipoUsuario);
-  table.innerHTML ="";
+    let listarUsuarios = await postListarUsuarios();
+   
+    table.innerHTML ="";
+  
+    for (let i = 0; i < listarUsuarios.length; i++) {
+  
+      let tr = document.createElement("tr");
+  
+       //tipoAsistencia
 
-  for (let i = 0; i < listarUsuarios.length; i++) {
+       if (listarUsuarios[i].tipoAsistencia ==undefined) {
+         
+       }
+       let td_tipoAsistencia = document.createElement("td");
+       let texto_tipoAsistencia = (listarUsuarios[i].tipoAsistencia)==undefined? document.createTextNode(' ') : document.createTextNode(listarUsuarios[i].tipoAsistencia);
 
-    let tr = document.createElement("tr");
 
-     //tipoAsistencia
-     let td_tipoAsistencia = document.createElement("td");
-     let texto_tipoAsistencia = document.createTextNode
-       (listarUsuarios[i].tipoAsistencia);
-     td_tipoAsistencia.appendChild(texto_tipoAsistencia);
-     tr.appendChild(td_tipoAsistencia);
+       td_tipoAsistencia.appendChild(texto_tipoAsistencia);
+       tr.appendChild(td_tipoAsistencia);
+       table.appendChild(tr);
+  
+      //nombre
+      let td_nombre = document.createElement("td");
+      let texto_nombre = document.createTextNode
+        (listarUsuarios[i].nombre);
+      td_nombre.appendChild(texto_nombre);
+      tr.appendChild(td_nombre);
+      table.appendChild(tr);
+  
+    //apellido
+    let td_apellido = document.createElement("td");
+    let texto_apellido = document.createTextNode
+      (listarUsuarios[i].apellido);
+    td_apellido.appendChild(texto_apellido);
+    tr.appendChild(td_apellido);
+    table.appendChild(tr);
+  
+     //edad
+     let td_edad = document.createElement("td");
+     let texto_edad = document.createTextNode
+       (listarUsuarios[i].edad);
+     td_edad.appendChild(texto_edad);
+     tr.appendChild(td_edad);
      table.appendChild(tr);
-
-    //nombre
-    let td_nombre = document.createElement("td");
-    let texto_nombre = document.createTextNode
-      (listarUsuarios[i].nombre);
-    td_nombre.appendChild(texto_nombre);
-    tr.appendChild(td_nombre);
-    table.appendChild(tr);
-
-  //apellido
-  let td_apellido = document.createElement("td");
-  let texto_apellido = document.createTextNode
-    (listarUsuarios[i].apellido);
-  td_apellido.appendChild(texto_apellido);
-  tr.appendChild(td_apellido);
-  table.appendChild(tr);
-
-   //edad
-   let td_edad = document.createElement("td");
-   let texto_edad = document.createTextNode
-     (listarUsuarios[i].edad);
-   td_edad.appendChild(texto_edad);
-   tr.appendChild(td_edad);
-   table.appendChild(tr);
-
-   //tipoCedula
-   let td_tipoCedula = document.createElement("td");
-   let texto_tipoCedula = document.createTextNode
-     (listarUsuarios[i].tipoCedula);
-   td_tipoCedula.appendChild(texto_tipoCedula);
-   tr.appendChild(td_tipoCedula);
-   table.appendChild(tr);
-
-   //cedula
-   let td_cedula = document.createElement("td");
-   let texto_cedula = document.createTextNode
-     (listarUsuarios[i].cedula);
-   td_cedula.appendChild(texto_cedula);
-   tr.appendChild(td_cedula);
-   table.appendChild(tr);
-
-    //modificar
-    let td_modificar = document.createElement("td");
-    let anchor_modificar = document.createElement("a");
-    anchor_modificar.classList.add("iconoEditarBorrar");
-
-    let image_modificar = document.createElement("img");
-    image_modificar.setAttribute("src", "../../../assets/img/edit.png");
-    anchor_modificar.appendChild(image_modificar);
-
-    anchor_modificar.addEventListener('click', () => {
-      localStorage.setItem('id', listarUsuarios[i]._id);
-   /*    window.location.href = '../../modificar/modificarMetodoPago/index.html'; */
-    });
-
-    td_modificar.appendChild(anchor_modificar);
-    tr.appendChild(td_modificar);
-    table.appendChild(tr);
-
-    //eliminar
-    let td_eliminar = document.createElement("td");
-    let anchor_eliminar = document.createElement("a");
-    anchor_eliminar.classList.add("iconoEditarBorrar");
-
-    let image_eliminar = document.createElement("img");
-    image_eliminar.setAttribute("src", "../../../assets/img/delete.png");
-    anchor_eliminar.appendChild(image_eliminar);
-
-    anchor_eliminar.addEventListener('click', () => {
-      localStorage.setItem('id', listarUsuarios[i]._id);
-      borrarListarUsuarios();
-    });
-
-    td_eliminar.appendChild(anchor_eliminar);
-    tr.appendChild(td_eliminar);
-    table.appendChild(tr); 
-
-  }//fin de for
-
-}); //fin de renderListarUsuarios
-
+  
+     //tipoCedula
+     let td_tipoCedula = document.createElement("td");
+     let texto_tipoCedula = document.createTextNode
+       (listarUsuarios[i].tipoCedula);
+     td_tipoCedula.appendChild(texto_tipoCedula);
+     tr.appendChild(td_tipoCedula);
+     table.appendChild(tr);
+  
+     //cedula
+     let td_cedula = document.createElement("td");
+     let texto_cedula = document.createTextNode
+       (listarUsuarios[i].cedula);
+     td_cedula.appendChild(texto_cedula);
+     tr.appendChild(td_cedula);
+     table.appendChild(tr);
+  
+      //modificar
+      let td_modificar = document.createElement("td");
+      let anchor_modificar = document.createElement("a");
+      anchor_modificar.classList.add("iconoEditarBorrar");
+  
+      let image_modificar = document.createElement("img");
+      image_modificar.setAttribute("src", "../../../assets/img/edit.png");
+      anchor_modificar.appendChild(image_modificar);
+  
+      anchor_modificar.addEventListener('click', () => {
+        localStorage.setItem('id', listarUsuarios[i]._id);
+     /*    window.location.href = '../../modificar/modificarMetodoPago/index.html'; */
+      });
+  
+      td_modificar.appendChild(anchor_modificar);
+      tr.appendChild(td_modificar);
+      table.appendChild(tr);
+  
+      //eliminar
+      let td_eliminar = document.createElement("td");
+      let anchor_eliminar = document.createElement("a");
+      anchor_eliminar.classList.add("iconoEditarBorrar");
+  
+      let image_eliminar = document.createElement("img");
+      image_eliminar.setAttribute("src", "../../../assets/img/delete.png");
+      anchor_eliminar.appendChild(image_eliminar);
+  
+      anchor_eliminar.addEventListener('click', () => {
+        localStorage.setItem('id', listarUsuarios[i]._id);
+        borrarListarUsuarios();
+      });
+  
+      td_eliminar.appendChild(anchor_eliminar);
+      tr.appendChild(td_eliminar);
+      table.appendChild(tr); 
+  
+    }//fin de for
+  
+   //fin de renderListarUsuarios
+  
+}
+ordenar()
 
 
 function buscar() {
