@@ -1,71 +1,135 @@
-contenidoTablaVehiculos = document.getElementById("contenidoTablaVehiculos");
+const table = document.getElementById('contenidoTablaVehiculos');
 
-
-
-function buscar(){
-
-
-  valor = {
-    identificador: localStorage.getItem('correo')
-  };
-  
-  fetch("http://localhost:5252/listarVehiculo/recibir", {
+async function postVehiculo() {
+  valor = { identificador: localStorage.getItem('correo') };
+  const res = await fetch('/listarVehiculo/recibir', {
+    method: 'POST',
     body: JSON.stringify(valor),
-    method: "POST",
     headers: {
       "Content-Type": "application/json"
     }
-  })
-    .then(function(data) {
-      return data.json();
-    })
-    .then(function(res) {
-   
-      listadoVehiculos = res;
-      console.log(res)
-      
-      contenidoTablaVehiculos.innerHTML ="";
-    
-      for (let i of listadoVehiculos) {
-    
-        //console.log(valor);
-        contenidoTablaVehiculos.innerHTML += `
-                    <tr>
-                       
-                        <td>${i.marca_vehiculo}</td>
-                        <td>${i.modelo}</td>
-                        <td>${i.anno}</td>
-                        <td>${i.placaVehi}</td>
-                        <td><button class="botonBorrarEditar" onclick=""><i class="far fa-edit"></i></button></td>
-                        <td><button class="botonBorrarEditar" onclick=""><i class="fas fa-trash"></i></button></td>
-             
-                    </tr>    
-                    `;
-      }
-  
-    })
-    .catch(function(err) {
-      console.log(err);
-    });
-
+  });
+  const data = await res.json();
+  return data;
 }
 
-buscar()
-
-/* router.post('/update', function(req, res) {
-  siniestro.findByIdAndUpdate({ _id: req.body.id },{ icono: req.body.icono,nombre : req.body.nombre,descripcion: req.body.descripcion},
-    function(err, result) {
-      if (err) {
-        res.send(err);
-      }
-      else {
-        res.json({
-          succes: false,
-          msg: 'El usuario no existe'
-        }) 
-      };
+async function deleteVehiculo() {
+  let id = localStorage.getItem('id');
+  var enlace = ('/eliminarVehiculo/borrar/' + id);
+  const res = await fetch(enlace, {
+    method: 'DELETE',
+    headers: {
+      "Content-Type": "application/json"
     }
-  );
-});
- */
+  });
+  var data = await res.json();
+  return data;
+}
 
+document.addEventListener("DOMContentLoaded", async function renderVehiculo() {
+
+  let vehiculo = await postVehiculo();
+  console.log(vehiculo);
+
+  for (let i = 0; i < vehiculo.length; i++) {
+
+    let tr = document.createElement("tr");
+
+    //marca
+    let td_marca = document.createElement("td");
+    let texto_marca = document.createTextNode
+      (vehiculo[i].marca_vehiculo);
+    td_marca.appendChild(texto_marca);
+    tr.appendChild(td_marca);
+    table.appendChild(tr);
+
+    //modelo 
+    let td_modelo = document.createElement("td");
+    let texto_modelo = document.createTextNode
+      (vehiculo[i].modelo);
+    td_modelo.appendChild(texto_modelo);
+    tr.appendChild(td_modelo);
+    table.appendChild(tr);
+
+    //año
+    let td_anno = document.createElement("td");
+    let texto_anno = document.createTextNode
+      (vehiculo[i].anno);
+    td_anno.appendChild(texto_anno);
+    tr.appendChild(td_anno);
+    table.appendChild(tr);
+
+    //placa vehiculo
+    let td_placaVehi = document.createElement("td");
+    let texto_placaVehi = document.createTextNode
+      (vehiculo[i].placaVehi);
+    td_placaVehi.appendChild(texto_placaVehi);
+    tr.appendChild(td_placaVehi);
+    table.appendChild(tr);
+
+    //modificar  
+    let td_modificar = document.createElement("td");
+    let anchor_modificar = document.createElement("a");
+    anchor_modificar.classList.add("iconoEditarBorrar");
+
+    let image_modificar = document.createElement("img");
+    image_modificar.setAttribute("src", "../../../assets/img/edit.png");
+    anchor_modificar.appendChild(image_modificar);
+
+    anchor_modificar.addEventListener('click', () => {
+      localStorage.setItem('id', vehiculo[i]._id);
+      window.location.href = '../../modificar/modificarVehiculo/index.html';
+    });
+
+    td_modificar.appendChild(anchor_modificar);
+    tr.appendChild(td_modificar);
+    table.appendChild(tr);
+
+    //eliminar
+    let td_eliminar = document.createElement("td");
+    let anchor_eliminar = document.createElement("a");
+    anchor_eliminar.classList.add("iconoEditarBorrar");
+
+    let image_eliminar = document.createElement("img");
+    image_eliminar.setAttribute("src", "../../../assets/img/delete.png");
+    anchor_eliminar.appendChild(image_eliminar);
+
+    anchor_eliminar.addEventListener('click', () => {
+      localStorage.setItem('id', vehiculo[i]._id);
+      borrarVehiculo();
+    });
+
+    td_eliminar.appendChild(anchor_eliminar);
+    tr.appendChild(td_eliminar);
+    table.appendChild(tr);
+
+  }//fin de for
+
+}); //fin de renderVehiculo
+
+
+function buscar() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("inputBuscar");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("contenidoTablaVehiculos");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+async function borrarVehiculo() {
+  var response = await deleteVehiculo();
+  console.log(response);
+  //location.reload(); 
+  window.location.reload(true);
+} 
