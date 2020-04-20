@@ -48,10 +48,11 @@ app.use('/listarVehiculo', require('./servicios/listarVehiculo'));
 app.use('/modificarVehiculo', require('./servicios/modificarVehiculo'));
 app.use('/eliminarVehiculo', require('./servicios/eliminarVehiculo'));
 
-//Registrar y listar Caracteristicas de vehiculo
+//Registrar,listar,modificar,eliminar Caracteristicas de vehiculo
 app.use('/registroCaracteristicaVehiculo', require('./servicios/registroCaracteristicaVehiculo'));
 app.use('/listarCaracteristicasVehiculo', require('./servicios/listarCaracteristicasVehiculo'));
-
+app.use('/eliminarCaracteristicasVehiculo', require('./servicios/eliminarCaracteristicasVehiculo'));
+app.use('/modificarCaracteristicasVehiculo', require('./servicios/modificarCaracteristicasVehiculo'));
 
 //Registrar,listar,modificar,eliminar Categoria Incidente 
 app.use('/registroCategoriaIncidente', require('./servicios/registroCategoriaIncidente'));

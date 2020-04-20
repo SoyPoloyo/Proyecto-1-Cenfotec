@@ -138,4 +138,26 @@
       width: 30%;
       margin-top: 10px;
     }
+
+
+    /** estilosPuntos**/
+    .marker {
+      background-image: url('../../../assets/img/mapbox-icon.png');
+          
+      background-size: cover;
+      width: 50px;
+      height: 50px;
+      border-radius: 40%;
+      cursor: pointer;
+          }
+      
+      .mapboxgl-popup {
+max-width: 200px;
+}
+      
+.mapboxgl-popup-content {
+text-align: center;
+font-family: 'Baloo 2, cursive';
+}
+      
     
