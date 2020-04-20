@@ -22,8 +22,9 @@
         <nav>
 
             <img class="logo_header" src="../../../assets/img/blancobesafe.png" alt="">
-            <a class="alt_letra derecha" href="../../../index.html" onclick="localStorage.clear()">CERRAR SESSION</a>
-            <a class="alt_letra derecha " href="../../sesiones_perfiles/sesionUsuarioClasico/index.html">INICIO  <i class="far fa-user-circle"></i></a>
+            <a class="alt_letra derecha" href="../../../index.html" onclick="localStorage.clear()">CERRAR SESIÓN</a>
+            <a class="alt_letra derecha " href="../../sesiones_perfiles/sesionUsuarioClasico/index.html">INICIO <i
+                    class="far fa-user-circle"></i></a>
             <a class="alt_letra titulo_cuenta " href="../../sesiones_perfiles/perfilUsuarioClasico/index.html">—USUARIO
                 TRADICIONAL</a>
 
@@ -46,14 +47,14 @@
                 <h3 class="titulo_lateral alt_letra">Opciones</h3> <br>
                 <li><a href="../../listar/listarPerfilUsuarioClasico/index.html">Cuenta</a> </li>
                 <br>
-                <li><a href="../../listar/listarVehiculos/index.html">Vehiculos</a> </li>
-                
+                <li><a href="../../listar/listarVehiculos/index.html">Vehículos</a> </li>
+
                 <br>
-                <li><a href="../../listar/listarMetodoPago/index.html">Tarjetas</a> </li>
+                <li><a href="../../listar/listarMetodoPago/index.html">Tarjetas de pago</a> </li>
                 <br>
 
-                <br>    
-           
+                <br>
+
 
             </ul>
 
@@ -75,40 +76,41 @@
                 <br>
                 <input type="text" id="inputBuscar" name="search" class="izquierda" onkeyup="buscar()"
                     placeholder="Buscar">
-              
+
 
                 <button class="boton_2 alt_letra fondosG modificarBoton " type="button">
-                    <a class="redireccion" href="../../registros/registroMetodoPago/index.html">Agregar nueva tarjeta</a>
+                    <a class="redireccion" href="../../registros/registroMetodoPago/index.html">Agregar nueva tarjeta de
+                        pago</a>
                 </button>
                 <br> <br>
-                <h1 class="izquierda ">Listado De Tarjetas</h1> 
+                <h1 class="izquierda ">Tarjetas de pago</h1>
 
 
-                  <br> <br> 
+                <br> <br>
 
-                <table  id="tablaTarjetas" class="tablaTarjetas tablaListar">
+                <table id="tablaTarjetas" class="tablaTarjetas tablaListar">
 
                     <thead>
                         <tr>
 
                             <th id="">Nombre del titular</th>
-                            <th id="">Numero de tarjeta</th>
-                            <th id="">Fecha Vencimiento</th>
-                            <th id="">CVV</th> 
-                            <th id="">Editar</th>   
-                            <th id="">Borrar</th>  
+                            <th id="">Número de tarjeta</th>
+                            <th id="">Fecha de Vencimiento</th>
+                            <th id="">CVV</th>
+                            <th id="">Editar</th>
+                            <th id="">Borrar</th>
                         </tr>
                     </thead>
-                    
+
                     <tbody id="contenidoTablaTarjetas">
 
                     </tbody>
 
 
                 </table>
-              
+
                 <br>
-    
+
 
             </section>
 
