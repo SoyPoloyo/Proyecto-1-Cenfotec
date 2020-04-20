@@ -22,7 +22,7 @@ async function postListarUsuarios() {
 
 async function deleteListarUsuarios() {
   let id = localStorage.getItem("id");
-  var enlace = "/eliminarMetodoPago/borrar/" + id;
+  var enlace = "/eliminarUsuario/borrar/" + id;
   const res = await fetch(enlace, {
     method: "DELETE",
     headers: {
@@ -144,7 +144,7 @@ function buscar() {
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("inputBuscar");
   filter = input.value.toUpperCase();
-  table = document.getElementById("contenidoTablaTarjetas");
+  table = document.getElementById("contenidoTablaUsuarios");
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[0];
