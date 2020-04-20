@@ -74,7 +74,7 @@ body{
 .wrapperCuerpo{
     padding-top: 5%;
     background-color:#EEBA19;
-    background-image: url('img/fondoabeja.png');
+
      background-repeat: no-repeat;
     background-size: cover;
     filter: brightness(100%);
@@ -162,3 +162,19 @@ body{
   from {opacity: .4}
   to {opacity: 1}
 }
+
+/** ==================================
+              FOOTER
+    =================================**/
+    footer {
+      background-color: #2f2319;
+      height: 8vh;
+      color: white;
+    }
+    footer p {
+      padding: 3px 20px;
+    }
+    .link{
+      text-decoration: none;
+      color: white;
+    }

@@ -98,6 +98,58 @@
                     center: [-84.03116608099936, 9.932827376420036]
 
                 });
+
+                
+/* 
+ Inicio de generar los puntos                  
+*/
+
+  
+var geojson = {
+  type: 'FeatureCollection',
+  features: [{
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-84.03116608099936,9.932827376420036]//Preguntar
+    },
+    properties: {
+      title: 'PruebaSiniestro',//Preguntar
+      description: 'Cenfotec'//Preguntar
+    }
+  },
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.414, 37.776]//Preguntar
+    },
+    properties: {
+      title: 'Mapbox',//Preguntar
+      description: 'San Francisco, California'//Preguntar
+    }
+  }]
+};
+    
+    
+    // add markers to map
+geojson.features.forEach(function(marker) {
+
+  // create a HTML element for each feature
+  var el = document.createElement('div');
+  el.className = 'marker';
+
+  // make a marker for each feature and add to the map
+  new mapboxgl.Marker(el)
+    .setLngLat(marker.geometry.coordinates)
+    .setPopup(new mapboxgl.Popup({ offset: 5 }) // agrega los popups
+    .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))// agrega los popups
+    .addTo(map);
+});
+
+/* 
+ Fin de generar los puntos                  
+*/
             </script>
         </div>
 
