@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BeeSafe</title>
 
+    <script>
+        var galleta = localStorage.getItem("usuario");
+        if (galleta != 3)
+          window.location.replace("../../../index.html");
+      </script>
+
     <link rel="stylesheet" href="../../../assets/css/estilosGlobales.css">
     <link rel="stylesheet" href="estilos.css">
 
@@ -13,6 +19,9 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
     <script src="https://kit.fontawesome.com/2b7b514291.js" crossorigin="anonymous"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.js'></script>
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.css' type='text/css' />
+
 </head>
 
 <body>
@@ -22,10 +31,10 @@
         <nav>
 
             <img class="logo_header" src="../../../assets/img/blancobesafe.png" alt="">
-            <a class="alt_letra derecha" href="../../../index.html" onclick="localStorage.clear()">CERRAR SESSION</a>
-            <a class="alt_letra derecha " href="../sesionUsuarioRutas/index.html">INICIO</a>
+            <a class="alt_letra derecha" href="../../sesiones_perfiles/perfilUsuarioRutas/index.html">PERFIL <i
+                class="far fa-user-circle"></i></a>
+          
             <a class="alt_letra titulo_cuenta " href="../sesionUsuarioRutas/index.html">—USUARIO RUTAS</a>
-
 
         </nav>
 
@@ -40,27 +49,18 @@
     <div class=" contenido_izquierdo izquierda">
 
         <br>
-
+    
         <ul style="list-style-type:none;" class="alt_letra listas_menu">
-
+    
             <h3 class="titulo_lateral alt_letra">Opciones</h3> <br>
-            <li><a href="../../listar/listarPerfilUsuarioRuta/index.html">Cuenta</a> </li>
-            <br>
-     
+            <li><a href="../registroRutas/index.html">Crear Ruta</a> </li>
          
-           
-        
+    
         </ul>
-     
-        <br> <br>
-       
-        <br> <br>
-        
-      
-
+    
     </div>
 
-         <!-- =======================================
+        <!-- =======================================
         CONTENIDO EN EL CAMPO IZQUIERDO DE LA PAGINA INICIO
     =================================================-->
 
@@ -69,23 +69,21 @@
     =================================================-->
 
 
-    <div class="contenidoPrincipal">
+       
+
+    
+        <div class="" id='map' style='height: 85vh;';>
+           
+        </div>
 
 
-        <H1 class="">Gracias por utilizar nuestra applicacion</H1>
-
-        <img class="temporalis" src="../../../assets/img/BEESAFE.png" alt="">
-
-    </div>
-
-
- <!-- =======================================
+        <!-- =======================================
                             Contenido Central Final
     =================================================-->
 
     </main>
 
-      
+
 
     <footer>
 
@@ -93,7 +91,7 @@
 
     </footer>
 
-    <script src="index.js"></script>
+    <script src="mapa.js"></script>
 </body>
 
 </html>
