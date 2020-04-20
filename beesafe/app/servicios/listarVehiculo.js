@@ -10,9 +10,9 @@ const listarVehiculos = require('../schema/modeloVehiculo');
   
   
   router.post("/recibir", function(req, res) { 
-  
-  
+   
     identificador=req.body.identificador
+    
   
     listarVehiculos
       .find({identificador:identificador})
@@ -22,12 +22,25 @@ const listarVehiculos = require('../schema/modeloVehiculo');
     
       .catch(function(error) {
         console.log(error);
-      });
-   
-  
-    
-    
+      }); 
   
   });
+
+  router.post("/recibir2", function(req, res) { 
+   
+    chofer= req.body.chofer
+  
+    listarVehiculos
+      .find({chofer:chofer})
+      .then(function(resultado) {
+        res.json(resultado);
+      })
+    
+      .catch(function(error) {
+        console.log(error);
+      }); 
+  
+  });
+  
   
     module.exports = router;
