@@ -67,6 +67,20 @@ document.addEventListener("DOMContentLoaded", async function renderVehiculo() {
     tr.appendChild(td_placaVehi);
     table.appendChild(tr);
 
+     //Chofer
+     let td_chofer = document.createElement("td");
+     
+
+       let texto_chofer =
+       vehiculo[i].chofer == undefined
+        ? document.createTextNode(" ")
+        : document.createTextNode(vehiculo[i].chofer);
+
+
+     td_chofer.appendChild(texto_chofer);
+     tr.appendChild(td_chofer);
+     table.appendChild(tr);
+
     //modificar  
     let td_modificar = document.createElement("td");
     let anchor_modificar = document.createElement("a");

@@ -7,7 +7,8 @@ var vehiculoSchema = mongoose.Schema({
   modelo: String,
   anno: Number,
   marca_vehiculo: String,
-  identificador: String
+  identificador: String,
+  chofer:String,
 });
 
 module.exports = mongoose.model( "vehiculo", vehiculoSchema ,"Vehiculos");

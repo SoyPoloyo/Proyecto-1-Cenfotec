@@ -88,8 +88,7 @@ async function ordenar() {
 
     //tipoAsistencia
 
-    if (listarUsuarios[i].tipoAsistencia == undefined) {
-    }
+  
     let td_tipoAsistencia = document.createElement("td");
     let texto_tipoAsistencia =
       listarUsuarios[i].tipoAsistencia == undefined
