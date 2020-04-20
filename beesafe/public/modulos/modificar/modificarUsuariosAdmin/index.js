@@ -1,12 +1,13 @@
 contenidoUsuario = document.getElementById("contenidoUsuario");
 
 
+let id = localStorage.getItem('id');
 
 valor = {
-  correo: localStorage.getItem('correo')
+  id: id
 };
 
-fetch("http://localhost:5252/listarUsuario/recibir", {
+fetch("http://localhost:5252/listarUsuariosAdmin/recibir", {
   body: JSON.stringify(valor),
   method: "POST",
   headers: {
@@ -61,8 +62,6 @@ fetch("http://localhost:5252/listarUsuario/recibir", {
 
 
 
-let id = localStorage.getItem('id');
-console.log(id);
 
 var enlace = ("/modificarUsuario/editar/"+ id);
 console.log(enlace);

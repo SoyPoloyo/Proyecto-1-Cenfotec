@@ -110,7 +110,7 @@ async function ordenar() {
 
     anchor_modificar.addEventListener("click", () => {
       localStorage.setItem("id", listarUsuarios[i]._id);
-      /*    window.location.href = '../../modificar/modificarMetodoPago/index.html'; */
+         window.location.href = '../../modificar/modificarUsuariosAdmin/index.html';
     });
 
     td_modificar.appendChild(anchor_modificar);

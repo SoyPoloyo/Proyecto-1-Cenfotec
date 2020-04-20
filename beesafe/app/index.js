@@ -38,7 +38,9 @@ app.use('/registroUsuarioClasico', require('./servicios/registroUsuarioClasico.j
 app.use('/registroUsuarioRutas', require('./servicios/registroUsuarioRutas'));
 app.use('/listarUsuarios', require('./servicios/listarUsuarios'));
 app.use('/listarUsuario', require('./servicios/listarUsuario'));
+app.use('/listarUsuariosAdmin', require('./servicios/listarUsuariosAdmin'));
 app.use('/eliminarUsuario', require('./servicios/eliminarUsuario'));
+app.use('/modificarUsuario', require('./servicios/modificarUsuario'));
 
 //Registrar,listar,modificar,eliminar Rutas
 app.use('/listarRutas', require('./servicios/listarRutas'));

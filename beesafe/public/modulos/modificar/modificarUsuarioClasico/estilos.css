@@ -1,20 +1,16 @@
 .listadoUsuarios{
     height: 85vh;
-    margin-left: 22%;
+    margin-left: 5%;
     text-align: justify;
 }
 
-.largoFondos{
-width: 46%!important;
+.modificarBoton{
+    
 }
 
 .modificar{
-    margin-left: 22%;
+    margin-left: 15%;
     text-align: center;
     width: 30%!important;
 
-}
-.redireccion{
-    text-decoration: none;
-    color: white;
 }
