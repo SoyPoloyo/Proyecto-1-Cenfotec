@@ -22,10 +22,9 @@
         <nav>
 
             <img class="logo_header" src="../../../assets/img/blancobesafe.png" alt="">
-            <a class="alt_letra derecha" href="../../../index.html" onclick="localStorage.clear()">CERRAR SESIÓN</a>
-            <a class="alt_letra derecha " href="../../sesiones_perfiles/sesionUsuarioClasico/index.html">INICIO <i class="far fa-user-circle"></i></a>
-            <a class="alt_letra titulo_cuenta " href="../../sesiones_perfiles/perfilUsuarioClasico/index.html">—USUARIO
-                TRADICIONAL</a>
+            <a class="alt_letra derecha" href="../../../index.html" onclick="localStorage.clear()">CERRAR SESSION</a>
+            <a class="alt_letra derecha " href="../../sesiones_perfiles/sesionUsuarioAdmin/index.html">INICIO <i class="far fa-user-circle"></i></a>
+            <a class="alt_letra titulo_cuenta " href="../../sesiones_perfiles/sesionUsuarioAdmin/index.html">—ADMINISTRADOR</a>
 
 
         </nav>
@@ -44,19 +43,21 @@
             <ul style="list-style-type:none;" class="alt_letra listas_menu">
 
                 <h3 class="titulo_lateral alt_letra">Opciones</h3> <br>
-                <li><a href="../../listar/listarPerfilUsuarioClasico/index.html">Cuenta</a> </li>
+                <li><a href="../../listar/listarPerfilAdmin/index.html">Cuenta</a> </li>
                 <br>
-                <li><a href="../../listar/listarVehiculos/index.html">Vehículos</a> </li>
-
-                <br>
-                <li><a href="../../listar/listarMetodoPago/index.html">Tarjetas</a> </li>
                 <br>
 
-                <br>
+            
 
 
 
             </ul>
+
+            <br> <br>
+
+            <br> <br>
+
+
 
         </div>
 
@@ -73,36 +74,22 @@
 
             <section class="listadoUsuarios">
 
- 
+            <br><br>
 
-                <h1 class="izquierda alt_letra">Información de su cuenta</h1>
+                <h1 class="izquierda alt_letra">Datos de su cuenta</h1>
+         
 
+                    <br><br>
 
-                  <br> <br> 
+              <div id="contenidoUsuario">   
+                  
+              </div>
 
-                <table  id="tablaUsuarios" class="tablaUsuarios tablaListar">
-
-                    <thead>
-                        <tr>
-
-                            <th id="">Nombre</th>
-                            <th id="">Apellido</th>
-                            <th id="">Edad</th>
-                            <th id="">Cedula</th> 
-                            <th id="">Correo</th>   
-                            <th id="">Editar</th>  
-                        </tr>
-                    </thead>
-                    
-                    <tbody id="contenidoTablaUsuarios">
-
-                    </tbody>
-
-
-                </table>
-              
-                <br>
-    
+              <br>
+              <button class="boton_1 alt_letra fondosG modificar largoFondos2 " 
+              onclick="window.location.href='../../listar/listarPerfilUsuarioClasico/index.html'" type="button" > 
+               Guardar cambios
+              </button>
 
             </section>
 
