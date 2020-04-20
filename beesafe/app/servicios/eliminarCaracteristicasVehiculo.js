@@ -6,7 +6,7 @@ var EliminarCaracteristicas = require('../schema/modeloCaracteristicaVehiculo');
 
 router.delete('/borrar/:id', async (req, res) => {
     const eliminarCaracteristicas = await EliminarCaracteristicas.findByIdAndDelete(req.params.id); 
-    res.json({message: 'Vehiculo Eliminado'});
+    res.json({message: 'Caracteristica Eliminada'});
   
 });
 

@@ -32,15 +32,16 @@ app.use(express.static(path.join(__dirname, "../public")));
 app.use('/login', require('./servicios/login'));
 
 
-//registrar y listar usuarios
+//Registrar,listar,modificar,eliminar Usuarios
 app.use('/registroUsuarioEspecializado', require('./servicios/registroUsuarioEspecializado.js'));
 app.use('/registroUsuarioClasico', require('./servicios/registroUsuarioClasico.js'));
 app.use('/registroUsuarioRutas', require('./servicios/registroUsuarioRutas'));
 app.use('/listarUsuarios', require('./servicios/listarUsuarios'));
 app.use('/listarUsuario', require('./servicios/listarUsuario'));
+app.use('/eliminarUsuario', require('./servicios/eliminarUsuario'));
 
+//Registrar,listar,modificar,eliminar Rutas
 app.use('/listarRutas', require('./servicios/listarRutas'));
-
 
 //Registrar,listar,modificar,eliminar Vehiculo
 app.use('/registroVehiculo', require('./servicios/registroVehiculo'));
