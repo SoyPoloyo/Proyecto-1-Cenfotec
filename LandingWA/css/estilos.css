@@ -34,8 +34,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#72ae94', end
 }
 
 .imagen2{
-    width: 300px;
-    margin: 0 auto;
+    width: 350px;
+    margin-left: 25%!important;
     
 
 }
@@ -94,4 +94,27 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#72ae94', end
 .fotosCartas{
     width: 40%!important;
     border-radius: 50px;
+}
+.botonPagina{
+    padding: 10px 30px;
+    background-color: #72AE94;
+    color: #ffffff;
+    text-decoration: none;
+    border: #72AE94;
+    border-radius: 10px;
+}
+.botonPagina:hover{
+    
+    background-color: rgb(86, 143, 118);
+   
+}
+.botonPagina a{
+    
+    color: #ffffff;
+    text-decoration: none;
+}
+.botonPagina a:hover{
+    
+    color: #ffffff;
+    text-decoration: none;
 }
