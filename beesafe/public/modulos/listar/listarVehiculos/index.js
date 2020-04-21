@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", async function renderVehiculo2() {
      table.appendChild(tr);
 
     //modificar  
-    let td_modificar = document.createElement("td");
+   /*  let td_modificar = document.createElement("td");
     let anchor_modificar = document.createElement("a");
     anchor_modificar.classList.add("iconoEditarBorrar");
 
@@ -204,25 +204,9 @@ document.addEventListener("DOMContentLoaded", async function renderVehiculo2() {
 
     td_modificar.appendChild(anchor_modificar);
     tr.appendChild(td_modificar);
-    table.appendChild(tr);
+    table.appendChild(tr); */
 
-    //eliminar
-    let td_eliminar = document.createElement("td");
-    let anchor_eliminar = document.createElement("a");
-    anchor_eliminar.classList.add("iconoEditarBorrar");
-
-    let image_eliminar = document.createElement("img");
-    image_eliminar.setAttribute("src", "../../../assets/img/delete.png");
-    anchor_eliminar.appendChild(image_eliminar);
-
-    anchor_eliminar.addEventListener('click', () => {
-      localStorage.setItem('id', vehiculo[i]._id);
-      borrarVehiculo();
-    });
-
-    td_eliminar.appendChild(anchor_eliminar);
-    tr.appendChild(td_eliminar);
-    table.appendChild(tr);
+  
 
   }//fin de for
 

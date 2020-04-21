@@ -42,5 +42,22 @@ const listarVehiculos = require('../schema/modeloVehiculo');
   
   });
   
+
+  router.post("/recibir3", function(req, res) { 
+   
+    id=req.body.id
+    
+  
+    listarVehiculos
+      .find({_id:id})
+      .then(function(resultado) {
+        res.json(resultado);
+      })
+    
+      .catch(function(error) {
+        console.log(error);
+      }); 
+  
+  });
   
     module.exports = router;
