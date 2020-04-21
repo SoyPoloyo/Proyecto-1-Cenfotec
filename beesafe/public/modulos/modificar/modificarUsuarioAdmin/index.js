@@ -110,6 +110,12 @@ function modificar() {
       button: "Continuar",
     });
 
+    setTimeout(() => {
+      window.location.replace(
+          "../../sesiones_perfiles/perfilUsuarioAdmin/index.html"
+      )
+  }, 3333);
+
 
   }
 

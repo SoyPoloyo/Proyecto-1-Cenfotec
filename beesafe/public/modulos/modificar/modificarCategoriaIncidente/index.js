@@ -1,5 +1,5 @@
-
-/* function subirImagen() {
+/* 
+function subirImagen() {
 
     console.dir(document.getElementById('imagenAgregada'));
     var archivo = document.getElementById("image").files[0];
@@ -20,6 +20,32 @@ console.log(id);
 
 var enlace = ("/modificarCategoriaIncidente/editar/" + id);
 console.log(enlace);
+
+const nombre = document.getElementById('nombre');
+const descripcion = document.getElementById('descripcion');
+
+async function postCampos(id) {
+    valor = { _id: id }
+    const res = await fetch('/modificarCategoriaIncidente/recibir', {
+        method: 'POST',
+        body: JSON.stringify(valor),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    });
+    const data = await res.json();
+    return data;
+}//fin 
+
+async function llenarCampos() {
+    var response = await postCampos(id);
+    console.log(response);
+
+    nombre.value = response[0].nombre;
+    descripcion.value = response[0].descripcion;
+}
+
+llenarCampos();
 
 function modificar() {
     let datos = ["nombre", "descripcion", "image"];
