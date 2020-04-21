@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", async function renderListarUsuario
 
     anchor_modificar.addEventListener('click', () => {
       localStorage.setItem('id', listarUsuario[i]._id);
-      window.location.href = '../../modificar/modificarUsuarioRutas/index.html';
+      window.location.href = '../../modificar/modificarUsuarioClasico/index.html';
     });
 
     td_modificar.appendChild(anchor_modificar);
