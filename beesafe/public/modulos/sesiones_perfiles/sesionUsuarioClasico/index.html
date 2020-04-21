@@ -51,7 +51,7 @@
         <h3 class="titulo_lateral alt_letra">Opciones</h3> <br>
         <li><a href="../sesionUsuarioClasico/index.html">Mapa</a> </li>
         <br>
-        <li><a href="#">Reportar Siniestro</a> </li>
+        <button class="boton" id="myBtn">Reporte SIniestro</button>
         
         <br>
         <li><a href="../../listar/listarVehiculos/index.html">Vehículos</a> </li>
@@ -91,7 +91,22 @@
                     center: [-84.03116608099936, 9.932827376420036]
 
                 });
-
+                //Inicio localizacion actual
+                var latitude;
+               var longitude;
+        if(navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+          var positionInfo = "Latitud: " + position.coords.latitude + ", " + "Longitud: " + position.coords.longitude;
+          console.log(positionInfo);
+      
+           latitude=position.coords.latitude;
+          longitude=position.coords.longitude;
+          });
+        }
+        
+    console.log(latitude);
+    console.log(latitude);
+ //Fin localizacion actual
                 
 /* 
  Inicio de generar los puntos                  
@@ -100,24 +115,24 @@
   
 var geojson = {
   type: 'FeatureCollection',
-  features: [{
+    features: [{
     type: 'Feature',
     geometry: {
       type: 'Point',
-      coordinates: [-84.03116608099936,9.932827376420036]//Preguntar
+      coordinates: [-84.031166036,9.93282737642003680999]//Preguntar
     },
-    properties: {
+      properties: {
       title: 'PruebaSiniestro',//Preguntar
       description: 'Cenfotec'//Preguntar
     }
   },
   {
-    type: 'Feature',
-    geometry: {
+      type: 'Feature',
+      geometry: {
       type: 'Point',
       coordinates: [-122.414, 37.776]//Preguntar
     },
-    properties: {
+      properties: {
       title: 'Mapbox',//Preguntar
       description: 'San Francisco, California'//Preguntar
     }
@@ -143,6 +158,9 @@ geojson.features.forEach(function(marker) {
 /* 
  Fin de generar los puntos                  
 */
+
+
+
             </script>
         </div>
 
@@ -150,7 +168,44 @@ geojson.features.forEach(function(marker) {
         <!-- =======================================
                             Contenido Central Final
     =================================================-->
+<!-- The Modal -->
+<div id="myModal" class="modal">
 
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h1>Reporte de Siniestro</h1>
+    <br><br>
+   
+    <select id="ruta" class="selectModalRuta">
+      <option value="Choque">Ruta</option>
+      <option value="Derrumbe">Derrumbe</option>
+            
+    </select>
+    <br><br>
+      
+        
+</select>
+<div class="wrapperAsistencia">
+  <br>
+  <div>
+    <label for="Asist" class="labelAsistencia">¿Asistencia? </label>
+  <input type="checkbox" id="asistencia" name="Ayuda" value="Asistencia">
+</div>
+  <select id="tipoSiniestro" class="selectModal">
+    <option value="Choque">Choque</option>
+    <option value="Derrumbe">Derrumbe</option>
+  </select>
+  
+
+</div>
+    <textarea  placeholder="Describa el siniestro" rows="4" cols="70" class="textAreaModal" id="descripcion"></textarea>
+<br><br>
+  <input type="submit" onclick="registro()">
+  
+  </div>
+
+</div>
     </main>
 
 
@@ -164,6 +219,7 @@ geojson.features.forEach(function(marker) {
   
 
     <script src="index.js"></script>
+    <script src="indexRegistro.js"></script>
 </body>
 
 </html>
