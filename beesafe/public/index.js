@@ -24,42 +24,58 @@ function validarLogin() {
           console.log(response[0].tipoUsuario);
           response[0].tipoUsuario == 0
             ? localStorage.setItem("usuario", "0") &
-              localStorage.setItem("correo", response[0].correo)
+            localStorage.setItem("correo", response[0].correo)
             : response[0].tipoUsuario == 1
-            ? localStorage.setItem("usuario", "1") &
+              ? localStorage.setItem("usuario", "1") &
               localStorage.setItem("correo", response[0].correo)
-            : response[0].tipoUsuario == 2
-            ? localStorage.setItem("usuario", "2") &
-              localStorage.setItem("correo", response[0].correo)
-            : response[0].tipoUsuario == 3
-            ? localStorage.setItem("usuario", "3") &
-              localStorage.setItem("correo", response[0].correo)
-            : "Invalido";
+              : response[0].tipoUsuario == 2
+                ? localStorage.setItem("usuario", "2") &
+                localStorage.setItem("correo", response[0].correo)
+                : response[0].tipoUsuario == 3
+                  ? localStorage.setItem("usuario", "3") &
+                  localStorage.setItem("correo", response[0].correo)
+                  : "Invalido";
           console.log(response);
 
           var galleta = localStorage.getItem("usuario");
-          
+
           galleta == 0
             ? window.location.replace(
-                "/modulos/sesiones_perfiles/sesionUsuarioAdmin/index.html"
-              )
+              "/modulos/sesiones_perfiles/sesionUsuarioAdmin/index.html"
+            )
             : galleta == 1
-            ? window.location.replace(
+              ? window.location.replace(
                 "/modulos/sesiones_perfiles/sesionUsuarioClasico/index.html"
               )
-            : galleta == 2
-            ? window.location.replace(
-                "/modulos/sesiones_perfiles/sesionUsuarioEspecializado/index.html"
-              )
-            : galleta == 3
-            ? window.location.replace(
-                "/modulos/sesiones_perfiles/sesionUsuarioRutas/index.html"
-              )
-            : console.log("invalido");
-        } else alert("Contraseña incorrecta");
+              : galleta == 2
+                ? window.location.replace(
+                  "/modulos/sesiones_perfiles/sesionUsuarioEspecializado/index.html"
+                )
+                : galleta == 3
+                  ? window.location.replace(
+                    "/modulos/sesiones_perfiles/sesionUsuarioRutas/index.html"
+                  )
+                  : console.log("invalido");
+        } else
+
+          swal({
+            title: "Contraseña incorrecta",
+            text: "Debe introducir una contraseña válida",
+            icon: "warning",
+            button: "Continuar",
+          });
+
       } else {
-        alert("Este usuario no existe");
+
+        swal({
+          title: "Usuario Inválido",
+          text: "El usuario ingresado no existe",
+          icon: "warning",
+          button: "Continuar",
+        });
+
       }
+
     })
     .catch(function (err) {
       console.log("Ocurrió un error con la ejecución", err);
@@ -69,21 +85,21 @@ function validarLogin() {
 var galleta = localStorage.getItem("usuario");
 galleta == 0
   ? window.location.replace(
-      "/modulos/sesiones_perfiles/sesionUsuarioAdmin/index.html"
-    )
+    "/modulos/sesiones_perfiles/sesionUsuarioAdmin/index.html"
+  )
   : galleta == 1
-  ? window.location.replace(
+    ? window.location.replace(
       "/modulos/sesiones_perfiles/sesionUsuarioClasico/index.html"
     )
-  : galleta == 2
-  ? window.location.replace(
-      "/modulos/sesiones_perfiles/sesionUsuarioEspecializado/index.html"
-    )
-  : galleta == 3
-  ? window.location.replace(
-      "/modulos/sesiones_perfiles/sesionUsuarioRutas/index.html"
-    )
-  : console.log("invalido");
+    : galleta == 2
+      ? window.location.replace(
+        "/modulos/sesiones_perfiles/sesionUsuarioEspecializado/index.html"
+      )
+      : galleta == 3
+        ? window.location.replace(
+          "/modulos/sesiones_perfiles/sesionUsuarioRutas/index.html"
+        )
+        : console.log("invalido");
 
 /*function validarLogin() {
     var data = {
@@ -102,7 +118,7 @@ galleta == 0
         if (response.status != 200)
           console.log('Ocurrió un error con el servicio: ' + response.status);
         else
-      
+
           return response.json();
       }
     )
@@ -125,7 +141,7 @@ galleta == 0
                         cookieConectado[1] == 2 ? window.location.replace("/modulos/sesiones_perfiles/sesionUsuarioEspecializado/index.html"):
                         cookieConectado[1] == 3 ? window.location.replace("/modulos/sesiones_perfiles/sesionUsuarioRutas/index.html"):
                         console.log('ejecucion');
-        
+
           }
           else
             alert('Contraseña incorrecta')
