@@ -1,20 +1,13 @@
-/** ==================================
-    se llamaron estilos globlaes de otra
-    carpeta, ingrese los suyos aca,
-    para sobreescribir algo si no se cambia
-    puede agregarle a la derecha
-    !important 
-    y listo
-    =================================**/
 
-
-.temporalis{
-    width: 20%;
-    margin: 50px 100px;
-}
-
-.contenidoPrincipal{
+ .contenidoPrincipal {
+    margin-left: 22%;
     
-    text-align: center;
-    margin-top: 50px;
+  }
+  
+
+
+
+.redireccion{
+    text-decoration: none;
+    color: white;
 }

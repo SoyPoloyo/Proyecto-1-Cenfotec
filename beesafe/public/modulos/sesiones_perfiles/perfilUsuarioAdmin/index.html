@@ -6,13 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BeeSafe</title>
 
-    <script>
-        var galleta = localStorage.getItem("usuario");
-        if (galleta != 0){
-          window.location.replace("../../../index.html");
-        }
-      </script>
-
     <link rel="stylesheet" href="../../../assets/css/estilosGlobales.css">
     <link rel="stylesheet" href="estilos.css">
 
@@ -30,8 +23,9 @@
 
             <img class="logo_header" src="../../../assets/img/blancobesafe.png" alt="">
             <a class="alt_letra derecha" href="../../../index.html" onclick="localStorage.clear()">CERRAR SESIÓN</a>
-            <a class="alt_letra derecha " href="../../sesiones_perfiles/sesionUsuarioAdmin/index.html">INICIO</a>
-            <a class="alt_letra titulo_cuenta " href="../../sesiones_perfiles/sesionUsuarioAdmin/index.html">—ADMINISTRADOR</a>
+            <a class="alt_letra derecha " href="../../sesiones_perfiles/sesionUsuarioAdmin/index.html">INICIO <i class="far fa-user-circle"></i></a>
+            <a class="alt_letra titulo_cuenta "
+                href="../../sesiones_perfiles/sesionUsuarioAdmin/index.html">—ADMINISTRADOR</a>
 
 
         </nav>
@@ -50,10 +44,12 @@
             <ul style="list-style-type:none;" class="alt_letra listas_menu">
 
                 <h3 class="titulo_lateral alt_letra">Opciones</h3> <br>
-                <li><a href="../../listar/listarPerfilAdmin/index.html">Cuenta</a> </li>
+                <li><a href="index.html">Cuenta</a> </li>
+                <br>
                 <br>
 
-               
+
+
 
 
             </ul>
@@ -74,16 +70,44 @@
                                 Contenido Central Inicio
         =================================================-->
 
-
         <div class="contenidoPrincipal">
 
+            <section class="listadoUsuarios">
 
-            <H1 class="">DESARROLLADO POR:</H1>
+ <br>
 
-            <img class="temporalis" src="../../../assets/img/logonegro.png" alt=""><h1>WORKAPES</h1>
+                <h1 class="izquierda alt_letra">Información de su cuenta</h1>
+
+
+                  <br> <br> 
+
+                <table  id="tablaUsuarios" class="tablaUsuarios tablaListar">
+
+                    <thead>
+                        <tr>
+
+                            <th id="">Nombre</th>
+                            <th id="">Apellido</th>
+                            <th id="">Edad</th>
+                            <th id="">Cedula</th> 
+                            <th id="">Correo</th>   
+                            <th id="">Editar</th>  
+                        </tr>
+                    </thead>
+                    
+                    <tbody id="contenidoTablaUsuarios">
+
+                    </tbody>
+
+
+                </table>
+              
+                <br>
+    
+
+            </section>
 
         </div>
-
 
 
 

@@ -23,8 +23,9 @@
 
             <img class="logo_header" src="../../../assets/img/blancobesafe.png" alt="">
             <a class="alt_letra derecha" href="../../../index.html" onclick="localStorage.clear()">CERRAR SESIÓN</a>
-            <a class="alt_letra derecha " href="../sesionUsuarioEspecializado/index.html">INICIO</a>
-            <a class="alt_letra titulo_cuenta " href="../sesionUsuarioEspecializado/index.html">—USUARIO ESPECIALIZADO</a>
+            <a class="alt_letra derecha " href="../../sesiones_perfiles/sesionUsuarioEspecializado/index.html">INICIO </a>
+            <a class="alt_letra titulo_cuenta " href="../../sesiones_perfiles/sesionUsuarioEspecializado/index.html">—USUARIO
+                ESPECIALIZADO</a>
 
 
         </nav>
@@ -34,56 +35,83 @@
     <main>
 
         <!-- =======================================
-        CONTENIDO EN EL CAMPO IZQUIERDO DE LA PAGINA INICIO
-    =================================================-->
+            CONTENIDO EN EL CAMPO IZQUIERDO DE LA PAGINA INICIO
+        =================================================-->
+        <div class=" contenido_izquierdo izquierda">
 
-    <div class=" contenido_izquierdo izquierda">
+            <br>
 
-        <br>
+            <ul style="list-style-type:none;" class="alt_letra listas_menu">
 
-        <ul style="list-style-type:none;" class="alt_letra listas_menu">
-
-            <h3 class="titulo_lateral alt_letra">Opciones</h3> <br>
-            <li><a href="../../listar/listarPerfilUsuarioEspecializado/index.html">Cuenta</a> </li>
-            
-           
-         
-       
-           
+                <h3 class="titulo_lateral alt_letra">Opciones</h3> <br>
+                <li><a href="index.html">Cuenta</a> </li>
+                <br>
         
-        </ul>
-     
-        <br> <br>
-       
-        <br> <br>
-        
-      
 
-    </div>
 
-   
+
+            </ul>
+
+        </div>
+
         <!-- =======================================
-                            Contenido Central Inicio
-    =================================================-->
+            CONTENIDO EN EL CAMPO IZQUIERDO DE LA PAGINA INICIO
+        =================================================-->
+
+        <!-- =======================================
+                                Contenido Central Inicio
+        =================================================-->
 
 
-    <div class="contenidoPrincipal">
+        <div class="contenidoPrincipal">
+
+            <section class="listadoUsuarios">
+
+ <br>
+
+                <h1 class="izquierda alt_letra">Información de su cuenta</h1>
 
 
-        <H1 class="">Gracias por utilizar nuestra aplicación</H1>
+                  <br> <br> 
 
-        <img class="temporalis" src="../../../assets/img/BEESAFE.png" alt="">
+                <table  id="tablaUsuarios" class="tablaUsuarios tablaListar">
 
-    </div>
+                    <thead>
+                        <tr>
+
+                            <th id="">Nombre</th>
+                            <th id="">Apellido</th>
+                            <th id="">Edad</th>
+                            <th id="">Cedula</th> 
+                            <th id="">Correo</th> 
+                            <th id="">Asistencia</th> 
+                            <th id="">Editar</th>  
+                            
+                        </tr>
+                    </thead>
+                    
+                    <tbody id="contenidoTablaUsuarios">
+
+                    </tbody>
 
 
- <!-- =======================================
-                            Contenido Central Final
-    =================================================-->
+                </table>
+              
+                <br>
+    
+
+            </section>
+
+        </div>
+
+
+        <!-- =======================================
+                                Contenido Central Final
+        =================================================-->
 
     </main>
 
-      
+
 
     <footer>
 
