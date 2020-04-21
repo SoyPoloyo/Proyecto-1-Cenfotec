@@ -29,7 +29,7 @@
 
             <img onclick="window.location.href='../../../index.html'" class="logo_header"
                 src="../../../assets/img/blancobesafe.png" alt="">
-            <a class="alt_letra derecha" href="../perfilUsuarioEspecializado/index.html">PERFIL <i
+            <a class="alt_letra derecha" href="../../sesiones_perfiles/perfilUsuarioEspecializado/index.html">PERFIL <i
                     class="far fa-user-circle"></i></a>
            
             <a class="alt_letra titulo_cuenta " href="../../sesiones_perfiles/sesionUsuarioEspecializado/index.html">—USUARIO ESPECIALIZADO</a>
@@ -55,6 +55,8 @@
 
                 <li><a href="#"> Solicitudes asistencia</a> </li>
                 <br>
+                <li><a href="#"> Solicitudes aprobadas</a> </li>
+                <br>
 
 
 
@@ -78,9 +80,15 @@
 
 <br>
 
-            <h1 class="izquierda alt_letra">Información de su cuenta</h1>
+            <h1 class="izquierda alt_letra">Solicitudes de asistencia</h1>
 
-
+            <select class="fondosG" id="tipoUsuarios" onchange="ordenar()">
+                <option value="5" selected hidden>Tipo de asistencia:</option>
+                <option value="1">Ambulancia</option>
+                <option value="2">Grua</option>
+                <option value="3">Policia</option>
+                <option value="5">Todas las asistencias</option>
+            </select>
               <br> <br> 
 
             <table  id="tablaUsuarios" class="tablaUsuarios tablaListar">
@@ -90,9 +98,7 @@
 
                         <th id="">Solicitante</th>
                         <th id="">Tipo de asistencia</th>
-                        <th id="">Hora</th>
-                     
-                        <th id="">Asistencia</th> 
+                        <th id="">Fecha</th>
                         <th id="">Aprobar</th>  
                         
                     </tr>
