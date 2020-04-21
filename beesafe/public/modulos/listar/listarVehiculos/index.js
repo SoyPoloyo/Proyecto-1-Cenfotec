@@ -1,7 +1,11 @@
 const table = document.getElementById('contenidoTablaVehiculos');
 
 async function postVehiculo() {
+
+
   valor = { identificador: localStorage.getItem('correo') };
+
+
   const res = await fetch('/listarVehiculo/recibir', {
     method: 'POST',
     body: JSON.stringify(valor),
@@ -11,8 +15,25 @@ async function postVehiculo() {
   });
   const data = await res.json();
   return data;
-}
 
+}
+async function postVehiculo2() {
+
+
+  valor2 = {chofer: localStorage.getItem('correo') };
+
+
+  const res = await fetch('/listarVehiculo/recibir2', {
+    method: 'POST',
+    body: JSON.stringify(valor2),
+    headers: {
+      "Content-Type": "application/json"
+    }
+  });
+  const data = await res.json();
+  return data;
+
+}
 async function deleteVehiculo() {
   let id = localStorage.getItem('id');
   var enlace = ('/eliminarVehiculo/borrar/' + id);
@@ -67,6 +88,16 @@ document.addEventListener("DOMContentLoaded", async function renderVehiculo() {
     tr.appendChild(td_placaVehi);
     table.appendChild(tr);
 
+     //Chofer
+     let td_chofer = document.createElement("td");
+       let texto_chofer =
+       vehiculo[i].chofer == undefined
+        ? document.createTextNode(" ")
+        : document.createTextNode(vehiculo[i].chofer);
+     td_chofer.appendChild(texto_chofer);
+     tr.appendChild(td_chofer);
+     table.appendChild(tr);
+
     //modificar  
     let td_modificar = document.createElement("td");
     let anchor_modificar = document.createElement("a");
@@ -106,7 +137,80 @@ document.addEventListener("DOMContentLoaded", async function renderVehiculo() {
   }//fin de for
 
 }); //fin de renderVehiculo
+document.addEventListener("DOMContentLoaded", async function renderVehiculo2() {
 
+  let vehiculo = await postVehiculo2();
+  console.log(vehiculo);
+
+  for (let i = 0; i < vehiculo.length; i++) {
+
+    let tr = document.createElement("tr");
+
+    //marca
+    let td_marca = document.createElement("td");
+    let texto_marca = document.createTextNode
+      (vehiculo[i].marca_vehiculo);
+    td_marca.appendChild(texto_marca);
+    tr.appendChild(td_marca);
+    table.appendChild(tr);
+
+    //modelo 
+    let td_modelo = document.createElement("td");
+    let texto_modelo = document.createTextNode
+      (vehiculo[i].modelo);
+    td_modelo.appendChild(texto_modelo);
+    tr.appendChild(td_modelo);
+    table.appendChild(tr);
+
+    //año
+    let td_anno = document.createElement("td");
+    let texto_anno = document.createTextNode
+      (vehiculo[i].anno);
+    td_anno.appendChild(texto_anno);
+    tr.appendChild(td_anno);
+    table.appendChild(tr);
+
+    //placa vehiculo
+    let td_placaVehi = document.createElement("td");
+    let texto_placaVehi = document.createTextNode
+      (vehiculo[i].placaVehi);
+    td_placaVehi.appendChild(texto_placaVehi);
+    tr.appendChild(td_placaVehi);
+    table.appendChild(tr);
+
+     //Chofer
+     let td_chofer = document.createElement("td");
+       let texto_chofer =
+       vehiculo[i].chofer == undefined
+        ? document.createTextNode(" ")
+        : document.createTextNode(vehiculo[i].chofer);
+     td_chofer.appendChild(texto_chofer);
+     tr.appendChild(td_chofer);
+     table.appendChild(tr);
+
+    //modificar  
+   /*  let td_modificar = document.createElement("td");
+    let anchor_modificar = document.createElement("a");
+    anchor_modificar.classList.add("iconoEditarBorrar");
+
+    let image_modificar = document.createElement("img");
+    image_modificar.setAttribute("src", "../../../assets/img/edit.png");
+    anchor_modificar.appendChild(image_modificar);
+
+    anchor_modificar.addEventListener('click', () => {
+      localStorage.setItem('id', vehiculo[i]._id);
+      window.location.href = '../../modificar/modificarVehiculo/index.html';
+    });
+
+    td_modificar.appendChild(anchor_modificar);
+    tr.appendChild(td_modificar);
+    table.appendChild(tr); */
+
+  
+
+  }//fin de for
+
+}); //fin de renderVehiculo
 
 function buscar() {
   var input, filter, table, tr, td, i, txtValue;

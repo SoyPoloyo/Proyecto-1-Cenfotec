@@ -7,7 +7,7 @@
     <title>BeeSafe</title>
 
     <link rel="stylesheet" href="../../../assets/css/estilosGlobales.css">
-
+    <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="../../registro/registroTipoVehiculo/estilos.css">
 
     <link href="https://fonts.googleapis.com/css?family=Baloo|Baloo+2&display=swap" rel="stylesheet">
@@ -79,34 +79,37 @@
 
         <div class="contenidoPrincipal">
 
-
-
             <section class="formulario">
-                <br>
-                <br>
+            
+                <form>
 
-                <br>
-
-
-                <form class="formulario2">
-                    <h1 class="alt_letra">Modificar tipo de vehículo especializado</h1> <br>
                     <br>
-                    <div class="izquierda izquierdaCentro">
+                    <br> <br>
 
-                        <input class="fondosG" type="text" name="nombre" id="nombre">
+                    <h1 class="alt_letra">Modificar tipo de vehículo especializado</h1> <br>
 
-                        <br><br>
 
-                        <textarea class="fondosG" rows="7" id="descripcion" name="descripcion"></textarea>
-                    </div>
+                    <input class="fondosG" type="text" value="" placeholder="Tipo de vehículo" name="nombre"
+                        id="nombre"><br> <br>
+                    <input class="fondosG" type="text" value="" placeholder="Característica" name="caracteristica"
+                        id="caracteristica"> <br> <br>
 
-                    <input class="fondosG" type="text" name="caracteristica" id="caracteristica">
-                    <br><br> <br><br> <br><br> <br><br><br>
-                    <input class="boton_1 alt_letra fondosG" type="button" value="Enviar" onclick="modificar()">
 
-                    <br><br>
+
+                    <textarea class="fondosG" rows="5" placeholder="Descripcion" id="descripcion"></textarea>
+                    <br>
+                    <br>
+
+
+
+
+                    <button class="boton_1 alt_letra fondosG " type="button" onclick="modificar()"> Agregar</button>
+
 
                 </form>
+
+
+
             </section>
 
         </div>

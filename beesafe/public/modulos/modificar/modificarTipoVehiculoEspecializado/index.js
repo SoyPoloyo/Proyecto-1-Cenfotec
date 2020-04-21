@@ -1,4 +1,5 @@
-/* async function postTipoVehiculo(id) {
+
+async function postCampos(id) {
     valor = { _id: id }
     const res = await fetch('/modificarTipoVehiculo/recibir', {
         method: 'POST',
@@ -9,26 +10,21 @@
     });
     const data = await res.json();
     return data;
-}//fin de postCategoriaIncidente */
-
-
+}//fin
 
 let id = localStorage.getItem('id');
-
 console.log(id);
 
-var enlace = ("/modificarTipoVehiculo/editar/"+ id);
+var enlace = ("/modificarTipoVehiculo/editar/" + id);
 console.log(enlace);
 
-/* 
 const nombre = document.getElementById('nombre');
 const caracteristica = document.getElementById('caracteristica');
 const descripcion = document.getElementById('descripcion');
 
 async function llenarCampos() {
-    var response = await postTipoVehiculo(id);
+    var response = await postCampos(id);
     console.log(response);
-
     nombre.value = response[0].nombre;
     caracteristica.value = response[0].caracteristica;
     descripcion.value = response[0].descripcion;
@@ -36,7 +32,7 @@ async function llenarCampos() {
 }
 
 llenarCampos();
- */
+
 
 function modificar() {
     let datos = ["nombre", "caracteristica", "descripcion"];
@@ -73,13 +69,20 @@ function modificar() {
             .then(response => console.log('Success:', response));
 
         swal({
-            title: "Registro Correcto",
-            text: "Registro Exitoso",
+            title: "Modificación Correcta",
+            text: "Campos completados de manera correcta",
             icon: "success",
             button: "Continuar",
         });
+
+        setTimeout(() => {
+            window.location.replace(
+                "../../listar/listarTipoVehiculoEspecializado/index.html"
+            )
+        }, 3333);
+
     }
-    
-  /*   window.location.href = 'index.html'; */
-    
+
+
+
 }//fin de registro

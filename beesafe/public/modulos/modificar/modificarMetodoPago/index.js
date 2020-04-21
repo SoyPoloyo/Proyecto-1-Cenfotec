@@ -1,6 +1,19 @@
- async function postTipoVehiculo(id) {
+
+let id = localStorage.getItem('id');
+console.log(id);
+
+var enlace = ("/modificarMetodoPago/editar/" + id);
+console.log(enlace);
+
+const nombre = document.getElementById('nombre');
+const numeroTarjeta = document.getElementById('numeroTarjeta');
+const fecha = document.getElementById('fecha');
+const cvv = document.getElementById('cvv');
+
+
+async function postCampos(id) {
     valor = { _id: id }
-    const res = await fetch('/listarMetodoPago/recibir', {
+    const res = await fetch('/modificarMetodoPago/recibir', {
         method: 'POST',
         body: JSON.stringify(valor),
         headers: {
@@ -9,35 +22,25 @@
     });
     const data = await res.json();
     return data;
-}//fin de postCategoriaIncidente 
+}//fin 
 
-let id = localStorage.getItem('id');
-console.log(id);
-
-var enlace = ("/modificarMetodoPago/editar/"+ id);
-console.log(enlace);
-
-
-let nombre = document.getElementById('nombre');
-let caracteristica = document.getElementById('caracteristica');
-let descripcion = document.getElementById('descripcion');
 
 async function llenarCampos() {
-    var response = await postTipoVehiculo();
+    var response = await postCampos(id);
     console.log(response);
 
-   /*  nombre.placeholder = response[0].nombre;
-    caracteristica.value = response[0].caracteristica;
-    descripcion.value = response[0].descripcion; */
-    
+    nombre.value = response[0].nombre;
+    numeroTarjeta.value = response[0].numeroTarjeta;
+    fecha.value = response[0].fecha;
+    cvv.value = response[0].cvv;
+
 }
 
 llenarCampos();
-console.log(nombre.placeholder)
- 
+
 
 function modificar() {
-    let datos = ["nombre", "numeroTarjeta", "fecha","cvv"];
+    let datos = ["nombre", "numeroTarjeta", "fecha", "cvv"];
     let valores = {};
     let aprobado = false;
 
@@ -71,13 +74,19 @@ function modificar() {
             .then(response => console.log('Success:', response));
 
         swal({
-            title: "Registro Correcto",
-            text: "Registro Exitoso",
+            title: "Modificación Correcta",
+            text: "Campos completados de manera correcta",
             icon: "success",
             button: "Continuar",
         });
+
+        setTimeout(() => {
+            window.location.replace(
+                "../../listar/listarMetodoPago/index.html"
+            )
+        }, 3333);
+
+
     }
-    
-  /*   window.location.href = 'index.html'; */
-    
+
 }//fin de registro

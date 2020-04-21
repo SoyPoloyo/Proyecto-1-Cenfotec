@@ -27,4 +27,21 @@ router.put('/editar/:id', function (req, res) {
   
 });
 
+
+router.post("/recibir", function (req, res) {
+    id = req.body._id
+
+    modificarMetodoPago
+        .find({ _id: id })
+        .then(function (resultado) {
+            res.json(resultado);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+});
+
+
+
+
 module.exports = router;

@@ -1,6 +1,12 @@
-/* async function postTipoVehiculo(id) {
+
+let id = localStorage.getItem('id');
+console.log(id);
+var enlace = ("/modificarCaracteristicasVehiculo/editar/" + id);
+console.log(enlace);
+
+async function postCampos(id) {
     valor = { _id: id }
-    const res = await fetch('/modificarTipoVehiculo/recibir', {
+    const res = await fetch('/modificarCaracteristicasVehiculo/recibir', {
         method: 'POST',
         body: JSON.stringify(valor),
         headers: {
@@ -9,31 +15,24 @@
     });
     const data = await res.json();
     return data;
-}//fin de postCategoriaIncidente */
+}
 
-
-/* 
 const nombre = document.getElementById('nombre');
-const caracteristica = document.getElementById('caracteristica');
+//const caracteristica = document.getElementById('caracteristica');
 const descripcion = document.getElementById('descripcion');
 
 async function llenarCampos() {
-    var response = await postTipoVehiculo(id);
+    var response = await postCampos(id);
     console.log(response);
 
     nombre.value = response[0].nombre;
-    caracteristica.value = response[0].caracteristica;
+    //caracteristica.value = response[0].caracteristica;
     descripcion.value = response[0].descripcion;
-    
 }
+
 llenarCampos();
- */
 
 function modificar() {
-    let id = localStorage.getItem('id');
-    console.log(id);
-    var enlace = ("/modificarCaracteristicasVehiculo/editar/" + id);
-    console.log(enlace);
 
     let datos = ["nombre", "descripcion"];
     let valores = {};
@@ -81,5 +80,6 @@ function modificar() {
             )
         }, 3333);
     }
+
 
 }//fin de registro
