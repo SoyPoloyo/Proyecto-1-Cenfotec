@@ -80,6 +80,8 @@ app.use('/modificarMetodoPago', require('./servicios/modificarMetodoPago'));
 app.use('/eliminarMetodoPago', require('./servicios/eliminarMetodoPago'));
 
 
+//registro terminos y condiciones
+
 
 
 
