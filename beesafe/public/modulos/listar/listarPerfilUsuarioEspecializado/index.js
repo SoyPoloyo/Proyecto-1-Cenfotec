@@ -65,6 +65,14 @@ document.addEventListener("DOMContentLoaded", async function renderListarUsuario
      tr.appendChild(td_correo);
      table.appendChild(tr);
 
+      //asistencia
+      let td_tipoAsistencia = document.createElement("td");
+      let texto_tipoAsistencia = document.createTextNode
+        (listarUsuario[i].tipoAsistencia);
+      td_tipoAsistencia.appendChild(texto_tipoAsistencia);
+      tr.appendChild(td_tipoAsistencia);
+      table.appendChild(tr);
+
     //modificar
     let td_modificar = document.createElement("td");
     let anchor_modificar = document.createElement("a");
@@ -76,7 +84,7 @@ document.addEventListener("DOMContentLoaded", async function renderListarUsuario
 
     anchor_modificar.addEventListener('click', () => {
       localStorage.setItem('id', listarUsuario[i]._id);
-      window.location.href = '../../modificar/modificarUsuarioClasico/index.html';
+      window.location.href = '../../modificar/modificarUsuarioEspecializado/index.html';
     });
 
     td_modificar.appendChild(anchor_modificar);
