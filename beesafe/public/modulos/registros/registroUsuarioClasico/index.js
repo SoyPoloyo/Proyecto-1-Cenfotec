@@ -112,7 +112,7 @@ function getRandomInt(max) {
 
             setTimeout(() => {
               window.location.replace(
-              "../../../index.html"
+              "../../../../index.html"
             )
             }, 3333);
          

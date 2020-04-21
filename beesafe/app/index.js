@@ -31,7 +31,6 @@ app.use(express.static(path.join(__dirname, "../public")));
 // Verificar Usuario , LOGIN
 app.use('/login', require('./servicios/login'));
 
-
 //Registrar,listar,modificar,eliminar Usuarios
 app.use('/registroUsuarioEspecializado', require('./servicios/registroUsuarioEspecializado.js'));
 app.use('/registroUsuarioClasico', require('./servicios/registroUsuarioClasico.js'));
@@ -45,9 +44,10 @@ app.use('/modificarUsuario', require('./servicios/modificarUsuario'));
 //Registrar,listar,modificar,eliminar Rutas
 app.use('/listarRutas', require('./servicios/listarRutas'));
 app.use('/eliminarRutas', require('./servicios/eliminarRutas'));
+
+
 //Registrar,listar,modificar,eliminar Siniestro
 app.use('/reporteSiniestro', require('./servicios/reportarSiniestro.js'));
-
 
 //Registrar,listar,modificar,eliminar Vehiculo
 app.use('/registroVehiculo', require('./servicios/registroVehiculo'));

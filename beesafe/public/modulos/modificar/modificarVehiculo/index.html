@@ -67,7 +67,7 @@
         =================================================-->
 
 
-        <div class="contenidoPrincipal">
+      <!--   <div class="contenidoPrincipal">
 
 
 
@@ -106,7 +106,8 @@
 
 
                     <input class="fondosG" type="number" value="" placeholder="Año" name="anno" id="anno">
-                    <input class="fondosG" type="text" value="" placeholder="Placa" name="placaVehi" id="placaVehi">
+                    <input class="fondosG" type="text" value="" placeholder="Placa" name="placaVehi" id="placaVehi"> <br> <br>
+                    <input class="fondosG" type="text" value="" placeholder="Conductor" name="chofer" id="chofer">
 
 
 
@@ -121,7 +122,34 @@
             </section>
 
 
+        </div> -->
+
+        <div class="contenidoPrincipal">
+
+            <section class="listadoUsuarios">
+
+                <br><br>
+                <button class="boton_2 alt_letra fondosG modificarBoton derecha " type="button">
+                    <a class="redireccion" onclick="modificar()" href="../../listar/listarPerfilUsuarioClasico/index.html">Guardar cambios</a>
+                </button>
+             
+
+                <h1 class="izquierda alt_letra">Datos de su cuenta</h1>
+
+
+                <br><br>
+
+                <div id="contenidoUsuario">
+
+                </div>
+
+                <br>
+            
+
+            </section>
+
         </div>
+
 
 
         <!-- =======================================
@@ -137,8 +165,9 @@
         <p class="derecha">WORKAPES&copy;<span>Todos los derechos reservados </span></p>
 
     </footer>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  
     <script src="index.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>
