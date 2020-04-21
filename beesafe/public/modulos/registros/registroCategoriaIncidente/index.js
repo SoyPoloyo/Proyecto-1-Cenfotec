@@ -56,6 +56,12 @@ function registro() {
             icon: "success",
             button: "Continuar",
         });
+
+        setTimeout(() => {
+            window.location.replace(
+            "../../listar/listarCategoriaIncidente/index.html"
+          )
+          }, 3333);
     }
 }//fin de registro
 

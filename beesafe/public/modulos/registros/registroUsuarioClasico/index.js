@@ -109,6 +109,12 @@ function getRandomInt(max) {
               icon: "success",
               button: "Continuar",
             });
+
+            setTimeout(() => {
+              window.location.replace(
+              "../../../index.html"
+            )
+            }, 3333);
          
   
         }

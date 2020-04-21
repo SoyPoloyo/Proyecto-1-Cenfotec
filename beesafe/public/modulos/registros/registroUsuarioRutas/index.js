@@ -110,6 +110,11 @@ function getRandomInt(max) {
               button: "Continuar",
             });
          
+            setTimeout(() => {
+              window.location.replace(
+              "../../listar/listarUsuarios/index.html"
+            )
+            }, 3333);
   
         }
         

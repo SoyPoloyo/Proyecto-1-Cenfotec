@@ -39,5 +39,11 @@ function registro() {
             icon: "success",
             button: "Continuar",
         });
+
+        setTimeout(() => {
+            window.location.replace(
+            "../../listar/listarTipoVehiculoEspecializado/index.html"
+          )
+          }, 3333);
     }
 }//fin de registro

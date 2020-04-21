@@ -44,5 +44,14 @@ function enviar() {
             icon: "success",
             button: "Continuar",
           });  
+
+
+          setTimeout(() => {
+            window.location.replace(
+            "../../listar/listarCaracteristicasvehiculo/index.html"
+          )
+          }, 3333);
+
+
     }
 }
