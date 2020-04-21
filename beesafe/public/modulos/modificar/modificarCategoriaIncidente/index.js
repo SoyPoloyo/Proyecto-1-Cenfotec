@@ -32,7 +32,7 @@ function modificar() {
     for (let i in valores) {
         if (valores[i] == "") {
             swal({
-                title: "Registro Incorrecto",
+                title: "Modificación Incorrecta",
                 text: "Debe completar todos los campos de manera correcta",
                 icon: "warning",
                 button: "Continuar",
@@ -57,12 +57,19 @@ function modificar() {
             .then(response => console.log('Success:', response));
 
         swal({
-            title: "Registro Correcto",
-            text: "Registro Exitoso",
+            title: "Modificación Correcta",
+            text: "Campos completados de manera correcta",
             icon: "success",
             button: "Continuar",
         });
-        /* window.location.href = 'listadoCategoriaIncidente.html'; */
+
+        setTimeout(() => {
+            window.location.replace(
+                "../../listar/listarCategoriaIncidente/index.html"
+            )
+        }, 3333);
     }
 }//fin de modificar
-    
+
+
+

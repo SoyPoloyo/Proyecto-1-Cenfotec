@@ -17,7 +17,7 @@ let id = localStorage.getItem('id');
 
 console.log(id);
 
-var enlace = ("/modificarTipoVehiculo/editar/"+ id);
+var enlace = ("/modificarTipoVehiculo/editar/" + id);
 console.log(enlace);
 
 /* 
@@ -73,13 +73,20 @@ function modificar() {
             .then(response => console.log('Success:', response));
 
         swal({
-            title: "Registro Correcto",
-            text: "Registro Exitoso",
+            title: "Modificación Correcta",
+            text: "Campos completados de manera correcta",
             icon: "success",
             button: "Continuar",
         });
+
+        setTimeout(() => {
+            window.location.replace(
+                "../../listar/listarTipoVehiculoEspecializado/index.html"
+            )
+        }, 3333);
+
     }
-    
-  /*   window.location.href = 'index.html'; */
-    
+
+
+
 }//fin de registro

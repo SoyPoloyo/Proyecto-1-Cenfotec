@@ -1,4 +1,4 @@
- async function postTipoVehiculo(id) {
+async function postTipoVehiculo(id) {
     valor = { _id: id }
     const res = await fetch('/listarMetodoPago/recibir', {
         method: 'POST',
@@ -14,7 +14,7 @@
 let id = localStorage.getItem('id');
 console.log(id);
 
-var enlace = ("/modificarMetodoPago/editar/"+ id);
+var enlace = ("/modificarMetodoPago/editar/" + id);
 console.log(enlace);
 
 
@@ -26,18 +26,18 @@ async function llenarCampos() {
     var response = await postTipoVehiculo();
     console.log(response);
 
-   /*  nombre.placeholder = response[0].nombre;
-    caracteristica.value = response[0].caracteristica;
-    descripcion.value = response[0].descripcion; */
-    
+    /*  nombre.placeholder = response[0].nombre;
+     caracteristica.value = response[0].caracteristica;
+     descripcion.value = response[0].descripcion; */
+
 }
 
 llenarCampos();
 console.log(nombre.placeholder)
- 
+
 
 function modificar() {
-    let datos = ["nombre", "numeroTarjeta", "fecha","cvv"];
+    let datos = ["nombre", "numeroTarjeta", "fecha", "cvv"];
     let valores = {};
     let aprobado = false;
 
@@ -71,13 +71,19 @@ function modificar() {
             .then(response => console.log('Success:', response));
 
         swal({
-            title: "Registro Correcto",
-            text: "Registro Exitoso",
+            title: "Modificación Correcta",
+            text: "Campos completados de manera correcta",
             icon: "success",
             button: "Continuar",
         });
+
+        setTimeout(() => {
+            window.location.replace(
+                "../../listar/listarMetodoPago/index.html"
+            )
+        }, 3333);
+
+
     }
-    
-  /*   window.location.href = 'index.html'; */
-    
+
 }//fin de registro

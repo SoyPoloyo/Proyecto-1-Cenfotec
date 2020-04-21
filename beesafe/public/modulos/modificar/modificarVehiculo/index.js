@@ -69,8 +69,8 @@ function modificar() {
             .then(response => console.log('Success:', response));
 
         swal({
-            title: "Registro Correcto",
-            text: "Registro Exitoso",
+            title: "Modificación Correcta",
+            text: "Campos completados de manera correcta",
             icon: "success",
             button: "Continuar",
         });
@@ -80,6 +80,7 @@ function modificar() {
                 "../../listar/listarVehiculos/index.html"
             )
         }, 3333);
+        
     }
 
-}//fin de registro
+}//fin

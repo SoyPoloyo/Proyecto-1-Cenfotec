@@ -81,5 +81,6 @@ function modificar() {
             )
         }, 3333);
     }
+    
 
 }//fin de registro
