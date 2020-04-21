@@ -108,7 +108,16 @@ function modificar() {
       icon: "success",
       button: "Continuar",
     });
+
+    setTimeout(() => {
+      window.location.replace(
+          "../../listar/listarUsuarios/index.html"
+      )
+  }, 3333);
     
   }
 
 }//fin de registro
+
+
+"../../listar/listarTipoVehiculoEspecializado/index.html"
