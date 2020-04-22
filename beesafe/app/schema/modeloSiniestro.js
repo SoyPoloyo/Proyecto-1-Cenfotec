@@ -4,7 +4,9 @@ var siniestroSchema = mongoose.Schema({
    ruta: String,
    asistencia: Boolean,
     tipoSiniestro: String,
-    descripcion: String
+    descripcion: String,
+    longitude: String,
+    latitude: String
   });
   
   module.exports = mongoose.model("Siniestro",siniestroSchema, "Siniestros");
