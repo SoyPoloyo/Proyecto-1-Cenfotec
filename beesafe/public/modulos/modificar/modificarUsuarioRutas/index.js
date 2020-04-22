@@ -110,6 +110,13 @@ function modificar() {
       button: "Continuar",
     });
 
+
+    setTimeout(() => {
+      window.location.replace(
+          "../../sesiones_perfiles/perfilUsuarioRutas/index.html"
+      )
+  }, 3333);
+
   }
 
 }//fin de registro
