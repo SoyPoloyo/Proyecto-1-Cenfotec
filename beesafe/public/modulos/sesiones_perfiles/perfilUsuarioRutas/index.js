@@ -13,78 +13,89 @@ async function postListarUsuario() {
   return data;
 }//fin
 
- 
+
 
 
 document.addEventListener("DOMContentLoaded", async function renderListarUsuario() {
 
-  let listarUsuario = await postListarUsuario();
+  var listarUsuario = await postListarUsuario();
   console.log(listarUsuario);
 
-  for (let i = 0; i < listarUsuario.length; i++) {
+  contenidoUsuario = document.getElementById("contenidoUsuario");
+  contenidoBotones = document.getElementById("listadoUsuarios");
 
-    let tr = document.createElement("tr");
 
-    //nombre
-    let td_nombre = document.createElement("td");
-    let texto_nombre = document.createTextNode
-      (listarUsuario[i].nombre);
-    td_nombre.appendChild(texto_nombre);
-    tr.appendChild(td_nombre);
-    table.appendChild(tr);
 
-    //apellido
-    let td_apellido = document.createElement("td");
-    let texto_apellido = document.createTextNode
-      (listarUsuario[i].apellido);
-    td_apellido.appendChild(texto_apellido);
-    tr.appendChild(td_apellido);
-    table.appendChild(tr);
+  valor = {
+    correo: localStorage.getItem('correo')
+  };
+  
+  fetch("http://localhost:5252/listarUsuario/recibir", {
+    body: JSON.stringify(valor),
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    }
+  })
+    .then(function (data) {
+      return data.json();
+    })
+    .then(function (res) {
+  
+      usuario = res[0];
+      console.log(res);
 
-    //edad
-    let td_edad = document.createElement("td");
-    let texto_edad = document.createTextNode
-      (listarUsuario[i].edad);
-    td_edad.appendChild(texto_edad);
-    tr.appendChild(td_edad);
-    table.appendChild(tr);
 
-    //cedula
-    let td_cedula = document.createElement("td");
-    let texto_cedula = document.createTextNode
-      (listarUsuario[i].cedula);
-    td_cedula.appendChild(texto_cedula);
-    tr.appendChild(td_cedula);
-    table.appendChild(tr);
+     
 
-     //correo
-     let td_correo = document.createElement("td");
-     let texto_correo = document.createTextNode
-       (listarUsuario[i].correo);
-     td_correo.appendChild(texto_correo);
-     tr.appendChild(td_correo);
-     table.appendChild(tr);
+      contenidoUsuario.innerHTML += `
+                      
+                     
+  
+                      <div class="izquierda">
+                      <h4>Nombre</h4>
+                      <input class="fondosG " type="text" readonly value="${usuario.nombre}"  name="nombre" id="nombre">
+                      <br> <br> 
+  
+                      <h4>Apellidos</h4>
+                      <input class="fondosG " type="text" readonly value="${usuario.apellido}"  name="apellido" id="apellido">
+                      <br><br>
+  
+                      <h4>Edad</h4>
+                      <input class="fondosG " type="text" readonly value="${usuario.edad}"  name="edad" id="edad">
+                      <br><br>
+  
+                      <h4>Cedula</h4>
+                      <input class="fondosG " type="text" readonly value="${usuario.cedula}"  name="cedula" id="cedula">
+  
+                      <br> <br>
+                      
+                      <h4>Correo Electronico</h4>
+                      <input class="fondosG  " type="text" readonly value="${usuario.correo}"  name="correo" id="correo">
+                      <br> <br>
+                      </div>
 
-    //modificar
-    let td_modificar = document.createElement("td");
-    let anchor_modificar = document.createElement("a");
-    anchor_modificar.classList.add("iconoEditarBorrar");
+                      
+                
+  
+        `;
 
-    let image_modificar = document.createElement("img");
-    image_modificar.setAttribute("src", "../../../assets/img/edit.png");
-    anchor_modificar.appendChild(image_modificar);
 
-    anchor_modificar.addEventListener('click', () => {
-      localStorage.setItem('id', listarUsuario[i]._id);
-      window.location.href = '../../modificar/modificarUsuarioRutas/index.html';
+     
+    })
+
+
+    .catch(function (err) {
+      console.log(err);
     });
 
-    td_modificar.appendChild(anchor_modificar);
-    tr.appendChild(td_modificar);
-    table.appendChild(tr);
-
-    
-
-  }//fin de for
 
 }); //fin de renderListarUsuario
+
+ function obtenerId() {
+
+  localStorage.setItem('id', usuario._id);
+      window.location.href = '../../modificar/modificarUsuarioRutas/index.html';
+      
+      
+}
