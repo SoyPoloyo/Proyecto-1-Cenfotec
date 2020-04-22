@@ -113,47 +113,15 @@
 */
 
   
-var geojson = {
-  type: 'FeatureCollection',
-    features: [{
-    type: 'Feature',
-    geometry: {
-      type: 'Point',
-      coordinates: [-84.031166036,9.93282737642003680999]//Preguntar
-    },
-      properties: {
-      title: 'PruebaSiniestro',//Preguntar
-      description: 'Cenfotec'//Preguntar
-    }
-  },
-  {
-      type: 'Feature',
-      geometry: {
-      type: 'Point',
-      coordinates: [-122.414, 37.776]//Preguntar
-    },
-      properties: {
-      title: 'Mapbox',//Preguntar
-      description: 'San Francisco, California'//Preguntar
-    }
-  }]
-};
-    
-    
+
+
+
     // add markers to map
-geojson.features.forEach(function(marker) {
+
+
 
   // create a HTML element for each feature
-  var el = document.createElement('div');
-  el.className = 'marker';
-
-  // make a marker for each feature and add to the map
-  new mapboxgl.Marker(el)
-    .setLngLat(marker.geometry.coordinates)
-    .setPopup(new mapboxgl.Popup({ offset: 5 }) // agrega los popups
-    .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))// agrega los popups
-    .addTo(map);
-});
+  
 
 /* 
  Fin de generar los puntos                  
@@ -178,9 +146,7 @@ geojson.features.forEach(function(marker) {
     <br><br>
    
     <select id="ruta" class="selectModalRuta">
-      <option value="Choque">Ruta</option>
-      <option value="Derrumbe">Derrumbe</option>
-            
+      <option value="Choque">Ruta1</option>          
     </select>
     <br><br>
       
@@ -190,7 +156,7 @@ geojson.features.forEach(function(marker) {
   <br>
   <div>
     <label for="Asist" class="labelAsistencia">¿Asistencia? </label>
-  <input type="checkbox" id="asistencia" name="Ayuda" value="Asistencia">
+  <input type="checkbox" id="asistencia" name="Ayuda" >
 </div>
   <select id="tipoSiniestro" class="selectModal">
     <option value="Choque">Choque</option>

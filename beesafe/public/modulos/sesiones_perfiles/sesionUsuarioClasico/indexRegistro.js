@@ -1,13 +1,44 @@
+function geo(lon,lat){
+    var geojson = {
+      type: 'FeatureCollection',
+        features: [{
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [lon, lat]//Preguntar
+        },
+          properties: {
+          title: 'PruebaSiniestro',//Preguntar
+          description: 'Cenfotec'//Preguntar
+        }
+        }]};
+        return geojson;
+  }//  
+      
+  
+  function addMarker (geoG){
+    geoG.features.forEach(function(marker) {
+      var el = document.createElement('div');
+    el.className = 'marker';
+  
+    // make a marker for each feature and add to the map
+    new mapboxgl.Marker(el)
+      .setLngLat(marker.geometry.coordinates)
+      .setPopup(new mapboxgl.Popup({ offset: 5 }) // agrega los popups
+      .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))// agrega los popups
+      .addTo(map);
+  });
+  }
+
+
 function registro() {
     let datos = ["ruta", "asistencia", "tipoSiniestro","descripcion"];
     let valores = {};
     let aprobado = false;
 
     for (let dato of datos) {
-        valores[dato] = document.getElementById(dato).value;
-    }
-    for (let i in valores) {
-        if (valores[i] == "") {
+       
+        if(document.getElementById(dato).value==""||document.getElementById(dato).value==undefined){
             swal({
                 title: "Registro Incorrecto",
                 text: "Debe completar todos los campos de manera correcta",
@@ -15,27 +46,37 @@ function registro() {
                 button: "Continuar",
             });//josue
             aprobado = false;
-            break;
-        } else {
-            aprobado = true;
+            return;
         }
-    }
-
-
-    }
-        const formData = new FormData();
-        formData.append('rutas', document.getElementById('ruta').value);
-        formData.append('asistencia', document.getElementById('asistencia').value);
-        formData.append('tipoAsistencia', document.getElementById('tipoSiniestro').value);
-        formData.append('descripcion', document.getElementById('descripcion').value);
-
+        if(dato=="asistencia"){
+            valores[dato] = document.getElementById(dato).checked *1;
+        }else{
+            valores[dato] = document.getElementById(dato).value;
+        }
         
-        fetch('/reporteSiniestro/insertar', {
-            method: 'POST',
-            body: formData,
-        }).then(res => res.json())
-            .catch(error => console.log('Error:', error))
-            .then(response => console.log('Success:', response));
+        valores["longitude"]=longitude;
+        valores["latitude"]=latitude;
 
+    }
+
+
+
+
+   fetch('/reporteSiniestro/insertar', { 
+        method: 'POST',
+        body: JSON.stringify(valores),
+        headers: {"Content-Type": "application/json"}//le dice a mongo que la informmacion es tipo json
+
+    }).then(response => response.json())
+    .then(data=>{addMarker(geo(longitude, latitude))})
+    //then(res => res.json())
+        //.catch(error => console.log('Error:', error))
+       // .then(response => console.log('Success:', response));
+
+
+
+    }
+ 
+       
       
   

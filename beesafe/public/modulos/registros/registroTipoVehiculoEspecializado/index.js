@@ -5,6 +5,7 @@ function registro() {
     let aprobado = false;
 
     for (let dato of datos) {
+        
         valores[dato] = document.getElementById(dato).value;
     }
     for (let i in valores) {
