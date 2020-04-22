@@ -92,8 +92,10 @@ async function ordenar() {
     let td_tipoAsistencia = document.createElement("td");
     let texto_tipoAsistencia =
       listarUsuarios[i].tipoAsistencia == undefined
-        ? document.createTextNode(" ")
-        : document.createTextNode(listarUsuarios[i].tipoAsistencia);
+        ? document.createTextNode(" "):
+        listarUsuarios[i].tipoAsistencia == 'undefined'
+        ?document.createTextNode(" "):
+         document.createTextNode(listarUsuarios[i].tipoAsistencia);
     td_tipoAsistencia.appendChild(texto_tipoAsistencia);
     tr.appendChild(td_tipoAsistencia);
     table.appendChild(tr);
