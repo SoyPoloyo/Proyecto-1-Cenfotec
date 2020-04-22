@@ -6,27 +6,22 @@ var mongoose = require("mongoose");
 
 var CrearRuta = require("../schema/modeloListarRutas");
 
-router.post("/insertar", async function(req, res) {
+router.post("/insertar", async function (req, res) {
 
-
-  
-  var crearRutaNueva = new CrearRuta({
+  var crearRuta = new CrearRuta({
     _id: new mongoose.Types.ObjectId(),
-    nombreRuta: req.body.nombreRuta,
-    cordenadasRuta: req.body.cordenadasRuta,
+    nombre: req.body.nombre,
+    coordenada: req.body.coordenada,
     estado: req.body.estado
-   
   });
 
-  crearRutaNueva.save()
-    .then(function(resultado) {
+  crearRuta.save()
+    .then(function (resultado) {
       res.json(resultado);
     })
-    .catch(function(error) {
+    .catch(function (error) {
       console.log(error);
     });
-
-  
 
 });
 
