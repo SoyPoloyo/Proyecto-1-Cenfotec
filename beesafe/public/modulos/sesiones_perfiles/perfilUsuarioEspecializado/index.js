@@ -98,7 +98,7 @@ function subirImagen() {
                       
 
                       <img class="fotoperfil" id="imagenAgregada" src="../../../../${usuario.image}" alt="">
-                      ${usuario.image == ' ' ? '<i class="far fa-image muestraIcono" id="muestraIcono"></i> <br> <br> ' : '<br><br>'} 
+                      ${usuario.image == undefined ? '<i class="far fa-image muestraIcono" id="muestraIcono"></i> <br> <br> ' : '<br><br>'} 
                       <img class="" id="imagenAgregada" alt=""> <br><br>
                   
 
@@ -128,19 +128,11 @@ function subirImagen() {
     });
 
 
- //fin de renderListarUsuario
-
-archi=document.getElementById('image');
-
-
-
+ //fin 
 
 
 function modificar() {
-  
 
-
-  
   fetch("http://localhost:5252/listarUsuario/recibir", {
     body: JSON.stringify(valor),
     method: "POST",

@@ -68,7 +68,7 @@
 
                 <br><br>
                 <button class="boton_2 alt_letra fondosG modificarBoton derecha " type="button">
-                    <a class="redireccion" onclick="obtenerId()" href="#">Editar cuenta</a>
+                    <a class="redireccion" onclick="obtenerId()" href="../../modificar/modificarUsuarioClasico/index.html">Editar cuenta</a>
                 </button>
 
                 <br>
@@ -78,6 +78,8 @@
                 <br><br>
 
                 <div id="contenidoUsuario">
+                    <br>
+                    <input onchange="subirImagen()" class="estiloBoton derecha" type="file" name="image" id="image"> 
 
                 </div>
 
@@ -87,7 +89,6 @@
             </section>
 
         </div>
-
 
 
         <!-- =======================================
@@ -105,6 +106,7 @@
     </footer>
 
     <script src="index.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>
