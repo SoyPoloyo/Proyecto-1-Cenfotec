@@ -16,6 +16,7 @@ function subirImagen() {
     }
   } 
 
+
 }
 
 
@@ -108,7 +109,7 @@ document.addEventListener("DOMContentLoaded", async function renderListarUsuario
                       
                      
 
-                    <input onchange="subirImagen()" class="estiloBoton" type="file" name="image" id="image"> <br> <br>
+                       <input onchange="subirImagen()" class="estiloBoton" type="file" name="image" id="image"> <br> <br>
                       </div>
 
                       

@@ -30,7 +30,7 @@ router.put('/editar/:id', function (req, res) {
 router.put('/editarFoto/:id', function (req, res) {
 
     modificarUsuarios.updateOne({ _id: req.params.id }, 
-      { image: req.file.filename},
+      { $set: req.body },
       function (error, info) {
           if (error) {
               res.json({
