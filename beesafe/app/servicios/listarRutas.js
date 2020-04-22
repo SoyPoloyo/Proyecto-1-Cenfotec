@@ -3,7 +3,7 @@ var express = require("express");
 var router = express.Router();
 var mongoose = require("mongoose");
 
-const listarRutas = require('../schema/modeloListarRutas');
+const listarRutas = require('../schema/modeloRuta');
 
 
 router.get("/recibir", function(req, res) { 
