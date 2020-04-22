@@ -43,8 +43,8 @@ app.use('/modificarUsuario', require('./servicios/modificarUsuario'));
 
 //Registrar,listar,modificar,eliminar Rutas
 app.use('/registroRutas', require('./servicios/registroRutas'));
-//app.use('/listarRutas', require('./servicios/listarRutas'));
-//app.use('/eliminarRutas', require('./servicios/eliminarRutas'));
+app.use('/listarRutas', require('./servicios/listarRutas'));
+app.use('/eliminarRutas', require('./servicios/eliminarRutas'));
 
 
 //Registrar,listar,modificar,eliminar Siniestro
