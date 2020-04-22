@@ -1,6 +1,6 @@
 let table = document.getElementById("contenidoTablaUsuarios");
 let valor = { correo: localStorage.getItem('correo') };
-
+botonListo=true
 
 function subirImagen() {
     
@@ -16,6 +16,23 @@ function subirImagen() {
     }
   } 
 
+
+  if (botonListo) {
+    contenidoUsuario.innerHTML += `
+
+
+    <button class="boton_2 alt_letra fondosG modificarBoton  " type="button">
+        <a class="redireccion" onclick="obtenerId()" href="#">Guardar imagen</a>
+    </button>
+  
+    <br>
+
+    ${botonListo=''}
+    
+  `;
+  }
+  
+ 
 
 }
 
@@ -115,7 +132,7 @@ document.addEventListener("DOMContentLoaded", async function renderListarUsuario
                       
 
                       <br>
-                      <br>
+                     
           
                           
           
@@ -138,7 +155,7 @@ document.addEventListener("DOMContentLoaded", async function renderListarUsuario
  function obtenerId() {
 
   localStorage.setItem('id', usuario._id);
-      window.location.href = '../../modificar/modificarUsuarioEspecializado/index.html';
+     
       
       
 }
