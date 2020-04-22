@@ -35,18 +35,18 @@ let table = document.getElementById('contenidoTablaRutas');
           //nombreRuta
           let td_nombreRuta = document.createElement("td");
           let texto_nombreRuta = document.createTextNode
-            (listarRutas[i].nombreRuta);
+            (listarRutas[i].nombre);
           td_nombreRuta.appendChild(texto_nombreRuta);
           tr.appendChild(td_nombreRuta);
           table.appendChild(tr);
         
           //cordenadasRuta
-          let td_cordenadasRuta = document.createElement("td");
+          /* let td_cordenadasRuta = document.createElement("td");
           let texto_cordenadasRuta = document.createTextNode
-            (listarRutas[i].cordenadasRuta);
+            (listarRutas[i].coordenada);
           td_cordenadasRuta.appendChild(texto_cordenadasRuta);
           tr.appendChild(td_cordenadasRuta);
-          table.appendChild(tr);
+          table.appendChild(tr); */
         
           //estado
           let td_estado = document.createElement("td");
