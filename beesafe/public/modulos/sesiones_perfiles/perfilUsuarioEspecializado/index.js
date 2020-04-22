@@ -1,6 +1,24 @@
 let table = document.getElementById("contenidoTablaUsuarios");
 let valor = { correo: localStorage.getItem('correo') };
 
+
+function subirImagen() {
+    
+  console.dir(document.getElementById('imagenAgregada'));
+    var archivo = document.getElementById("image").files[0];
+    var reader = new FileReader();
+    if (image) {
+      reader.readAsDataURL(archivo);
+      reader.onloadend = function () {
+        document.getElementById("imagenAgregada").src = reader.result;
+        document.getElementById("imagenAgregada").classList.add('imagenAgregada');
+        document.getElementById('muestraIcono').remove()
+    }
+  } 
+
+}
+
+
 async function postListarUsuario() {
   const res = await fetch('/listarUsuario/recibir', {
       method: 'POST',
@@ -78,9 +96,29 @@ document.addEventListener("DOMContentLoaded", async function renderListarUsuario
                       <div class="fotoperfilespacio">
                       <h4>Foto de perfil</h4>
                       <br> <br>
-                      <img class="fotoperfil" src="../../../../assets/uploads/${usuario.image}" alt="">
+
+                      
+
+                      <img class="fotoperfil" id="imagenAgregada" src="../../../../assets/uploads/${usuario.image}" alt="">
+                      ${usuario.image == '' ? '<i class="far fa-image muestraIcono" id="muestraIcono"></i> <br> <br> ' : '<br><br>'} 
+                      <img class="" id="imagenAgregada" alt=""> <br><br>
+                  
+
+                      
+                      
+                     
+
+                    <input onchange="subirImagen()" class="estiloBoton" type="file" name="image" id="image"> <br> <br>
                       </div>
-                
+
+                      
+
+                      <br>
+                      <br>
+          
+                          
+          
+                        
   
         `;
 
