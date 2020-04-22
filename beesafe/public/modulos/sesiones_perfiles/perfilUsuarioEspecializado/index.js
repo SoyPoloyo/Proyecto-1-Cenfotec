@@ -97,8 +97,8 @@ function subirImagen() {
 
                       
 
-                      <img class="fotoperfil" id="imagenAgregada" src="../../../../assets/uploads/${usuario.image}" alt="">
-                      ${usuario.image == '' ? '<i class="far fa-image muestraIcono" id="muestraIcono"></i> <br> <br> ' : '<br><br>'} 
+                      <img class="fotoperfil" id="imagenAgregada" src="../../../../${usuario.image}" alt="">
+                      ${usuario.image == ' ' ? '<i class="far fa-image muestraIcono" id="muestraIcono"></i> <br> <br> ' : '<br><br>'} 
                       <img class="" id="imagenAgregada" alt=""> <br><br>
                   
 
@@ -106,7 +106,6 @@ function subirImagen() {
                       
                      
 
-                       <input onchange="subirImagen()" class="estiloBoton" type="file" name="image" id="image"> <br> <br>
                       </div>
 
                       
@@ -170,7 +169,7 @@ function modificar() {
         console.log(nombre + 'probando');
   
         var enlace = ("/modificarUsuario/editarFoto/" + id);
-  console.log(enlace);
+         console.log(enlace);
 
   
   const formData = new FormData();
@@ -199,6 +198,10 @@ function modificar() {
       button: "Continuar",
   });
 
+  
+  setTimeout(() => {
+    location.reload()
+}, 3333);
   
   
     })

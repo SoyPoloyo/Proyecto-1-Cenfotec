@@ -31,7 +31,7 @@ router.put('/editar/:id', function (req, res) {
 
 router.put('/editarFoto/:id', function (req, res) {
 
-    CategoriaIncidente.updateOne({ _id: req.params.id }, {
+    modificarUsuarios.updateOne({ _id: req.params.id }, {
         $set: {
             nombre : req.body.nombre,
             apellido : req.body.apellido,
