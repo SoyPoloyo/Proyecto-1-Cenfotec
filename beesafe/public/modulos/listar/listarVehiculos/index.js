@@ -54,7 +54,13 @@ document.addEventListener("DOMContentLoaded", async function renderVehiculo() {
 
   for (let i = 0; i < vehiculo.length; i++) {
 
+    
+   
+  
     let tr = document.createElement("tr");
+    
+    vehiculo[i].activado==false? tr.classList.add('desactivado'):'';
+    
 
     //marca
     let td_marca = document.createElement("td");
@@ -97,6 +103,7 @@ document.addEventListener("DOMContentLoaded", async function renderVehiculo() {
      td_chofer.appendChild(texto_chofer);
      tr.appendChild(td_chofer);
      table.appendChild(tr);
+
 
     //modificar  
     let td_modificar = document.createElement("td");

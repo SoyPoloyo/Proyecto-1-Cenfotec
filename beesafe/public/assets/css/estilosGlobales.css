@@ -1,7 +1,15 @@
 /** ==================================
     GLOBALES
     =================================**/
-
+.desactivado{
+  background-color: #2f2319;
+  color: #ffffff;
+  border-radius: 50%!important;
+}
+.desactivado:hover{
+  background-color: #2f2319!important;
+  color: #ffffff;
+}
 * {
   box-sizing: border-box;
   margin: 0;

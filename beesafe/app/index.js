@@ -50,6 +50,10 @@ app.use('/eliminarRutas', require('./servicios/eliminarRutas'));
 //Registrar,listar,modificar,eliminar Siniestro
 app.use('/reporteSiniestro', require('./servicios/reportarSiniestro.js'));
 
+//Registrar,listar,modificar,eliminar Asistencias
+app.use('/registroAsistencia', require('./servicios/registroAsistencia'));
+
+
 //Registrar,listar,modificar,eliminar Vehiculo
 app.use('/registroVehiculo', require('./servicios/registroVehiculo'));
 app.use('/listarVehiculo', require('./servicios/listarVehiculo'));
