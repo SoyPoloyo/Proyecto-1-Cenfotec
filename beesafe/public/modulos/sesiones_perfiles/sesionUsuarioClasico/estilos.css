@@ -134,12 +134,45 @@ margin-top: 1%;
   cursor: pointer;
 }
 
-.boton {
+.botonReporte {
 
- padding-left: 48%;
- margin-left: 24%;
+  color: white;
+  background-color: #2f2319;
+  width: 100%;
+  font-size: 15px;
+  margin: 0 auto;
+  border: #2f2319;
+  box-shadow: 1px 1px 10px #2f2319;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-family: "Baloo 2", cursive;
+
 }
-.boton_1:hover {
+.botonReporte:hover {
   box-shadow: 1px 1px 7px #2f2319;
   background-color: #cc5d01;
+}
+.confirmarReporte{
+    display: inline-block;
+    border-radius: 4px;
+    background-color: rgb(25, 187, 25);
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    width: 70px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    margin-left: 7%;
+    font-family: "Baloo 2", cursive;
+}
+.confirmarReporte:hover{
+  font-family: "Baloo 2", cursive;
+  background-color: rgb(17, 131, 17);
+}
+.containerAsistencia{
+margin-top: 0%;
 }

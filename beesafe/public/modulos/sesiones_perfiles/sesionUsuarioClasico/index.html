@@ -51,9 +51,9 @@
         <h3 class="titulo_lateral alt_letra">Opciones</h3> <br>
         <li><a href="../sesionUsuarioClasico/index.html">Mapa</a> </li>
         <br>
-        <button class="boton" id="myBtn">Reporte SIniestro</button>
+        <button class="botonReporte" id="myBtn">Reporte</button>
         
-        <br>
+        <br><br>
         <li><a href="../../listar/listarVehiculos/index.html">Vehículos</a> </li>
 
         <br>
@@ -82,56 +82,44 @@
 
     
         <div class="" id='map' style=' height: 85vh'>
-            <script>
-                mapboxgl.accessToken = 'pk.eyJ1Ijoic295cG9sb3lvIiwiYSI6ImNrODRtY3pyNTB5OWkzbG56ZWp2b3Y4cWEifQ.kXhxq_6KXwzzTMKX9MR66w';
-                var map = new mapboxgl.Map({
-                    container: 'map',
-                    style: 'mapbox://styles/mapbox/streets-v11',
-                    zoom: 14.5,
-                    center: [-84.03116608099936, 9.932827376420036]
+          <script>
+                 mapboxgl.accessToken = 'pk.eyJ1Ijoic295cG9sb3lvIiwiYSI6ImNrODRtY3pyNTB5OWkzbG56ZWp2b3Y4cWEifQ.kXhxq_6KXwzzTMKX9MR66w';
+              
+              var map = new mapboxgl.Map({
+                  container: 'map',
+                  style: 'mapbox://styles/mapbox/streets-v11',
+                  zoom: 14.5
+                  
 
-                });
+              });
+
+             var latitude;
+                          var longitude;
+                    if(navigator.geolocation) {
+                      navigator.geolocation.getCurrentPosition(function(position) {
+                      var positionInfo = "Latitud: " + position.coords.latitude + ", " + "Longitud: " + position.coords.longitude;
+                      console.log(positionInfo);
+                  
+                      latitude=position.coords.latitude;
+                      longitude=position.coords.longitude;
+                      console.log(latitude +   " " + longitude);
+                        map.setCenter({lon: position.coords.longitude, lat: position.coords.latitude})//cambio
+                      },function (){},{timeout:5000});
+                    }else{
+                      console.log("error de Long lat");
+  
+                    }
+               
                 //Inicio localizacion actual
-                var latitude;
-               var longitude;
-        if(navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-          var positionInfo = "Latitud: " + position.coords.latitude + ", " + "Longitud: " + position.coords.longitude;
-          console.log(positionInfo);
-      
-           latitude=position.coords.latitude;
-          longitude=position.coords.longitude;
-          });
-        }
+                
         
     console.log(latitude);
     console.log(latitude);
- //Fin localizacion actual
+  //Fin localizacion actual
                 
-/* 
- Inicio de generar los puntos                  
-*/
-
-  
-
-
-
-    // add markers to map
-
-
-
-  // create a HTML element for each feature
-  
-
-/* 
- Fin de generar los puntos                  
-*/
-
-
-
-            </script>
+           </script>
         </div>
-
+      
 
         <!-- =======================================
                             Contenido Central Final
@@ -154,7 +142,7 @@
 </select>
 <div class="wrapperAsistencia">
   <br>
-  <div>
+  <div class="containerAsistencia">
     <label for="Asist" class="labelAsistencia">¿Asistencia? </label>
   <input type="checkbox" id="asistencia" name="Ayuda" >
 </div>
@@ -167,7 +155,7 @@
 </div>
     <textarea  placeholder="Describa el siniestro" rows="4" cols="70" class="textAreaModal" id="descripcion"></textarea>
 <br><br>
-  <input type="submit" onclick="registro()">
+  <input type="submit" onclick="registro()" class="confirmarReporte">
   
   </div>
 

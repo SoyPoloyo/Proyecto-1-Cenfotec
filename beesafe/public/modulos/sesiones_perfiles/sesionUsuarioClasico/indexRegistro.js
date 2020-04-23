@@ -49,11 +49,12 @@ function registro() {
             return;
         }
         if(dato=="asistencia"){
-            valores[dato] = document.getElementById(dato).checked *1;// trasnforma el true y false en 1 o 0 
+            valores[dato] = document.getElementById(dato).checked ;// trasnforma el true y false en 1 o 0 
+            console.log(valores[dato]);
         }else{
             valores[dato] = document.getElementById(dato).value;
         }
-        
+     
         valores["longitude"]=longitude;
         valores["latitude"]=latitude;
 
