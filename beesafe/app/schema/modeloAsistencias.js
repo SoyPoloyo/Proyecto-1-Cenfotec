@@ -7,6 +7,8 @@ var modeloAsistencias = mongoose.Schema({
   descripcion: String,
   image: String,
   ruta: String,
+  metodoPago:String,
+  usuarioEspecializado:String
 });
 
 module.exports = mongoose.model( "Asistencia", modeloAsistencias,"Asistencias");
