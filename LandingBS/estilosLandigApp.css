@@ -23,6 +23,12 @@ body{
 }
 
 **/
+body{
+        background-image: url('img/alinea.png');
+        background-repeat: no-repeat;
+      background-size: cover;
+
+    }
 *{
     box-sizing: border-box;
     margin: 0;
@@ -32,12 +38,7 @@ body{
     margin-left: 28%;
     margin-top: 13%;
 }
-.wrapperImg{
-    background-image: url('img/alinea.png');
-      background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom: 24%;
-}
+
 .divButton{
    margin-left: 47%;
    margin-top: 4%;
@@ -71,18 +72,18 @@ body{
 
 /**Comienza carusel**/
 
-.wrapperCuerpo{
+/**.wrapperCuerpo{
     padding-top: 5%;
     background-color:#EEBA19;
 
      background-repeat: no-repeat;
     background-size: cover;
     filter: brightness(100%);
-}
+}**/
 .mySlides img {
     width: 10%;
     border-radius: 10%;
-    border-color: #533d27;
+    border-color: #EEBA19;
     border-style: solid;
     border-width: 5px;
 }
