@@ -3,6 +3,8 @@ let valor = { correo: localStorage.getItem('correo') };
 id=localStorage.getItem('id')
 contenidoUsuario = document.getElementById("contenidoUsuario");
 contenidoBotones = document.getElementById("listadoUsuarios");
+usuarioSolicitante = localStorage.getItem('correo');
+console.log(usuarioSolicitante)
 
 
 
@@ -111,7 +113,7 @@ function subirImagen() {
  */
 async function enviar() {
       
-  let datos = ['rutasDisponibles', 'asistenciasDisponibles', 'descripcionAsistencia', 'usuarioSolicitante'];
+  let datos = ['tarjetasDisponibles', 'tipoVehiculo'];
   let valores = new FormData();
   let aprobado = false;
   regexCorreo = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
@@ -143,11 +145,12 @@ async function enviar() {
   
   if (aprobado) {
 
- 
+    valores.append( 'usuarioSolicitante' ,usuarioSolicitante);
+
   valores.append( 'image' , document.getElementById('image').files[0]);
 
 
-     fetch("http://localhost:5252/registroAsistencia/insertar", {
+     fetch("http://localhost:5252/registroSiniestroAsistencia/insertar", {
       body: valores,
       method: "POST",
 
@@ -170,7 +173,12 @@ async function enviar() {
       });
       
 
-
+      setTimeout(() => {
+        window.location.replace(
+        "../../sesiones_perfiles/sesionUsuarioClasico/index.html"
+      )
+      }, 2333);
+  
   
     
   }

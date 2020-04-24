@@ -9,10 +9,10 @@ router.post("/insertar", async function (req, res) {
   var asistenciaNueva = new Asistencia({
     _id: new mongoose.Types.ObjectId(),
     
-    tipoAsistencia: req.body.asistenciasDisponibles,
+    metodoPago: req.body.tarjetasDisponibles,
     usuarioSolicitante: req.body.usuarioSolicitante,
-    descripcion: req.body.descripcionAsistencia,
-    ruta: req.body.rutasDisponibles,
+    tipoVehiculo: req.body.tipoVehiculo,
+   
     image: req.file.filename,
   });
   console.log(asistenciaNueva.image);

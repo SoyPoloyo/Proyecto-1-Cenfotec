@@ -2,7 +2,7 @@ var mongoose = require("mongoose");
 
 var modeloSiniestroAsistencia = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
-  tipoAsistencia:String,
+  tipoVehiculo:String,
   usuarioSolicitante: String,
   descripcion: String,
   image: String,
