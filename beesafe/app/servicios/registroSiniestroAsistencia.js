@@ -8,15 +8,21 @@ router.post("/insertar", async function (req, res) {
   console.log(req.file);
   var asistenciaNueva = new Asistencia({
     _id: new mongoose.Types.ObjectId(),
-    
-    metodoPago: req.body.tarjetasDisponibles,
-    usuarioSolicitante: req.body.usuarioSolicitante,
-    tipoVehiculo: req.body.tipoVehiculo,
-   
+
+
+    categoriaIncidente: req.body.categoriaIncidente,
+    rutaIncidente: req.body.rutaIncidente,
+    descripcionIncidente: req.body.descripcionIncidente,
+    iconoIncidente: req.body.iconoIncidente,
     image: req.file.filename,
+    longitud: req.body.longitud,
+    latitud: req.body.latitud,
+    metodoPago: req.body.metodoPago,
+    tipoVehiculo: req.body.tipoVehiculo,
+    usuarioSolicitante: req.body.usuarioSolicitante
   });
   console.log(asistenciaNueva.image);
-  
+
   asistenciaNueva
     .save()
     .then(function (resultado) {

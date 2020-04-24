@@ -90,3 +90,10 @@
  .tituloFoto{
    margin-left: 3.5%;
  }
+
+.icon {
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}

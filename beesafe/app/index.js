@@ -53,6 +53,7 @@ app.use('/reporteSiniestro', require('./servicios/reportarSiniestro.js'));
 
 //Registrar,listar,modificar,eliminar SiniestroAsistencia
 app.use('/registroSiniestroAsistencia', require('./servicios/registroSiniestroAsistencia'));
+app.use('/listarSiniestroAsistencia', require('./servicios/listarSiniestroAsistencia'));
 
 
 //Registrar,listar,modificar,eliminar Vehiculo
