@@ -93,36 +93,37 @@
 
                 <div id="contenidoUsuario">
                     <br>
-                    <input onchange="subirImagen()" class="estiloBoton derecha" type="file" name="image" id="image"> 
+                   
 
                     
                     <div class="izquierda">
-                        <h4>Ruta del incidente</h4>
+                        
                         <select class="fondosG" id="rutasDisponibles">
-                            <option value="" selected hidden>Ruta de la asistencia:</option>
+                            <option value="" selected hidden>Tipo de incidente  :</option>
                             <option value="heredia">Heredia, Barva</option>
                             <option value="san jose">San Jose </option>
                         </select>
+
+                
+                            <select class="fondosG" id="habilitar" onchange="habilitar()">
+                                <option value="" selected hidden>¿ Desea asistencia ?</option>
+                                <option value="1">Si</option>
+                                <option value="2">No</option>
+                            </select>
                         
                         <br> <br> 
     
-                        <h4>Tipo de Asistencia</h4>
-                        <select class="fondosG" id="asistenciasDisponibles">
-                            <option value="" selected hidden>Tipo de asistencia:</option>
+                     
+                        <select class="fondosG"  id="rutaDelIncidente">
+                            <option value="" selected hidden>Ruta del incidente:</option>
                             <option value="grua">Grua</option>
                             <option value="ambulancia">Ambulancia</option>
                             <option value="mecanico">Mecanico</option>
                         </select>
-                        <br><br>
-    
-                        <h4>Descripcion</h4>
-                        <textarea class="fondosG" value="" placeholder="Descripción" name="descripcionCaracteristica"
-                        id="descripcionAsistencia" rows="5"></textarea>
                       
-                        <br><br>
 
-                        <h4>Forma de pago</h4>
-                        <select class="fondosG" id="tarjetasDisponibles">
+                        
+                        <select class="fondosG " hidden id="tarjetasDisponibles">
                             <option value="" selected hidden>Tarjetas disponibles:</option>
                             <option value="1">12312312321323</option>
                             <option value="2">1231231232</option>
@@ -130,26 +131,34 @@
                         </select>
                         <br><br>
     
-                        <h4>Usuario Solicitante</h4>
-                        <input class="fondosG " type="text" readonly value=''  name="usuarioSolicitante" id="usuarioSolicitante">
+                     
+                        <textarea class="fondosG izquierda" value="" placeholder="Descripción" name="descripcionCaracteristica"
+                        id="descripcionAsistencia" rows="5"></textarea>
+                      
+                        <select class="fondosG subirPoco" hidden id="tipoVehiculo">
+                            <option value="" selected hidden>Tipo de vehiculo:</option>
+                            <option value="1">12312312321323</option>
+                            <option value="2">1231231232</option>
+                            <option value="3">123123123232</option>
+                        </select>
+                        
+                        <br><br>
     
                         <br> <br>
-                        
+                        <br> <br>
+                        <input onchange="subirImagen()" class="estiloBoton derecha" type="file" name="image" id="image"> 
+                        <h4>Foto del incidente</h4>
+                     
+                        <img class="" id="imagenAgregada" alt=""> <br><br>
+                        <i class="far fa-image muestraIcono" id="muestraIcono"></i><br> <br> <br> <br> <br>
+                       
                      
                         </div>
   
-                        <div class="fotoperfilespacio">
-                        <h4>Foto del incidente</h4>
-                        <br> 
-                        
+                                        
   
-                        
-                        <i class="far fa-image muestraIcono" id="muestraIcono"></i>
-                        <img class="" id="imagenAgregada" alt=""> <br><br>                  
-  
-                        </div>                  
-  
-                        <br>
+                        <br> <br>
+                        <div class="derecha" id='map' style='height: 45vh; width: 60vh;' ;></div>
 
                 </div>
 
@@ -176,6 +185,7 @@
     </footer>
 
     <script src="index.js"></script>
+    <script src="mapa.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 

@@ -3,10 +3,25 @@ let valor = { correo: localStorage.getItem('correo') };
 id=localStorage.getItem('id')
 contenidoUsuario = document.getElementById("contenidoUsuario");
 contenidoBotones = document.getElementById("listadoUsuarios");
-perro= document.getElementById("usuarioSolicitante");
-perro.value= localStorage.getItem('correo');
-console.log(perro.value)
 
+
+
+
+
+
+function habilitar(){
+  
+  habilita =document.getElementById('habilitar').value
+  if (habilita == 1) {
+    document.getElementById('tarjetasDisponibles').removeAttribute('hidden',false)
+    document.getElementById('tipoVehiculo').removeAttribute('hidden',false)
+  }else{
+      document.getElementById('tarjetasDisponibles').setAttribute('hidden',true)
+  document.getElementById('tipoVehiculo').setAttribute('hidden',true)
+  }
+
+
+}
 function subirImagen() {
     
   console.dir(document.getElementById('imagenAgregada'));

@@ -6,10 +6,12 @@
     !important 
     y listo
     =================================**/
-    
+    .absoluto{
+      position: absolute!important;
+    }
     main .contenidoPrincipal{
-      max-height: 100vh;
-      overflow: auto;
+      max-height: 95vh;
+      overflow: auto!important;
     }
     
     .contenidoPrincipal {
@@ -70,8 +72,14 @@
     }
 
     .imagenAgregada{
-      width: 30%!important;
-      margin-bottom: -50px;
+      width: 25%;
+      margin-top: 5px;
+      margin-left: 10px;
+      margin-right: -500px;
+
     }
     
- 
+ .subirPoco{
+   margin-left: 3.2%!important;
+   
+ }
