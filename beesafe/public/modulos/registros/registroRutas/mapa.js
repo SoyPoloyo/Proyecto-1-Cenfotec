@@ -160,6 +160,13 @@ function registrar() {
       icon: "success",
       button: "Continuar",
     });
+
+    setTimeout(() => {
+      window.location.replace(
+          "../../sesiones_perfiles/sesionUsuarioRutas/index.html"
+      )
+  }, 2000);
+
   }
 
 }//fin de registrar

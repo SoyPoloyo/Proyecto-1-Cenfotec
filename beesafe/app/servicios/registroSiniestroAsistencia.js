@@ -3,7 +3,7 @@ var express = require("express");
 var router = express.Router();
 var mongoose = require("mongoose");
 
-var Asistencia = require("../schema/modeloAsistencias");
+var Asistencia = require("../schema/modeloSiniestroAsistencia");
 router.post("/insertar", async function (req, res) {
   console.log(req.file);
   var asistenciaNueva = new Asistencia({

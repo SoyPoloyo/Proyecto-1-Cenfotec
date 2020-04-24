@@ -113,11 +113,9 @@ function modificar() {
       window.location.replace(
           "../../listar/listarUsuarios/index.html"
       )
-  }, 3333);
+  }, 3000);
     
   }
 
 }//fin de registro
 
-
-"../../listar/listarTipoVehiculoEspecializado/index.html"

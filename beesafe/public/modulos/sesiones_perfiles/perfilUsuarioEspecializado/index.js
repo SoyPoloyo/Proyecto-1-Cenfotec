@@ -85,6 +85,10 @@ function subirImagen() {
                       <input class="fondosG " type="text" readonly value="${usuario.cedula}"  name="cedula" id="cedula">
   
                       <br> <br>
+
+                      <h4>Tipo de vehiculo</h4>
+                      <input class="fondosG  " type="text" readonly value="${usuario.tipoAsistencia}"  name="correo" id="correo">
+                      <br> <br>
                       
                       <h4>Correo Electronico</h4>
                       <input class="fondosG  " type="text" readonly value="${usuario.correo}"  name="correo" id="correo">

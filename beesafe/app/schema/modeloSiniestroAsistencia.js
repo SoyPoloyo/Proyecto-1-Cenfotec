@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 
-var modeloAsistencias = mongoose.Schema({
+var modeloSiniestroAsistencia = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
   tipoAsistencia:String,
   usuarioSolicitante: String,
@@ -11,4 +11,4 @@ var modeloAsistencias = mongoose.Schema({
   usuarioEspecializado:String
 });
 
-module.exports = mongoose.model( "Asistencia", modeloAsistencias,"Asistencias");
+module.exports = mongoose.model( "SiniestroAsistencia", modeloSiniestroAsistencia,"SiniestroAsistencias");
