@@ -191,10 +191,10 @@ function modificar() {
   });
 
   
-/*   setTimeout(() => {
+  setTimeout(() => {
     location.reload()
 }, 3333);
-   */
+  
   
     })
     .catch(function (err) {

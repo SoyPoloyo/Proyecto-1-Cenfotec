@@ -87,7 +87,11 @@ app.use('/modificarMetodoPago', require('./servicios/modificarMetodoPago'));
 app.use('/eliminarMetodoPago', require('./servicios/eliminarMetodoPago'));
 
 
-//registro terminos y condiciones
+//Registrar,listar,modificar,eliminar tipo de asistencia
+app.use('/listarTiposAsistencia', require('./servicios/listarTipoAsistencia'));
+app.use('/registroTipoAsistencia', require('./servicios/registroTipoAsistencia'));
+app.use('/modificarTipoAsistencia', require('./servicios/modificarTipoAsistencia'));
+app.use('/eliminarTipoAsistencia', require('./servicios/eliminarTipoAsistencia'));
 
 
 

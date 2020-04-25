@@ -7,8 +7,8 @@
     <title>BeeSafe</title>
 
     <link rel="stylesheet" href="../../../assets/css/estilosGlobales.css">
-
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="../../registro/registroTipoVehiculo/estilos.css">
 
     <link href="https://fonts.googleapis.com/css?family=Baloo|Baloo+2&display=swap" rel="stylesheet">
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
@@ -27,7 +27,7 @@
 
 
             <a class="alt_letra derecha" href="../../sesiones_perfiles/perfilUsuarioAdmin/index.html">PERFIL</a>
-            <a class="alt_letra derecha " href="#">INICIO</a>
+
             <a class="alt_letra titulo_cuenta "
                 href="../../sesiones_perfiles/sesionUsuarioAdmin/index.html">—ADMINISTRADOR</a>
 
@@ -40,31 +40,36 @@
         <!-- =======================================
         CONTENIDO EN EL CAMPO IZQUIERDO DE LA PAGINA INICIO
     =================================================-->
-    <div class=" contenido_izquierdo izquierda">
 
-        <br>
+        <div class=" contenido_izquierdo izquierda">
 
-        <ul style="list-style-type:none;" class="alt_letra listas_menu">
-
-            <h3 class="titulo_lateral alt_letra">Opciones</h3> <br>
-            <li>  <a href="../../listar/listarUsuarios/index.html">Usuarios</a></li>
             <br>
-            <li> <a href="../../listar/ListarRutasAdmin/index.html">Rutas Disponibles</a> </li>
-            <br>
-            <li>  <a href="../../listar/listarTipoVehiculoEspecializado/index.html"> Tipos de Vehículos</a></li>
-            <br>
-            <li><a href="../../listar/listarCaracteristicasvehiculo/index.html"> Características Vehículos</a> </li>
-            <br>
-            <li> <a href="../../listar/listarCategoriaIncidente/index.html"> Categorías Incidentes</a></li>
-        
-        </ul>
-    
 
-        
- 
-      
+            <ul style="list-style-type:none;" class="alt_letra listas_menu">
 
-    </div>
+                <h3 class="titulo_lateral alt_letra">Opciones</h3> <br>
+                <li> <a href="../../listar/listarUsuarios/index.html">Usuarios</a></li>
+                <br>
+                <li> <a href="../../listar/ListarRutas/index.html">Rutas Disponibles</a> </li>
+                <br>
+                <li> <a href="../../listar/ListarRutas/index.html">Tipos de asistencias</a> </li>
+                <br>
+                <li> <a href="../../listar/listarTipoVehiculoEspecializado/index.html">Vehículos Especializados</a></li>
+                <br>
+                <li><a href="../../listar/listarCaracteristicasvehiculo/index.html"> Características Vehículos</a> </li>
+                <br>
+                <li> <a href="../../listar/listarCategoriaIncidente/index.html"> Categorías Incidentes </a></li>
+
+            </ul>
+
+
+
+
+
+
+        </div>
+
+
         <!-- =======================================
         CONTENIDO EN EL CAMPO IZQUIERDO DE LA PAGINA INICIO
     =================================================-->
@@ -76,34 +81,37 @@
 
         <div class="contenidoPrincipal">
 
-
             <section class="formulario">
-
+            
                 <form>
-        
+
                     <br>
-               <br> <br>
-               
-                    <h1 class="alt_letra">Registrar tipo de vehículo</h1> <br>
-        
-        
-                    <input class="fondosG" type="text" value="" placeholder="Tipo de vehículo" name="nombre" id="nombre"><br> <br>
-                    <input class="fondosG" type="text" value="" placeholder="Característica" name="caracteristica" id="caracteristica"> <br> <br>
-                    
-           
+                    <br> <br>
+
+                    <h1 class="alt_letra">Modificar tipo de asistencia</h1> <br>
+
+
+                    <input class="fondosG" type="text" value="" placeholder="Tipo de vehículo" name="nombre"
+                        id="nombre"><br> <br>
+                    <input class="fondosG" type="text" value="" placeholder="Característica" name="caracteristica"
+                        id="caracteristica"> <br> <br>
+
+
 
                     <textarea class="fondosG" rows="5" placeholder="Descripcion" id="descripcion"></textarea>
                     <br>
                     <br>
-        
-        
-        
-                    
-                    <button class="boton_1 alt_letra fondosG " type="button" onclick="registro()"> Registrar</button>
-        
-        
+
+
+
+
+                    <button class="boton_1 alt_letra fondosG " type="button" onclick="modificar()"> Guardar</button>
+
+
                 </form>
-        
+
+
+
             </section>
 
         </div>
@@ -122,8 +130,9 @@
         <p class="derecha">WORKAPES&copy;<span>Todos los derechos reservados </span></p>
 
     </footer>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <script src="index.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>
