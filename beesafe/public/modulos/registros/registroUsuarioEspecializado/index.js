@@ -123,3 +123,28 @@ function getRandomInt(max) {
         }
       }
       
+
+      async function getCategoriaIncidente() {
+        var response = await fetch('/listarTiposAsistencia/recibir');
+        var data = await response.json();
+        return data;
+      }//fin de getCategoriaIncidente
+      
+
+      llenarIncidente();
+      
+      async function llenarIncidente() {
+      
+        var incidente = await getCategoriaIncidente();
+        console.log(incidente);
+      
+        for (var i = 0; i < incidente.length; i++) {
+      
+          var select = document.getElementById('tipoAsistencia');
+          var option = document.createElement('option');
+          option.value = incidente[i].nombre;
+          option.text = incidente[i].nombre;
+          select.appendChild(option);
+        }
+      
+      }//fin

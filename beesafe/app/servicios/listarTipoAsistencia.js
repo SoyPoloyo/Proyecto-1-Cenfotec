@@ -1,12 +1,12 @@
 var express = require("express");
 var router = express.Router();
 
-var ListarTipoVehiculo = require('../schema/modeloTipoAsistencia.js');
+var listarTipoAsistencia = require('../schema/modeloTipoAsistencia.js');
 
 
 router.get("/recibir", function(req, res) { 
 
-    ListarTipoVehiculo.find().exec()
+  listarTipoAsistencia.find().exec()
       .then(function(result) {
         res.json(result);
       })
@@ -17,3 +17,5 @@ router.get("/recibir", function(req, res) {
   });
   
   module.exports = router;
+
+  
