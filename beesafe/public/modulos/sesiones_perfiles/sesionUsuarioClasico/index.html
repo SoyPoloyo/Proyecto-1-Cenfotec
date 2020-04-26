@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BeeSafe</title>
 
-   
+
 
     <link rel="stylesheet" href="../../../assets/css/estilosGlobales.css">
     <link rel="stylesheet" href="estilos.css">
@@ -15,7 +15,6 @@
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
-
     <script src="https://kit.fontawesome.com/2b7b514291.js" crossorigin="anonymous"></script>
 
 </head>
@@ -29,47 +28,43 @@
             <img class="logo_header" src="../../../assets/img/blancobesafe.png" alt="">
             <a class="alt_letra derecha" href="../../sesiones_perfiles/perfilUsuarioClasico/index.html">PERFIL <i
                     class="far fa-user-circle"></i></a>
-
-            <a class="alt_letra titulo_cuenta " href="../../sesiones_perfiles/sesionUsuarioClasico/index.html">—USUARIO TRADICIONAL</a>
+            <a class="alt_letra titulo_cuenta " href="../../sesiones_perfiles/sesionUsuarioClasico/index.html">—USUARIO
+                TRADICIONAL</a>
 
         </nav>
 
     </header>
 
     <main>
-
         <!-- =======================================
         CONTENIDO EN EL CAMPO IZQUIERDO DE LA PAGINA INICIO
     =================================================-->
+        <div class=" contenido_izquierdo izquierda">
 
-    <div class=" contenido_izquierdo izquierda">
+            <br>
 
-        <br>
-    
-        <ul style="list-style-type:none;" class="alt_letra listas_menu">
-    
-            <h3 class="titulo_lateral alt_letra">Opciones</h3> <br>
-            <li><a href="../../sesiones_perfiles/sesionUsuarioClasico/index.html">Mapa</a> </li>
-            <br>
-        
-            <li><a href="../../registros/registroSiniestroAsistencia/index.html">Reportes incidente</a> </li>
-            <br>
-            <li><a href="../../listar/listarSiniestroAsistencia/index.html">Asistencias</a> </li>
-            
-            <br>
-            <li><a href="../../listar/listarVehiculos/index.html">Vehículos</a> </li>
-    
-            <br>
-            <li><a href="../../listar/listarMetodoPago/index.html">Tarjetas de pago</a> </li>
-            <br>
-    
-            <br>
-    
-    
-        </ul>
-    
-    </div>
-    
+            <ul style="list-style-type:none;" class="alt_letra listas_menu">
+
+                <h3 class="titulo_lateral alt_letra">Opciones</h3> <br>
+                <li><a href="../../sesiones_perfiles/sesionUsuarioClasico/index.html">Mapa</a> </li>
+                <br>
+
+                <li><a href="../../registros/registroSiniestroAsistencia/index.html">Reportes incidente</a> </li>
+                <br>
+                <li><a href="../../listar/listarSiniestroAsistencia/index.html">Asistencias</a> </li>
+
+                <br>
+                <li><a href="../../listar/listarVehiculos/index.html">Vehículos</a> </li>
+
+                <br>
+                <li><a href="../../listar/listarMetodoPago/index.html">Tarjetas de pago</a> </li>
+                <br>
+
+                <br>
+            </ul>
+
+        </div>
+
         <!-- =======================================
         CONTENIDO EN EL CAMPO IZQUIERDO DE LA PAGINA INICIO
     =================================================-->
@@ -86,13 +81,20 @@
 
     </main>
 
-
-
     <footer>
 
         <p class="derecha">WORKAPES&copy;<span>Todos los derechos reservados </span></p>
 
     </footer>
+
+
+
+
+
+
+
+
+
 
     <script>
 
@@ -102,9 +104,34 @@
         var map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/mapbox/streets-v11',
-            center: [-84.03116608099936, 9.932827376420036],
             zoom: 14.5,
         });
+
+        //script para conocer la ubicación actual
+
+        var longitud;
+        var latitud;
+
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var longitud = position.coords.longitude;
+                var latitud = position.coords.latitude
+                /* guardarCoordenadas(longitud, latitud); */
+
+                map.setCenter({ lon: position.coords.longitude, lat: position.coords.latitude })//cambio
+
+            }, function () { }, { timeout: 5000 });
+
+        } else {
+            console.log('Error de longitud y latitud');
+        }
+
+        /* function guardarCoordenadas(plongitud, platitud) {
+            console.log(plongitud);
+            console.log(platitud);
+            localStorage.setItem('longitud', plongitud);
+            localStorage.setItem('latitud', platitud);
+        } */
 
         async function getRutas() {
             var response = await fetch('/listarRutas/recibir');
@@ -147,7 +174,7 @@
                 });
             }//fin del for
 
-        };//fin de la funcion
+        };//fin de listaRutas
 
         async function obtenerRuta(coordenada, radius, profile) {
             var radiuses = radius.join(';')
@@ -158,6 +185,67 @@
             console.log(coords.coordinates);
             return coords;
         }
+
+
+
+
+
+
+
+
+
+
+
+
+        renderSiniestros();
+
+        async function renderSiniestros() {
+
+            let incidente = await getIncidentes();
+            console.log(incidente);
+
+            for (let i = 0; i < incidente.length; i++) {
+
+                var infoIncidente = {
+                    type: 'FeatureCollection',
+                    features: [
+                        {
+                            type: 'Feature',
+                            geometry: {
+                                type: 'Point',
+                                coordinates: [incidente[i].longitud, incidente[i].latitud]
+                            },
+                            properties: {
+                                title: incidente[i].categoriaIncidente,
+                                description: incidente[i].descripcionIncidente
+                            }
+                        }]
+                };
+
+                // add markers to map
+                infoIncidente.features.forEach(function (marker) {
+                    // create a HTML element for each feature
+                    var el = document.createElement('div');
+                    var image = document.createElement("img");
+                    image.setAttribute("src", incidente[i].iconoIncidente);
+                    image.classList.add("icon");
+                    el.appendChild(image);
+
+                    // make a marker for each feature and add to the map
+                    new mapboxgl.Marker(el)
+                        .setLngLat(marker.geometry.coordinates)
+                        .setPopup(new mapboxgl.Popup({ offset: 25 })
+                            .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
+                        .addTo(map);
+                });
+            }
+        };
+
+        async function getIncidentes() {
+            var response = await fetch('/listarSiniestroAsistencia/recibir');
+            var data = await response.json();
+            return data;
+        }//fin de getSiniestroAsistencia
 
     </script>
 

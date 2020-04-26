@@ -17,10 +17,8 @@ if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function (position) {
     var longitud = position.coords.longitude;
     var latitud = position.coords.latitude
-   /*  console.log(longitud);
-    console.log(latitud); */
-    guardarCoordenadas(longitud,latitud);
- 
+    guardarCoordenadas(longitud, latitud);
+
     map.setCenter({ lon: position.coords.longitude, lat: position.coords.latitude })//cambio
 
   }, function () { }, { timeout: 5000 });
@@ -29,14 +27,10 @@ if (navigator.geolocation) {
   console.log('Error de longitud y latitud');
 }
 
-function guardarCoordenadas(plongitud,platitud) {
+function guardarCoordenadas(plongitud, platitud) {
   console.log(plongitud);
   console.log(platitud);
-  console.log('vamos bien');
-  localStorage.setItem('longitud',plongitud);
-  localStorage.setItem('latitud',platitud);
-  /* sessionStorage.setItem('lon',plongitud);
-  sessionStorage.setItem('lat',platitud); */
-
+  localStorage.setItem('longitud', plongitud);
+  localStorage.setItem('latitud', platitud);
 }
 

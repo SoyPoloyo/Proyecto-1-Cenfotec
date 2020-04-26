@@ -4,8 +4,10 @@ var router = express.Router();
 var mongoose = require("mongoose");
 
 var Asistencia = require("../schema/modeloSiniestroAsistencia");
+
+
 router.post("/insertar", async function (req, res) {
-  console.log(req.file);
+  //console.log(req.file);
   var asistenciaNueva = new Asistencia({
     _id: new mongoose.Types.ObjectId(),
 
@@ -14,7 +16,7 @@ router.post("/insertar", async function (req, res) {
     rutaIncidente: req.body.rutaIncidente,
     descripcionIncidente: req.body.descripcionIncidente,
     iconoIncidente: req.body.iconoIncidente,
-    image: req.file.filename,
+    image: '/assets/uploads/' + req.file.originalname,
     longitud: req.body.longitud,
     latitud: req.body.latitud,
     metodoPago: req.body.metodoPago,
