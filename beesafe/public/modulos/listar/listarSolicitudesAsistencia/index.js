@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", async function renderTipoVehiculo(
         anchor_image.classList.add("iconoEditarBorrar");
       
         let image_image = document.createElement("img");
-        image_image.setAttribute("src", "../../../ "+ tipoVehiculo[i].image);
+        image_image.setAttribute("src", "../../.."+ tipoVehiculo[i].image);
         anchor_image.appendChild(image_image);
       
         td_image.appendChild(anchor_image);
