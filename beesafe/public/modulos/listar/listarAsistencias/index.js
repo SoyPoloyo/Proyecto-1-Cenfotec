@@ -40,13 +40,7 @@ document.addEventListener("DOMContentLoaded", async function renderTipoVehiculo(
       tr.appendChild(td_nombre);
       table.appendChild(tr);
     
-      //caracteristica
-      let td_caracteristica = document.createElement("td");
-      let texto_caracteristica = document.createTextNode
-        (tipoVehiculo[i].caracteristica);
-      td_caracteristica.appendChild(texto_caracteristica);
-      tr.appendChild(td_caracteristica);
-      table.appendChild(tr);
+ 
     
       //descripcion
       let td_descripcion = document.createElement("td");

@@ -13,8 +13,8 @@ router.put('/editar/:id', function (req, res) {
           if (error) {
               res.json({
                   resultado: false,
-                  msg: 'No se pudo el metodo de pago',
-                  err
+                  msg: 'No se pudo el modificar le usuario',
+                  err:'no se creo el usuario'
               });
           } else {
               res.json({

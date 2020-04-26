@@ -51,7 +51,7 @@ let table = document.getElementById('contenidoTablaRutas');
           //estado
           let td_estado = document.createElement("td");
           let texto_estado = document.createTextNode
-            (listarRutas[i].estado);
+            (listarRutas[i].estado==1?'Activa':'Deshabilitada');
           td_estado.appendChild(texto_estado);
           tr.appendChild(td_estado);
           table.appendChild(tr);
