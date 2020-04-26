@@ -23,46 +23,17 @@ function habilitar() {
   }
   
 }
-function subirImagen() {
-
-  console.dir(document.getElementById('imagenAgregada'));
-  var archivo = document.getElementById("image").files[0];
-  var reader = new FileReader();
-  if (image) {
-    reader.readAsDataURL(archivo);
-    reader.onloadend = function () {
-      document.getElementById("imagenAgregada").src = reader.result;
-      document.getElementById("imagenAgregada").classList.add('imagenAgregada');
-      document.getElementById('muestraIcono').remove()
 
 
-    }
-  }
- 
-  /* console.log(image) */
-
-}
-
-async function getCategoriaIncidente() {
-  var response = await fetch('/listarCategoriaIncidente/recibir');
-  var data = await response.json();
-  return data;
-}//fin de getCategoriaIncidente
-
-async function getTipoAsistencia() {
-  var response = await fetch('/listarTiposAsistencia/recibir');
-  var data = await response.json();
-  return data;
-}//fin de getTipoAsistencia
 
 async function getTipometodoPago() {
 
-  valor = { identificador: localStorage.getItem('correo') };
+  //valor = { identificador: localStorage.getItem('correo') };
 
 
-  const res = await fetch('/listarMetodoPago/recibir', {
-    method: 'POST',
-    body: JSON.stringify(valor),
+  const res = await fetch('/listarSiniestroAsistencia/recibir', {
+    method: 'GET',
+    body: JSON.stringify(),
     headers: {
       "Content-Type": "application/json"
     }
@@ -73,48 +44,8 @@ async function getTipometodoPago() {
 }//fin de getTipoAsistencia
 
 
-async function getListarRutas() {
-  var response = await fetch('/listarRutas/recibir');
-  var data = await response.json();
-  return data;
-}//fin de getListarRutas
-
-llenarIncidente();
-llenarRuta();
-llenarAsistencia();
 llenarMetodoPago();
 
-async function llenarIncidente() {
-
-  var incidente = await getCategoriaIncidente();
-  console.log(incidente);
-
-  for (var i = 0; i < incidente.length; i++) {
-
-    var select = document.getElementById('categoriaIncidente');
-    var option = document.createElement('option');
-    option.value = incidente[i].nombre;
-    option.text = incidente[i].nombre;
-    select.appendChild(option);
-  }
-
-}//fin 
-
-async function llenarAsistencia() {
-
-  var asistencia = await getTipoAsistencia();
-  console.log(asistencia);
-
-  for (var i = 0; i < asistencia.length; i++) {
-
-    var select = document.getElementById('tipoAsistencia');
-    var option = document.createElement('option');
-    option.value = asistencia[i].nombre;
-    option.text = asistencia[i].nombre;
-    select.appendChild(option);
-  }
-
-}//fin 
 
 async function llenarMetodoPago() {
 
@@ -123,10 +54,10 @@ async function llenarMetodoPago() {
 
   for (var i = 0; i < metodoPago.length; i++) {
 
-    var select = document.getElementById('metodoPago');
+    var select = document.getElementById('tipoAsistencia');
     var option = document.createElement('option');
-    option.value = metodoPago[i].numeroTarjeta;
-    option.text = metodoPago[i].numeroTarjeta;
+    option.value = metodoPago[i].tipoAsistencia;
+    option.text = metodoPago[i].tipoAsistencia;
     select.appendChild(option);
   }
 

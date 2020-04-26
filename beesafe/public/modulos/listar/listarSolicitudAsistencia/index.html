@@ -89,12 +89,12 @@
 
                     <div class="izquierda">
 
-                        <select class="fondosG" id="categoriaIncidente">
+                        <select class="fondosG" readonly id="categoriaIncidente">
                             <option value="" selected hidden>Categoria de incidente :</option>
                         </select>
 
 
-                        <select class="fondosG" id="habilitar" onchange="habilitar()">
+                        <select class="fondosG" readonly id="habilitar" onchange="habilitar()">
                             <option value="" selected hidden>¿ Desea asistencia ?</option>
                             <option value="1">Si</option>
                             <option value="2">No</option>
@@ -116,11 +116,11 @@
                         <br><br>
 
 
-                        <textarea class="fondosG izquierda" value="" placeholder="Descripción"
+                        <textarea class="fondosG izquierda" readonly value="" placeholder="Descripción"
                             name="descripcionSiniestro" id="descripcionIncidente" rows="5"></textarea>
 
-                        <select class="fondosG subirPoco" hidden id="tipoAsistencia">
-                            <option value="" selected hidden>Tipo de asistencia:</option>
+                        <select class="fondosG subirPoco"  id="tipoAsistencia">
+                            
                           
                         </select>
 
