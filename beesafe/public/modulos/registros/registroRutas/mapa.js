@@ -4,9 +4,34 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYWJsYW5jb2NlbmZvIiwiYSI6ImNrODNud2lrdzB6NDQzZ
 var map = new mapboxgl.Map({
   container: 'map', // Especifico el ID del contenedor
   style: 'mapbox://styles/mapbox/streets-v11', // Especifico el estilo del mapa
-  center: [-84.03116608099936, 9.932827376420036], // Especifico las coordenadas adonde inicia el mapa
   zoom: 14.5, // Especifico el zoom inicial
 });
+
+//script para conocer la ubicación actual
+
+var longitud;
+var latitud;
+
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(function (position) {
+    var longitud = position.coords.longitude;
+    var latitud = position.coords.latitude
+    /* guardarCoordenadas(longitud, latitud); */
+
+    map.setCenter({ lon: position.coords.longitude, lat: position.coords.latitude })//cambio
+
+  }, function () { }, { timeout: 5000 });
+
+} else {
+  console.log('Error de longitud y latitud');
+}
+
+/* function guardarCoordenadas(plongitud, platitud) {
+    console.log(plongitud);
+    console.log(platitud);
+    localStorage.setItem('longitud', plongitud);
+    localStorage.setItem('latitud', platitud);
+} */
 
 var draw = new MapboxDraw({
   displayControlsDefault: false, //Muestro solo las herramientas que necesito
@@ -163,9 +188,9 @@ function registrar() {
 
     setTimeout(() => {
       window.location.replace(
-          "../../sesiones_perfiles/sesionUsuarioRutas/index.html"
+        "../../sesiones_perfiles/sesionUsuarioRutas/index.html"
       )
-  }, 2000);
+    }, 2000);
 
   }
 

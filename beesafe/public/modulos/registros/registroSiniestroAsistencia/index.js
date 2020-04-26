@@ -4,17 +4,12 @@ id = localStorage.getItem('id')
 contenidoUsuario = document.getElementById("contenidoUsuario");
 contenidoBotones = document.getElementById("listadoUsuarios");
 usuarioSolicitante = localStorage.getItem('correo');
-console.log(usuarioSolicitante);
-/* longitud = localStorage.getItem('longitud');
-latitud = localStorage.getItem('latitud');
-console.log(longitud);
-console.log(latitud); */
+/* console.log(usuarioSolicitante); */
 
 longitud = parseFloat(localStorage.getItem('longitud'));
 latitud = parseFloat(localStorage.getItem('latitud'));
 console.log(longitud);
-console.log(latitud);
-
+console.log(latitud); 
 
 function habilitar() {
 
@@ -26,7 +21,6 @@ function habilitar() {
     document.getElementById('metodoPago').setAttribute('hidden', true)
     document.getElementById('tipoVehiculo').setAttribute('hidden', true)
   }
-
 
 }
 function subirImagen() {
@@ -45,7 +39,7 @@ function subirImagen() {
     }
   }
 
-  console.log(image)
+  /* console.log(image) */
 
 }
 
@@ -101,89 +95,18 @@ async function buscarIcono() {
   var incidente = await getCategoriaIncidente();
   for (i = 0; i < incidente.length; i++) {
 
-      if (incidente[i].nombre == incidenteSelect) {
-          var image = incidente[i].image
-          console.log(image);
-          return image;
-      }
+    if (incidente[i].nombre == incidenteSelect) {
+      var image = incidente[i].image
+      console.log(image);
+      return image;
+    }
 
   }
 }//fin 
 
-
-
-/* function guardar() {
-
-  fetch("http://localhost:5252/listarUsuario/recibir", {
-    body: JSON.stringify(valor),
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    }
-  })
-    .then(function (data) {
-      return data.json();
-    })
-    .then(function (res) {
-  
-      usuario = res[0];
-  
-  
-     
-        var nombre= usuario.nombre
-        var apellido= usuario.apellido
-        var password=usuario.password
-        var edad=usuario.edad
-  
-        console.log(nombre + 'probando');
-  
-        var enlace = ("/modificarUsuario/editarFoto/" + id);
-         console.log(enlace);
-
-  
-  const formData = new FormData();
-  formData.append('tipoAsistencia',nombre);
-  formData.append('usuarioSolicitante', apellido);
-  formData.append('descripcion', password);
-  formData.append('ruta', edad);
-  
-  formData.append('image', document.getElementById('image').files[0]);
-
-  fetch(enlace, {
-      method: 'PUT',
-      body: formData,
-  }).then(res => res.json())
-      .catch(error => console.log('Error:', error))
-      .then(response => console.log('Success:', response));
-
-  swal({
-      title: "Modificación Correcta",
-      text: "Campos completados de manera correcta",
-      icon: "success",
-      button: "Continuar",
-  });
-
-  
-  setTimeout(() => {
-    location.reload()
-}, 3333);
-  
-  
-    })
-    .catch(function (err) {
-      console.log(err);
-    });
-     
-    
-}//fin de modificar
- */
-
-
-
-
 async function enviar() {
 
-  let datos = ['categoriaIncidente','rutaIncidente','descripcionIncidente','metodoPago','tipoVehiculo'];
+  let datos = ['categoriaIncidente', 'rutaIncidente', 'descripcionIncidente', 'metodoPago', 'tipoVehiculo'];
   let valores = new FormData();
   let aprobado = false;
   regexCorreo = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
@@ -246,12 +169,12 @@ async function enviar() {
     });
 
     mostrarIcono();
-    
-    setTimeout(() => {
-      window.location.replace(
-        "../../sesiones_perfiles/sesionUsuarioClasico/index.html"
-      )
-    }, 2333);
+
+    /*  setTimeout(() => {
+       window.location.replace(
+         "../../sesiones_perfiles/sesionUsuarioClasico/index.html"
+       )
+     }, 2333); */
 
   }
 
@@ -259,39 +182,39 @@ async function enviar() {
 
 function mostrarIcono() {
 
-  /* var longitud = parseFloat(localStorage.getItem('longitud'));
+  var longitud = parseFloat(localStorage.getItem('longitud'));
   var latitud = parseFloat(localStorage.getItem('latitud'));
   console.log(longitud);
-  console.log(latitud); */
+  console.log(latitud);
 
   var incidente = {
-      type: 'FeatureCollection',
-      features: [
-          {
-              type: 'Feature',
-              geometry: {
-                  type: 'Point',
-                  coordinates: [longitud, latitud]
-              },
-              properties: {
-                  title: 'Incidente',
-                  description: 'Incidente Reportado'
-              }
-          }]
+    type: 'FeatureCollection',
+    features: [
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [longitud, latitud]
+        },
+        properties: {
+          title: 'Incidente',
+          description: 'Incidente Reportado'
+        }
+      }]
   };
 
   // add markers to map
   incidente.features.forEach(function (marker) {
 
-      var el = document.createElement('div');
-      var image = document.createElement("img");
-      image.setAttribute("src", "../../../assets/img/mapbox-icon.png");
-      image.classList.add("icon");
-      el.appendChild(image);
-      // make a marker for each feature and add to the map
-      new mapboxgl.Marker(el)
-          .setLngLat(marker.geometry.coordinates)
-          .addTo(map);
+    var el = document.createElement('div');
+    var image = document.createElement("img");
+    image.setAttribute("src", "../../../assets/img/mapbox-icon.png");
+    image.classList.add("icon");
+    el.appendChild(image);
+    // make a marker for each feature and add to the map
+    new mapboxgl.Marker(el)
+      .setLngLat(marker.geometry.coordinates)
+      .addTo(map);
 
   });
 
