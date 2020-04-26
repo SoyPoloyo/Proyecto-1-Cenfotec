@@ -6,7 +6,7 @@ async function postVehiculo() {
   valor = { identificador: localStorage.getItem('correo') };
 
 
-  const res = await fetch('/listarVehiculo/recibir', {
+  const res = await fetch('/listarVehiculoUEps/recibir', {
     method: 'POST',
     body: JSON.stringify(valor),
     headers: {
@@ -23,7 +23,7 @@ async function postVehiculo2() {
   valor2 = {chofer: localStorage.getItem('correo') };
 
 
-  const res = await fetch('/listarVehiculo/recibir2', {
+  const res = await fetch('/listarVehiculoUEps/recibir2', {
     method: 'POST',
     body: JSON.stringify(valor2),
     headers: {
@@ -36,7 +36,7 @@ async function postVehiculo2() {
 }
 async function deleteVehiculo() {
   let id = localStorage.getItem('id');
-  var enlace = ('/eliminarVehiculo/borrar/' + id);
+  var enlace = ('/eliminarVehiculoUEps/borrar/' + id);
   const res = await fetch(enlace, {
     method: 'DELETE',
     headers: {
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", async function renderVehiculo() {
 
     anchor_modificar.addEventListener('click', () => {
       localStorage.setItem('id', vehiculo[i]._id);
-      window.location.href = '../../modificar/modificarVehiculo/index.html';
+      window.location.href = '../../modificar/modificarVehiculoUEps/index.html';
     });
 
     td_modificar.appendChild(anchor_modificar);

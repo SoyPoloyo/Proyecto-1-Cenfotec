@@ -5,7 +5,7 @@ valor = {
   id: localStorage.getItem("id"),
 };
 
-fetch("http://localhost:5252/listarVehiculo/recibir3", {
+fetch("http://localhost:5252/listarVehiculoUEps/recibir3", {
   body: JSON.stringify(valor),
   method: "POST",
   headers: {
@@ -56,7 +56,7 @@ fetch("http://localhost:5252/listarVehiculo/recibir3", {
 function modificar() {
   let id = localStorage.getItem("id");
   console.log(id);
-  var enlace = "/modificarVehiculo/editar/" + id;
+  var enlace = "/modificarVehiculoUEps/editar/" + id;
   console.log(enlace);
 
   let datos = ["placaVehi", "tipo_vehiculo", "anno", "caracteristicasVehiculo", "chofer"];
@@ -100,7 +100,7 @@ function modificar() {
     });
 
     setTimeout(() => {
-      window.location.replace("../../listar/listarVehiculos/index.html");
+      window.location.replace("../../listar/listarVehiculosUEsp/index.html");
     }, 2000);
   }
 } //fin

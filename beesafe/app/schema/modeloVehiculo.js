@@ -4,9 +4,9 @@ var mongoose = require("mongoose");
 var vehiculoSchema = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
   placaVehi: String,
- 
- 
-  marca_vehiculo: String,
+  caracteristicasVehiculo:String,
+  anno: Number,
+  tipo_vehiculo: String,
   identificador: String,
   chofer:String,
   activado:Boolean

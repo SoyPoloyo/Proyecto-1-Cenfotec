@@ -62,6 +62,12 @@ app.use('/listarVehiculo', require('./servicios/listarVehiculo'));
 app.use('/modificarVehiculo', require('./servicios/modificarVehiculo'));
 app.use('/eliminarVehiculo', require('./servicios/eliminarVehiculo'));
 
+//Registrar,listar,modificar,eliminar Vehiculo
+app.use('/registroVehiculoUEps', require('./servicios/registroVehiculoUEps'));
+app.use('/listarVehiculoUEps', require('./servicios/listarVehiculoUEps'));
+app.use('/modificarVehiculoUEps', require('./servicios/modificarVehiculoUEps'));
+app.use('/eliminarVehiculoUEps', require('./servicios/eliminarVehiculoUEps'));
+
 //Registrar,listar,modificar,eliminar Caracteristicas de vehiculo
 app.use('/registroCaracteristicaVehiculo', require('./servicios/registroCaracteristicaVehiculo'));
 app.use('/listarCaracteristicasVehiculo', require('./servicios/listarCaracteristicasVehiculo'));

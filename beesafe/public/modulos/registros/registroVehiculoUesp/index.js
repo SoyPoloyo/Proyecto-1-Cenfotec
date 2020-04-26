@@ -100,7 +100,7 @@ async function enviar() {
     
     console.log(valores);
     valores['identificador'] = localStorage.getItem("correo")
-    fetch2 = await fetch("http://localhost:5252/registroVehiculo/insertar", {
+    fetch2 = await fetch("http://localhost:5252/registroVehiculoUEps/insertar", {
       body: JSON.stringify(valores),
       method: "POST",
       headers: {
@@ -127,7 +127,7 @@ async function enviar() {
 
     setTimeout(() => {
       window.location.replace(
-        "../../listar/listarVehiculos/index.html"
+        "../../listar/listarVehiculosUEsp/index.html"
       )
     }, 2000);
 
