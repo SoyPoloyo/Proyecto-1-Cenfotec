@@ -13,4 +13,16 @@
         background-color: #cc5d01;
       }
 
+      #caracteristicasVehiculo label{
+        padding: 5px;
+       margin-right: 50px;
+        font-size: 25px;
+        
+      }
+
+      input[type=checkbox] {
+        transform: scale(1.5);
+        margin-left: 50px;
+        
+      }
   
