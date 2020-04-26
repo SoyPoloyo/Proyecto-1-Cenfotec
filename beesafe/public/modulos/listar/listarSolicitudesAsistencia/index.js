@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", async function renderTipoVehiculo(
        //estado
        let td_estado = document.createElement("td");
        let texto_estado = document.createTextNode
-         (tipoVehiculo[i].estado);
+         (tipoVehiculo[i].estado==0?'Disponible':'Ocupado');
        td_estado.appendChild(texto_estado);
        tr.appendChild(td_estado);
        table.appendChild(tr);
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", async function renderTipoVehiculo(
     
       anchor_modificar.addEventListener('click', () => {
         localStorage.setItem('id', tipoVehiculo[i]._id);
-        window.location.href = '../../modificar/modificarTipoAsistencia/index.html';
+        window.location.href = '../../listar/listarSolicitudAsistencia/index.html';
       });
     
       td_modificar.appendChild(anchor_modificar);
