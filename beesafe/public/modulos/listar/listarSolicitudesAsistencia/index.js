@@ -7,20 +7,7 @@ async function getTipoVehiculo() {
     return data;
 }//fin de getTipoVehiculo
 
-async function deleteTipoVehiculo() {
-
-  let id = localStorage.getItem('id');
-  var enlace = ('/eliminarTipoAsistencia/borrar/' + id);
-  const res = await fetch(enlace, {
-      method: 'DELETE',
-      headers: {
-          "Content-Type": "application/json"
-      }
-  });
-  var data = await res.json();
-  return data;
-
-}//fin de deleteTipoVehiculo 
+ 
 
 document.addEventListener("DOMContentLoaded", async function renderTipoVehiculo() {
 
@@ -64,23 +51,31 @@ document.addEventListener("DOMContentLoaded", async function renderTipoVehiculo(
       tr.appendChild(td_rutaIncidente);
       table.appendChild(tr);
 
-       //caracteristica
-       let td_caracteristica = document.createElement("td");
-       let texto_caracteristica = document.createTextNode
-         (tipoVehiculo[i].caracteristica);
-       td_caracteristica.appendChild(texto_caracteristica);
-       tr.appendChild(td_caracteristica);
+        //image
+        let td_image = document.createElement("td");
+        let anchor_image = document.createElement("a");
+        anchor_image.classList.add("iconoEditarBorrar");
+      
+        let image_image = document.createElement("img");
+        image_image.setAttribute("src", "../../../ "+ tipoVehiculo[i].image);
+        anchor_image.appendChild(image_image);
+      
+        td_image.appendChild(anchor_image);
+        tr.appendChild(td_image);
+        table.appendChild(tr);  
+    
+
+
+       //estado
+       let td_estado = document.createElement("td");
+       let texto_estado = document.createTextNode
+         (tipoVehiculo[i].estado);
+       td_estado.appendChild(texto_estado);
+       tr.appendChild(td_estado);
        table.appendChild(tr);
       
     
-      //descripcion
-      let td_descripcion = document.createElement("td");
-      let texto_descripcion = document.createTextNode
-        (tipoVehiculo[i].descripcion);
-      td_descripcion.appendChild(texto_descripcion);
-      tr.appendChild(td_descripcion);
-      table.appendChild(tr);
-    
+      
       //modificar
       let td_modificar = document.createElement("td");
       let anchor_modificar = document.createElement("a");
