@@ -12,7 +12,8 @@ var modeloSiniestroAsistencia = mongoose.Schema({
   metodoPago:String,
   tipoAsistencia:String,
   usuarioSolicitante: String,
-  usuarioEspecializado:String
+  usuarioEspecializado:String,
+  estado:Number
 });
 
 module.exports = mongoose.model( "SiniestroAsistencia", modeloSiniestroAsistencia,"SiniestroAsistencias");

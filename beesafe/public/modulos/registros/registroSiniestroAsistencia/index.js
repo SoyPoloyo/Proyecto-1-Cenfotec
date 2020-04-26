@@ -229,11 +229,11 @@ async function enviar() {
 
     mostrarIcono();
 
-    /*  setTimeout(() => {
-       window.location.replace(
-         "../../sesiones_perfiles/sesionUsuarioClasico/index.html"
-       )
-     }, 2333); */
+    setTimeout(() => {
+      window.location.replace(
+      "../../sesiones_perfiles/sesionUsuarioClasico/index.html"
+    )
+    }, 2000);
 
   }
 

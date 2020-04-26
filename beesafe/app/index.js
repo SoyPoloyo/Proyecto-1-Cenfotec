@@ -102,6 +102,8 @@ app.use('/eliminarTipoAsistencia', require('./servicios/eliminarTipoAsistencia')
 
 
 
+
+
 app.listen(5252, function () {
     console.log("servidor corriendo en el puerto 5252")
 });

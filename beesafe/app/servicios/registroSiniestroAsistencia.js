@@ -11,7 +11,7 @@ router.post("/insertar", async function (req, res) {
   var asistenciaNueva = new Asistencia({
     _id: new mongoose.Types.ObjectId(),
 
-
+    estado:0,
     categoriaIncidente: req.body.categoriaIncidente,
     rutaIncidente: req.body.rutaIncidente,
     descripcionIncidente: req.body.descripcionIncidente,
