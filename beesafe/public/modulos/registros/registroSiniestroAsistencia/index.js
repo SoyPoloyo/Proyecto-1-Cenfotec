@@ -16,12 +16,12 @@ function habilitar() {
   habilita = document.getElementById('habilitar').value
   if (habilita == 1) {
     document.getElementById('metodoPago').removeAttribute('hidden', false)
-    document.getElementById('tipoVehiculo').removeAttribute('hidden', false)
+    document.getElementById('tipoAsistencia').removeAttribute('hidden', false)
   } else {
     document.getElementById('metodoPago').setAttribute('hidden', true)
-    document.getElementById('tipoVehiculo').setAttribute('hidden', true)
+    document.getElementById('tipoAsistencia').setAttribute('hidden', true)
   }
-
+  
 }
 function subirImagen() {
 
@@ -38,7 +38,7 @@ function subirImagen() {
 
     }
   }
-
+ 
   /* console.log(image) */
 
 }
@@ -49,6 +49,30 @@ async function getCategoriaIncidente() {
   return data;
 }//fin de getCategoriaIncidente
 
+async function getTipoAsistencia() {
+  var response = await fetch('/listarTiposAsistencia/recibir');
+  var data = await response.json();
+  return data;
+}//fin de getTipoAsistencia
+
+async function getTipometodoPago() {
+
+  valor = { identificador: localStorage.getItem('correo') };
+
+
+  const res = await fetch('/listarMetodoPago/recibir', {
+    method: 'POST',
+    body: JSON.stringify(valor),
+    headers: {
+      "Content-Type": "application/json"
+    }
+  });
+  const data = await res.json();
+  return data;
+
+}//fin de getTipoAsistencia
+
+
 async function getListarRutas() {
   var response = await fetch('/listarRutas/recibir');
   var data = await response.json();
@@ -57,6 +81,8 @@ async function getListarRutas() {
 
 llenarIncidente();
 llenarRuta();
+llenarAsistencia();
+llenarMetodoPago();
 
 async function llenarIncidente() {
 
@@ -69,6 +95,38 @@ async function llenarIncidente() {
     var option = document.createElement('option');
     option.value = incidente[i].nombre;
     option.text = incidente[i].nombre;
+    select.appendChild(option);
+  }
+
+}//fin 
+
+async function llenarAsistencia() {
+
+  var asistencia = await getTipoAsistencia();
+  console.log(asistencia);
+
+  for (var i = 0; i < asistencia.length; i++) {
+
+    var select = document.getElementById('tipoAsistencia');
+    var option = document.createElement('option');
+    option.value = asistencia[i].nombre;
+    option.text = asistencia[i].nombre;
+    select.appendChild(option);
+  }
+
+}//fin 
+
+async function llenarMetodoPago() {
+
+  var metodoPago = await getTipometodoPago();
+  console.log(metodoPago);
+
+  for (var i = 0; i < metodoPago.length; i++) {
+
+    var select = document.getElementById('metodoPago');
+    var option = document.createElement('option');
+    option.value = metodoPago[i].numeroTarjeta;
+    option.text = metodoPago[i].numeroTarjeta;
     select.appendChild(option);
   }
 
@@ -106,7 +164,7 @@ async function buscarIcono() {
 
 async function enviar() {
 
-  let datos = ['categoriaIncidente', 'rutaIncidente', 'descripcionIncidente', 'metodoPago', 'tipoVehiculo'];
+  let datos = ['categoriaIncidente', 'rutaIncidente', 'descripcionIncidente'];
   let valores = new FormData();
   let aprobado = false;
   regexCorreo = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
@@ -139,7 +197,8 @@ async function enviar() {
   if (aprobado) {
 
     var iconoIncidente = await buscarIcono();
-
+    valores.append('metodoPago', document.getElementById('metodoPago').value);
+    valores.append('tipoAsistencia', document.getElementById('tipoAsistencia').value);
     valores.append('iconoIncidente', iconoIncidente);
     valores.append('image', document.getElementById('image').files[0]);
     valores.append('longitud', longitud);

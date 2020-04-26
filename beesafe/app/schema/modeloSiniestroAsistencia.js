@@ -10,7 +10,7 @@ var modeloSiniestroAsistencia = mongoose.Schema({
   longitud: Number,
   latitud: Number,
   metodoPago:String,
-  tipoVehiculo:String,
+  tipoAsistencia:String,
   usuarioSolicitante: String,
   usuarioEspecializado:String
 });

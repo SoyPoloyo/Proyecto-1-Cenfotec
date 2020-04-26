@@ -60,14 +60,14 @@ document.addEventListener("DOMContentLoaded", async function renderListadoMetodo
     tr.appendChild(td_fecha);
     table.appendChild(tr);
 
-    //cvv
+    /* //cvv
     let td_cvv = document.createElement("td");
     let texto_cvv = document.createTextNode
       (listadoMetodoPago[i].cvv);
     td_cvv.appendChild(texto_cvv);
     tr.appendChild(td_cvv);
     table.appendChild(tr);
-
+ */
     //modificar
     let td_modificar = document.createElement("td");
     let anchor_modificar = document.createElement("a");

@@ -20,7 +20,7 @@ router.post("/insertar", async function (req, res) {
     longitud: req.body.longitud,
     latitud: req.body.latitud,
     metodoPago: req.body.metodoPago,
-    tipoVehiculo: req.body.tipoVehiculo,
+    tipoAsistencia: req.body.tipoAsistencia,
     usuarioSolicitante: req.body.usuarioSolicitante
   });
   console.log(asistenciaNueva.image);
