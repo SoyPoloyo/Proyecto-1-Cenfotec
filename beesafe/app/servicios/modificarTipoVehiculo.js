@@ -14,7 +14,7 @@ router.put('/editar/:id', function (req, res) {
               res.json({
                   resultado: false,
                   msg: 'No se pudo modificar el cliente',
-                  err
+                  err:'error al modificar el tipo de vehiculo'
               });
           } else {
               res.json({

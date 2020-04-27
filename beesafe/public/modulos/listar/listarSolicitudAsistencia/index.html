@@ -85,46 +85,34 @@
                 <br><br>
 
                 <div id="contenidoUsuario">
+
                     <br>
-
-
 
                     <div class="izquierda">
 
-                        <select class="fondosG" readonly id="categoriaIncidente">
-                            <option value="" selected hidden>Categoria de incidente :</option>
-                        </select>
+                        
+                        <input type="text" class="fondosG" id="categoriaIncidente"  value="">
+                        
+                        <input type="text" class="fondosG" id="habilitar" readonly value="Si">
 
-
-                        <select class="fondosG" readonly id="habilitar" onchange="habilitar()">
-                            <option value="" selected hidden>¿ Desea asistencia ?</option>
-                            <option value="1">Si</option>
-                            <option value="2">No</option>
-                        </select>
+             
 
                         <br> <br>
 
+                   
+                        <input type="text" class="fondosG" id="rutaIncidente"  value="">
 
-                        <select class="fondosG" id="rutaIncidente">
-                            <option value="" selected hidden>Ruta del incidente:</option>
-                        </select>
+                        <input type="text" class="fondosG" id="metodoPago"  value="">
 
-
-
-                        <select class="fondosG " hidden id="metodoPago">
-                            <option value="" selected hidden>Tarjetas disponibles:</option>
-                        
-                        </select>
+                       
                         <br><br>
 
-
-                        <textarea class="fondosG izquierda" readonly value="" placeholder="Descripción"
+                        <textarea class="fondosG izquierda"  value="" placeholder="Descripción"
                             name="descripcionSiniestro" id="descripcionIncidente" rows="5"></textarea>
 
-                        <select class="fondosG subirPoco"  id="tipoAsistencia">
-                            
-                          
-                        </select>
+                        <input type="text" class="fondosG" id="tipoAsistencia"  value="">
+
+                   
 
                         <br><br>
 
@@ -132,8 +120,7 @@
                         <br> <br>
                         <h4 class="tituloFoto">Foto del incidente</h4>
 
-                        <img class="" id="imagenAgregada" alt=""> <br><br>
-                        <i class="far fa-image muestraIcono" id="muestraIcono"></i><br> <br> <br> <br> <br>
+                        <img class="imagenAgregada" id="imagenAgregada" alt=""> <br><br>
 
 
                     </div>
