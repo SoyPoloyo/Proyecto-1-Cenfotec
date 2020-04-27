@@ -115,7 +115,7 @@ function modificar() {
       window.location.replace(
           "../../sesiones_perfiles/perfilUsuarioRutas/index.html"
       )
-  }, 3333);
+  }, 2000);
 
   }
 

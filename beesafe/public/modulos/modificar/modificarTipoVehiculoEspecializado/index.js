@@ -79,7 +79,7 @@ function modificar() {
             window.location.replace(
                 "../../listar/listarTipoVehiculoEspecializado/index.html"
             )
-        }, 2555);
+        }, 2000);
 
     }
 

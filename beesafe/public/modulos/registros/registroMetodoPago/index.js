@@ -63,7 +63,7 @@
               window.location.replace(
               "../../listar/listarMetodoPago/index.html"
             )
-            }, 2333);
+            }, 2000);
         
         
           

@@ -93,7 +93,7 @@ function modificar() {
             window.location.replace(
                 "../../listar/listarCategoriaIncidente/index.html"
             )
-        }, 3333);
+        }, 2000);
     }
 }//fin de modificar
 

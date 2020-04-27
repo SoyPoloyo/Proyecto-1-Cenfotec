@@ -113,7 +113,7 @@ function modificar() {
       window.location.replace(
           "../../listar/listarUsuarios/index.html"
       )
-  }, 3000);
+  }, 2000);
     
   }
 

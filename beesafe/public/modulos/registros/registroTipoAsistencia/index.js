@@ -45,6 +45,6 @@ function registro() {
             window.location.replace(
             "../../listar/listarAsistencias/index.html"
           )
-          }, 3333);
+          }, 2000);
     }
 }//fin de registro

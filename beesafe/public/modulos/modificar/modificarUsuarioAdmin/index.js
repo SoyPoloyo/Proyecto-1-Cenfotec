@@ -114,7 +114,7 @@ function modificar() {
       window.location.replace(
           "../../sesiones_perfiles/perfilUsuarioAdmin/index.html"
       )
-  }, 3333);
+  }, 2000);
 
 
   }

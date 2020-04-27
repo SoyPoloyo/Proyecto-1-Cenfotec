@@ -78,7 +78,7 @@ function modificar() {
             window.location.replace(
                 "../../listar/listarCaracteristicasvehiculo/index.html"
             )
-        }, 3333);
+        }, 2000);
     }
 
 

@@ -79,7 +79,7 @@ function modificar() {
             window.location.replace(
                 "../../listar/listarAsistencias/index.html"
             )
-        }, 2555);
+        }, 2000);
 
     }
 

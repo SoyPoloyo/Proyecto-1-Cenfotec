@@ -115,7 +115,7 @@ function getRandomInt(max) {
               window.location.replace(
               "../../../../index.html"
             )
-            }, 3333);
+            }, 2000);
   
         }
         

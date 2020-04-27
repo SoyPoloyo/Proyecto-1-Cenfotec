@@ -84,7 +84,7 @@ function modificar() {
             window.location.replace(
                 "../../listar/listarMetodoPago/index.html"
             )
-        }, 3333);
+        }, 2000);
 
 
     }

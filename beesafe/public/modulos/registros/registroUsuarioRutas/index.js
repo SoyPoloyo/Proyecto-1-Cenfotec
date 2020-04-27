@@ -114,7 +114,7 @@ function getRandomInt(max) {
               window.location.replace(
               "../../listar/listarUsuarios/index.html"
             )
-            }, 3333);
+            }, 2000);
   
         }
         
