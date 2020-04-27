@@ -108,18 +108,18 @@ async function buscarIcono() {
 console.log(ENVlongitud)
 valor2 = {
   
-  'descripcionIncidente': ENVcategoriaIncidente,
-  'rutaIncidente': ENVrutaIncidente,
-  'descripcionIncidente': ENVdescripcionIncidente,
-  'iconoIncidente': ENViconoIncidente,
-  'longitud': ENVlongitud,
-  'latitud': ENVlatitud,
-  'metodoPago': ENVmetodoPago,
-  'tipoAsistencia': ENVtipoAsistencia,
-  'usuarioSolicitante': ENVusuarioSolicitante,
-  'usuarioEspecializado':localStorage.getItem('correo'),
+  /* 'descripcionIncidente':ENVcategoriaIncidente,
+  'rutaIncidente':ENVrutaIncidente,
+  'descripcionIncidente':ENVdescripcionIncidente,
+  'iconoIncidente':ENViconoIncidente,
+  'longitud':ENVlongitud,
+  'latitud':ENVlatitud,
+  'metodoPago':ENVmetodoPago,
+  'tipoAsistencia':ENVtipoAsistencia,
+  'usuarioSolicitante':ENVusuarioSolicitante,
+  'usuarioEspecializado':localStorage.getItem('correo'), */
   'estado':1,
-  'image': ENVimage
+  /* 'image':ENVimage */
 
 }
 
