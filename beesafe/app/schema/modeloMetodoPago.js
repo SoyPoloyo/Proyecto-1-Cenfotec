@@ -10,4 +10,4 @@ var metodoPagoSchema = mongoose.Schema({
  
 });
 
-module.exports = mongoose.model( "MetodoPago", metodoPagoSchema,"MetodoPago");
+module.exports = mongoose.model( "MetodoPago", metodoPagoSchema,"MetodoPagos");

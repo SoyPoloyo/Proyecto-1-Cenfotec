@@ -4,7 +4,7 @@ var app = express();
 var mongoose = require('mongoose');
 var multer = require('multer');
 
-mongoose.connect('mongodb+srv://admin:admin@workapes-9hxh3.mongodb.net/pruebas?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://admin:admin@workapes-9hxh3.mongodb.net/beesafe?retryWrites=true&w=majority',
     { useNewUrlParser: true, useUnifiedTopology: true })
     .then(db => console.log(`Base de datos conectada`))
     .catch(err => console.error(err));

@@ -56,7 +56,7 @@ function getRandomInt(max) {
         if (aprobado) {
   
         let existente;
-        valores.append( 'image' , document.getElementById('image').files[0]);
+        /* valores.append( 'image' , document.getElementById('image').files[0]); */
         valores.append( 'password' , 'beesafe'+getRandomInt(300));
 
 

@@ -3,7 +3,7 @@ var mongoose = require("mongoose");
 var tipoAsistenciasSchema = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
   nombre: String,
-  caracteristica: String,
+
   descripcion: String
 });
 

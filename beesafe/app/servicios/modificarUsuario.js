@@ -50,7 +50,7 @@ router.put('/editarFoto/:id', function (req, res) {
                 res.json({
                     resultado: false,
                     msg: 'No se pudo modificar el cliente',
-                    err
+                    err:'no se pudo modificar'
                 });
             } else {
                 res.json({

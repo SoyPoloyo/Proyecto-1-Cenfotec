@@ -10,7 +10,7 @@ router.post("/insertar", async function (req, res) {
   var tipoVehiculoNuevo = new TipoVehiculo({
     _id: new mongoose.Types.ObjectId(),
     nombre: req.body.nombre,
-    caracteristica: req.body.caracteristica,
+    
     descripcion: req.body.descripcion
   });
 

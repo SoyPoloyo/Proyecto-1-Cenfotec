@@ -1,6 +1,6 @@
 
 function registro() {
-    let datos = ["nombre", "caracteristica", "descripcion"];
+    let datos = ["nombre", "descripcion"];
     let valores = {};
     let aprobado = false;
 

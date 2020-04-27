@@ -6,4 +6,4 @@ var caracteristicasVehiculoSchema = mongoose.Schema({
   descripcion: String,
 });
 
-module.exports = mongoose.model( "caracteristicasVehiculos", caracteristicasVehiculoSchema ,"caracteristicasVehiculos");
+module.exports = mongoose.model( "CaracteristicasVehiculo", caracteristicasVehiculoSchema ,"CaracteristicasVehiculos");
