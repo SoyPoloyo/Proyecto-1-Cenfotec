@@ -11,8 +11,6 @@ latitud = parseFloat(localStorage.getItem("latitud"));
 console.log(longitud);
 console.log(latitud);
 
-var enlace = ("/listarSiniestroAsistencia/editar/" + id);
-console.log(enlace);
 
 async function getSiniestroAsistencia() {
   //valor = { identificador: localStorage.getItem('correo') };
@@ -83,49 +81,18 @@ async function buscarIcono() {
 
 
  async function enviar() {
-
-  var siniestroAsistencia = await getSiniestroAsistencia();
-  for (var i = 0; i < siniestroAsistencia.length; i++) {
-   
-
-     //los guardamos en variables:
-
-   var ENVcategoriaIncidente = siniestroAsistencia[i].categoriaIncidente;
-  var ENVrutaIncidente= siniestroAsistencia[i].rutaIncidente;
-  var ENVdescripcionIncidente= siniestroAsistencia[i].descripcionIncidente; 
-  var  ENViconoIncidente= siniestroAsistencia[i].iconoIncidente;
-  var ENVimage= siniestroAsistencia[i].image; 
-   var ENVlongitud= siniestroAsistencia[i].longitud; 
-  var ENVlatitud= siniestroAsistencia[i].latitud; 
-  var ENVmetodoPago= siniestroAsistencia[i].metodoPago;
-   var ENVtipoAsistencia= siniestroAsistencia[i].tipoAsistencia;
-  var ENVusuarioSolicitante= siniestroAsistencia[i].usuarioSolicitante; 
-  var  ENVusuarioEspecializado= localStorage.getItem('correo');
+  id=localStorage.getItem('id')
+    var enlace = (id); 
+  console.log(enlace);
   
-
-
+  valor2={
+    estado:1,
+    usuarioEspecializado:localStorage.getItem('correo')
   }
-console.log(ENVlongitud)
 
 
- /*  const formData = new FormData();
-  formData.append('descripcionIncidente', ENVcategoriaIncidente);
-  formData.append('rutaIncidente', ENVrutaIncidente);
-  formData.append('descripcionIncidente', ENVdescripcionIncidente);
-  formData.append('iconoIncidente', ENViconoIncidente);
-  formData.append('longitud', ENVlongitud);
-  formData.append('latitud', ENVlatitud);
-  formData.append('metodoPago', ENVmetodoPago);
-  formData.append('tipoAsistencia', ENVtipoAsistencia);
-  formData.append('usuarioSolicitante', ENVusuarioSolicitante);
-  formData.append('usuarioEspecializado',ENVusuarioEspecializado);
- 
-  formData.append('image', ENVimage); */
-  valor2={}
-  valor2['estado'] = 1;
-  valor2['usuarioEspecializado'] = localStorage.getItem('correo');
   console.log({valor2})
-  fetch(enlace, {
+  fetch("/listarSiniestroAsistencia/editar/" + id, {
       method: 'PUT',
       body:JSON.stringify(valor2) ,
   }).then(res => res.json())
