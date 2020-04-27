@@ -2,25 +2,12 @@ let table = document.getElementById('contenidoTablaVehiculo');
 
 
 async function getTipoVehiculo() {
-    var response = await fetch('/listarTiposAsistencia/recibir');
+    var response = await fetch('/listarSiniestroAsistencia/recibir');
     var data = await response.json();
     return data;
 }//fin de getTipoVehiculo
 
-async function deleteTipoVehiculo() {
-
-  let id = localStorage.getItem('id');
-  var enlace = ('/eliminarTipoAsistencia/borrar/' + id);
-  const res = await fetch(enlace, {
-      method: 'DELETE',
-      headers: {
-          "Content-Type": "application/json"
-      }
-  });
-  var data = await res.json();
-  return data;
-
-}//fin de deleteTipoVehiculo 
+ 
 
 document.addEventListener("DOMContentLoaded", async function renderTipoVehiculo() {
 
@@ -32,24 +19,63 @@ document.addEventListener("DOMContentLoaded", async function renderTipoVehiculo(
   
       let tr = document.createElement("tr");
       
-      //nombre
-      let td_nombre = document.createElement("td");
-      let texto_nombre = document.createTextNode
-        (tipoVehiculo[i].nombre);
-      td_nombre.appendChild(texto_nombre);
-      tr.appendChild(td_nombre);
+      //categoriaIncidente
+      let td_categoriaIncidente = document.createElement("td");
+      let texto_categoriaIncidente = document.createTextNode
+        (tipoVehiculo[i].categoriaIncidente);
+      td_categoriaIncidente.appendChild(texto_categoriaIncidente);
+      tr.appendChild(td_categoriaIncidente);
       table.appendChild(tr);
     
- 
-    
-      //descripcion
-      let td_descripcion = document.createElement("td");
-      let texto_descripcion = document.createTextNode
-        (tipoVehiculo[i].descripcion);
-      td_descripcion.appendChild(texto_descripcion);
-      tr.appendChild(td_descripcion);
+      //tipoAsistencia
+      let td_tipoAsistencia = document.createElement("td");
+      let texto_tipoAsistencia = document.createTextNode
+        (tipoVehiculo[i].tipoAsistencia);
+      td_tipoAsistencia.appendChild(texto_tipoAsistencia);
+      tr.appendChild(td_tipoAsistencia);
       table.appendChild(tr);
+
+       //descripcionIncidente
+       let td_descripcionIncidente = document.createElement("td");
+       let texto_descripcionIncidente = document.createTextNode
+         (tipoVehiculo[i].descripcionIncidente);
+       td_descripcionIncidente.appendChild(texto_descripcionIncidente);
+       tr.appendChild(td_descripcionIncidente);
+       table.appendChild(tr);
+
+        //rutaIncidente
+      let td_rutaIncidente = document.createElement("td");
+      let texto_rutaIncidente = document.createTextNode
+        (tipoVehiculo[i].rutaIncidente);
+      td_rutaIncidente.appendChild(texto_rutaIncidente);
+      tr.appendChild(td_rutaIncidente);
+      table.appendChild(tr);
+
+        //image
+        let td_image = document.createElement("td");
+        let anchor_image = document.createElement("a");
+        anchor_image.classList.add("iconoEditarBorrar");
+      
+        let image_image = document.createElement("img");
+        image_image.setAttribute("src", "../../.."+ tipoVehiculo[i].image);
+        anchor_image.appendChild(image_image);
+      
+        td_image.appendChild(anchor_image);
+        tr.appendChild(td_image);
+        table.appendChild(tr);  
     
+
+
+       //estado
+       let td_estado = document.createElement("td");
+       let texto_estado = document.createTextNode
+         (tipoVehiculo[i].estado==0?'Disponible':'Ocupado');
+       td_estado.appendChild(texto_estado);
+       tr.appendChild(td_estado);
+       table.appendChild(tr);
+      
+    
+      
       //modificar
       let td_modificar = document.createElement("td");
       let anchor_modificar = document.createElement("a");
@@ -61,31 +87,14 @@ document.addEventListener("DOMContentLoaded", async function renderTipoVehiculo(
     
       anchor_modificar.addEventListener('click', () => {
         localStorage.setItem('id', tipoVehiculo[i]._id);
-        window.location.href = '../../modificar/modificarTipoAsistencia/index.html';
+        window.location.href = '../../listar/listarSolicitudAsistencia/index.html';
       });
     
       td_modificar.appendChild(anchor_modificar);
       tr.appendChild(td_modificar);
       table.appendChild(tr);
     
-      //eliminar
     
-      let td_eliminar = document.createElement("td");
-      let anchor_eliminar = document.createElement("a");
-      anchor_eliminar.classList.add("iconoEditarBorrar");
-    
-      let image_eliminar = document.createElement("img");
-      image_eliminar.setAttribute("src", "../../../assets/img/delete.png");
-      anchor_eliminar.appendChild(image_eliminar);
-    
-      anchor_eliminar.addEventListener('click', () => {
-        localStorage.setItem('id', tipoVehiculo[i]._id);
-        borrarTipoVehiculo();
-      });
-    
-      td_eliminar.appendChild(anchor_eliminar);
-      tr.appendChild(td_eliminar);
-      table.appendChild(tr);
     }
   
   }); //fin de renderTipoVehiculo
