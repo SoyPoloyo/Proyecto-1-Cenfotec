@@ -81,37 +81,36 @@ async function buscarIcono() {
 
 
  async function enviar() {
-  id=localStorage.getItem('id')
-    var enlace = (id); 
-  console.log(enlace);
-  
-  valor2={
-    estado:1,
-    usuarioEspecializado:localStorage.getItem('correo')
-  }
 
 
-  console.log({valor2})
-  fetch("/listarSiniestroAsistencia/editar/" + id, {
-      method: 'PUT',
-      body:JSON.stringify(valor2) ,
-  }).then(res => res.json())
-      .catch(error => console.log('Error:', error))
-      .then(response => console.log('Success:', response));
-     
-  swal({
-      title: "Modificación Correcta",
-      text: "Campos completados de manera correcta",
-      icon: "success",
-      button: "Continuar",
+  valor = { estado:1,
+    usuarioEspecializado:localStorage.getItem('correo') };
+  const res = await fetch("/listarSiniestroAsistencia/editar/"+ id, {
+    method: "PUT",
+    body: JSON.stringify(valor),
+    headers: {
+      "Content-Type": "application/json",
+    },
   });
+ 
+  swal({
+    title: "Modificación Correcta",
+    text: "Campos completados de manera correcta",
+    icon: "success",
+    button: "Continuar",
 
-  /* setTimeout(() => {
-      window.location.replace(
-          "../../listar/listarCategoriaIncidente/index.html"
-      )
-  }, 2033); */
+    
+});
+setTimeout(() => {
+  window.location.replace(
+      "../../listar/listarReporteAsistenciaEspecializado/index.html"
+  )
+}, 2033); 
 
+
+
+
+ 
 
 
 } //fin de enviar
