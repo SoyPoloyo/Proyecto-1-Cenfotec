@@ -106,22 +106,7 @@ async function buscarIcono() {
 
   }
 console.log(ENVlongitud)
-valor2 = {
-  
-  /* 'descripcionIncidente':ENVcategoriaIncidente,
-  'rutaIncidente':ENVrutaIncidente,
-  'descripcionIncidente':ENVdescripcionIncidente,
-  'iconoIncidente':ENViconoIncidente,
-  'longitud':ENVlongitud,
-  'latitud':ENVlatitud,
-  'metodoPago':ENVmetodoPago,
-  'tipoAsistencia':ENVtipoAsistencia,
-  'usuarioSolicitante':ENVusuarioSolicitante,
-  'usuarioEspecializado':localStorage.getItem('correo'), */
-  'estado':1,
-  /* 'image':ENVimage */
 
-}
 
  /*  const formData = new FormData();
   formData.append('descripcionIncidente', ENVcategoriaIncidente);
@@ -136,6 +121,9 @@ valor2 = {
   formData.append('usuarioEspecializado',ENVusuarioEspecializado);
  
   formData.append('image', ENVimage); */
+  valor2={}
+  valor2['estado'] = 1;
+  valor2['usuarioEspecializado'] = localStorage.getItem('correo');
   console.log({valor2})
   fetch(enlace, {
       method: 'PUT',
