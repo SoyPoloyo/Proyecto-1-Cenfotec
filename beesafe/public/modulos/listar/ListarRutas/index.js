@@ -51,12 +51,12 @@ let table = document.getElementById('contenidoTablaRutas');
           //estado
           let td_estado = document.createElement("td");
           let texto_estado = document.createTextNode
-            (listarRutas[i].estado);
+            (listarRutas[i].estado==1?'Activa':'Inactiva');
           td_estado.appendChild(texto_estado);
           tr.appendChild(td_estado);
           table.appendChild(tr);
         
-          //modificar
+          /* //modificar
           let td_modificar = document.createElement("td");
           let anchor_modificar = document.createElement("a");
           anchor_modificar.classList.add("iconoEditarBorrar");
@@ -67,12 +67,12 @@ let table = document.getElementById('contenidoTablaRutas');
         
           anchor_modificar.addEventListener('click', () => {
             localStorage.setItem('id', listarRutas[i]._id);
-            /* window.location.href = '../../modificar/modificarTipoVehiculoEspecializado/index.html'; */
-          });
+             window.location.href = '../../modificar/modificarTipoVehiculoEspecializado/index.html'; 
+          }); */
         
-          td_modificar.appendChild(anchor_modificar);
+         /*  td_modificar.appendChild(anchor_modificar);
           tr.appendChild(td_modificar);
-          table.appendChild(tr);
+          table.appendChild(tr); */
         
           //eliminar
         

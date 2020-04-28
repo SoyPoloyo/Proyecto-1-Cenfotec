@@ -81,12 +81,12 @@ function subirImagen() {
                       <input class="fondosG " type="text" readonly value="${usuario.edad}"  name="edad" id="edad">
                       <br><br>
   
-                      <h4>Cedula</h4>
+                      <h4>Cédula</h4>
                       <input class="fondosG " type="text" readonly value="${usuario.cedula}"  name="cedula" id="cedula">
   
                       <br> <br>
                       
-                      <h4>Correo Electronico</h4>
+                      <h4>Correo Electrónico</h4>
                       <input class="fondosG  " type="text" readonly value="${usuario.correo}"  name="correo" id="correo">
                       <br> <br>
                       </div>
@@ -193,7 +193,7 @@ function modificar() {
   
   setTimeout(() => {
     location.reload()
-}, 3333);
+}, 2000);
   
   
     })

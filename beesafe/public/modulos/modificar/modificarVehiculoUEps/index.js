@@ -5,7 +5,7 @@ valor = {
   id: localStorage.getItem("id"),
 };
 
-fetch("http://localhost:5252/listarVehiculoUEps/recibir3", {
+fetch("http://localhost:5252/listarVehiculo/recibir3", {
   body: JSON.stringify(valor),
   method: "POST",
   headers: {
@@ -24,7 +24,7 @@ fetch("http://localhost:5252/listarVehiculoUEps/recibir3", {
   
                       <h4>Tipo de vehiculo</h4>
                       <select class="fondosG" value="" name="tipo_vehiculo" id="tipo_vehiculo">
-                        <option value="" selected hidden>Tipo de vehículo:</option>  
+                        <option value="${usuario.tipo_vehiculo}" selected hidden>${usuario.tipo_vehiculo}</option>  
                       </select> 
                       <br><br>
   
@@ -37,8 +37,8 @@ fetch("http://localhost:5252/listarVehiculoUEps/recibir3", {
                       <br> <br> 
 
                       <h4>caracteristicas de vehiculo</h4>
-                      <select class="fondosG" value="" name="caracteristicasVehiculo" id="caracteristicasVehiculo">
-                      <option value="" selected hidden>Caracteristicas:</option>
+                      <select class="fondosG" value="${usuario.caracteristicasVehiculo}" name="caracteristicasVehiculo" id="caracteristicasVehiculo">
+                      <option value="" selected hidden>${usuario.caracteristicasVehiculo}</option>
                       </select> 
                       <br><br>
   
@@ -56,10 +56,10 @@ fetch("http://localhost:5252/listarVehiculoUEps/recibir3", {
 function modificar() {
   let id = localStorage.getItem("id");
   console.log(id);
-  var enlace = "/modificarVehiculoUEps/editar/" + id;
+  var enlace = "/modificarVehiculo/editar/" + id;
   console.log(enlace);
 
-  let datos = ["placaVehi", "tipo_vehiculo", "anno", "caracteristicasVehiculo", "chofer"];
+  let datos = ["placaVehi", "anno", "chofer"];
   let valores = {};
   let aprobado = false;
 

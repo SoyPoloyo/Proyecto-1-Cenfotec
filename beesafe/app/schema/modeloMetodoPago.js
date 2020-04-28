@@ -3,7 +3,7 @@ var mongoose = require("mongoose");
 var metodoPagoSchema = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
   nombre:String,
-  numeroTarjeta: Number,
+  numeroTarjeta: String,
   fecha: String,
   cvv: Number,
   identificador:String

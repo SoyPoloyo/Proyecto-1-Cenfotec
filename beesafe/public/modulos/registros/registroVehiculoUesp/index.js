@@ -100,7 +100,7 @@ async function enviar() {
     
     console.log(valores);
     valores['identificador'] = localStorage.getItem("correo")
-    fetch2 = await fetch("http://localhost:5252/registroVehiculoUEps/insertar", {
+    fetch2 = await fetch("http://localhost:5252/registroVehiculo/insertar", {
       body: JSON.stringify(valores),
       method: "POST",
       headers: {

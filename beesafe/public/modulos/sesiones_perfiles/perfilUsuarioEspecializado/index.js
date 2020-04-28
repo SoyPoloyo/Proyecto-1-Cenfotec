@@ -197,7 +197,7 @@ function modificar() {
   
   setTimeout(() => {
     location.reload()
-}, 3333);
+}, 2000);
   
   
     })

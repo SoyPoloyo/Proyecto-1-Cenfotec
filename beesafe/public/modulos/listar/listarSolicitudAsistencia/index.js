@@ -94,8 +94,8 @@ async function buscarIcono() {
   });
  
   swal({
-    title: "Modificación Correcta",
-    text: "Campos completados de manera correcta",
+    title: "Asistencia Aceptada",
+    
     icon: "success",
     button: "Continuar",
 

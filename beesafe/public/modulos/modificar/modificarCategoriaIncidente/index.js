@@ -1,4 +1,4 @@
-/* 
+
 function subirImagen() {
 
     console.dir(document.getElementById('imagenAgregada'));
@@ -13,7 +13,7 @@ function subirImagen() {
         }
     }
 
-} */ //fin de subirImagen 
+} //fin de subirImagen 
 
 let id = localStorage.getItem('id');
 console.log(id);
